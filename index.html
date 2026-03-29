@@ -3,10 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>최애의 독서 | Archive</title>
+  <title>최애의 독서 | 당신이 좋아하는, 그들이 읽은 책</title>
   <meta name="google-site-verification" content="RGTC9c8GtMgvT1HtDz5vzgXPGl9f-DSDOq1lCW95In8" />
   <meta name="description" content="아이돌, 셀럽, 그리고 나의 최애가 읽은 책들을 한곳에 모았습니다.">
   <meta name="keywords" content="아이돌, 셀럽, 최애, 독서, 책, 읽는, 책 추천, 인생책, 읽은 책">
+  
+  <!-- 검색 결과에 로고(파비콘) 띄우기 -->
+  <link rel="icon" href="favicon.png" type="image/png">
+  
+  <!-- 검색 결과 및 링크 공유 시 보여질 정보 명시 (Open Graph) -->
+  <meta property="og:site_name" content="최애의 독서">
+  <meta property="og:title" content="최애의 독서 | 당신이 좋아하는, 그들이 읽은 책">
+  <meta property="og:description" content="아이돌, 셀럽, 그리고 나의 최애가 읽은 책들을 한곳에 모았습니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hwiruruk.github.io/favoread/">
+
+  <!-- 구글이 잘못된 이름을 쓰지 못하게 명시하는 코드 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "최애의 독서",
+    "url": "https://hwiruruk.github.io/favoread/"
+  }
+  </script>
   
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;400;600;900&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
@@ -335,7 +355,7 @@
 
   /* ── UTILS ──────────────────────────────────────────────── */
   function updateSEO(name) {
-    const defaultTitle = '최애의 독서 | Archive';
+    const defaultTitle = '최애의 독서 | 당신이 좋아하는, 그들이 읽은 책';
     const defaultDesc = '아이돌, 셀럽, 그리고 나의 최애가 읽은 책들을 한곳에 모았습니다.';
     
     if (name) {
