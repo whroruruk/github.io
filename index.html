@@ -232,7 +232,7 @@
 
 <main id="app-root" class="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-24">
 
-  <header class="flex flex-col items-center mb-16 md:mb-20 opacity-0 animate-fade-in pt-10 md:pt-0">
+  <header class="flex flex-col items-center mb-10 md:mb-16 opacity-0 animate-fade-in pt-10 md:pt-0">
     <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-3 text-ink text-center">최애의 독서</h1>
     <p class="text-ink font-sans font-bold text-sm sm:text-base tracking-wide mb-6 text-center">당신이 좋아하는, 그들이 읽은 책📕</p>
     
@@ -243,10 +243,17 @@
     </div>
   </header>
 
-  <div class="max-w-xl mx-auto mb-16 md:mb-20 opacity-0 animate-fade-in-delayed">
+  <div class="max-w-xl mx-auto mb-16 md:mb-20 opacity-0 animate-fade-in-delayed flex flex-col gap-4">
+    <!-- 검색창: placeholder 수정 (작가, 출판사 추가) -->
     <input id="search-input" type="text"
       class="w-full bg-white border-2 border-ink shadow-neo px-4 sm:px-6 py-3 sm:py-4 text-center text-base sm:text-lg focus:outline-none focus:shadow-neo-lg focus:-translate-y-1 transition-all placeholder:text-muted/50 tracking-wide font-sans font-bold"
-      placeholder="Search by name or title">
+      placeholder="Search name, title, author, publisher">
+    
+    <!-- 뷰 모드 토글 버튼 -->
+    <div class="flex justify-center gap-3">
+      <button id="btn-grid" class="font-sans font-bold text-[10px] sm:text-xs tracking-widest uppercase border-2 border-ink bg-neo-yellow shadow-neo-sm px-5 py-2 hover:-translate-y-0.5 transition-all">■ GRID</button>
+      <button id="btn-list" class="font-sans font-bold text-[10px] sm:text-xs tracking-widest uppercase border-2 border-ink bg-white hover:bg-neo-yellow shadow-neo-sm px-5 py-2 hover:-translate-y-0.5 transition-all">≡ LIST</button>
+    </div>
   </div>
 
   <div id="grid-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-12"></div>
@@ -330,6 +337,7 @@
   let filteredEntries = [];
   let renderIndex = 0;
   const CHUNK_SIZE = 24; 
+  let viewMode = 'grid'; // 'grid' | 'list'
 
   /* ── DOM ────────────────────────────────────────────────── */
   const D = {
@@ -351,6 +359,8 @@
     dots:       document.getElementById('dots-container'),
     toast:      document.getElementById('toast'),
     floatMenus: document.getElementById('floating-menus'),
+    btnGrid:    document.getElementById('btn-grid'),
+    btnList:    document.getElementById('btn-list'),
   };
 
   /* ── UTILS ──────────────────────────────────────────────── */
@@ -369,6 +379,23 @@
       const descMeta = document.querySelector('meta[name="description"]');
       if (descMeta) descMeta.setAttribute('content', defaultDesc);
     }
+  }
+
+  function setViewMode(mode) {
+    if (viewMode === mode) return;
+    viewMode = mode;
+    
+    if (mode === 'grid') {
+      D.btnGrid.classList.replace('bg-white', 'bg-neo-yellow');
+      D.btnList.classList.replace('bg-neo-yellow', 'bg-white');
+      D.grid.className = 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-12';
+    } else {
+      D.btnList.classList.replace('bg-white', 'bg-neo-yellow');
+      D.btnGrid.classList.replace('bg-neo-yellow', 'bg-white');
+      D.grid.className = 'flex flex-col gap-3 max-w-2xl mx-auto w-full';
+    }
+    
+    filterEntries(D.search.value);
   }
 
   /* ── STATUS ─────────────────────────────────────────────── */
@@ -445,7 +472,7 @@
         const name = card.dataset.name;
         obs.unobserve(card); 
         
-        if (!celebMap[name].imageUrl) {
+        if (!celebMap[name].imageUrl && viewMode === 'grid') {
           loadWikiImage(name, card);
         }
       }
@@ -475,9 +502,16 @@
 
   function filterEntries(kw = '') {
     const q = kw.toLowerCase();
-    filteredEntries = entries.filter(([name, data]) => {
+    
+    // 뷰 모드에 따라 데이터 정렬(리스트 뷰는 가나다순, 그리드는 섞인 상태 유지)
+    let currentEntries = viewMode === 'list'
+      ? [...entries].sort((a, b) => a[0].localeCompare(b[0], 'ko'))
+      : entries;
+
+    filteredEntries = currentEntries.filter(([name, data]) => {
       if (!q) return true;
-      const str = `${name} ${data.books.map(b => b.title).join(' ')}.toLowerCase()`;
+      // 검색 범위: 인물 이름, 도서명, 작가, 출판사 통합
+      const str = `${name} ${data.books.map(b => `${b.title} ${b.author} ${b.publisher}`).join(' ')}`.toLowerCase();
       return str.includes(q);
     });
     
@@ -494,29 +528,38 @@
       const card = document.createElement('a');
       const celebUrl = `${BASE_PATH}?celeb=${encodeURIComponent(name)}`;
       card.href = celebUrl;
-      card.className = 'group cursor-pointer flex flex-col bg-white border-2 border-ink shadow-neo hover:shadow-neo-lg hover:-translate-y-1 transition-all duration-200 opacity-0 animate-fade-in-fast block';
       card.dataset.name = name;
 
-      const img = data.imageUrl
-        ? `<img src="${data.imageUrl}" alt="${name} 책 추천" loading="lazy" class="celeb-portrait w-full h-full object-cover">`
-        : `<div class="w-full h-full bg-paper-dark flex items-center justify-center font-sans font-bold text-[10px] tracking-widest text-muted">PHOTO</div>`;
-      
-      card.innerHTML = `
-        <div class="celeb-photo-wrap w-full aspect-[3/4] overflow-hidden border-b-2 border-ink bg-paper-dark relative">${img}</div>
-        <div class="p-3 sm:p-5 flex flex-col items-center group-hover:bg-neo-mint transition-colors duration-200">
-          <h3 class="text-base sm:text-xl font-bold tracking-tight mb-1 sm:mb-2 text-ink text-center line-clamp-1">${name}</h3>
-          <p class="text-[8px] sm:text-[10px] tracking-widest text-ink uppercase font-sans font-bold bg-white border border-ink px-1.5 sm:px-2 py-0.5">${data.books.length} records</p>
-        </div>`;
+      if (viewMode === 'grid') {
+        card.className = 'group cursor-pointer flex flex-col bg-white border-2 border-ink shadow-neo hover:shadow-neo-lg hover:-translate-y-1 transition-all duration-200 opacity-0 animate-fade-in-fast block';
+        const img = data.imageUrl
+          ? `<img src="${data.imageUrl}" alt="${name} 책 추천" loading="lazy" class="celeb-portrait w-full h-full object-cover">`
+          : `<div class="w-full h-full bg-paper-dark flex items-center justify-center font-sans font-bold text-[10px] tracking-widest text-muted">PHOTO</div>`;
+        
+        card.innerHTML = `
+          <div class="celeb-photo-wrap w-full aspect-[3/4] overflow-hidden border-b-2 border-ink bg-paper-dark relative">${img}</div>
+          <div class="p-3 sm:p-5 flex flex-col items-center group-hover:bg-neo-mint transition-colors duration-200">
+            <h3 class="text-base sm:text-xl font-bold tracking-tight mb-1 sm:mb-2 text-ink text-center line-clamp-1">${name}</h3>
+            <p class="text-[8px] sm:text-[10px] tracking-widest text-ink uppercase font-sans font-bold bg-white border border-ink px-1.5 sm:px-2 py-0.5">${data.books.length} records</p>
+          </div>`;
+          
+        if (!data.imageUrl) imgObserver.observe(card);
+      } else {
+        // 리스트 뷰(사진 없음, 텍스트만)
+        card.className = 'group cursor-pointer flex justify-between items-center bg-white border-2 border-ink shadow-neo-sm hover:shadow-neo hover:bg-neo-mint hover:-translate-y-0.5 transition-all duration-200 opacity-0 animate-fade-in-fast block px-4 py-3 sm:px-6 sm:py-4';
+        card.innerHTML = `
+          <h3 class="text-base sm:text-lg font-bold tracking-tight text-ink group-hover:underline decoration-2 underline-offset-4">${name}</h3>
+          <p class="text-[9px] sm:text-xs tracking-widest text-ink uppercase font-sans font-bold bg-neo-yellow border border-ink px-2 py-1 flex-shrink-0">${data.books.length} records</p>
+        `;
+      }
       
       card.addEventListener('click', (e) => {
         if (e.ctrlKey || e.metaKey || e.shiftKey) return;
-        
         e.preventDefault(); 
         openModal(name);
         history.pushState({ celeb: name }, '', celebUrl);
       });
       
-      if (!data.imageUrl) imgObserver.observe(card);
       D.grid.appendChild(card);
     });
 
@@ -640,6 +683,9 @@
     D.search.addEventListener('input', e => filterEntries(e.target.value));
     D.closeBtn.addEventListener('click', () => closeModal(false));
     D.overlay.addEventListener('click', e => { if (e.target === D.overlay) closeModal(false); });
+    
+    D.btnGrid.addEventListener('click', () => setViewMode('grid'));
+    D.btnList.addEventListener('click', () => setViewMode('list'));
     
     D.shareBtn.addEventListener('click', () => {
       const shareUrl = `${window.location.origin}${BASE_PATH}?celeb=${encodeURIComponent(modal.name)}`;
