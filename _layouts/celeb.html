@@ -2,7 +2,26 @@
 layout: default
 ---
 {% assign current_celeb = page.title %}
-{% assign books = site.data.list | where: "이름", current_celeb %}
+{% assign books = "" | split: "" %}
+{% assign celeb_img_url = "" %}
+
+{% comment %} 엑셀 특수문자로 인한 인식 오류를 피하기 위해 유연한 컬럼 검색을 진행합니다. {% endcomment %}
+{% for row in site.data.list %}
+  {% assign r_name = "" %}
+  {% for field in row %}
+    {% if field[0] contains "이름" or field[0] contains "연예인" %}
+      {% assign r_name = field[1] | strip %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if r_name == current_celeb %}
+    {% assign books = books | push: row %}
+    {% assign img = row["연예인이미지"] | default: row["이미지주소"] | default: row["photo"] %}
+    {% if img != "" and img != nil %}
+      {% assign celeb_img_url = img %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
 
 <!-- 검색 로봇을 위한 숨김 키워드 -->
 <div class="sr-only">
@@ -13,13 +32,15 @@ layout: default
 <div class="fixed inset-0 bg-ink/75 z-50 flex items-center justify-center md:p-8 backdrop-blur-sm">
   <div id="modal-inner" class="w-full max-w-5xl bg-paper border-4 border-ink shadow-neo-lg relative flex flex-col md:flex-row max-h-[88svh] overflow-hidden">
     
-    <!-- 뒤로가기 버튼 (클릭 시 메인 홈으로 이동) -->
     <a href="{{ '/' | relative_url }}" class="absolute top-2 right-2 z-50 w-9 h-9 flex items-center justify-center bg-neo-pink border-2 border-ink shadow-neo-sm text-ink font-sans font-black text-base hover:bg-neo-yellow active:shadow-none transition-all">✕</a>
 
-    <!-- 왼쪽 영역: 프로필 사진과 정보 -->
     <div id="modal-left" class="w-full md:w-64 lg:w-72 flex-shrink-0 flex flex-col justify-center items-center bg-white border-b-4 md:border-b-0 md:border-r-4 border-ink p-6 md:p-10 gap-0">
-      <div id="modal-photo-wrap" class="w-40 h-52 md:w-44 md:h-56 overflow-hidden border-2 border-ink shadow-neo bg-paper-dark mb-6 relative" data-name="{{ current_celeb }}">
-        <div class="w-full h-full flex items-center justify-center font-sans font-bold text-xs text-muted">PHOTO</div>
+      <div id="modal-photo-wrap" class="w-40 h-52 md:w-44 md:h-56 overflow-hidden border-2 border-ink shadow-neo bg-paper-dark mb-6 relative" data-name="{{ current_celeb }}" data-img="{{ celeb_img_url }}">
+        {% if celeb_img_url != "" %}
+          <img src="{{ celeb_img_url }}" class="w-full h-full object-cover" alt="{{ current_celeb }}">
+        {% else %}
+          <div class="w-full h-full flex items-center justify-center font-sans font-bold text-xs text-muted">PHOTO</div>
+        {% endif %}
       </div>
 
       <div id="modal-meta" class="flex flex-col items-center mb-6 md:mb-10 w-full text-center">
@@ -32,7 +53,6 @@ layout: default
       </button>
     </div>
 
-    <!-- 오른쪽 영역: 책 슬라이드 목록 -->
     <div id="modal-right" class="flex flex-col flex-1 bg-[#fafaf8] min-w-0">
       <div id="modal-archive-label" class="flex-shrink-0 font-sans font-bold text-[9px] md:text-xs tracking-widest text-ink border-b border-ink/10 px-5 md:px-10 pt-4 md:pt-7 pb-2">
         READING ARCHIVE
@@ -41,27 +61,35 @@ layout: default
       <div id="swiper-viewport" class="mx-4 md:mx-8 mt-2 md:mt-4 overflow-hidden relative" style="height: 380px;">
         <div id="swiper-track" class="h-full flex transition-transform duration-500 ease-in-out">
           {% for book in books %}
+            {% assign b_title = book["도서명"] | default: book["제목"] | default: book["책"] %}
+            {% assign b_author = book["저자"] | default: book["작가"] %}
+            {% assign b_pub = book["출판사"] %}
+            {% assign b_comment = book["코멘트"] | default: book["한마디"] %}
+            {% assign b_cover = book["도서이미지"] | default: book["표지"] %}
+            {% assign b_source = book["출처"] | default: book["근거"] %}
+            {% assign b_link = book["링크"] | default: book["url"] %}
+
           <div class="w-full flex-shrink-0 flex flex-col md:flex-row gap-4 md:gap-8 items-center md:items-start px-4 py-4 md:px-6 h-full overflow-y-auto">
-            {% if book.도서이미지 != "" %}
-              <img src="{{ book.도서이미지 }}" class="w-24 md:w-36 lg:w-44 object-cover border-2 border-ink shadow-neo flex-shrink-0 mx-auto md:mx-0" alt="표지">
+            {% if b_cover != "" and b_cover != nil %}
+              <img src="{{ b_cover }}" class="w-24 md:w-36 lg:w-44 object-cover border-2 border-ink shadow-neo flex-shrink-0 mx-auto md:mx-0" alt="표지">
             {% else %}
               <div class="w-24 md:w-36 lg:w-44 aspect-[2/3] border-2 border-ink bg-white flex items-center justify-center font-sans font-bold text-xs text-muted shadow-neo flex-shrink-0 mx-auto md:mx-0">COVER</div>
             {% endif %}
             
             <div class="flex flex-col w-full text-center md:text-left min-w-0">
-              <h4 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black tracking-tight leading-snug mb-1.5 md:mb-2">{{ book.도서명 }}</h4>
-              <p class="text-xs md:text-sm font-bold mb-3">{{ book.저자 }} {% if book.출판사 != "" %}<span class="opacity-40 mx-1.5">|</span><span class="text-ink/70">{{ book.출판사 }}</span>{% endif %}</p>
+              <h4 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black tracking-tight leading-snug mb-1.5 md:mb-2">{{ b_title }}</h4>
+              <p class="text-xs md:text-sm font-bold mb-3">{{ b_author }} {% if b_pub != "" and b_pub != nil %}<span class="opacity-40 mx-1.5">|</span><span class="text-ink/70">{{ b_pub }}</span>{% endif %}</p>
               
-              {% if book.코멘트 != "" %}
-              <blockquote class="text-xs md:text-sm leading-relaxed text-ink mb-3 bg-neo-yellow border-2 border-ink p-3 md:p-4 shadow-neo-sm font-medium">"{{ book.코멘트 }}"</blockquote>
+              {% if b_comment != "" and b_comment != nil %}
+              <blockquote class="text-xs md:text-sm leading-relaxed text-ink mb-3 bg-neo-yellow border-2 border-ink p-3 md:p-4 shadow-neo-sm font-medium">"{{ b_comment }}"</blockquote>
               {% endif %}
               
               <div class="flex gap-4 flex-wrap justify-center md:justify-start mt-2">
-                {% if book.출처 contains "http" %}
-                  <a href="{{ book.출처 }}" target="_blank" class="book-link">↗ 출처</a>
+                {% if b_source contains "http" %}
+                  <a href="{{ b_source }}" target="_blank" class="book-link">↗ 출처</a>
                 {% endif %}
-                {% if book.링크 != "" and book.링크 != "#" %}
-                  <a href="{{ book.링크 }}" target="_blank" class="book-link">↗ 도서 정보</a>
+                {% if b_link != "" and b_link != "#" and b_link != nil %}
+                  <a href="{{ b_link }}" target="_blank" class="book-link">↗ 도서 정보</a>
                 {% endif %}
               </div>
             </div>
@@ -84,9 +112,11 @@ layout: default
 </div>
 
 <script>
-  // 위키백과 인물 사진 로딩
+  // CSV 이미지가 없을 경우 위키백과 인물 사진 로딩
   async function loadWikiImage() {
     const wrap = document.getElementById('modal-photo-wrap');
+    if (wrap.dataset.img && wrap.dataset.img.length > 0) return;
+
     const name = wrap.dataset.name;
     try {
       const u = `https://ko.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=${encodeURIComponent(name)}&gsrlimit=1&prop=pageimages&pithumbsize=500&format=json&origin=*`;
@@ -118,6 +148,8 @@ layout: default
     prevBtn.addEventListener('click', () => { if (currentIdx > 0) { currentIdx--; updateSlide(); } });
     nextBtn.addEventListener('click', () => { if (currentIdx < totalBooks - 1) { currentIdx++; updateSlide(); } });
     updateSlide();
+  } else if (totalBooks === 0 && indicator) {
+    indicator.textContent = "0 / 0";
   }
 
   // 링크 복사 기능
