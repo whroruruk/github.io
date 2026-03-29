@@ -158,6 +158,34 @@
   </style>
 </head>
 
+<div class="fixed right-6 bottom-6 md:right-10 md:bottom-10 z-[60] flex flex-col items-end">
+  <div id="faq-window" class="hidden bg-paper border-4 border-ink shadow-neo-lg w-80 mb-4 flex flex-col transition-all">
+    <div class="flex justify-between items-center border-b-4 border-ink p-3 bg-neo-mint">
+      <h3 class="font-sans font-black text-lg tracking-widest text-ink">FAQ</h3>
+      <button onclick="document.getElementById('faq-window').classList.toggle('hidden')" class="text-ink font-black text-xl hover:text-white transition-colors">✕</button>
+    </div>
+    
+    <div class="p-5 font-serif text-sm text-ink space-y-6 max-h-[60vh] overflow-y-auto">
+      
+      <div>
+        <h4 class="font-bold bg-neo-yellow inline-block px-2 py-1 mb-2 shadow-neo-sm border-2 border-ink">Q. 질문을 여기에 적어주세요.</h4>
+        <p class="leading-relaxed text-muted mt-1 font-sans font-bold">A. 이곳에 답변을 작성해주시면 됩니다. HTML 태그 없이 편하게 텍스트만 변경하세요.</p>
+      </div>
+
+      <div>
+        <h4 class="font-bold bg-neo-pink inline-block px-2 py-1 mb-2 shadow-neo-sm border-2 border-ink">Q. 두 번째 질문 예시입니다.</h4>
+        <p class="leading-relaxed text-muted mt-1 font-sans font-bold">A. 두 번째 답변을 작성하는 공간입니다. 질문 블록을 복사해서 더 추가할 수도 있습니다.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <button onclick="document.getElementById('faq-window').classList.toggle('hidden')" 
+          class="w-14 h-14 bg-neo-yellow border-4 border-ink shadow-neo hover:bg-neo-pink hover:-translate-y-1 active:shadow-none transition-all rounded-full flex items-center justify-center font-sans font-black text-ink text-2xl">
+    ?
+  </button>
+</div>  
+
 <body class="font-serif relative selection:bg-neo-yellow selection:text-ink">
 
 <a href="https://hwiruruk.github.io/readinglab/" 
