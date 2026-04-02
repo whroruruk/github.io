@@ -17,6 +17,21 @@
   <meta property="og:description" content="아이돌, 셀럽, 그리고 나의 최애가 읽은 책들을 한곳에 모았습니다.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hwiruruk.github.io/favoread/">
+  <meta property="og:image" content="https://hwiruruk.github.io/favoread/favicon.png">
+  <meta property="og:image:alt" content="최애의 독서 로고">
+  <meta property="og:locale" content="ko_KR">
+
+  <!-- Twitter / X 카드 -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="최애의 독서 | 당신이 좋아하는, 그들이 읽은 책">
+  <meta name="twitter:description" content="아이돌, 셀럽, 그리고 나의 최애가 읽은 책들을 한곳에 모았습니다.">
+  <meta name="twitter:image" content="https://hwiruruk.github.io/favoread/favicon.png">
+
+  <!-- 정규 URL (중복 색인 방지) -->
+  <link rel="canonical" href="https://hwiruruk.github.io/favoread/">
+
+  <!-- 크롤러 지시 -->
+  <meta name="robots" content="index, follow">
 
   <!-- 구글이 잘못된 이름을 쓰지 못하게 명시하는 코드 -->
   <script type="application/ld+json">
@@ -24,7 +39,34 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "최애의 독서",
-    "url": "https://hwiruruk.github.io/favoread/"
+    "url": "https://hwiruruk.github.io/favoread/",
+    "description": "아이돌, 셀럽, 그리고 나의 최애가 읽은 책들을 한곳에 모았습니다.",
+    "inLanguage": "ko-KR",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://hwiruruk.github.io/favoread/?celeb={celeb_name}"
+      },
+      "query-input": "required name=celeb_name"
+    }
+  }
+  </script>
+
+  <!-- 웹페이지 상세 스키마 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "최애의 독서 | 당신이 좋아하는, 그들이 읽은 책",
+    "url": "https://hwiruruk.github.io/favoread/",
+    "description": "아이돌, 셀럽, 그리고 나의 최애가 읽은 책들을 한곳에 모았습니다.",
+    "inLanguage": "ko-KR",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Reading Lab",
+      "url": "https://hwiruruk.github.io/readinglab/"
+    }
   }
   </script>
   
@@ -575,6 +617,7 @@
     modal = { open: true, name, books: data.books, idx: 0 };
 
     D.mImg.src = data.imageUrl || '';
+    D.mImg.alt = data.imageUrl ? `${name} 책 추천` : '';
     D.mImg.parentElement.style.display = data.imageUrl ? '' : 'none';
     
     D.mName.textContent  = name; 
@@ -612,7 +655,7 @@
       slide.className = 'slide-area w-full flex-shrink-0 flex flex-col md:flex-row gap-4 md:gap-8 items-center md:items-start px-4 py-4 md:px-6';
 
       const cover = book.coverUrl
-        ? `<img src="${book.coverUrl}" class="w-24 md:w-36 lg:w-44 object-cover border-2 border-ink shadow-neo flex-shrink-0 mx-auto md:mx-0" alt="표지" loading="lazy">`
+        ? `<img src="${book.coverUrl}" class="w-24 md:w-36 lg:w-44 object-cover border-2 border-ink shadow-neo flex-shrink-0 mx-auto md:mx-0" alt="${book.title} 표지" loading="lazy">`
         : `<div class="w-24 md:w-36 lg:w-44 aspect-[2/3] border-2 border-ink bg-white flex items-center justify-center font-sans font-bold text-xs text-muted shadow-neo flex-shrink-0 mx-auto md:mx-0">COVER</div>`;
 
       const quote = book.comment
