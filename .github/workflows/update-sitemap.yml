@@ -47,9 +47,10 @@ jobs:
           ]
 
           for name in sorted(names):
+              # safe="()" → 괄호는 인코딩하지 않아 실제 URL과 일치시킴
               lines += [
                   '  <url>',
-                  f'    <loc>{BASE}?celeb={quote(name)}</loc>',
+                  f'    <loc>{BASE}?celeb={quote(name, safe="()")}</loc>',
                   f'    <lastmod>{TODAY}</lastmod>',
                   '    <priority>0.7</priority>',
                   '  </url>',
@@ -58,7 +59,7 @@ jobs:
           lines.append('</urlset>')
 
           with open("sitemap.xml", "w", encoding="utf-8") as f:
-              f.write('\n'.join(lines))
+              f.write('\n'.join(lines) + '\n')
 
           print(f"✅ sitemap.xml 생성 완료: 총 {len(names)}명")
           EOF
