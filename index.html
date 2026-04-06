@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>최애의 독서 | 당신이 좋아하는, 그들이 읽은 책</title>
   <meta name="google-site-verification" content="RGTC9c8GtMgvT1HtDz5vzgXPGl9f-DSDOq1lCW95In8" />
-  <meta name="description" content="아이돌, 셀럽, 그리고 나의 최애가 읽은 책들을 한곳에 모았습니다.">
+  <meta name="description" content="아이돌, 셀럽, 연예인 나의 최애가 읽은 책, 추천 책, 인생책을 한곳에 모았어요✨">
   <meta name="keywords" content="아이돌, 셀럽, 연예인, 최애, 독서, 책, 읽는, 책 추천, 인생책, 읽은 책, 책추천, kpop star reading, kpop star book">
   
   <link rel="icon" href="https://hwiruruk.github.io/favoread/favicon.png" type="image/png">
@@ -16,7 +16,7 @@
   
   <meta property="og:site_name" content="최애의 독서">
   <meta property="og:title" content="최애의 독서 | 당신이 좋아하는, 그들이 읽은 책">
-  <meta property="og:description" content="아이돌, 셀럽, 연예인, 배우, 나의 최애가 읽은 책들을 한곳에 모은 최애의 독서">
+  <meta property="og:description" content="아이돌, 셀럽, 연예인 나의 최애가 읽은 책, 추천 책, 인생책을 한곳에 모았어요✨">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hwiruruk.github.io/favoread/">
   <meta property="og:image" content="https://hwiruruk.github.io/favoread/favicon.png">
@@ -25,7 +25,7 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="최애의 독서 | 당신이 좋아하는, 그들이 읽은 책">
-  <meta name="twitter:description" content="아이돌, 셀럽, 그리고 나의 최애가 읽은 책들을 한곳에 모았습니다.">
+  <meta name="twitter:description" content="아이돌, 셀럽, 연예인 나의 최애가 읽은 책, 추천 책, 인생책을 한곳에 모았어요✨">
   <meta name="twitter:image" content="https://hwiruruk.github.io/favoread/favicon.png">
 
   <link rel="canonical" href="https://hwiruruk.github.io/favoread/">
@@ -58,7 +58,7 @@
     "@type": "WebPage",
     "name": "최애의 독서 | 당신이 좋아하는, 그들이 읽은 책",
     "url": "https://hwiruruk.github.io/favoread/",
-    "description": "아이돌, 셀럽, 그리고 나의 최애가 읽은 책들을 한곳에 모았습니다.",
+    "description": "아이돌, 셀럽, 연예인 나의 최애가 읽은 책, 추천 책, 인생책을 한곳에 모았어요✨",
     "image": "https://hwiruruk.github.io/favoread/favicon.png",
     "inLanguage": "ko-KR",
     "isPartOf": {
@@ -219,6 +219,8 @@
       transition: opacity .15s;
     }
     .book-link:hover { opacity: .45; }
+    
+    .word-break-keep { word-break: keep-all; }
   </style>
 </head>
 
@@ -270,9 +272,9 @@
   </div>
 </div>  
 
-<main id="app-root" class="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-24">
+<main id="app-root" class="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-24 flex flex-col gap-12 md:gap-16">
 
-  <header class="flex flex-col items-center mb-10 md:mb-16 opacity-0 animate-fade-in pt-10 md:pt-0">
+  <header class="flex flex-col items-center opacity-0 animate-fade-in pt-10 md:pt-0">
     <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-3 text-ink text-center">최애의 독서</h1>
     <p class="text-ink font-sans font-bold text-sm sm:text-base tracking-wide mb-6 text-center">당신이 좋아하는, 그들이 읽은 책📕</p>
     
@@ -283,7 +285,15 @@
     </div>
   </header>
 
-  <div class="max-w-xl mx-auto mb-16 md:mb-20 opacity-0 animate-fade-in-delayed flex flex-col gap-4">
+  <section class="opacity-0 animate-fade-in-delayed text-center max-w-2xl mx-auto border-4 border-ink p-6 md:p-8 bg-white shadow-neo w-full">
+    <h2 class="text-xl md:text-2xl font-black mb-4 bg-neo-pink inline-block px-3 py-1 border-2 border-ink shadow-neo-sm">최애의 독서란?</h2>
+    <p class="text-sm md:text-base font-bold leading-relaxed text-ink word-break-keep">
+      아이돌, 배우, 뮤지션 등 셀럽이 직접 언급하거나 손에 들고 있던 책들을 모은 아카이브입니다.<br>
+      인터뷰, SNS, 유튜브에서 확인된 출처 기반으로 기록하며, 현재 <strong class="bg-neo-mint px-1">198명의 셀럽</strong>과 <strong class="bg-neo-mint px-1">533권의 도서</strong>가 등록되어 있어요. 계속 업뎃할게요😆
+    </p>
+  </section>
+
+  <section class="max-w-xl mx-auto w-full opacity-0 animate-fade-in-delayed flex flex-col gap-4">
     <input id="search-input" type="text"
       class="w-full bg-white border-2 border-ink shadow-neo px-4 sm:px-6 py-3 sm:py-4 text-center text-base sm:text-lg focus:outline-none focus:shadow-neo-lg focus:-translate-y-1 transition-all placeholder:text-muted/50 tracking-wide font-sans font-bold"
       placeholder="Search name, title, author, publisher">
@@ -292,10 +302,138 @@
       <button id="btn-grid" class="font-sans font-bold text-[10px] sm:text-xs tracking-widest uppercase border-2 border-ink bg-neo-yellow shadow-neo-sm px-5 py-2 hover:-translate-y-0.5 transition-all">■ GRID</button>
       <button id="btn-list" class="font-sans font-bold text-[10px] sm:text-xs tracking-widest uppercase border-2 border-ink bg-white hover:bg-neo-yellow shadow-neo-sm px-5 py-2 hover:-translate-y-0.5 transition-all">≡ LIST</button>
     </div>
-  </div>
+  </section>
 
-  <div id="grid-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-12"></div>
-  <div id="empty-state" class="hidden text-center py-20 text-ink font-sans font-bold tracking-widest">No results found.</div>
+  <section class="w-full">
+    <div id="grid-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-12"></div>
+    <div id="empty-state" class="hidden text-center py-20 text-ink font-sans font-bold tracking-widest">No results found.</div>
+    
+    <div id="load-more-wrap" class="hidden flex justify-center mt-12 w-full">
+      <button id="btn-load-more" class="font-sans font-bold text-sm tracking-widest border-2 border-ink bg-white hover:bg-neo-yellow shadow-neo px-8 py-3 hover:-translate-y-1 hover:shadow-neo-lg active:shadow-neo-sm transition-all">▼ 더보기</button>
+    </div>
+  </section>
+
+  <section id="seo-top-readers" class="border-t-4 border-ink pt-12 md:pt-16 w-full">
+    <h2 class="text-2xl md:text-3xl font-black mb-2 word-break-keep">내 최애가 읽은 책이 이렇게 많다니 😍</h2>
+    <p class="text-sm md:text-base font-bold text-muted mb-8 word-break-keep">가장 많은 책을 읽은 셀럽들을 소개해요 (모든 사람들이 책을 읽고 인증하진 않으니까 참고만 해주세요 😅)</p>
+    
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+      <div class="border-2 border-ink bg-white shadow-neo flex flex-col group overflow-hidden">
+        <div class="w-full aspect-square bg-paper-dark border-b-2 border-ink overflow-hidden">
+          <img src="https://i.namu.wiki/i/aYmZqfEqwSxKPmZ711jhB5hCq6iQ0cFUF0EzkBbrvI0RXrFdVWL1S2MkSB3w-bGvYMGiLcsjAtMaq86DZuj6Gg.webp" alt="진영(갓세븐)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'">
+        </div>
+        <div class="p-3 text-center flex-1 flex flex-col justify-center">
+          <p class="font-black text-sm mb-1 truncate">진영(갓세븐)</p>
+          <p class="font-sans font-bold text-[10px] bg-neo-yellow border border-ink px-1.5 py-0.5 inline-block mx-auto mb-2 shadow-neo-sm">19 records</p>
+          <p class="text-[10px] text-muted truncate">감정 교육 · 구해줘 외</p>
+        </div>
+      </div>
+
+      <div class="border-2 border-ink bg-white shadow-neo flex flex-col group overflow-hidden">
+        <div class="w-full aspect-square bg-paper-dark border-b-2 border-ink overflow-hidden">
+          <img src="https://i.namu.wiki/i/V_ylW8Wt_jjYVx55wMOKrUuoLqeBCOpX8wfn5Bm4x7TEZ0P7paXgr6R2aQoRjgLh12My7kFtsgPh-dH3nueFp5seopceh-wkRtQqVnQuHi7dpxx6CdSut57UzONbbkkMubV_HS5ojfEaKDDXD2kquw.webp" alt="윤덕원(브로콜리 너마저)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'">
+        </div>
+        <div class="p-3 text-center flex-1 flex flex-col justify-center">
+          <p class="font-black text-sm mb-1 truncate">윤덕원(브로콜리 너마저)</p>
+          <p class="font-sans font-bold text-[10px] bg-neo-yellow border border-ink px-1.5 py-0.5 inline-block mx-auto mb-2 shadow-neo-sm">18 records</p>
+          <p class="text-[10px] text-muted truncate">땡스 갓, 잇츠 프라이데이 외</p>
+        </div>
+      </div>
+
+      <div class="border-2 border-ink bg-white shadow-neo flex flex-col group overflow-hidden">
+        <div class="w-full aspect-square bg-paper-dark border-b-2 border-ink overflow-hidden">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Marie_Claire_Korea_%EA%B9%80%ED%9A%A8%EC%A7%84%EC%9D%98_Cozy_Scenes.png/330px-Marie_Claire_Korea_%EA%B9%80%ED%9A%A8%EC%A7%84%EC%9D%98_Cozy_Scenes.png" alt="김효진" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'">
+        </div>
+        <div class="p-3 text-center flex-1 flex flex-col justify-center">
+          <p class="font-black text-sm mb-1 truncate">김효진</p>
+          <p class="font-sans font-bold text-[10px] bg-neo-yellow border border-ink px-1.5 py-0.5 inline-block mx-auto mb-2 shadow-neo-sm">17 records</p>
+          <p class="text-[10px] text-muted truncate">나의 비거니즘 만화 외</p>
+        </div>
+      </div>
+
+      <div class="border-2 border-ink bg-white shadow-neo flex flex-col group overflow-hidden">
+        <div class="w-full aspect-square bg-paper-dark border-b-2 border-ink overflow-hidden">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Lee_Chung-ah_20260126.png/960px-Lee_Chung-ah_20260126.png" alt="이청아" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'">
+        </div>
+        <div class="p-3 text-center flex-1 flex flex-col justify-center">
+          <p class="font-black text-sm mb-1 truncate">이청아</p>
+          <p class="font-sans font-bold text-[10px] bg-neo-yellow border border-ink px-1.5 py-0.5 inline-block mx-auto mb-2 shadow-neo-sm">17 records</p>
+          <p class="text-[10px] text-muted truncate">검은색 · 나 혼자만 레벨업 외</p>
+        </div>
+      </div>
+
+      <div class="border-2 border-ink bg-white shadow-neo flex flex-col group overflow-hidden">
+        <div class="w-full aspect-square bg-paper-dark border-b-2 border-ink overflow-hidden">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Karina_at_Love_Your_W_event_2025.jpg" alt="카리나(에스파)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'">
+        </div>
+        <div class="p-3 text-center flex-1 flex flex-col justify-center">
+          <p class="font-black text-sm mb-1 truncate">카리나(에스파)</p>
+          <p class="font-sans font-bold text-[10px] bg-neo-yellow border border-ink px-1.5 py-0.5 inline-block mx-auto mb-2 shadow-neo-sm">14 records</p>
+          <p class="text-[10px] text-muted truncate">낯선 행성 · 내게 무해한 사람 외</p>
+        </div>
+      </div>
+
+      <div class="border-2 border-ink bg-white shadow-neo flex flex-col group overflow-hidden">
+        <div class="w-full aspect-square bg-paper-dark border-b-2 border-ink overflow-hidden">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Bong_Joon-ho_2017.jpg" alt="봉준호" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'">
+        </div>
+        <div class="p-3 text-center flex-1 flex flex-col justify-center">
+          <p class="font-black text-sm mb-1 truncate">봉준호</p>
+          <p class="font-sans font-bold text-[10px] bg-neo-yellow border border-ink px-1.5 py-0.5 inline-block mx-auto mb-2 shadow-neo-sm">13 records</p>
+          <p class="text-[10px] text-muted truncate">7인의 집행관 · 나쁜 친구 외</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="common-books" class="border-t-4 border-ink pt-12 md:pt-16 w-full">
+    <h2 class="text-2xl md:text-3xl font-black mb-2 word-break-keep">여러 명이 읽은 책</h2>
+    <p class="text-sm md:text-base font-bold text-muted mb-8 word-break-keep">두 명 이상의 인물이 언급한 도서 (클릭하면 해당 책을 읽은 셀럽이 검색됩니다!)</p>
+    
+    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 md:gap-5">
+      <script>
+        const commonBooks = [
+          '소년이 온다', '데미안', '창조적 행위', '어린왕자', '인간 실격', '달과 6펜스', '호밀밭의 파수꾼', '언어의 온도', 
+          '모순', '운다고 달라지는 일은 아무것도 없겠지만', '바깥은 여름', '비행운', '아몬드', '작별하지 않는다', 
+          '우리가 빛의 속도로 갈 수 없다면', '지금 알고 있는 걸 그때도 알았더라면', '왜 세계의 절반은 굶주리는가', 
+          '급류', '나의 라임오렌지나무', '참을 수 없는 존재의 가벼움'
+        ];
+        
+        const colors = ['bg-neo-yellow', 'bg-neo-mint', 'bg-neo-pink', 'bg-white'];
+        
+        commonBooks.forEach((book, i) => {
+          const color = colors[i % colors.length];
+          document.write(`
+            <div onclick="searchBook('${book}')" class="cursor-pointer group flex flex-col items-center bg-white border-2 border-ink shadow-neo hover:shadow-neo-lg hover:-translate-y-1 transition-all p-2.5 sm:p-3">
+              <div class="w-full aspect-[2/3] ${color} border-2 border-ink mb-2 sm:mb-3 flex items-center justify-center p-2 text-center group-hover:bg-opacity-80 transition-colors">
+                 <span class="font-black text-xs sm:text-sm text-ink leading-snug word-break-keep">${book}</span>
+              </div>
+              <p class="font-bold text-[10px] sm:text-xs text-center w-full truncate text-ink">${book}</p>
+            </div>
+          `);
+        });
+      </script>
+    </div>
+  </section>
+
+  <section id="all-celebs" class="border-t-4 border-ink pt-12 md:pt-16 pb-16 w-full">
+    <h2 class="text-2xl md:text-3xl font-black mb-2 word-break-keep">등록된 셀럽 · 아이돌 · 배우 전체 목록 198명</h2>
+    <p class="text-sm md:text-base font-bold text-muted mb-8 word-break-keep">링크를 누르면 해당 인물의 독서 기록이 바로 열립니다.</p>
+    
+    <div class="flex flex-wrap gap-2 md:gap-3">
+      <script>
+        const allCelebs = "RM(BTS),가원(미야오),가을(아이브),강혜정,고민시,고아성,고영배,구혜선,구혜썬,김규남,김대명,김동완,김동완(신화),김민하,김사월,김새벽,김서형,김선아,김세정,김시현,김유정,김윤아(자우림),김윤진,김지원,김채원(르세라핌),김태리,김한주(실리카겔),김혜수,김혜윤,김효진,나린(미야오),나윤선,남주혁,남지현,노제,닝닝(에스파),다현(트와이스),도겸(세븐틴),도훈(TWS),디노(세븐틴),로운,로제(블랙핑크),류수영,류현경,리아킴,문가영,문소리,문지애,문채원,미미(오마이걸),미연(아이들),민지(뉴진스),밍기뉴,박보검,박보영,박소담,박예은,박정민,박지훈,박찬욱,박하선,박해수,박훈,박희순,버논(세븐틴),변요한,봉준호,뷔(BTS),산들,서강준,서유리,서지혜(1996),서현진,설현,성찬(라이즈),성현(코르티스),세훈(엑소),소유진,소이,소지섭,손수현,손연재,손예진,손종원,송혜교,수영(소녀시대),스텔라장,시온(NCT 위시),신세경,신시아,아이린(레드벨벳),아이유,안예은,안유진(아이브),안형섭,엄태구,예리(레드벨벳),예지원,오연서,오지은,옥상달빛,옥자연,옹성우,요조,원우(세븐틴),원필(데이식스),웬디(레드벨벳),윈터(에스파),유겸(갓세븐),유라(1993),유재석,유타(NCT),윤덕원(브로콜리 너마저),윤덕원(브로콜리너마저),윤아(소녀시대),윤하,이동휘,이미연,이병헌,이보영,이브,이석훈,이설,이세영,이솜,이승열,이엘,이엘리야,이연희,이영애,이유비,이유영,이이경,이적,이정은,이제훈,이준혁,이청아,이혜성,이효리,임수정,임시완,장기하,장나라,장도연,장동윤,장원영,장재인,재민(NCT 드림),재현(NCT),재희(NCT 위시),적재,전미도,전석호,전소민,전여빈,전효성,정경호,정국(BTS),정세운,정승환,정우성,정은지,정은채,정인지,정해인,정혜선(제이래빗),조여정,존 박,종현(샤이니),주연(더보이즈),지젤(에스파),지훈(TWS),진영(갓세븐),찰스엔터,청하,최강창민,최정훈(잔나비),최희서,카리나(에스파),카이(엑소),테오(P1하모니),페이커,폴킴,하니(뉴진스),하정우,한로로,한소희,한승연,한예리,한지민,한효주,허윤진(르세라핌),혜림,홍경,황소윤(새소년),황정민,황제성".split(',');
+
+        allCelebs.forEach(name => {
+          document.write(`
+            <a href="?celeb=${encodeURIComponent(name)}" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">
+              ${name}
+            </a>
+          `);
+        });
+      </script>
+    </div>
+  </section>
 
 </main>
 
@@ -384,6 +522,8 @@
     search:     document.getElementById('search-input'),
     grid:       document.getElementById('grid-container'),
     empty:      document.getElementById('empty-state'),
+    loadWrap:   document.getElementById('load-more-wrap'),
+    loadBtn:    document.getElementById('btn-load-more'),
     overlay:    document.getElementById('modal-overlay'),
     mImg:       document.getElementById('modal-image'),
     mName:      document.getElementById('modal-name'),
@@ -401,6 +541,13 @@
     btnList:    document.getElementById('btn-list'),
   };
 
+  /* ── GLOBALS ────────────────────────────────────────────── */
+  window.searchBook = function(title) {
+    D.search.value = title;
+    D.search.dispatchEvent(new Event('input'));
+    D.search.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+
   /* ── UTILS ──────────────────────────────────────────────── */
   function updateSEO(name) {
     const defaultTitle = '최애의 독서 | 당신이 좋아하는, 그들이 읽은 책';
@@ -409,59 +556,34 @@
     const BASE = 'https://hwiruruk.github.io/favoread/';
 
     const title    = name ? `${name} 읽은 책 인생책 추천 | 최애의 독서` : defaultTitle;
-    
-    // 해당 인물이 읽은 책의 권수를 계산
     const bookCount = (name && celebMap[name]) ? celebMap[name].books.length : 0;
-    
-    // 이름과 권수를 반영한 인스타그램 감성의 메타 설명글 적용
     const desc = name ? `${name}의 읽은 책이 궁금하다면? ✨ 총 ${bookCount}권의 읽은 책과 추천하는 책, 인생책까지 확인해 보세요. #${name} #책추천 #읽은책 #독서 #도서 📕` : defaultDesc;
-    
     const canonical = name ? `${BASE}?celeb=${encodeURIComponent(name)}` : BASE;
 
-    // 인물 사진이 있으면 해당 사진으로, 없으면 기본 파비콘으로 설정 (인물 페이지 검색 결과 사진 노출용)
     let imageUrl = defaultImage;
     if (name && celebMap[name] && celebMap[name].imageUrl) {
       imageUrl = celebMap[name].imageUrl;
     }
 
-    // title
     document.title = title;
-
-    // description
     document.querySelector('meta[name="description"]')?.setAttribute('content', desc);
-
-    // og tags
     document.querySelector('meta[property="og:title"]')?.setAttribute('content', title);
     document.querySelector('meta[property="og:description"]')?.setAttribute('content', desc);
     document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical);
-    
-    // 동적으로 og:image 업데이트 (검색 결과에 인물 사진 노출되도록 반영)
     document.querySelector('meta[property="og:image"]')?.setAttribute('content', imageUrl);
-
-    // twitter tags
     document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', title);
     document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', desc);
-    
-    // 동적으로 twitter:image 업데이트
     document.querySelector('meta[name="twitter:image"]')?.setAttribute('content', imageUrl);
 
-    // 동적으로 썸네일(thumbnail) 메타 태그 업데이트
     let thumbTag = document.querySelector('meta[name="thumbnail"]');
-    if (thumbTag) {
-      thumbTag.setAttribute('content', imageUrl);
-    }
-
-    // canonical ← 셀럽 페이지가 독립적으로 색인되는 핵심
+    if (thumbTag) thumbTag.setAttribute('content', imageUrl);
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical);
     
-    /* ── 동적 스키마(구조화 데이터) 생성 ── */
     const existingScript = document.getElementById('dynamic-schema');
     if (existingScript) existingScript.remove();
 
     if (name && celebMap[name]) {
-      // 해당 연예인의 책 제목들을 배열로 추출 후 콤마로 연결
       const books = celebMap[name].books.map(b => b.title).join(', ');
-
       const schema = {
         "@context": "https://schema.org",
         "@type": "ProfilePage",
@@ -579,13 +701,6 @@
     });
   }, { rootMargin: '100px' }); 
 
-  const scrollObserver = new IntersectionObserver((entries, obs) => {
-    if (entries[0].isIntersecting) {
-      obs.unobserve(entries[0].target);
-      renderNextChunk();
-    }
-  }, { rootMargin: '300px' });
-
   async function loadWikiImage(name, card) {
     try {
       const url = await wikiImg(name);
@@ -603,14 +718,12 @@
   function filterEntries(kw = '') {
     const q = kw.toLowerCase();
     
-    // 뷰 모드에 따라 정렬(리스트 뷰는 가나다순, 그리드는 섞인 상태 유지)
     let currentEntries = viewMode === 'list'
       ? [...entries].sort((a, b) => a[0].localeCompare(b[0], 'ko'))
       : entries;
 
     filteredEntries = currentEntries.filter(([name, data]) => {
       if (!q) return true;
-      // 검색 범위: 인물 이름, 도서명, 작가, 출판사 통합
       const str = `${name} ${data.books.map(b => `${b.title} ${b.author} ${b.publisher}`).join(' ')}`.toLowerCase();
       return str.includes(q);
     });
@@ -645,7 +758,6 @@
           
         if (!data.imageUrl) imgObserver.observe(card);
       } else {
-        // 리스트 뷰(사진 없음, 텍스트만)
         card.className = 'group cursor-pointer flex justify-between items-center bg-white border-2 border-ink shadow-neo-sm hover:shadow-neo hover:bg-neo-mint hover:-translate-y-0.5 transition-all duration-200 opacity-0 animate-fade-in-fast block px-4 py-3 sm:px-6 sm:py-4';
         card.innerHTML = `
           <h3 class="text-base sm:text-lg font-bold tracking-tight text-ink group-hover:underline decoration-2 underline-offset-4">${name}</h3>
@@ -664,8 +776,12 @@
     });
 
     renderIndex += CHUNK_SIZE;
+    
+    // 6줄(CHUNK_SIZE) 제한: 남은 항목이 있으면 더보기 버튼 활성화
     if (renderIndex < filteredEntries.length) {
-      scrollObserver.observe(D.grid.lastElementChild);
+      D.loadWrap.classList.remove('hidden');
+    } else {
+      D.loadWrap.classList.add('hidden');
     }
   }
 
@@ -788,6 +904,8 @@
     D.btnGrid.addEventListener('click', () => setViewMode('grid'));
     D.btnList.addEventListener('click', () => setViewMode('list'));
     
+    D.loadBtn.addEventListener('click', () => renderNextChunk());
+    
     D.shareBtn.addEventListener('click', () => {
       const shareUrl = `${window.location.origin}${BASE_PATH}?celeb=${encodeURIComponent(modal.name)}`;
       try {
@@ -838,186 +956,5 @@
   document.addEventListener('DOMContentLoaded', init);
 })();
 </script>
-
-<!-- SEO 정적 콘텐츠 섹션 -->
-<section id="seo-content" style="padding:64px 24px 48px;max-width:860px;margin:0 auto;border-top:2px solid #000;">
-
-  <h2 style="font-size:1.25rem;font-weight:800;margin:0 0 10px;">최애의 독서란?</h2>
-  <p style="font-size:0.93rem;color:#444;line-height:1.9;margin:0 0 48px;">
-    아이돌, 배우, 뮤지션 등 셀럽이 직접 언급하거나 손에 들고 있던 책들을 모은 아카이브입니다.
-    인터뷰, SNS, 유튜브에서 확인된 출처 기반으로 기록하며, 현재 <strong>198명의 셀럽</strong>과
-    <strong>533권의 도서</strong>가 등록되어 있습니다.
-  </p>
-
-  <h2 style="font-size:1.25rem;font-weight:800;margin:0 0 8px;">여러 셀럽이 함께 읽은 책</h2>
-  <p style="font-size:0.83rem;color:#666;margin:0 0 14px;">두 명 이상의 셀럽이 언급한 도서 — 인생책, 책 추천, 공통 독서 취향</p>
-  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:48px;">
-    <span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">소년이 온다</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">데미안</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">창조적 행위</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">어린왕자</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">인간 실격</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">달과 6펜스</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">호밀밭의 파수꾼</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">언어의 온도</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">모순</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">운다고 달라지는 일은 아무것도 없겠지만</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">바깥은 여름</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">비행운</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">아몬드</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">작별하지 않는다</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">우리가 빛의 속도로 갈 수 없다면</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">지금 알고 있는 걸 그때도 알았더라면</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">왜 세계의 절반은 굶주리는가</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">급류</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">나의 라임오렌지나무</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">참을 수 없는 존재의 가벼움</span>
-  </div>
-
-  <h2 style="font-size:1.25rem;font-weight:800;margin:0 0 8px;">등록된 셀럽 · 아이돌 · 배우 전체 목록</h2>
-  <p style="font-size:0.83rem;color:#666;margin:0 0 14px;">독서 기록이 확인된 아이돌, 연예인, 배우, 뮤지션 198명</p>
-  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:0;">
-    <span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">RM(BTS)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">가원(미야오)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">가을(아이브)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">강혜정</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">고민시</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">고아성</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">고영배</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">구혜선</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">구혜썬</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김규남</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김대명</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김동완</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김동완(신화)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김민하</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김사월</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김새벽</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김서형</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김선아</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김세정</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김시현</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김유정</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김윤아(자우림)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김윤진</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김지원</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김채원(르세라핌)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김태리</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김한주(실리카겔)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김혜수</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김혜윤</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">김효진</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">나린(미야오)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">나윤선</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">남주혁</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">남지현</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">노제</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">닝닝(에스파)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">다현(트와이스)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">도겸(세븐틴)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">도훈(TWS)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">디노(세븐틴)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">로운</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">로제(블랙핑크)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">류수영</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">류현경</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">리아킴</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">문가영</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">문소리</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">문지애</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">문채원</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">미미(오마이걸)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">미연(아이들)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">민지(뉴진스)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">밍기뉴</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">박보검</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">박보영</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">박소담</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">박예은</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">박정민</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">박지훈</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">박찬욱</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">박하선</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">박해수</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">박훈</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">박희순</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">버논(세븐틴)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">변요한</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">봉준호</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">뷔(BTS)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">산들</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">서강준</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">서유리</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">서지혜(1996)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">서현진</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">설현</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">성찬(라이즈)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">성현(코르티스)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">세훈(엑소)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">소유진</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">소이</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">소지섭</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">손수현</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">손연재</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">손예진</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">손종원</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">송혜교</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">수영(소녀시대)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">스텔라장</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">시온(NCT 위시)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">신세경</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">신시아</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">아이린(레드벨벳)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">아이유</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">안예은</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">안유진(아이브)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">안형섭</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">엄태구</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">예리(레드벨벳)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">예지원</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">오연서</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">오지은</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">옥상달빛</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">옥자연</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">옹성우</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">요조</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">원우(세븐틴)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">원필(데이식스)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">웬디(레드벨벳)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">윈터(에스파)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">유겸(갓세븐)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">유라(1993)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">유재석</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">유타(NCT)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">윤덕원(브로콜리 너마저)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">윤덕원(브로콜리너마저)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">윤아(소녀시대)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">윤하</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이동휘</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이미연</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이병헌</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이보영</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이브</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이석훈</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이설</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이세영</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이솜</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이승열</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이엘</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이엘리야</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이연희</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이영애</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이유비</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이유영</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이이경</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이적</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이정은</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이제훈</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이준혁</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이청아</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이혜성</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">이효리</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">임수정</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">임시완</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">장기하</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">장나라</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">장도연</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">장동윤</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">장원영</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">장재인</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">재민(NCT 드림)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">재현(NCT)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">재희(NCT 위시)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">적재</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">전미도</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">전석호</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">전소민</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">전여빈</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">전효성</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">정경호</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">정국(BTS)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">정세운</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">정승환</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">정우성</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">정은지</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">정은채</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">정인지</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">정해인</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">정혜선(제이래빗)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">조여정</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">존 박</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">종현(샤이니)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">주연(더보이즈)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">지젤(에스파)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">지훈(TWS)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">진영(갓세븐)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">찰스엔터</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">청하</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">최강창민</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">최정훈(잔나비)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">최희서</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">카리나(에스파)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">카이(엑소)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">테오(P1하모니)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">페이커</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">폴킴</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">하니(뉴진스)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">하정우</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">한로로</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">한소희</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">한승연</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">한예리</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">한지민</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">한효주</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">허윤진(르세라핌)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">혜림</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">홍경</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">황소윤(새소년)</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">황정민</span><span style="display:inline-block;padding:4px 10px;border:1px solid #ccc;border-radius:4px;font-size:0.82rem;color:#333;">황제성</span>
-  </div>
-
-</section>
-<!-- /SEO 정적 콘텐츠 섹션 -->
-
-<!-- SEO: 다독 셀럽 카드 섹션 -->
-<section id="seo-top-readers" style="padding:64px 24px 80px;max-width:960px;margin:0 auto;border-top:2px solid #000;">
-  <h2 style="font-size:1.4rem;font-weight:900;margin:0 0 6px;">내 최애가 읽은 책이 이렇게 많다니 😍</h2>
-  <p style="font-size:0.88rem;color:#666;margin:0 0 32px;">가장 많은 책을 읽은 셀럽들을 소개해요 (모든 사람들이 책을 읽고 인증하진 않으니 참고만 해주세요 😅)</p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:20px;">
-    
-    <div style="border:2px solid #000;border-radius:12px;overflow:hidden;background:#fff;box-shadow:4px 4px 0 #000;">
-      <div style="aspect-ratio:1/1;overflow:hidden;background:#f0f0f0;">
-        <img src="https://i.namu.wiki/i/aYmZqfEqwSxKPmZ711jhB5hCq6iQ0cFUF0EzkBbrvI0RXrFdVWL1S2MkSB3w-bGvYMGiLcsjAtMaq86DZuj6Gg.webp" alt="진영(갓세븐) 프로필" loading="lazy"
-          style="width:100%;height:100%;object-fit:cover;object-position:top;"
-          onerror="this.style.display='none';this.parentElement.style.background='#e8e8e8';">
-      </div>
-      <div style="padding:14px;">
-        <p style="font-weight:800;font-size:0.95rem;margin:0 0 4px;">진영(갓세븐)</p>
-        <p style="font-size:0.78rem;color:#666;margin:0 0 8px;">📕 19권 읽음</p>
-        <p style="font-size:0.76rem;color:#444;line-height:1.6;margin:0;">감정 교육 · 구해줘 · 그 남자의 피아노 그 여자의 소나타 외 16권</p>
-      </div>
-    </div>
-    <div style="border:2px solid #000;border-radius:12px;overflow:hidden;background:#fff;box-shadow:4px 4px 0 #000;">
-      <div style="aspect-ratio:1/1;overflow:hidden;background:#f0f0f0;">
-        <img src="https://i.namu.wiki/i/V_ylW8Wt_jjYVx55wMOKrUuoLqeBCOpX8wfn5Bm4x7TEZ0P7paXgr6R2aQoRjgLh12My7kFtsgPh-dH3nueFp5seopceh-wkRtQqVnQuHi7dpxx6CdSut57UzONbbkkMubV_HS5ojfEaKDDXD2kquw.webp" alt="윤덕원(브로콜리 너마저) 프로필" loading="lazy"
-          style="width:100%;height:100%;object-fit:cover;object-position:top;"
-          onerror="this.style.display='none';this.parentElement.style.background='#e8e8e8';">
-      </div>
-      <div style="padding:14px;">
-        <p style="font-weight:800;font-size:0.95rem;margin:0 0 4px;">윤덕원(브로콜리 너마저)</p>
-        <p style="font-size:0.78rem;color:#666;margin:0 0 8px;">📕 18권 읽음</p>
-        <p style="font-size:0.76rem;color:#444;line-height:1.6;margin:0;">땡스 갓, 잇츠 프라이데이 · 목성에게 고리는 · 미생물 전쟁 외 15권</p>
-      </div>
-    </div>
-    <div style="border:2px solid #000;border-radius:12px;overflow:hidden;background:#fff;box-shadow:4px 4px 0 #000;">
-      <div style="aspect-ratio:1/1;overflow:hidden;background:#f0f0f0;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Marie_Claire_Korea_%EA%B9%80%ED%9A%A8%EC%A7%84%EC%9D%98_Cozy_Scenes.png/330px-Marie_Claire_Korea_%EA%B9%80%ED%9A%A8%EC%A7%84%EC%9D%98_Cozy_Scenes.png" alt="김효진 프로필" loading="lazy"
-          style="width:100%;height:100%;object-fit:cover;object-position:top;"
-          onerror="this.style.display='none';this.parentElement.style.background='#e8e8e8';">
-      </div>
-      <div style="padding:14px;">
-        <p style="font-weight:800;font-size:0.95rem;margin:0 0 4px;">김효진</p>
-        <p style="font-size:0.78rem;color:#666;margin:0 0 8px;">📕 17권 읽음</p>
-        <p style="font-size:0.76rem;color:#444;line-height:1.6;margin:0;">꽃으로 때리지 말라 · 나의 비거니즘 만화 · 달의 궁전 외 14권</p>
-      </div>
-    </div>
-    <div style="border:2px solid #000;border-radius:12px;overflow:hidden;background:#fff;box-shadow:4px 4px 0 #000;">
-      <div style="aspect-ratio:1/1;overflow:hidden;background:#f0f0f0;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Lee_Chung-ah_20260126.png/960px-Lee_Chung-ah_20260126.png" alt="이청아 프로필" loading="lazy"
-          style="width:100%;height:100%;object-fit:cover;object-position:top;"
-          onerror="this.style.display='none';this.parentElement.style.background='#e8e8e8';">
-      </div>
-      <div style="padding:14px;">
-        <p style="font-weight:800;font-size:0.95rem;margin:0 0 4px;">이청아</p>
-        <p style="font-size:0.78rem;color:#666;margin:0 0 8px;">📕 17권 읽음</p>
-        <p style="font-size:0.76rem;color:#444;line-height:1.6;margin:0;">검은색 · 꾸준히, 오래 지치지 않고 · 나 혼자만 레벨업 외 14권</p>
-      </div>
-    </div>
-    <div style="border:2px solid #000;border-radius:12px;overflow:hidden;background:#fff;box-shadow:4px 4px 0 #000;">
-      <div style="aspect-ratio:1/1;overflow:hidden;background:#f0f0f0;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Karina_at_Love_Your_W_event_2025.jpg" alt="카리나(에스파) 프로필" loading="lazy"
-          style="width:100%;height:100%;object-fit:cover;object-position:top;"
-          onerror="this.style.display='none';this.parentElement.style.background='#e8e8e8';">
-      </div>
-      <div style="padding:14px;">
-        <p style="font-weight:800;font-size:0.95rem;margin:0 0 4px;">카리나(에스파)</p>
-        <p style="font-size:0.78rem;color:#666;margin:0 0 8px;">📕 14권 읽음</p>
-        <p style="font-size:0.76rem;color:#444;line-height:1.6;margin:0;">낯선 행성 · 내게 무해한 사람 · 달과 6펜스 외 11권</p>
-      </div>
-    </div>
-    <div style="border:2px solid #000;border-radius:12px;overflow:hidden;background:#fff;box-shadow:4px 4px 0 #000;">
-      <div style="aspect-ratio:1/1;overflow:hidden;background:#f0f0f0;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Bong_Joon-ho_2017.jpg" alt="봉준호 프로필" loading="lazy"
-          style="width:100%;height:100%;object-fit:cover;object-position:top;"
-          onerror="this.style.display='none';this.parentElement.style.background='#e8e8e8';">
-      </div>
-      <div style="padding:14px;">
-        <p style="font-weight:800;font-size:0.95rem;margin:0 0 4px;">봉준호</p>
-        <p style="font-size:0.78rem;color:#666;margin:0 0 8px;">📕 13권 읽음</p>
-        <p style="font-size:0.76rem;color:#444;line-height:1.6;margin:0;">7인의 집행관 · 극장에는 항상 상훈이 형이 있다 · 나쁜 친구 외 10권</p>
-      </div>
-    </div>
-    <div style="border:2px solid #000;border-radius:12px;overflow:hidden;background:#fff;box-shadow:4px 4px 0 #000;">
-      <div style="aspect-ratio:1/1;overflow:hidden;background:#f0f0f0;">
-        <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/hgihMhudc2HURhtLbTXBXIlBLoe.jpg" alt="손수현 프로필" loading="lazy"
-          style="width:100%;height:100%;object-fit:cover;object-position:top;"
-          onerror="this.style.display='none';this.parentElement.style.background='#e8e8e8';">
-      </div>
-      <div style="padding:14px;">
-        <p style="font-weight:800;font-size:0.95rem;margin:0 0 4px;">손수현</p>
-        <p style="font-size:0.78rem;color:#666;margin:0 0 8px;">📕 13권 읽음</p>
-        <p style="font-size:0.76rem;color:#444;line-height:1.6;margin:0;">82년생 김지영 · 나의 미친 페미니스트 여자친구 · 나의 비거니즘 만화 외 10권</p>
-      </div>
-    </div>
-    <div style="border:2px solid #000;border-radius:12px;overflow:hidden;background:#fff;box-shadow:4px 4px 0 #000;">
-      <div style="aspect-ratio:1/1;overflow:hidden;background:#f0f0f0;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Ive_Gaeul_at_Seoul_Fashion_Week%2C_1_September_2025_03_%28cropped%29.png" alt="가을(아이브) 프로필" loading="lazy"
-          style="width:100%;height:100%;object-fit:cover;object-position:top;"
-          onerror="this.style.display='none';this.parentElement.style.background='#e8e8e8';">
-      </div>
-      <div style="padding:14px;">
-        <p style="font-weight:800;font-size:0.95rem;margin:0 0 4px;">가을(아이브)</p>
-        <p style="font-size:0.78rem;color:#666;margin:0 0 8px;">📕 12권 읽음</p>
-        <p style="font-size:0.76rem;color:#444;line-height:1.6;margin:0;">군주론 · 그리고 아무도 없었다 · 살인자의 기억법 외 9권</p>
-      </div>
-    </div>
-    <div style="border:2px solid #000;border-radius:12px;overflow:hidden;background:#fff;box-shadow:4px 4px 0 #000;">
-      <div style="aspect-ratio:1/1;overflow:hidden;background:#f0f0f0;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/%EB%AC%B8%EA%B0%80%EC%98%81%28MOON_GAYOUNG%29_-_INCHEON_AIRPORT_-_2023.06.09_P2.jpg/250px-%EB%AC%B8%EA%B0%80%EC%98%81%28MOON_GAYOUNG%29_-_INCHEON_AIRPORT_-_2023.06.09_P2.jpg" alt="문가영 프로필" loading="lazy"
-          style="width:100%;height:100%;object-fit:cover;object-position:top;"
-          onerror="this.style.display='none';this.parentElement.style.background='#e8e8e8';">
-      </div>
-      <div style="padding:14px;">
-        <p style="font-weight:800;font-size:0.95rem;margin:0 0 4px;">문가영</p>
-        <p style="font-size:0.78rem;color:#666;margin:0 0 8px;">📕 12권 읽음</p>
-        <p style="font-size:0.76rem;color:#444;line-height:1.6;margin:0;">군주론 · 남자들은 자꾸 나를 가르치려 든다 · 논어 외 9권</p>
-      </div>
-    </div>
-    <div style="border:2px solid #000;border-radius:12px;overflow:hidden;background:#fff;box-shadow:4px 4px 0 #000;">
-      <div style="aspect-ratio:1/1;overflow:hidden;background:#f0f0f0;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/230315_Go_Min-si_%28%EA%B3%A0%EB%AF%BC%EC%8B%9C%29.jpg" alt="고민시 프로필" loading="lazy"
-          style="width:100%;height:100%;object-fit:cover;object-position:top;"
-          onerror="this.style.display='none';this.parentElement.style.background='#e8e8e8';">
-      </div>
-      <div style="padding:14px;">
-        <p style="font-weight:800;font-size:0.95rem;margin:0 0 4px;">고민시</p>
-        <p style="font-size:0.78rem;color:#666;margin:0 0 8px;">📕 11권 읽음</p>
-        <p style="font-size:0.76rem;color:#444;line-height:1.6;margin:0;">노르웨이의 숲 · 문장 수집가 : No.1 Love Myself · 바깥은 여름 외 8권</p>
-      </div>
-    </div>
-    <div style="border:2px solid #000;border-radius:12px;overflow:hidden;background:#fff;box-shadow:4px 4px 0 #000;">
-      <div style="aspect-ratio:1/1;overflow:hidden;background:#f0f0f0;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/250313_Kim_Hye_Soo_%28%EA%B9%80%ED%98%9C%EC%88%98%29.png" alt="김혜수 프로필" loading="lazy"
-          style="width:100%;height:100%;object-fit:cover;object-position:top;"
-          onerror="this.style.display='none';this.parentElement.style.background='#e8e8e8';">
-      </div>
-      <div style="padding:14px;">
-        <p style="font-weight:800;font-size:0.95rem;margin:0 0 4px;">김혜수</p>
-        <p style="font-size:0.78rem;color:#666;margin:0 0 8px;">📕 10권 읽음</p>
-        <p style="font-size:0.76rem;color:#444;line-height:1.6;margin:0;">꽃을 보듯 너를 본다 · 나의 아름다운 이웃 · 눈의 황홀 외 7권</p>
-      </div>
-    </div>
-    <div style="border:2px solid #000;border-radius:12px;overflow:hidden;background:#fff;box-shadow:4px 4px 0 #000;">
-      <div style="aspect-ratio:1/1;overflow:hidden;background:#f0f0f0;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/201106_sf9_%EB%A1%9C%EC%9A%B4.jpg" alt="로운 프로필" loading="lazy"
-          style="width:100%;height:100%;object-fit:cover;object-position:top;"
-          onerror="this.style.display='none';this.parentElement.style.background='#e8e8e8';">
-      </div>
-      <div style="padding:14px;">
-        <p style="font-weight:800;font-size:0.95rem;margin:0 0 4px;">로운</p>
-        <p style="font-size:0.78rem;color:#666;margin:0 0 8px;">📕 10권 읽음</p>
-        <p style="font-size:0.76rem;color:#444;line-height:1.6;margin:0;">나는 나로 살기로 했다 · 논어 · 니체와 고흐 외 7권</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /SEO: 다독 셀럽 카드 섹션 -->
-
-
 </body>
 </html>
