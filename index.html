@@ -908,7 +908,7 @@
     D.loadBtn.addEventListener('click', () => renderNextChunk());
     
     D.shareBtn.addEventListener('click', () => {
-      const shareUrl = `${window.location.origin}${BASE_PATH}?celeb=${encodeURIComponent(modal.name)}`;
+      const shareUrl = `${window.location.origin}${BASE_PATH}share/${modal.name}.html`;
       try {
         const ta = document.createElement('textarea');
         ta.value = shareUrl;
