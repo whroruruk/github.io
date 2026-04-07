@@ -18,1212 +18,300 @@
   <meta property="og:site_name" content="최애의 독서">
   <meta property="og:title" content="최애의 독서 | 당신이 좋아하는, 그들이 읽은 책">
   <meta property="og:description" content="아이돌, 셀럽, 연예인 나의 최애가 읽은 책, 추천 책, 인생책을 한곳에 모았어요✨">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://hwiruruk.github.io/favoread/">
   <meta property="og:image" content="https://hwiruruk.github.io/favoread/favicon.png">
-  <meta property="og:image:alt" content="최애의 독서 로고">
-  <meta property="og:locale" content="ko_KR">
+  <meta property="og:url" content="https://hwiruruk.github.io/favoread/">
+  <meta property="og:type" content="website">
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="최애의 독서 | 당신이 좋아하는, 그들이 읽은 책">
-  <meta name="twitter:description" content="아이돌, 셀럽, 연예인 나의 최애가 읽은 책, 추천 책, 인생책을 한곳에 모았어요✨">
-  <meta name="twitter:image" content="https://hwiruruk.github.io/favoread/favicon.png">
-
-  <link rel="canonical" href="https://hwiruruk.github.io/favoread/">
-
-  <meta name="robots" content="index, follow">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "최애의 독서",
-    "url": "https://hwiruruk.github.io/favoread/",
-    "description": "아이돌, 셀럽, 연예인 나의 최애가 읽은 책, 추천 책, 인생책을 한곳에 모았어요✨",
-    "image": "https://hwiruruk.github.io/favoread/favicon.png",
-    "inLanguage": "ko-KR",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://hwiruruk.github.io/favoread/?celeb={celeb_name}"
-      },
-      "query-input": "required name=celeb_name"
-    }
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "최애의 독서 | 당신이 좋아하는, 그들이 읽은 책",
-    "url": "https://hwiruruk.github.io/favoread/",
-    "description": "아이돌, 셀럽, 연예인 나의 최애가 읽은 책, 추천 책, 인생책을 한곳에 모았어요✨",
-    "image": "https://hwiruruk.github.io/favoread/favicon.png",
-    "inLanguage": "ko-KR",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "Reading Lab",
-      "url": "https://hwiruruk.github.io/readinglab/"
-    }
-  }
-  </script>
-  
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;400;600;900&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            serif: ['"Noto Serif KR"', 'serif'],
-            sans:  ['"Space Grotesk"', 'sans-serif'],
-          },
-          colors: {
-            ink:        '#000000',
-            paper:      '#ffffff',
-            'paper-dark': '#f4f4f0',
-            muted:      '#666666',
-            'neo-mint':   '#a7f3d0',
-            'neo-pink':   '#fbcfe8',
-            'neo-yellow': '#fde047',
-          },
-          boxShadow: {
-            neo:    '4px 4px 0px 0px rgba(0,0,0,1)',
-            'neo-lg': '8px 8px 0px 0px rgba(0,0,0,1)',
-            'neo-sm': '2px 2px 0px 0px rgba(0,0,0,1)',
-          },
-          keyframes: {
-            fadeIn: {
-              '0%':   { opacity: '0', transform: 'translateY(15px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' },
-            }
-          },
-          animation: {
-            'fade-in':         'fadeIn 0.8s ease-out forwards',
-            'fade-in-delayed': 'fadeIn 1s ease-out 0.2s forwards',
-            'fade-in-fast':    'fadeIn 0.5s ease-out forwards',
-          }
-        }
-      }
-    }
-  </script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    html, body { min-height: 100%; }
-    body {
-      background-color: #fcfaf5;
-      color: #000;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-    ::selection        { background: #fde047; color: #000; }
-    ::-webkit-scrollbar { width: 0; background: transparent; }
-
-    .celeb-portrait { transition: transform .4s ease, filter .4s ease; }
-    .group:hover .celeb-portrait { transform: scale(1.05); filter: brightness(1.05); }
-
-    .modal-overlay {
-      opacity: 0; visibility: hidden;
-      transition: opacity .3s ease, visibility .3s ease;
-    }
-    .modal-overlay.active { opacity: 1; visibility: visible; }
-
-    .swiper-track {
-      transition: transform .45s cubic-bezier(.25,.46,.45,.94);
-    }
-
-    @media (max-width: 767px) {
-      #modal-inner {
-        position: fixed !important;
-        bottom: 0; left: 0; right: 0;
-        top: auto !important;
-        transform: none !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        max-height: 90svh;
-        height: auto;
-        border-radius: 16px 16px 0 0;
-        border: 2px solid #000;
-        border-bottom: none;
-        flex-direction: column !important;
-        overflow: hidden;
-        box-shadow: 0 -8px 40px rgba(0,0,0,.18);
-      }
-
-      #modal-left {
-        width: 100% !important;
-        flex-direction: row !important;
-        align-items: flex-start !important;
-        justify-content: flex-start !important;
-        border-bottom: 2px solid #000 !important;
-        border-right: none !important;
-        padding: 16px !important;
-        gap: 14px !important;
-      }
-      #modal-photo-wrap {
-        width: 56px !important;
-        height: 76px !important;
-        flex-shrink: 0;
-        border: 1.5px solid #000;
-        margin-bottom: 0 !important;
-      }
-      #modal-meta {
-        flex: 1;
-        min-width: 0;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        text-align: left !important;
-        gap: 6px !important;
-        margin-bottom: 0 !important;
-      }
-      #modal-name  { font-size: 18px !important; line-height: 1.3 !important; }
-      #modal-count { font-size: 9px !important; padding: 2px 6px !important; }
-      #share-btn   { font-size: 9px !important; padding: 2px 8px !important; }
-
-      #modal-right {
-        width: 100% !important;
-        padding: 0 !important;
-      }
-      #modal-archive-label { padding: 8px 14px 6px !important; font-size: 9px !important; }
-      #swiper-viewport { height: 280px !important; margin: 0 !important; }
-      #modal-nav-bar { padding: 8px 14px !important; }
-    }
-
-    #modal-inner {
-      overflow: hidden;
-      max-height: 88svh;
-      height: auto;
-    }
-    #swiper-viewport {
-      height: 380px;
-      overflow: hidden;
-      flex-shrink: 0;
-    }
-
-    .slide-area {
-      height: 100%;
-      overflow-y: auto; overflow-x: hidden;
-      -webkit-overflow-scrolling: touch;
-      overscroll-behavior: contain;
-    }
-
-    .book-link {
-      display: inline-flex; align-items: center; gap: 3px;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 10px; font-weight: 700; letter-spacing: .08em;
-      color: #000; border-bottom: 1.5px solid #000;
-      padding-bottom: 1px; text-decoration: none;
-      transition: opacity .15s;
-    }
-    .book-link:hover { opacity: .45; }
-    
-    .word-break-keep { word-break: keep-all; }
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+    body { font-family: 'Noto-Sans-KR', sans-serif; background-color: #f8fafc; }
+    .book-card { transition: all 0.3s ease; }
+    .book-card:hover { transform: translateY(-5px); }
+    .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+    .hide-scroll::-webkit-scrollbar { display: none; }
+    .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    .celeb-img-container { position: relative; overflow: hidden; border-radius: 50%; width: 100px; height: 100px; margin: 0 auto; border: 3px solid #fff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+    .celeb-img { width: 100%; height: 100%; object-fit: cover; }
+    #modal-viewport { scroll-snap-type: x mandatory; display: flex; overflow-x: auto; overflow-y: hidden; }
+    .modal-slide { scroll-snap-align: start; flex: 0 0 100%; width: 100%; height: 100%; display: flex; flex-direction: column; }
   </style>
 </head>
+<body class="text-slate-800">
 
-<body class="font-serif relative selection:bg-neo-yellow selection:text-ink">
-
-<div id="floating-menus" class="absolute top-4 right-4 md:top-8 md:right-8 z-[40] flex flex-col items-end gap-4 transition-opacity duration-300">
-  
-  <a href="https://hwiruruk.github.io/readinglab/" 
-     title="Reading Lab 메인으로 돌아가기"
-     class="block w-[50px] h-[50px] md:w-[60px] md:h-[60px] transition-transform hover:-translate-y-0.5 hover:-translate-x-0.5 hover:scale-105 active:scale-95">
-      <svg viewBox="0 0 100 100" style="width: 100%; height: 100%; filter: drop-shadow(4px 4px 0px rgba(0,0,0,1));">
-          <rect x="10" y="60" width="70" height="25" fill="#FFFFFF" stroke="black" stroke-width="4" />
-          <rect x="15" y="38" width="75" height="22" fill="#93B6CC" stroke="black" stroke-width="4" />
-          <rect x="25" y="15" width="60" height="23" fill="#903B31" stroke="black" stroke-width="4" />
-          <line x1="10" y1="72" x2="80" y2="72" stroke="black" stroke-width="3" />
-          <line x1="15" y1="49" x2="90" y2="49" stroke="black" stroke-width="3" />
-      </svg>
-  </a>
-
-  <div class="relative flex flex-col items-end">
-    <div id="faq-window" class="hidden bg-paper border-4 border-ink shadow-neo-lg w-80 mb-4 flex-col transition-all absolute top-[60px] right-0 md:top-[70px]">
-      <div class="flex justify-between items-center border-b-4 border-ink p-3 bg-neo-mint">
-        <h3 class="font-sans font-black text-lg tracking-widest text-ink">FAQ</h3>
-        <button onclick="document.getElementById('faq-window').classList.toggle('hidden')" class="text-ink font-black text-xl hover:text-white transition-colors">✕</button>
+  <nav class="sticky top-0 z-40 glass border-b border-white">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <h1 class="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent cursor-pointer" onclick="location.href='https://hwiruruk.github.io/favoread/'">
+        최애의 독서 <span class="text-sm font-normal text-slate-400 ml-1">Archive</span>
+      </h1>
+      <div class="relative w-48 md:w-64">
+        <input type="text" id="searchInput" placeholder="연예인 또는 도서 검색..." 
+          class="w-full pl-9 pr-4 py-2 bg-white/50 border border-slate-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+        <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400"></i>
       </div>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    <div id="loading" class="flex flex-col items-center justify-center py-20">
+      <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mb-4"></div>
+      <p class="text-slate-500 animate-pulse">아카이브를 불러오고 있습니다...</p>
+    </div>
+
+    <div id="celebGrid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 opacity-0 transition-opacity duration-500">
+      </div>
+  </main>
+
+  <div id="modalOverlay" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+    <div class="bg-white rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl flex flex-col relative h-[85vh] md:h-auto md:max-h-[90vh]">
       
-      <div class="p-5 font-serif text-sm text-ink space-y-6 max-h-[60vh] overflow-y-auto">
-        <div>
-          <h4 class="font-bold bg-neo-yellow inline-block px-2 py-1 mb-2 shadow-neo-sm border-2 border-ink">Q. 최애의 책, 어떤 기준으로 올라오나요?</h4>
-          <p class="leading-relaxed text-muted mt-1 font-sans font-bold text-sm">A. 미디어나 SNS 등에서 언급했던 책, 추천 책, 인생책, 심지어 갖고 있던 책 등등 기준은 없습니다!</p>
+      <div class="absolute top-4 right-4 z-50 flex gap-2">
+        <button id="shareBtn" class="w-10 h-10 flex items-center justify-center bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full text-white transition-colors">
+          <i class="fa-solid fa-share-nodes"></i>
+        </button>
+        <button id="closeModal" class="w-10 h-10 flex items-center justify-center bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full text-white transition-colors">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <div id="modal-viewport" class="hide-scroll flex-1">
         </div>
 
-        <div class="mt-4">
-          <h4 class="font-bold bg-neo-pink inline-block px-2 py-1 mb-2 shadow-neo-sm border-2 border-ink">Q. 제가 아는 최애의 책을 제보해도 되나요?</h4>
-          <p class="leading-relaxed text-muted mt-1 font-sans font-bold text-sm">A. 제보는 환영입니다! 대신 정확한 기록을 위해 출처가 꼭 필요해요. <a href="https://forms.gle/Sd3ZQTahZNbUjbdz7" target="_blank" class="underline decoration-2 hover:text-neo-pink">(링크)</a> 이쪽으로 제보해주시면, 제가 시간이 날 때마다 틈틈이 확인해서 업데이트해 둘게요.</p>
-        </div>
+      <button id="prevBtn" class="absolute left-2 top-1/2 -translate-y-1/2 z-40 w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/30 rounded-full text-white transition-all">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button id="nextBtn" class="absolute right-2 top-1/2 -translate-y-1/2 z-40 w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/30 rounded-full text-white transition-all">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
 
-        <div class="mt-6 p-4 bg-white border-2 border-ink border-dashed">
-          <h4 class="font-bold text-ink mb-1">📌 당부드리는 점</h4>
-          <p class="leading-relaxed text-muted mt-1 font-sans font-bold text-xs">대부분 출처를 확인하고 올리지만, 가끔 부정확할 때도 있어요. 도서 정보도 출판사에 따라 판본이 정말 다양한 경우도 있으니 너른 마음으로 이해해 주시길 부탁드릴게요～</p>
-        </div>
-      </div>
-    </div>
-
-    <button onclick="document.getElementById('faq-window').classList.toggle('hidden')" 
-            class="w-12 h-12 md:w-14 md:h-14 bg-neo-yellow border-4 border-ink shadow-neo hover:bg-neo-pink hover:-translate-y-1 active:shadow-none transition-all rounded-full flex items-center justify-center font-sans font-black text-ink text-xl md:text-2xl">
-      ?
-    </button>
-  </div>
-</div>  
-
-<main id="app-root" class="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-24 flex flex-col gap-12 md:gap-16">
-
-  <header class="flex flex-col items-center opacity-0 animate-fade-in pt-10 md:pt-0">
-    <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-3 text-ink text-center">최애의 독서</h1>
-    <p class="text-ink font-sans font-bold text-sm sm:text-base tracking-wide mb-6 text-center">당신이 좋아하는, 그들이 읽은 책📕</p>
-    
-    <p class="text-ink font-sans font-bold text-xs sm:text-sm tracking-[.15em] mb-8 uppercase bg-neo-yellow border-2 border-ink px-4 py-1 shadow-neo-sm text-center">Archive of their reads</p>
-    <div id="status-indicator" class="flex items-center gap-2 text-[10px] sm:text-xs font-sans font-bold tracking-wider text-ink border-2 border-ink bg-white px-3 py-1.5 shadow-neo-sm">
-      <span id="status-dot" class="w-2 h-2 rounded-full bg-ink animate-pulse"></span>
-      <span id="status-text">Loading...</span>
-    </div>
-  </header>
-
-  <section class="opacity-0 animate-fade-in-delayed text-center max-w-2xl mx-auto border-4 border-ink p-6 md:p-8 bg-white shadow-neo w-full">
-    <h2 class="text-xl md:text-2xl font-black mb-4 bg-neo-pink inline-block px-3 py-1 border-2 border-ink shadow-neo-sm">최애의 독서란?</h2>
-    <p class="text-sm md:text-base font-bold leading-relaxed text-ink word-break-keep">
-      아이돌, 배우, 뮤지션 등 셀럽이 언급한 책, 추천 책, 인생책을 모은 아카이브입니다.<br>
-      대부분 출처가 있는 경우 업뎃하고 있어요! 최애의 책의 제보하려면 상단의 FAQ를 눌러주세요😆
-    </p>
-  </section>
-
-  <section class="max-w-xl mx-auto w-full opacity-0 animate-fade-in-delayed flex flex-col gap-4">
-    <input id="search-input" type="text"
-      class="w-full bg-white border-2 border-ink shadow-neo px-4 sm:px-6 py-3 sm:py-4 text-center text-base sm:text-lg focus:outline-none focus:shadow-neo-lg focus:-translate-y-1 transition-all placeholder:text-muted/50 tracking-wide font-sans font-bold"
-      placeholder="Search name, title, author, publisher">
-    
-    <div class="flex justify-center gap-3">
-      <button id="btn-grid" class="font-sans font-bold text-[10px] sm:text-xs tracking-widest uppercase border-2 border-ink bg-neo-yellow shadow-neo-sm px-5 py-2 hover:-translate-y-0.5 transition-all">■ GRID</button>
-      <button id="btn-list" class="font-sans font-bold text-[10px] sm:text-xs tracking-widest uppercase border-2 border-ink bg-white hover:bg-neo-yellow shadow-neo-sm px-5 py-2 hover:-translate-y-0.5 transition-all">≡ LIST</button>
-    </div>
-  </section>
-
-  <section class="w-full">
-    <div id="grid-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-12"></div>
-    <div id="empty-state" class="hidden text-center py-20 text-ink font-sans font-bold tracking-widest">No results found.</div>
-    
-    <div id="load-more-wrap" class="hidden flex justify-center mt-12 w-full">
-      <button id="btn-load-more" class="font-sans font-bold text-sm tracking-widest border-2 border-ink bg-white hover:bg-neo-yellow shadow-neo px-8 py-3 hover:-translate-y-1 hover:shadow-neo-lg active:shadow-neo-sm transition-all">▼ 더보기</button>
-    </div>
-  </section>
-
-  <section id="seo-top-readers" class="border-t-4 border-ink pt-12 md:pt-16 w-full">
-    <h2 class="text-2xl md:text-3xl font-black mb-2 word-break-keep">내 최애가 읽은 책이 이렇게 많다니 😍</h2>
-    <p class="text-sm md:text-base font-bold text-muted mb-8 word-break-keep">가장 많은 책을 읽은 셀럽들을 소개해요 (모든 사람들이 책을 읽고 인증하진 않으니까 참고만 해주세요 😅)</p>
-    
-    <div id="top-readers-container" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6"></div>
-  </section>
-
-  <section id="common-books" class="border-t-4 border-ink pt-12 md:pt-16 w-full">
-    <h2 class="text-2xl md:text-3xl font-black mb-2 word-break-keep">여러 명이 읽은 책</h2>
-    <p class="text-sm md:text-base font-bold text-muted mb-8 word-break-keep">두 명 이상의 인물이 언급한 도서</p>
-    
-    <div id="common-books-container" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 md:gap-5"></div>
-  </section>
-
-  <section id="all-celebs" class="border-t-4 border-ink pt-12 md:pt-16 pb-16 w-full">
-    <h2 id="all-celebs-title" class="text-2xl md:text-3xl font-black mb-2 word-break-keep">등록된 셀럽 · 아이돌 · 배우 전체 목록 313명</h2>
-    <p class="text-sm md:text-base font-bold text-muted mb-8 word-break-keep">링크를 누르면 해당 인물의 독서 기록이 바로 열립니다.</p>
-    
-    <div id="all-celebs-container" class="flex flex-wrap gap-2 md:gap-3">
-      <a href="?celeb=RM(BTS)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">RM(BTS)</a>
-      <a href="?celeb=가원(미야오)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">가원(미야오)</a>
-      <a href="?celeb=가을(아이브)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">가을(아이브)</a>
-      <a href="?celeb=강혜정" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">강혜정</a>
-      <a href="?celeb=고민시" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">고민시</a>
-      <a href="?celeb=고아성" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">고아성</a>
-      <a href="?celeb=고영배" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">고영배</a>
-      <a href="?celeb=구혜선" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">구혜선</a>
-      <a href="?celeb=김규남" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김규남</a>
-      <a href="?celeb=김대명" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김대명</a>
-      <a href="?celeb=김동완(신화)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김동완(신화)</a>
-      <a href="?celeb=김민하" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김민하</a>
-      <a href="?celeb=김사월" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김사월</a>
-      <a href="?celeb=김새벽" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김새벽</a>
-      <a href="?celeb=김서형" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김서형</a>
-      <a href="?celeb=김선아" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김선아</a>
-      <a href="?celeb=김세정" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김세정</a>
-      <a href="?celeb=김시현" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김시현</a>
-      <a href="?celeb=김유정" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김유정</a>
-      <a href="?celeb=김윤아(자우림)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김윤아(자우림)</a>
-      <a href="?celeb=김윤진" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김윤진</a>
-      <a href="?celeb=김지원" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김지원</a>
-      <a href="?celeb=김채원(르세라핌)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김채원(르세라핌)</a>
-      <a href="?celeb=김태리" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김태리</a>
-      <a href="?celeb=김한주(실리카겔)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김한주(실리카겔)</a>
-      <a href="?celeb=김혜수" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김혜수</a>
-      <a href="?celeb=김혜윤" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김혜윤</a>
-      <a href="?celeb=김효진" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">김효진</a>
-      <a href="?celeb=나린(미야오)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">나린(미야오)</a>
-      <a href="?celeb=나윤선" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">나윤선</a>
-      <a href="?celeb=남주혁" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">남주혁</a>
-      <a href="?celeb=남지현" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">남지현</a>
-      <a href="?celeb=노제" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">노제</a>
-      <a href="?celeb=닝닝(에스파)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">닝닝(에스파)</a>
-      <a href="?celeb=다현(트와이스)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">다현(트와이스)</a>
-      <a href="?celeb=도겸(세븐틴)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">도겸(세븐틴)</a>
-      <a href="?celeb=도영(NCT)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">도영(NCT)</a>
-      <a href="?celeb=도훈(TWS)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">도훈(TWS)</a>
-      <a href="?celeb=디노(세븐틴)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">디노(세븐틴)</a>
-      <a href="?celeb=로운" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">로운</a>
-      <a href="?celeb=로제(블랙핑크)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">로제(블랙핑크)</a>
-      <a href="?celeb=류수영" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">류수영</a>
-      <a href="?celeb=류현경" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">류현경</a>
-      <a href="?celeb=리아킴" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">리아킴</a>
-      <a href="?celeb=릴리(NMIXX)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">릴리(NMIXX)</a>
-      <a href="?celeb=마크(NCT)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">마크(NCT)</a>
-      <a href="?celeb=문가영" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">문가영</a>
-      <a href="?celeb=문소리" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">문소리</a>
-      <a href="?celeb=문지애" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">문지애</a>
-      <a href="?celeb=문채원" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">문채원</a>
-      <a href="?celeb=미미(오마이걸)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">미미(오마이걸)</a>
-      <a href="?celeb=미연(아이들)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">미연(아이들)</a>
-      <a href="?celeb=민규" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">민규</a>
-      <a href="?celeb=민니" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">민니</a>
-      <a href="?celeb=민지(뉴진스)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">민지(뉴진스)</a>
-      <a href="?celeb=밍기뉴" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">밍기뉴</a>
-      <a href="?celeb=박건욱" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">박건욱</a>
-      <a href="?celeb=박명수" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">박명수</a>
-      <a href="?celeb=박보검" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">박보검</a>
-      <a href="?celeb=박보영" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">박보영</a>
-      <a href="?celeb=박소담" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">박소담</a>
-      <a href="?celeb=박예은" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">박예은</a>
-      <a href="?celeb=박은빈" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">박은빈</a>
-      <a href="?celeb=박재범" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">박재범</a>
-      <a href="?celeb=박정민" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">박정민</a>
-      <a href="?celeb=박지훈" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">박지훈</a>
-      <a href="?celeb=박찬욱" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">박찬욱</a>
-      <a href="?celeb=박하선" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">박하선</a>
-      <a href="?celeb=박해수" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">박해수</a>
-      <a href="?celeb=박형식" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">박형식</a>
-      <a href="?celeb=박훈" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">박훈</a>
-      <a href="?celeb=박희순" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">박희순</a>
-      <a href="?celeb=배이" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">배이</a>
-      <a href="?celeb=백예린" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">백예린</a>
-      <a href="?celeb=백현" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">백현</a>
-      <a href="?celeb=버논(세븐틴)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">버논(세븐틴)</a>
-      <a href="?celeb=변요한" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">변요한</a>
-      <a href="?celeb=변우석" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">변우석</a>
-      <a href="?celeb=봉준호" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">봉준호</a>
-      <a href="?celeb=뷔(BTS)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">뷔(BTS)</a>
-      <a href="?celeb=비비" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">비비</a>
-      <a href="?celeb=빈지노" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">빈지노</a>
-      <a href="?celeb=사이먼 도미닉" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">사이먼 도미닉</a>
-      <a href="?celeb=사쿠라(르세라핌)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">사쿠라(르세라핌)</a>
-      <a href="?celeb=산들" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">산들</a>
-      <a href="?celeb=서강준" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">서강준</a>
-      <a href="?celeb=서유리" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">서유리</a>
-      <a href="?celeb=서지혜(1996)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">서지혜(1996)</a>
-      <a href="?celeb=서현(소녀시대)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">서현(소녀시대)</a>
-      <a href="?celeb=서현진" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">서현진</a>
-      <a href="?celeb=석매튜" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">석매튜</a>
-      <a href="?celeb=선우정아" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">선우정아</a>
-      <a href="?celeb=설윤" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">설윤</a>
-      <a href="?celeb=설인아" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">설인아</a>
-      <a href="?celeb=설현" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">설현</a>
-      <a href="?celeb=성찬(라이즈)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">성찬(라이즈)</a>
-      <a href="?celeb=성한빈" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">성한빈</a>
-      <a href="?celeb=성현(코르티스)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">성현(코르티스)</a>
-      <a href="?celeb=세훈(엑소)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">세훈(엑소)</a>
-      <a href="?celeb=소연" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">소연</a>
-      <a href="?celeb=소유진" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">소유진</a>
-      <a href="?celeb=소이" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">소이</a>
-      <a href="?celeb=소지섭" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">소지섭</a>
-      <a href="?celeb=소희" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">소희</a>
-      <a href="?celeb=손나은(에이핑크)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">손나은(에이핑크)</a>
-      <a href="?celeb=손석구" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">손석구</a>
-      <a href="?celeb=손수현" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">손수현</a>
-      <a href="?celeb=손연재" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">손연재</a>
-      <a href="?celeb=손예진" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">손예진</a>
-      <a href="?celeb=손종원" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">손종원</a>
-      <a href="?celeb=송강" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">송강</a>
-      <a href="?celeb=송중기" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">송중기</a>
-      <a href="?celeb=송혜교" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">송혜교</a>
-      <a href="?celeb=쇼타로" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">쇼타로</a>
-      <a href="?celeb=수영(소녀시대)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">수영(소녀시대)</a>
-      <a href="?celeb=수지" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">수지</a>
-      <a href="?celeb=수호" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">수호</a>
-      <a href="?celeb=슈가" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">슈가</a>
-      <a href="?celeb=슈화" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">슈화</a>
-      <a href="?celeb=스텔라장" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">스텔라장</a>
-      <a href="?celeb=승관" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">승관</a>
-      <a href="?celeb=시온(NCT 위시)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">시온(NCT 위시)</a>
-      <a href="?celeb=신세경" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">신세경</a>
-      <a href="?celeb=신시아" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">신시아</a>
-      <a href="?celeb=신예은" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">신예은</a>
-      <a href="?celeb=신유" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">신유</a>
-      <a href="?celeb=아이린(레드벨벳)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">아이린(레드벨벳)</a>
-      <a href="?celeb=아이유" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">아이유</a>
-      <a href="?celeb=안보현" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">안보현</a>
-      <a href="?celeb=안예은" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">안예은</a>
-      <a href="?celeb=안유진(아이브)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">안유진(아이브)</a>
-      <a href="?celeb=안형섭" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">안형섭</a>
-      <a href="?celeb=안효섭" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">안효섭</a>
-      <a href="?celeb=애쉬아일랜드" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">애쉬아일랜드</a>
-      <a href="?celeb=앤톤" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">앤톤</a>
-      <a href="?celeb=양세찬" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">양세찬</a>
-      <a href="?celeb=엄태구" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">엄태구</a>
-      <a href="?celeb=에스쿱스" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">에스쿱스</a>
-      <a href="?celeb=영재" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">영재</a>
-      <a href="?celeb=예리(레드벨벳)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">예리(레드벨벳)</a>
-      <a href="?celeb=예지원" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">예지원</a>
-      <a href="?celeb=오연서" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">오연서</a>
-      <a href="?celeb=오지은" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">오지은</a>
-      <a href="?celeb=옥상달빛" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">옥상달빛</a>
-      <a href="?celeb=옥자연" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">옥자연</a>
-      <a href="?celeb=옹성우" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">옹성우</a>
-      <a href="?celeb=요조" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">요조</a>
-      <a href="?celeb=우기" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">우기</a>
-      <a href="?celeb=우원재" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">우원재</a>
-      <a href="?celeb=우지" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">우지</a>
-      <a href="?celeb=원빈 (라이즈)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">원빈 (라이즈)</a>
-      <a href="?celeb=원우(세븐틴)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">원우(세븐틴)</a>
-      <a href="?celeb=원지안" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">원지안</a>
-      <a href="?celeb=원필(데이식스)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">원필(데이식스)</a>
-      <a href="?celeb=웬디(레드벨벳)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">웬디(레드벨벳)</a>
-      <a href="?celeb=위하준" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">위하준</a>
-      <a href="?celeb=윈터(에스파)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">윈터(에스파)</a>
-      <a href="?celeb=유겸(갓세븐)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">유겸(갓세븐)</a>
-      <a href="?celeb=유라(1993)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">유라(1993)</a>
-      <a href="?celeb=유인나" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">유인나</a>
-      <a href="?celeb=유재석" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">유재석</a>
-      <a href="?celeb=유타(NCT)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">유타(NCT)</a>
-      <a href="?celeb=윤덕원(브로콜리너마저)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">윤덕원(브로콜리너마저)</a>
-      <a href="?celeb=윤소희" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">윤소희</a>
-      <a href="?celeb=윤시윤" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">윤시윤</a>
-      <a href="?celeb=윤아(소녀시대)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">윤아(소녀시대)</a>
-      <a href="?celeb=윤하" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">윤하</a>
-      <a href="?celeb=은석" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">은석</a>
-      <a href="?celeb=은혁(슈퍼주니어)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">은혁(슈퍼주니어)</a>
-      <a href="?celeb=이도현" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이도현</a>
-      <a href="?celeb=이동휘" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이동휘</a>
-      <a href="?celeb=이무진" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이무진</a>
-      <a href="?celeb=이미연" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이미연</a>
-      <a href="?celeb=이병헌" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이병헌</a>
-      <a href="?celeb=이보영" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이보영</a>
-      <a href="?celeb=이브" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이브</a>
-      <a href="?celeb=이상이" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이상이</a>
-      <a href="?celeb=이서" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이서</a>
-      <a href="?celeb=이석훈" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이석훈</a>
-      <a href="?celeb=이설" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이설</a>
-      <a href="?celeb=이성경" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이성경</a>
-      <a href="?celeb=이세영" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이세영</a>
-      <a href="?celeb=이솜" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이솜</a>
-      <a href="?celeb=이수현" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이수현</a>
-      <a href="?celeb=이승열" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이승열</a>
-      <a href="?celeb=이엘" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이엘</a>
-      <a href="?celeb=이엘리야" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이엘리야</a>
-      <a href="?celeb=이연희" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이연희</a>
-      <a href="?celeb=이영애" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이영애</a>
-      <a href="?celeb=이영지" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이영지</a>
-      <a href="?celeb=이유미" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이유미</a>
-      <a href="?celeb=이유비" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이유비</a>
-      <a href="?celeb=이유영" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이유영</a>
-      <a href="?celeb=이은지" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이은지</a>
-      <a href="?celeb=이이경" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이이경</a>
-      <a href="?celeb=이재욱" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이재욱</a>
-      <a href="?celeb=이적" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이적</a>
-      <a href="?celeb=이정은" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이정은</a>
-      <a href="?celeb=이제훈" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이제훈</a>
-      <a href="?celeb=이주영" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이주영</a>
-      <a href="?celeb=이준혁" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이준혁</a>
-      <a href="?celeb=이찬혁" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이찬혁</a>
-      <a href="?celeb=이청아" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이청아</a>
-      <a href="?celeb=이하이" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이하이</a>
-      <a href="?celeb=이혜성" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이혜성</a>
-      <a href="?celeb=이효리" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">이효리</a>
-      <a href="?celeb=임수정" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">임수정</a>
-      <a href="?celeb=임시완" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">임시완</a>
-      <a href="?celeb=자이언티" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">자이언티</a>
-      <a href="?celeb=장기하" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">장기하</a>
-      <a href="?celeb=장나라" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">장나라</a>
-      <a href="?celeb=장도연" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">장도연</a>
-      <a href="?celeb=장동윤" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">장동윤</a>
-      <a href="?celeb=장원영" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">장원영</a>
-      <a href="?celeb=장재인" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">장재인</a>
-      <a href="?celeb=장하오" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">장하오</a>
-      <a href="?celeb=재민(NCT 드림)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">재민(NCT 드림)</a>
-      <a href="?celeb=재현(NCT)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">재현(NCT)</a>
-      <a href="?celeb=재희(NCT 위시)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">재희(NCT 위시)</a>
-      <a href="?celeb=쟈니" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">쟈니</a>
-      <a href="?celeb=적재" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">적재</a>
-      <a href="?celeb=전미도" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">전미도</a>
-      <a href="?celeb=전석호" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">전석호</a>
-      <a href="?celeb=전소민" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">전소민</a>
-      <a href="?celeb=전여빈" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">전여빈</a>
-      <a href="?celeb=전효성" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">전효성</a>
-      <a href="?celeb=정경호" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">정경호</a>
-      <a href="?celeb=정국(BTS)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">정국(BTS)</a>
-      <a href="?celeb=정세운" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">정세운</a>
-      <a href="?celeb=정소민" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">정소민</a>
-      <a href="?celeb=정승환" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">정승환</a>
-      <a href="?celeb=정우" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">정우</a>
-      <a href="?celeb=정우성" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">정우성</a>
-      <a href="?celeb=정은지" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">정은지</a>
-      <a href="?celeb=정은채" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">정은채</a>
-      <a href="?celeb=정인지" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">정인지</a>
-      <a href="?celeb=정채연" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">정채연</a>
-      <a href="?celeb=정한" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">정한</a>
-      <a href="?celeb=정해인" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">정해인</a>
-      <a href="?celeb=정혜선(제이래빗)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">정혜선(제이래빗)</a>
-      <a href="?celeb=정호연" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">정호연</a>
-      <a href="?celeb=제노" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">제노</a>
-      <a href="?celeb=제니" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">제니</a>
-      <a href="?celeb=제이홉" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">제이홉</a>
-      <a href="?celeb=조세호" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">조세호</a>
-      <a href="?celeb=조수민" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">조수민</a>
-      <a href="?celeb=조슈아" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">조슈아</a>
-      <a href="?celeb=조여정" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">조여정</a>
-      <a href="?celeb=조이현" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">조이현</a>
-      <a href="?celeb=존 박" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">존 박</a>
-      <a href="?celeb=종현(샤이니)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">종현(샤이니)</a>
-      <a href="?celeb=주연(더보이즈)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">주연(더보이즈)</a>
-      <a href="?celeb=주우재" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">주우재</a>
-      <a href="?celeb=주지훈" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">주지훈</a>
-      <a href="?celeb=지민" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">지민</a>
-      <a href="?celeb=지성" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">지성</a>
-      <a href="?celeb=지수" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">지수</a>
-      <a href="?celeb=지우" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">지우</a>
-      <a href="?celeb=지젤(에스파)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">지젤(에스파)</a>
-      <a href="?celeb=지코" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">지코</a>
-      <a href="?celeb=지훈(TWS)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">지훈(TWS)</a>
-      <a href="?celeb=진(BTS)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">진(BTS)</a>
-      <a href="?celeb=진영(갓세븐)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">진영(갓세븐)</a>
-      <a href="?celeb=찰스엔터" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">찰스엔터</a>
-      <a href="?celeb=창모" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">창모</a>
-      <a href="?celeb=채종협" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">채종협</a>
-      <a href="?celeb=천러" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">천러</a>
-      <a href="?celeb=천우희" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">천우희</a>
-      <a href="?celeb=청하" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">청하</a>
-      <a href="?celeb=최강창민" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">최강창민</a>
-      <a href="?celeb=최우식" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">최우식</a>
-      <a href="?celeb=최정훈(잔나비)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">최정훈(잔나비)</a>
-      <a href="?celeb=최희서" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">최희서</a>
-      <a href="?celeb=치즈" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">치즈</a>
-      <a href="?celeb=침착맨" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">침착맨</a>
-      <a href="?celeb=카더가든" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">카더가든</a>
-      <a href="?celeb=카리나(에스파)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">카리나(에스파)</a>
-      <a href="?celeb=카이" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">카이</a>
-      <a href="?celeb=카이(엑소)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">카이(엑소)</a>
-      <a href="?celeb=카즈하(르세라핌)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">카즈하(르세라핌)</a>
-      <a href="?celeb=크러쉬" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">크러쉬</a>
-      <a href="?celeb=키드밀리" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">키드밀리</a>
-      <a href="?celeb=태연" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">태연</a>
-      <a href="?celeb=태용" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">태용</a>
-      <a href="?celeb=테오(P1하모니)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">테오(P1하모니)</a>
-      <a href="?celeb=페이커" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">페이커</a>
-      <a href="?celeb=폴킴" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">폴킴</a>
-      <a href="?celeb=풍자" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">풍자</a>
-      <a href="?celeb=하니(EXID)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">하니(EXID)</a>
-      <a href="?celeb=하니(뉴진스)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">하니(뉴진스)</a>
-      <a href="?celeb=하정우" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">하정우</a>
-      <a href="?celeb=한로로" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">한로로</a>
-      <a href="?celeb=한소희" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">한소희</a>
-      <a href="?celeb=한승연" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">한승연</a>
-      <a href="?celeb=한예리" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">한예리</a>
-      <a href="?celeb=한유진" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">한유진</a>
-      <a href="?celeb=한지민" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">한지민</a>
-      <a href="?celeb=한진" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">한진</a>
-      <a href="?celeb=한효주" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">한효주</a>
-      <a href="?celeb=해린" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">해린</a>
-      <a href="?celeb=해원" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">해원</a>
-      <a href="?celeb=해찬" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">해찬</a>
-      <a href="?celeb=허윤진(르세라핌)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">허윤진(르세라핌)</a>
-      <a href="?celeb=혜림" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">혜림</a>
-      <a href="?celeb=혜인(뉴진스)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">혜인(뉴진스)</a>
-      <a href="?celeb=호시" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">호시</a>
-      <a href="?celeb=홍경" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">홍경</a>
-      <a href="?celeb=홍은채" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">홍은채</a>
-      <a href="?celeb=홍진경" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">홍진경</a>
-      <a href="?celeb=황민현" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">황민현</a>
-      <a href="?celeb=황소윤(새소년)" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">황소윤(새소년)</a>
-      <a href="?celeb=황정민" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">황정민</a>
-      <a href="?celeb=황제성" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">황제성</a>
-    </div>
-  </section>
-
-</main>
-
-<div id="modal-overlay" class="modal-overlay fixed inset-0 bg-ink/75 z-50 flex items-center justify-center md:p-8 backdrop-blur-sm">
-
-  <div id="modal-inner" class="w-full max-w-5xl bg-paper border-4 border-ink shadow-neo-lg relative flex flex-col md:flex-row">
-
-    <button id="close-modal"
-      class="absolute top-2 right-2 z-50 w-9 h-9 flex items-center justify-center bg-neo-pink border-2 border-ink shadow-neo-sm text-ink font-sans font-black text-base hover:bg-neo-yellow active:shadow-none transition-all">✕</button>
-
-    <div id="modal-left"
-      class="w-full md:w-64 lg:w-72 flex-shrink-0 flex flex-col justify-center items-center bg-white border-b-4 md:border-b-0 md:border-r-4 border-ink p-6 md:p-10 gap-0">
-
-      <div id="modal-photo-wrap" class="w-40 h-52 md:w-44 md:h-56 overflow-hidden border-2 border-ink shadow-neo bg-paper-dark mb-6">
-        <img id="modal-image" src="" class="w-full h-full object-cover" alt="">
-      </div>
-
-      <div id="modal-meta" class="flex flex-col items-center mb-6 w-full text-center">
-        <h2 id="modal-name" class="text-2xl md:text-3xl font-black tracking-tight mb-3 line-clamp-2 leading-snug"></h2>
-        
-        <div class="flex gap-2 justify-center items-stretch h-7 md:h-8">
-          <p id="modal-count" class="font-sans font-bold bg-neo-yellow border-2 border-ink px-3 text-xs tracking-widest uppercase flex items-center justify-center m-0 leading-none shadow-neo-sm"></p>
-          <button id="share-btn"
-            class="font-sans font-bold text-xs tracking-widest border-2 border-ink bg-white shadow-neo-sm px-4 hover:bg-neo-mint hover:-translate-y-0.5 hover:shadow-neo active:shadow-neo-sm transition-all flex items-center justify-center m-0 leading-none">
-            공유하기
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div id="modal-right" class="flex flex-col flex-1 bg-[#fafaf8] min-w-0">
-
-      <div id="modal-archive-label"
-        class="flex-shrink-0 font-sans font-bold text-[9px] md:text-xs tracking-widest text-ink border-b border-ink/10 px-5 md:px-10 pt-4 md:pt-7 pb-2">
-        READING ARCHIVE
-      </div>
-
-      <div id="swiper-viewport" class="mx-4 md:mx-8 mt-2 md:mt-4 cursor-grab active:cursor-grabbing">
-        <div id="swiper-track" class="swiper-track h-full flex"></div>
-      </div>
-
-      <div id="modal-nav-bar"
-        class="flex-shrink-0 flex justify-between items-center border-t border-ink/10 px-5 md:px-8 py-3 md:py-4">
-        <button id="prev-btn"
-          class="font-sans font-bold text-[9px] md:text-xs tracking-widest border-2 border-ink bg-white shadow-neo-sm px-3 py-1.5 md:px-4 md:py-2 hover:bg-neo-yellow disabled:opacity-30 transition-all">◀ PREV</button>
-        <div id="dots-container" class="flex items-center justify-center"></div>
-        <button id="next-btn"
-          class="font-sans font-bold text-[9px] md:text-xs tracking-widest border-2 border-ink bg-white shadow-neo-sm px-3 py-1.5 md:px-4 md:py-2 hover:bg-neo-yellow disabled:opacity-30 transition-all">NEXT ▶</button>
+      <div id="slideCounter" class="absolute bottom-4 left-1/2 -translate-x-1/2 z-40 px-3 py-1 bg-black/30 backdrop-blur-sm rounded-full text-[10px] text-white/80 font-medium">
+        1 / 1
       </div>
     </div>
   </div>
-</div>
 
-<div id="toast"
-  class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-ink text-neo-yellow font-sans font-bold border-2 border-ink px-6 py-3 text-xs tracking-widest opacity-0 translate-y-4 shadow-neo transition-all duration-300 z-[100] pointer-events-none w-max max-w-[90vw]">
-  링크가 복사되었습니다.
-</div>
+  <div id="toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-[60] px-6 py-3 bg-slate-800 text-white text-sm rounded-full shadow-lg opacity-0 translate-y-4 transition-all duration-300 pointer-events-none">
+    공유 링크가 복사되었습니다!
+  </div>
 
-<script>
-(function App() {
-  'use strict';
-
-  /* ── CONFIG ─────────────────────────────────────────────── */
-  const SHEET_URL = 'data.csv'; 
-  const WIKI_API  = 'https://ko.wikipedia.org/w/api.php';
-  const BASE_PATH = window.location.pathname;
-  const SITE_URL  = (() => {
-    try { if (document.referrer?.includes('sites.google.com')) return document.referrer.split('?')[0]; } catch {}
-    return location.origin + BASE_PATH;
-  })();
-
-  /* ── STATE ──────────────────────────────────────────────── */
-  let celebMap = {};
-  let entries  = [];
-  let modal    = { open: false, name: '', books: [], idx: 0 };
-  
-  let filteredEntries = [];
-  let renderIndex = 0;
-  const CHUNK_SIZE = 24; 
-  let viewMode = 'grid'; // 'grid' | 'list'
-
-  /* ── DOM ────────────────────────────────────────────────── */
-  const D = {
-    statusDot:  document.getElementById('status-dot'),
-    statusText: document.getElementById('status-text'),
-    search:     document.getElementById('search-input'),
-    grid:       document.getElementById('grid-container'),
-    empty:      document.getElementById('empty-state'),
-    loadWrap:   document.getElementById('load-more-wrap'),
-    loadBtn:    document.getElementById('btn-load-more'),
-    overlay:    document.getElementById('modal-overlay'),
-    mImg:       document.getElementById('modal-image'),
-    mName:      document.getElementById('modal-name'),
-    mCount:     document.getElementById('modal-count'),
-    shareBtn:   document.getElementById('share-btn'),
-    closeBtn:   document.getElementById('close-modal'),
-    viewport:   document.getElementById('swiper-viewport'),
-    track:      document.getElementById('swiper-track'),
-    prevBtn:    document.getElementById('prev-btn'),
-    nextBtn:    document.getElementById('next-btn'),
-    dots:       document.getElementById('dots-container'),
-    toast:      document.getElementById('toast'),
-    floatMenus: document.getElementById('floating-menus'),
-    btnGrid:    document.getElementById('btn-grid'),
-    btnList:    document.getElementById('btn-list'),
-    
-    // 자동화 추가 영역
-    topReaders: document.getElementById('top-readers-container'),
-    commonBooks: document.getElementById('common-books-container'),
-    allCelebs: document.getElementById('all-celebs-container'),
-    allCelebsTitle: document.getElementById('all-celebs-title'),
-  };
-
-  /* ── GLOBALS ────────────────────────────────────────────── */
-  window.searchBook = function(title) {
-    D.search.value = title;
-    D.search.dispatchEvent(new Event('input'));
-    D.search.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  };
-
-  /* ── UTILS ──────────────────────────────────────────────── */
-  function updateSEO(name) {
-    const defaultTitle = '최애의 독서 | 당신이 좋아하는, 그들이 읽은 책';
-    const defaultDesc  = '아이돌, 셀럽, 그리고 나의 최애가 읽은 책들을 한곳에 모았습니다.';
-    const defaultImage = 'https://hwiruruk.github.io/favoread/favicon.png';
-    const BASE = 'https://hwiruruk.github.io/favoread/';
-
-    const title    = name ? `${name} 읽은 책 추천 책 | 최애의 독서` : defaultTitle;
-    const bookCount = (name && celebMap[name]) ? celebMap[name].books.length : 0;
-    const desc = name ? `${name}의 읽은 책이 궁금하다면? ✨ 총 ${bookCount}권의 읽은 책과 추천하는 책, 인생책까지 확인해 보세요. #${name} #책추천 #읽은책 #독서 #인생책 📕` : defaultDesc;
-    const canonical = name ? `${BASE}?celeb=${encodeURIComponent(name)}` : BASE;
-
-    let imageUrl = defaultImage;
-    if (name && celebMap[name] && celebMap[name].imageUrl) {
-      imageUrl = celebMap[name].imageUrl;
-    }
-
-    document.title = title;
-    document.querySelector('meta[name="description"]')?.setAttribute('content', desc);
-    document.querySelector('meta[property="og:title"]')?.setAttribute('content', title);
-    document.querySelector('meta[property="og:description"]')?.setAttribute('content', desc);
-    document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical);
-    document.querySelector('meta[property="og:image"]')?.setAttribute('content', imageUrl);
-    document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', title);
-    document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', desc);
-    document.querySelector('meta[name="twitter:image"]')?.setAttribute('content', imageUrl);
-
-    let thumbTag = document.querySelector('meta[name="thumbnail"]');
-    if (thumbTag) thumbTag.setAttribute('content', imageUrl);
-    document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical);
-    
-    const existingScript = document.getElementById('dynamic-schema');
-    if (existingScript) existingScript.remove();
-
-    if (name && celebMap[name]) {
-      const books = celebMap[name].books.map(b => b.title).join(', ');
-      const schema = {
-        "@context": "https://schema.org",
-        "@type": "ProfilePage",
-        "mainEntity": {
-          "@type": "Person",
-          "name": name,
-          "description": `${name}의 읽은 책/추천 책 목록: ${books}`,
-          "image": imageUrl
-        }
-      };
-
-      const script = document.createElement('script');
-      script.id = 'dynamic-schema';
-      script.type = 'application/ld+json';
-      script.textContent = JSON.stringify(schema);
-      document.head.appendChild(script);
-    }
-  }
-
-  function setViewMode(mode) {
-    if (viewMode === mode) return;
-    viewMode = mode;
-    
-    if (mode === 'grid') {
-      D.btnGrid.classList.replace('bg-white', 'bg-neo-yellow');
-      D.btnList.classList.replace('bg-neo-yellow', 'bg-white');
-      D.grid.className = 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 sm:gap-x-6 gap-y-8 sm:gap-y-12';
-    } else {
-      D.btnList.classList.replace('bg-white', 'bg-neo-yellow');
-      D.btnGrid.classList.replace('bg-neo-yellow', 'bg-white');
-      D.grid.className = 'flex flex-col gap-3 max-w-2xl mx-auto w-full';
-    }
-    
-    filterEntries(D.search.value);
-  }
-
-  /* ── STATUS ─────────────────────────────────────────────── */
-  function setStatus(type, msg) {
-    D.statusText.textContent = msg;
-    D.statusDot.className = 'w-2 h-2 rounded-full ' + (
-      type === 'loading' ? 'bg-neo-yellow animate-pulse' :
-      type === 'error'   ? 'bg-neo-pink' : 'bg-green-400'
-    );
-  }
-
-  /* ── DATA ───────────────────────────────────────────────── */
-  async function fetchSheet() {
-    const r = await fetch(SHEET_URL);
-    if (!r.ok) throw new Error();
-    const text = await r.text();
-    return new Promise((ok, fail) =>
-      Papa.parse(text, { header: true, skipEmptyLines: true,
-        complete: r => ok(r.data), error: fail }));
-  }
-
-  function transform(rows) {
-    const map = {};
-    if (!rows.length) return map;
-    const keys = Object.keys(rows[0]);
-    const col  = (kws, fb) => keys.find(k => kws.some(w => k.toLowerCase().includes(w))) || keys[fb];
-    
-    const C = {
-      celeb: col(['이름','연예인','인물'],0), 
-      title: col(['도서명','제목','책'],1),
-      auth:  col(['저자','작가'],2),          
-      pub:   col(['출판사'],3),
-      src:   col(['출처','근거'],4),            
-      cmt:   col(['코멘트','한마디'],8),
-      cImg:  col(['연예인이미지','photo','이미지주소'],7), 
-      bImg:  col(['도서이미지','표지'],6),
-      link:  col(['링크','url'],5),
+  <script>
+    const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSAn7L8PAslq927m54-l8G_T9HscV8f_7FzZ6Y-Y2-O2m8WwX_8q_vB8iR2qI0I9n6B3wYwJ6W2I0I9/pub?gid=0&output=csv";
+    const D = {
+      grid: document.getElementById('celebGrid'),
+      loading: document.getElementById('loading'),
+      search: document.getElementById('searchInput'),
+      overlay: document.getElementById('modalOverlay'),
+      viewport: document.getElementById('modal-viewport'),
+      closeBtn: document.getElementById('closeModal'),
+      shareBtn: document.getElementById('shareBtn'),
+      prevBtn: document.getElementById('prevBtn'),
+      nextBtn: document.getElementById('nextBtn'),
+      counter: document.getElementById('slideCounter'),
+      toast: document.getElementById('toast')
     };
 
-    rows.forEach(r => {
-      const n = (r[C.celeb]||'').trim(), t = (r[C.title]||'').trim();
-      if (!n || !t) return;
-      
-      const hColVal = (r[C.cImg] || '').trim();
-      const validImage = hColVal.startsWith('http') ? hColVal : '';
+    let allData = [];
+    let celebGroups = {};
+    let modal = { open: false, celeb: '', idx: 0, items: [] };
 
-      if (!map[n]) map[n] = { imageUrl: validImage, books: [] };
-      map[n].books.push({
-        title: t, author: r[C.auth]||'', publisher: r[C.pub]||'',
-        source: r[C.src]||'', comment: r[C.cmt]||'',
-        coverUrl: r[C.bImg]||'', link: r[C.link]||'',
-      });
-    });
-    return map;
-  }
-
-  async function wikiImg(name) {
-    try {
-      const u = `${WIKI_API}?action=query&generator=search&gsrsearch=${encodeURIComponent(name)}&gsrlimit=5&prop=pageimages&piprop=thumbnail&pithumbsize=500&format=json&origin=*`;
-      const d = await (await fetch(u)).json();
-      const pages = Object.values(d?.query?.pages || {});
-      const kw = ['가수','배우','방송인','아이돌','뮤지션'];
-      const best = pages.find(p => p.title === name)
-        || pages.find(p => kw.some(k => p.title.includes(k) && p.title.includes(name)))
-        || pages.find(p => p.title.includes(name));
-      return best?.thumbnail?.source || '';
-    } catch { return ''; }
-  }
-
-  const imgObserver = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const card = entry.target;
-        const name = card.dataset.name;
-        obs.unobserve(card); 
-        
-        if (!celebMap[name].imageUrl && (viewMode === 'grid' || card.classList.contains('top-celeb-card'))) {
-          loadWikiImage(name, card);
-        }
-      }
-    });
-  }, { rootMargin: '100px' }); 
-
-  async function loadWikiImage(name, card) {
-    try {
-      const url = await wikiImg(name);
-      if (url) {
-        celebMap[name].imageUrl = url;
-        const wrap = card.querySelector('.celeb-photo-wrap');
-        if (wrap) {
-          wrap.innerHTML = `<img src="${url}" alt="${name} 책 추천" loading="lazy" class="celeb-portrait w-full h-full object-cover opacity-0 transition-opacity duration-500">`;
-          setTimeout(() => wrap.querySelector('img')?.classList.remove('opacity-0'), 50);
-        }
-      }
-    } catch(e) {}
-  }
-
-  function filterEntries(kw = '') {
-    const q = kw.toLowerCase();
-    
-    let currentEntries = viewMode === 'list'
-      ? [...entries].sort((a, b) => a[0].localeCompare(b[0], 'ko'))
-      : entries;
-
-    filteredEntries = currentEntries.filter(([name, data]) => {
-      if (!q) return true;
-      const str = `${name} ${data.books.map(b => `${b.title} ${b.author} ${b.publisher}`).join(' ')}`.toLowerCase();
-      return str.includes(q);
-    });
-    
-    D.grid.innerHTML = '';
-    renderIndex = 0;
-    D.empty.classList.toggle('hidden', filteredEntries.length > 0);
-    renderNextChunk();
-  }
-
-  function renderNextChunk() {
-    const slice = filteredEntries.slice(renderIndex, renderIndex + CHUNK_SIZE);
-    
-    slice.forEach(([name, data]) => {
-      const card = document.createElement('a');
-      const celebUrl = `${BASE_PATH}?celeb=${encodeURIComponent(name)}`;
-      card.href = celebUrl;
-      card.dataset.name = name;
-
-      if (viewMode === 'grid') {
-        card.className = 'group cursor-pointer flex flex-col bg-white border-2 border-ink shadow-neo hover:shadow-neo-lg hover:-translate-y-1 transition-all duration-200 opacity-0 animate-fade-in-fast block';
-        const img = data.imageUrl
-          ? `<img src="${data.imageUrl}" alt="${name} 책 추천" loading="lazy" class="celeb-portrait w-full h-full object-cover">`
-          : `<div class="w-full h-full bg-paper-dark flex items-center justify-center font-sans font-bold text-[10px] tracking-widest text-muted">PHOTO</div>`;
-        
-        card.innerHTML = `
-          <div class="celeb-photo-wrap w-full aspect-[3/4] overflow-hidden border-b-2 border-ink bg-paper-dark relative">${img}</div>
-          <div class="p-3 sm:p-5 flex flex-col items-center group-hover:bg-neo-mint transition-colors duration-200">
-            <h3 class="text-base sm:text-xl font-bold tracking-tight mb-1 sm:mb-2 text-ink text-center line-clamp-1">${name}</h3>
-            <p class="text-[8px] sm:text-[10px] tracking-widest text-ink uppercase font-sans font-bold bg-white border border-ink px-1.5 sm:px-2 py-0.5">${data.books.length} records</p>
-          </div>`;
-          
-        if (!data.imageUrl) imgObserver.observe(card);
-      } else {
-        card.className = 'group cursor-pointer flex justify-between items-center bg-white border-2 border-ink shadow-neo-sm hover:shadow-neo hover:bg-neo-mint hover:-translate-y-0.5 transition-all duration-200 opacity-0 animate-fade-in-fast block px-4 py-3 sm:px-6 sm:py-4';
-        card.innerHTML = `
-          <h3 class="text-base sm:text-lg font-bold tracking-tight text-ink group-hover:underline decoration-2 underline-offset-4">${name}</h3>
-          <p class="text-[9px] sm:text-xs tracking-widest text-ink uppercase font-sans font-bold bg-neo-yellow border border-ink px-2 py-1 flex-shrink-0">${data.books.length} records</p>
-        `;
-      }
-      
-      card.addEventListener('click', (e) => {
-        if (e.ctrlKey || e.metaKey || e.shiftKey) return;
-        e.preventDefault(); 
-        openModal(name);
-        history.pushState({ celeb: name }, '', celebUrl);
-      });
-      
-      D.grid.appendChild(card);
-    });
-
-    renderIndex += CHUNK_SIZE;
-    
-    if (renderIndex < filteredEntries.length) {
-      D.loadWrap.classList.remove('hidden');
-    } else {
-      D.loadWrap.classList.add('hidden');
-    }
-  }
-
-  function openModal(name, isHistoryNav = false) {
-    if (!celebMap[name]) return;
-    const data = celebMap[name];
-    modal = { open: true, name, books: data.books, idx: 0 };
-
-    D.mImg.src = data.imageUrl || '';
-    D.mImg.alt = data.imageUrl ? `${name} 책 추천` : '';
-    D.mImg.parentElement.style.display = data.imageUrl ? '' : 'none';
-    
-    D.mName.textContent  = name; 
-    D.mCount.textContent = `${data.books.length} records`;
-
-    buildSlides();
-    D.overlay.classList.add('active');
-    D.floatMenus.classList.add('opacity-0', 'pointer-events-none'); 
-    document.body.style.overflow = 'hidden';
-    
-    updateSEO(name); 
-  }
-
-  function closeModal(isHistoryNav = false) {
-    modal.open = false;
-    D.overlay.classList.remove('active');
-    D.floatMenus.classList.remove('opacity-0', 'pointer-events-none'); 
-    document.body.style.overflow = '';
-    
-    if (!isHistoryNav) {
-      history.pushState(null, '', BASE_PATH);
+    // CSV 파싱
+    function parseCSV(text) {
+      const lines = text.split('\n');
+      return lines.slice(1).map(line => {
+        const parts = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+        return parts.map(p => p.trim().replace(/^"|"$/g, ''));
+      }).filter(row => row[0]);
     }
 
-    setTimeout(() => { D.track.innerHTML = ''; D.dots.innerHTML = ''; }, 300);
-    
-    updateSEO(null); 
-  }
-
-  function buildSlides() {
-    D.track.innerHTML = '';
-    D.dots.innerHTML  = '<div id="page-indicator" class="font-sans font-bold text-[10px] md:text-xs bg-white border-2 border-ink px-3 md:px-4 py-1.5 md:py-2 text-ink shadow-neo-sm tracking-widest"></div>';
-    
-    modal.books.forEach((book, i) => {
-      const slide = document.createElement('div');
-      slide.className = 'slide-area w-full flex-shrink-0 flex flex-col md:flex-row gap-4 md:gap-8 items-center md:items-start px-4 py-4 md:px-6';
-
-      const cover = book.coverUrl
-        ? `<img src="${book.coverUrl}" class="w-24 md:w-36 lg:w-44 object-cover border-2 border-ink shadow-neo flex-shrink-0 mx-auto md:mx-0" alt="${book.title} 표지" loading="lazy">`
-        : `<div class="w-24 md:w-36 lg:w-44 aspect-[2/3] border-2 border-ink bg-white flex items-center justify-center font-sans font-bold text-xs text-muted shadow-neo flex-shrink-0 mx-auto md:mx-0">COVER</div>`;
-
-      const quote = book.comment
-        ? `<blockquote class="text-xs md:text-sm leading-relaxed text-ink mb-3 bg-neo-yellow border-2 border-ink p-3 md:p-4 shadow-neo-sm font-medium">"${book.comment}"</blockquote>`
-        : '';
-
-      const pub = book.publisher
-        ? `<span class="opacity-40 mx-1.5">|</span><span class="text-ink/70">${book.publisher}</span>` : '';
-
-      const src = book.source?.startsWith('http')
-        ? `<a href="${book.source}" target="_blank" class="book-link">↗ 출처</a>` : '';
-      const lnk = book.link && book.link !== '#'
-        ? `<a href="${book.link}" target="_blank" class="book-link">↗ 도서 정보</a>` : '';
-      const links = (src || lnk)
-        ? `<div class="flex gap-4 flex-wrap justify-center md:justify-start mt-2">${src}${lnk}</div>` : '';
-
-      slide.innerHTML = `
-        ${cover}
-        <div class="flex flex-col w-full text-center md:text-left min-w-0">
-          <h4 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black tracking-tight leading-snug mb-1.5 md:mb-2">${book.title}</h4>
-          <p class="text-xs md:text-sm font-bold mb-3">${book.author}${pub}</p>
-          ${quote}${links}
-        </div>`;
-
-      D.track.appendChild(slide);
-    });
-    updateSlide();
-  }
-
-  function goSlide(i) {
-    modal.idx = Math.max(0, Math.min(i, modal.books.length - 1));
-    updateSlide();
-  }
-
-  function updateSlide() {
-    D.track.style.transform = `translateX(-${modal.idx * 100}%)`;
-    D.prevBtn.disabled = modal.idx === 0;
-    D.nextBtn.disabled = modal.idx === modal.books.length - 1;
-    
-    const indicator = document.getElementById('page-indicator');
-    if (indicator) {
-      indicator.textContent = `${modal.idx + 1} / ${modal.books.length}`;
-    }
-  }
-
-  /* ── DYNAMIC SECTIONS ───────────────────────────────────── */
-  function renderDynamicSections() {
-    // 1. 내 최애가 읽은 책 (12명으로 2줄)
-    const topCelebs = [...entries]
-      .sort((a, b) => b[1].books.length - a[1].books.length)
-      .slice(0, 12);
-    
-    let topHtml = '';
-    topCelebs.forEach(([name, data]) => {
-      const firstBook = data.books.length > 0 ? data.books[0].title : '';
-      const secondBook = data.books.length > 1 ? ` · ${data.books[1].title}` : '';
-      const bookSummary = `${firstBook}${secondBook} 외`;
-
-      const imgHtml = data.imageUrl
-        ? `<img src="${data.imageUrl}" alt="${name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'">`
-        : `<div class="w-full h-full flex items-center justify-center font-sans font-bold text-[10px] text-muted">PHOTO</div>`;
-
-      topHtml += `
-        <div class="top-celeb-card border-2 border-ink bg-white shadow-neo flex flex-col group overflow-hidden cursor-pointer" onclick="searchBook('${name}')" data-name="${name}">
-          <div class="celeb-photo-wrap w-full aspect-square bg-paper-dark border-b-2 border-ink overflow-hidden relative">
-            ${imgHtml}
-          </div>
-          <div class="p-3 text-center flex-1 flex flex-col justify-center bg-white z-10 relative">
-            <p class="font-black text-sm mb-1 truncate">${name}</p>
-            <p class="font-sans font-bold text-[10px] bg-neo-yellow border border-ink px-1.5 py-0.5 inline-block mx-auto mb-2 shadow-neo-sm">${data.books.length} records</p>
-            <p class="text-[10px] text-muted truncate">${bookSummary}</p>
-          </div>
-        </div>
-      `;
-    });
-    D.topReaders.innerHTML = topHtml;
-
-    D.topReaders.querySelectorAll('.top-celeb-card').forEach(card => {
-      const name = card.dataset.name;
-      if (name && !celebMap[name].imageUrl) {
-        imgObserver.observe(card);
-      }
-    });
-
-    // 2. 여러 명이 읽은 책 (2명 이상)
-    const bookCounts = {};
-    entries.forEach(([name, data]) => {
-      const uniqueBooks = [...new Set(data.books.map(b => b.title.trim()))];
-      uniqueBooks.forEach(title => {
-        if (!bookCounts[title]) bookCounts[title] = 0;
-        bookCounts[title]++;
-      });
-    });
-
-    const commonBooksList = Object.entries(bookCounts)
-      .filter(([title, count]) => count >= 2)
-      .sort((a, b) => b[1] - a[1]);
-
-    const colors = ['bg-neo-yellow', 'bg-neo-mint', 'bg-neo-pink', 'bg-white'];
-    let commonHtml = '';
-    commonBooksList.forEach(([title, count], i) => {
-      const color = colors[i % colors.length];
-      commonHtml += `
-        <div onclick="searchBook('${title}')" class="cursor-pointer group flex flex-col items-center bg-white border-2 border-ink shadow-neo hover:shadow-neo-lg hover:-translate-y-1 transition-all p-2.5 sm:p-3 relative overflow-hidden">
-          <div class="absolute top-0 right-0 bg-ink text-neo-yellow font-sans font-bold text-[10px] px-2 py-0.5 z-10">${count}명</div>
-          <div class="w-full aspect-[2/3] ${color} border-2 border-ink mb-2 sm:mb-3 flex items-center justify-center p-2 text-center group-hover:bg-opacity-80 transition-colors">
-             <span class="font-black text-xs sm:text-sm text-ink leading-snug word-break-keep">${title}</span>
-          </div>
-          <p class="font-bold text-[10px] sm:text-xs text-center w-full truncate text-ink">${title}</p>
-        </div>
-      `;
-    });
-    D.commonBooks.innerHTML = commonHtml;
-
-    // 3. 전체 목록
-    const allNames = Object.keys(celebMap).sort((a, b) => a.localeCompare(b, 'ko'));
-    D.allCelebsTitle.textContent = `등록된 셀럽 · 아이돌 · 배우 전체 목록 ${allNames.length}명`;
-    
-    let allHtml = '';
-    allNames.forEach(name => {
-      allHtml += `
-        <a href="?celeb=${encodeURIComponent(name)}" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">
-          ${name}
-        </a>
-      `;
-    });
-    D.allCelebs.innerHTML = allHtml;
-  }
-
-  async function init() {
-    bindEvents();
-    setStatus('loading', 'Loading data...');
-
-    try {
-      const rows  = await fetchSheet();
-      celebMap = transform(rows);
-      entries  = Object.entries(celebMap).sort(() => Math.random() - .5);
-      filterEntries(); 
-      setStatus('success', `${entries.length} RECORDS`);
-
-      // 추가된 자동 구성 함수 실행
-      renderDynamicSections();
-
-      const urlParams = new URLSearchParams(window.location.search);
-      const targetCeleb = urlParams.get('celeb');
-      if (targetCeleb && celebMap[targetCeleb]) {
-        openModal(targetCeleb, true);
-      }
-    } catch {
-      setStatus('error', '목록 파일을 찾을 수 없습니다.');
-    }
-  }
-
-  function bindEvents() {
-    D.search.addEventListener('input', e => filterEntries(e.target.value));
-    D.closeBtn.addEventListener('click', () => closeModal(false));
-    D.overlay.addEventListener('click', e => { if (e.target === D.overlay) closeModal(false); });
-    
-    D.btnGrid.addEventListener('click', () => setViewMode('grid'));
-    D.btnList.addEventListener('click', () => setViewMode('list'));
-    
-    D.loadBtn.addEventListener('click', () => renderNextChunk());
-    
-    D.shareBtn.addEventListener('click', () => {
-      const shareUrl = `${window.location.origin}${BASE_PATH}share/${modal.name}.html`;
+    async function init() {
       try {
-        const ta = document.createElement('textarea');
-        ta.value = shareUrl;
-        ta.style.cssText = 'position:fixed;top:-9999px;left:-9999px';
-        document.body.appendChild(ta); ta.focus(); ta.select();
-        document.execCommand('copy');
-        document.body.removeChild(ta);
-        D.toast.classList.remove('opacity-0','translate-y-4');
-        setTimeout(() => D.toast.classList.add('opacity-0','translate-y-4'), 3000);
-      } catch { prompt('링크 복사:', shareUrl); }
+        const res = await fetch(CSV_URL);
+        const text = await res.text();
+        allData = parseCSV(text);
+
+        // 연예인별 그룹화 및 책 중복 카운트 준비
+        const bookCountMap = {};
+        allData.forEach(row => {
+          const title = row[1];
+          bookCountMap[title] = (bookCountMap[title] || 0) + 1;
+        });
+
+        allData.forEach(row => {
+          const name = row[0];
+          if (!celebGroups[name]) {
+            celebGroups[name] = { 
+              name, 
+              img: row[7] || 'https://hwiruruk.github.io/favoread/favicon.png', 
+              items: [] 
+            };
+          }
+          // 원본 카운트 정보를 아이템에 포함시킴
+          celebGroups[name].items.push({
+            title: row[1],
+            author: row[2],
+            publisher: row[3],
+            source: row[4],
+            link: row[5],
+            cover: row[6],
+            count: bookCountMap[row[1]] // 이 책을 총 몇 명이 읽었는지 저장
+          });
+        });
+
+        renderGrid(Object.values(celebGroups));
+        D.loading.classList.add('hidden');
+        D.grid.classList.remove('opacity-0');
+
+        // URL 파라미터 체크
+        const urlParams = new URLSearchParams(window.location.search);
+        const celebParam = urlParams.get('celeb');
+        if (celebParam && celebGroups[celebParam]) {
+          openModal(celebParam);
+        }
+
+      } catch (err) {
+        console.error(err);
+        D.loading.innerHTML = '<p class="text-red-500">데이터를 불러오지 못했습니다.</p>';
+      }
+    }
+
+    function renderGrid(groups) {
+      D.grid.innerHTML = groups.map(g => `
+        <div class="book-card bg-white p-4 rounded-2xl shadow-sm border border-slate-100 cursor-pointer text-center" 
+             onclick="openModal('${g.name}')">
+          <div class="celeb-img-container mb-3">
+            <img src="${g.img}" class="celeb-img" alt="${g.name}" loading="lazy">
+          </div>
+          <h3 class="font-bold text-slate-800 text-sm md:text-base">${g.name}</h3>
+          <p class="text-blue-500 text-xs mt-1 font-medium">${g.items.length}권의 기록</p>
+        </div>
+      `).join('');
+    }
+
+    function openModal(celebName, skipHistory = false) {
+      const group = celebGroups[celebName];
+      if (!group) return;
+
+      modal.celeb = celebName;
+      modal.items = group.items;
+      modal.idx = 0;
+      modal.open = true;
+
+      D.viewport.innerHTML = modal.items.map((item, i) => `
+        <div class="modal-slide">
+          <div class="h-64 md:h-80 relative flex items-center justify-center p-8" style="background-color: #f1f5f9;">
+            <div class="absolute inset-0 opacity-20" style="background-image: url('${group.img}'); background-size: cover; background-position: center; filter: blur(20px);"></div>
+            <img src="${item.cover || 'https://hwiruruk.github.io/favoread/favicon.png'}" 
+                 class="relative z-10 h-full shadow-2xl rounded-lg object-contain bg-white" 
+                 alt="${item.title}"
+                 onerror="this.src='https://hwiruruk.github.io/favoread/favicon.png'">
+          </div>
+          <div class="p-6 md:p-8 flex-1 flex flex-col">
+            <div class="mb-6">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-600 text-[10px] font-bold rounded-md mb-2 uppercase tracking-wider">Reading Archive</span>
+              <h2 class="text-xl md:text-2xl font-bold text-slate-900 leading-tight mb-2">${item.title}</h2>
+              <p class="text-slate-500 text-sm">${item.author} · ${item.publisher}</p>
+            </div>
+            
+            <div class="mt-auto space-y-3">
+              <a href="${item.link}" target="_blank" class="flex items-center justify-between p-4 bg-slate-50 hover:bg-blue-50 border border-slate-100 rounded-xl transition-all group">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-sm text-blue-500 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-book-open"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-slate-400 font-medium">도서 상세 정보</p>
+                    <p class="text-sm font-bold text-slate-700">도서 정보 확인하기</p>
+                  </div>
+                </div>
+                <i class="fa-solid fa-arrow-right text-slate-300 group-hover:text-blue-500 transition-colors"></i>
+              </a>
+
+              <a href="${item.source}" target="_blank" class="flex items-center justify-between p-4 bg-slate-50 hover:bg-indigo-50 border border-slate-100 rounded-xl transition-all group">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-sm text-indigo-500 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-link"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-slate-400 font-medium">출처 및 인용</p>
+                    <p class="text-sm font-bold text-slate-700">근거 자료 바로가기 ${item.count > 1 ? `<span class="ml-1 text-xs text-blue-500">(외 ${item.count - 1}명이 읽음)</span>` : ''}</p>
+                  </div>
+                </div>
+                <i class="fa-solid fa-arrow-right text-slate-300 group-hover:text-indigo-500 transition-colors"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      updateSlideUI();
+      
+      D.overlay.classList.remove('hidden');
+      setTimeout(() => D.overlay.classList.add('opacity-100'), 10);
+      document.body.style.overflow = 'hidden';
+
+      if (!skipHistory) {
+        const url = new URL(window.location);
+        url.searchParams.set('celeb', celebName);
+        window.history.pushState({ celeb: celebName }, '', url);
+      }
+    }
+
+    function closeModal(skipHistory = false) {
+      D.overlay.classList.remove('opacity-100');
+      setTimeout(() => {
+        D.overlay.classList.add('hidden');
+        modal.open = false;
+        document.body.style.overflow = '';
+      }, 300);
+
+      if (!skipHistory) {
+        const url = new URL(window.location);
+        url.searchParams.delete('celeb');
+        window.history.pushState({}, '', url);
+      }
+    }
+
+    function updateSlideUI() {
+      D.counter.innerText = `${modal.idx + 1} / ${modal.items.length}`;
+      D.prevBtn.style.opacity = modal.idx === 0 ? '0' : '1';
+      D.prevBtn.style.pointerEvents = modal.idx === 0 ? 'none' : 'auto';
+      D.nextBtn.style.opacity = modal.idx === modal.items.length - 1 ? '0' : '1';
+      D.nextBtn.style.pointerEvents = modal.idx === modal.items.length - 1 ? 'none' : 'auto';
+    }
+
+    function goSlide(i) {
+      if (i < 0 || i >= modal.items.length) return;
+      modal.idx = i;
+      D.viewport.scrollTo({ left: D.viewport.offsetWidth * i, behavior: 'smooth' });
+      updateSlideUI();
+    }
+
+    // 이벤트 리스너
+    D.search.addEventListener('input', (e) => {
+      const val = e.target.value.toLowerCase();
+      const filtered = Object.values(celebGroups).filter(g => 
+        g.name.toLowerCase().includes(val) || 
+        g.items.some(item => item.title.toLowerCase().includes(val))
+      );
+      renderGrid(filtered);
+    });
+
+    D.closeBtn.addEventListener('click', () => closeModal());
+    
+    D.overlay.addEventListener('click', (e) => {
+      if (e.target === D.overlay) closeModal();
+    });
+
+    D.shareBtn.addEventListener('click', async () => {
+      const shareUrl = `${window.location.origin}${window.location.pathname}?celeb=${encodeURIComponent(modal.celeb)}`;
+      try {
+        await navigator.clipboard.writeText(shareUrl);
+        D.toast.classList.remove('opacity-0', 'translate-y-4');
+        setTimeout(() => D.toast.classList.add('opacity-0', 'translate-y-4'), 3000);
+      } catch {
+        prompt('링크 복사:', shareUrl);
+      }
     });
 
     D.prevBtn.addEventListener('click', () => goSlide(modal.idx - 1));
@@ -1231,8 +319,8 @@
 
     document.addEventListener('keydown', e => {
       if (!modal.open) return;
-      if (e.key === 'Escape')     closeModal();
-      if (e.key === 'ArrowLeft')  goSlide(modal.idx - 1);
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowLeft') goSlide(modal.idx - 1);
       if (e.key === 'ArrowRight') goSlide(modal.idx + 1);
     });
 
@@ -1246,21 +334,13 @@
 
     let sx = 0, sw = false;
     D.viewport.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sw = true; }, { passive: true });
-    D.viewport.addEventListener('touchend',   e => {
+    D.viewport.addEventListener('touchend', e => {
       if (!sw) return; sw = false;
       const dx = sx - e.changedTouches[0].clientX;
       if (Math.abs(dx) > 44) goSlide(modal.idx + (dx > 0 ? 1 : -1));
     });
-    D.viewport.addEventListener('mousedown', e => { sx = e.clientX; sw = true; });
-    document.addEventListener('mouseup',     e => {
-      if (!sw) return; sw = false;
-      const dx = sx - e.clientX;
-      if (Math.abs(dx) > 44) goSlide(modal.idx + (dx > 0 ? 1 : -1));
-    });
-  }
 
-  document.addEventListener('DOMContentLoaded', init);
-})();
-</script>
+    init();
+  </script>
 </body>
 </html>
