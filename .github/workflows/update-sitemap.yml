@@ -19,18 +19,20 @@ jobs:
       - name: Generate sitemap and share pages
         run: |
           python3 - <<'EOF'
-          import csv, datetime, os
+          import csv, datetime, os, json
           from urllib.parse import quote
 
           BASE = "https://hwiruruk.github.io/favoread/"
           TODAY = datetime.date.today().isoformat()
 
+          # 인물별 정보 및 도서 목록 저장용
           celebs = {}
+          
           with open("data.csv", encoding="utf-8") as f:
               reader = csv.reader(f)
               headers = next(reader)
               
-              # 이미지 주소가 있는 열 찾기 (기본값 7)
+              # 열 인덱스 찾기 (연예인:0, 도서명:1, 이미지:7)
               img_col = 7 
               for i, h in enumerate(headers):
                   if any(w in h.lower() for w in ['연예인이미지', 'photo', '이미지주소']):
@@ -40,10 +42,17 @@ jobs:
               for row in reader:
                   if row and row[0].strip():
                       name = row[0].strip()
+                      book_title = row[1].strip() if len(row) > 1 else ""
                       img_url = row[img_col].strip() if len(row) > img_col else ""
+                      
                       if not img_url.startswith('http'):
                           img_url = f"{BASE}favicon.png"
-                      celebs[name] = img_url
+                      
+                      if name not in celebs:
+                          celebs[name] = {'img': img_url, 'books': []}
+                      
+                      if book_title:
+                          celebs[name]['books'].append(book_title)
 
           # share 폴더 만들기
           os.makedirs("share", exist_ok=True)
@@ -63,37 +72,74 @@ jobs:
               '  </url>',
           ]
 
-          for name, img in celebs.items():
+          for name, info in celebs.items():
+              img = info['img']
+              books = info['books']
               safe_name = quote(name, safe="()")
               
-              # 1. 인물별 고유 HTML 페이지(공유용) 생성
+              # JSON-LD 구조화 데이터 생성 (Person + ItemList)
+              item_list = []
+              for i, b in enumerate(books):
+                  item_list.append({
+                      "@type": "ListItem",
+                      "position": i + 1,
+                      "name": b
+                  })
+
+              json_ld = {
+                  "@context": "https://schema.org",
+                  "@type": "Person",
+                  "name": name,
+                  "image": img,
+                  "description": f"{name}님이 읽거나 추천한 책들의 리스트입니다.",
+                  "mainEntityOfPage": {
+                      "@type": "WebPage",
+                      "@id": f"{BASE}share/{name}.html"
+                  },
+                  "knowsAbout": {
+                      "@type": "ItemList",
+                      "numberOfItems": len(books),
+                      "itemListElement": item_list
+                  }
+              }
+
+              # 1. 인물별 고유 HTML 페이지 생성
               html = f"""<!DOCTYPE html>
           <html lang="ko">
           <head>
               <meta charset="utf-8">
-              <title>{name} | 최애의 독서</title>
+              <title>{name}의 독서 리스트 | 최애의 독서</title>
               <meta property="og:title" content="{name} | 최애의 독서">
-              <meta property="og:description" content="당신이 좋아하는 {name}의 독서 기록을 확인해보세요!">
+              <meta property="og:description" content="당신이 좋아하는 {name}의 독서 기록과 추천 책 {len(books)}권을 확인해보세요!">
               <meta property="og:image" content="{img}">
               <meta property="og:url" content="{BASE}share/{name}.html">
               <meta name="twitter:card" content="summary_large_image">
+              
+              <script type="application/ld+json">
+              {json.dumps(json_ld, ensure_ascii=False, indent=2)}
+              </script>
+
               <meta http-equiv="refresh" content="0; url={BASE}?celeb={safe_name}">
           </head>
           <body>
               <script>window.location.replace("{BASE}?celeb={safe_name}");</script>
           </body>
           </html>"""
-              with open(f"share/{name}.html", "w", encoding="utf-8") as f:
+              
+              # 파일명에 포함될 수 없는 문자 처리하여 저장
+              file_name = name.replace("/", "_").replace("\\", "_")
+              with open(f"share/{file_name}.html", "w", encoding="utf-8") as f:
                   f.write(html)
               
               # 2. 사이트맵 추가
               lines += [
                   '  <url>',
-                  f'    <loc>{BASE}share/{safe_name}.html</loc>',
+                  f'    <loc>{BASE}share/{quote(file_name, safe="()")}.html</loc>',
                   f'    <lastmod>{TODAY}</lastmod>',
                   '    <priority>0.7</priority>',
                   '  </url>',
               ]
+
           lines.append('</urlset>')
           with open("sitemap.xml", "w", encoding="utf-8") as f:
               f.write('\n'.join(lines) + '\n')
@@ -101,12 +147,10 @@ jobs:
           print(f"✅ 공유 페이지 및 사이트맵 생성 완료: 총 {len(celebs)}명")
           EOF
 
-      # (이 사이에 있는 Detect new & removed celebs 와 Request indexing 부분은 원래 코드 그대로 둡니다)
-
       - name: Commit & push sitemap and share pages
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add sitemap.xml share/
-          git diff --cached --quiet || git commit -m "chore: sitemap 및 개별 공유 페이지 자동 갱신 ($(date '+%Y-%m-%d'))"
+          git diff --cached --quiet || git commit -m "chore: sitemap 및 개별 공유 페이지 자동 갱신 (JSON-LD ItemList 포함)"
           git push
