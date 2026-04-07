@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>최애의 독서 | 당신이 좋아하는, 그들이 읽은 책</title>
+  <link>https://hwiruruk.github.io/favoread/</link>
+  <description>아이돌, 셀럽, 연예인 나의 최애가 읽은 책, 추천 책, 인생책을 한곳에 모은 아카이브입니다. ✨</description>
+  <language>ko-kr</language>
+  <lastBuildDate>Tue, 07 Apr 2026 11:00:00 +0900</lastBuildDate>
+  <atom:link href="https://hwiruruk.github.io/favoread/feed.xml" rel="self" type="application/rss+xml" />
+
+  <item>
+    <title>최애의 독서 아카이브 업데이트 (313명 등록 완료)</title>
+    <link>https://hwiruruk.github.io/favoread/</link>
+    <description>RM(BTS), 카리나, 김혜수 등 총 313명의 셀럽들이 읽은 책 리스트가 업데이트되었습니다. 최애의 인생책을 확인해 보세요.</description>
+    <pubDate>Tue, 07 Apr 2026 11:00:00 +0900</pubDate>
+    <guid>https://hwiruruk.github.io/favoread/?update=20260407</guid>
+  </item>
+
+  <item>
+    <title>여러 명이 공통으로 읽은 베스트 도서 확인하기</title>
+    <link>https://hwiruruk.github.io/favoread/</link>
+    <description>두 명 이상의 셀럽이 언급한 화제의 도서들을 모아볼 수 있습니다.</description>
+    <pubDate>Mon, 06 Apr 2026 10:00:00 +0900</pubDate>
+    <guid>https://hwiruruk.github.io/favoread/?section=common-books</guid>
+  </item>
+</channel>
+</rss>
