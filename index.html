@@ -71,7 +71,6 @@
   </script>
   
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;400;600;900&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
   <!-- data.json은 GitHub Actions가 data.csv에서 자동 생성 -->
 
@@ -122,7 +121,11 @@
       overflow-x: hidden;
     }
     ::selection        { background: #fde047; color: #000; }
-    ::-webkit-scrollbar { width: 0; background: transparent; }
+    ::-webkit-scrollbar { width: 12px; }
+    ::-webkit-scrollbar-track { background: #fcfaf5; border-left: 2px solid #000; }
+    ::-webkit-scrollbar-thumb { background: #fde047; border: 2px solid #000; }
+    ::-webkit-scrollbar-thumb:hover { background: #000; }
+    html { scrollbar-color: #fde047 #fcfaf5; scrollbar-width: thin; }
 
     .celeb-portrait { transition: transform .4s ease, filter .4s ease; }
     .group:hover .celeb-portrait { transform: scale(1.05); filter: brightness(1.05); }
@@ -334,7 +337,6 @@
     <p class="text-sm md:text-base font-bold text-muted mb-8 word-break-keep">링크를 누르면 해당 인물의 독서 기록이 바로 열립니다.</p>
     
     <div id="all-celebs-container" class="flex flex-wrap gap-2 md:gap-3">
-
       <a href="share/RM%28BTS%29.html" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">RM(BTS)</a>
       <a href="share/%EA%B0%80%EC%9B%90%28%EB%AF%B8%EC%95%BC%EC%98%A4%29.html" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">가원(미야오)</a>
       <a href="share/%EA%B0%80%EC%9D%84%28%EC%95%84%EC%9D%B4%EB%B8%8C%29.html" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">가을(아이브)</a>
@@ -533,50 +535,6 @@
     </div>
   </section>
 
-  <!-- ── 셀럽 독서 취향 비교 ── -->
-  <section id="compare-section" class="border-t-4 border-ink pt-12 md:pt-16 w-full">
-    <h2 class="text-2xl md:text-3xl font-black mb-2 word-break-keep">독서 취향 비교 📊</h2>
-    <p class="text-sm md:text-base font-bold text-muted mb-8 word-break-keep">두 셀럽의 독서 목록을 비교해 보세요</p>
-    <div class="flex flex-col sm:flex-row gap-4 mb-8">
-      <input id="compare-a" type="text" placeholder="첫 번째 셀럽 이름"
-        class="flex-1 bg-white border-2 border-ink shadow-neo-sm px-4 py-3 text-center font-sans font-bold text-sm focus:outline-none focus:shadow-neo focus:-translate-y-0.5 transition-all placeholder:text-muted/50"
-        list="celeb-datalist-a">
-      <span class="font-black text-2xl text-ink self-center hidden sm:block">VS</span>
-      <input id="compare-b" type="text" placeholder="두 번째 셀럽 이름"
-        class="flex-1 bg-white border-2 border-ink shadow-neo-sm px-4 py-3 text-center font-sans font-bold text-sm focus:outline-none focus:shadow-neo focus:-translate-y-0.5 transition-all placeholder:text-muted/50"
-        list="celeb-datalist-b">
-    </div>
-    <datalist id="celeb-datalist-a"></datalist>
-    <datalist id="celeb-datalist-b"></datalist>
-    <div class="flex justify-center mb-8">
-      <button id="compare-btn"
-        class="font-sans font-bold text-sm tracking-widest border-2 border-ink bg-neo-yellow shadow-neo px-8 py-3 hover:-translate-y-1 hover:shadow-neo-lg active:shadow-neo-sm transition-all">비교하기</button>
-    </div>
-    <div id="compare-result" class="hidden"></div>
-  </section>
-
-  <!-- ── 나와 취향이 비슷한 셀럽 ── -->
-  <section id="quiz-section" class="border-t-4 border-ink pt-12 md:pt-16 w-full">
-    <h2 class="text-2xl md:text-3xl font-black mb-2 word-break-keep">나의 독서 소울메이트는? 💫</h2>
-    <p class="text-sm md:text-base font-bold text-muted mb-8 word-break-keep">좋아하는 책을 고르면, 취향이 비슷한 셀럽을 찾아드려요</p>
-    <div id="quiz-book-pool" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 mb-8"></div>
-    <div class="flex justify-center mb-4">
-      <span id="quiz-selected-count" class="font-sans font-bold text-xs text-muted tracking-wider">0 / 5 선택</span>
-    </div>
-    <div class="flex justify-center mb-8">
-      <button id="quiz-btn"
-        class="font-sans font-bold text-sm tracking-widest border-2 border-ink bg-neo-pink shadow-neo px-8 py-3 hover:-translate-y-1 hover:shadow-neo-lg active:shadow-neo-sm transition-all disabled:opacity-30" disabled>매칭 시작!</button>
-    </div>
-    <div id="quiz-result" class="hidden"></div>
-  </section>
-
-  <!-- ── 셀럽 독서 네트워크 ── -->
-  <section id="network-section" class="border-t-4 border-ink pt-12 md:pt-16 pb-16 w-full">
-    <h2 class="text-2xl md:text-3xl font-black mb-2 word-break-keep">셀럽 독서 네트워크 🕸️</h2>
-    <p class="text-sm md:text-base font-bold text-muted mb-8 word-break-keep">같은 책을 읽은 셀럽끼리 연결해 보면?</p>
-    <div id="network-container" class="w-full border-4 border-ink bg-white shadow-neo-lg" style="height:500px;"></div>
-    <p class="text-[10px] text-muted mt-3 text-center font-sans font-bold">드래그로 이동 · 스크롤로 확대/축소 · 노드 클릭으로 상세 보기</p>
-  </section>
 
 </main>
 
@@ -698,15 +656,10 @@
     commonBooks: document.getElementById('common-books-container'),
     allCelebs: document.getElementById('all-celebs-container'),
     allCelebsTitle: document.getElementById('all-celebs-title'),
-    compareA:   document.getElementById('compare-a'),
-    compareB:   document.getElementById('compare-b'),
-    compareBtn: document.getElementById('compare-btn'),
-    compareResult: document.getElementById('compare-result'),
     quizPool:   document.getElementById('quiz-book-pool'),
     quizBtn:    document.getElementById('quiz-btn'),
     quizCount:  document.getElementById('quiz-selected-count'),
     quizResult: document.getElementById('quiz-result'),
-    networkContainer: document.getElementById('network-container'),
     scrollTopBtn: document.getElementById('scroll-top-btn'),
   };
 
@@ -721,13 +674,14 @@
   function updateSEO(name) {
     const defaultTitle = '최애의 독서 | 당신이 좋아하는, 그들이 읽은 책';
     const defaultDesc  = '아이돌, 셀럽, 그리고 나의 최애가 읽은 책들을 한곳에 모았습니다.';
-    const defaultImage = 'https://hwiruruk.github.io/favoread/favicon.png';
+    const defaultImage = 'https://hwiruruk.github.io/favoread/og-image.jpg';
     const BASE = 'https://hwiruruk.github.io/favoread/';
 
     const title    = name ? `${name} 읽은 책 추천 책 | 최애의 독서` : defaultTitle;
     const bookCount = (name && celebMap[name]) ? celebMap[name].books.length : 0;
     const desc = name ? `${name}의 읽은 책이 궁금하다면? ✨ 총 ${bookCount}권의 읽은 책과 추천하는 책, 인생책까지 확인해 보세요. #${name} #책추천 #읽은책 #독서 #인생책 📕` : defaultDesc;
-    const canonical = name ? `${BASE}?celeb=${encodeURIComponent(name)}` : BASE;
+    const fn = name ? name.replace(/\//g, '_').replace(/\\/g, '_') : '';
+    const canonical = name ? `${BASE}share/${encodeURIComponent(fn)}.html` : BASE;
 
     let imageUrl = defaultImage;
     if (name && celebMap[name] && celebMap[name].imageUrl) {
@@ -1143,8 +1097,9 @@
     
     let allHtml = '';
     allNames.forEach(name => {
+      const fn = encodeURIComponent(name.replace(/\//g, '_').replace(/\\/g, '_'));
       allHtml += `
-        <a href="?celeb=${encodeURIComponent(name)}" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">
+        <a href="share/${fn}.html" class="inline-block px-3 py-1.5 border-2 border-ink rounded-none bg-white hover:bg-neo-yellow shadow-neo-sm hover:shadow-neo hover:-translate-y-0.5 transition-all text-[11px] sm:text-xs font-bold font-sans text-ink">
           ${name}
         </a>
       `;
@@ -1164,9 +1119,7 @@
 
       // 추가된 자동 구성 함수 실행
       renderDynamicSections();
-      setupCompare();
       setupQuiz();
-      setupNetwork();
 
       const urlParams = new URLSearchParams(window.location.search);
       const targetCeleb = urlParams.get('celeb');
@@ -1242,49 +1195,6 @@
     D.scrollTopBtn.style.opacity = show ? '1' : '0';
     D.scrollTopBtn.style.pointerEvents = show ? 'auto' : 'none';
   });
-
-  /* ── COMPARE FEATURE ─────────────────────────────────── */
-  function setupCompare() {
-    const names = Object.keys(celebMap).sort((a, b) => a.localeCompare(b, 'ko'));
-    ['celeb-datalist-a', 'celeb-datalist-b'].forEach(id => {
-      const dl = document.getElementById(id);
-      dl.innerHTML = names.map(n => `<option value="${n}">`).join('');
-    });
-
-    D.compareBtn.addEventListener('click', runCompare);
-  }
-
-  function runCompare() {
-    const a = D.compareA.value.trim();
-    const b = D.compareB.value.trim();
-    if (!celebMap[a] || !celebMap[b]) {
-      D.compareResult.className = 'text-center py-8 border-2 border-ink bg-white shadow-neo-sm';
-      D.compareResult.innerHTML = '<p class="font-bold text-sm text-muted">정확한 셀럽 이름을 입력해 주세요.</p>';
-      return;
-    }
-    const booksA = new Set(celebMap[a].books.map(x => x.title.trim()));
-    const booksB = new Set(celebMap[b].books.map(x => x.title.trim()));
-    const common = [...booksA].filter(t => booksB.has(t));
-    const onlyA  = [...booksA].filter(t => !booksB.has(t));
-    const onlyB  = [...booksB].filter(t => !booksA.has(t));
-
-    const pill = (t, bg) => `<span class="inline-block px-2 py-1 m-0.5 text-[10px] sm:text-xs font-bold border border-ink ${bg} shadow-neo-sm">${t}</span>`;
-
-    D.compareResult.className = 'grid grid-cols-1 md:grid-cols-3 gap-4';
-    D.compareResult.innerHTML = `
-      <div class="border-2 border-ink bg-white p-4 shadow-neo-sm">
-        <h4 class="font-black text-sm mb-3 bg-neo-yellow inline-block px-2 py-1 border border-ink">${a}만 읽은 책 (${onlyA.length})</h4>
-        <div class="flex flex-wrap">${onlyA.map(t => pill(t, 'bg-white')).join('') || '<span class="text-xs text-muted">없음</span>'}</div>
-      </div>
-      <div class="border-2 border-ink bg-neo-mint p-4 shadow-neo">
-        <h4 class="font-black text-sm mb-3 bg-ink text-neo-yellow inline-block px-2 py-1">함께 읽은 책 (${common.length})</h4>
-        <div class="flex flex-wrap">${common.map(t => pill(t, 'bg-neo-mint')).join('') || '<span class="text-xs text-muted">없음</span>'}</div>
-      </div>
-      <div class="border-2 border-ink bg-white p-4 shadow-neo-sm">
-        <h4 class="font-black text-sm mb-3 bg-neo-pink inline-block px-2 py-1 border border-ink">${b}만 읽은 책 (${onlyB.length})</h4>
-        <div class="flex flex-wrap">${onlyB.map(t => pill(t, 'bg-white')).join('') || '<span class="text-xs text-muted">없음</span>'}</div>
-      </div>`;
-  }
 
   /* ── QUIZ FEATURE ────────────────────────────────────── */
   let quizSelected = new Set();
@@ -1371,116 +1281,6 @@
           </div>
         </div>` : ''}`;
     D.quizResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
-
-  /* ── NETWORK VISUALIZATION ───────────────────────────── */
-  function setupNetwork() {
-    const container = D.networkContainer;
-    const width = container.clientWidth;
-    const height = container.clientHeight || 500;
-
-    // 공유 책이 있는 셀럽 쌍 찾기
-    const celebBooks = {};
-    Object.entries(celebMap).forEach(([name, data]) => {
-      celebBooks[name] = new Set(data.books.map(b => b.title.trim()));
-    });
-
-    const names = Object.keys(celebBooks);
-    const links = [];
-    const nodeSet = new Set();
-
-    for (let i = 0; i < names.length; i++) {
-      for (let j = i + 1; j < names.length; j++) {
-        const shared = [...celebBooks[names[i]]].filter(t => celebBooks[names[j]].has(t));
-        if (shared.length >= 1) {
-          links.push({ source: names[i], target: names[j], value: shared.length, books: shared });
-          nodeSet.add(names[i]);
-          nodeSet.add(names[j]);
-        }
-      }
-    }
-
-    if (links.length === 0) return;
-
-    // 연결 수 기준 상위 노드만 (너무 많으면 느림)
-    const linkCounts = {};
-    links.forEach(l => {
-      linkCounts[l.source] = (linkCounts[l.source] || 0) + l.value;
-      linkCounts[l.target] = (linkCounts[l.target] || 0) + l.value;
-    });
-    const topNodes = Object.entries(linkCounts).sort((a, b) => b[1] - a[1]).slice(0, 50).map(x => x[0]);
-    const topSet = new Set(topNodes);
-    const filteredLinks = links.filter(l => topSet.has(l.source) && topSet.has(l.target));
-    const nodes = topNodes.map(name => ({
-      id: name,
-      bookCount: celebMap[name].books.length,
-      linkStrength: linkCounts[name]
-    }));
-
-    const svg = d3.select(container).append('svg')
-      .attr('width', width).attr('height', height)
-      .attr('viewBox', `0 0 ${width} ${height}`);
-
-    const g = svg.append('g');
-
-    const zoom = d3.zoom().scaleExtent([0.3, 4]).on('zoom', (e) => g.attr('transform', e.transform));
-    svg.call(zoom);
-
-    const simulation = d3.forceSimulation(nodes)
-      .force('link', d3.forceLink(filteredLinks).id(d => d.id).distance(d => 120 / d.value))
-      .force('charge', d3.forceManyBody().strength(-200))
-      .force('center', d3.forceCenter(width / 2, height / 2))
-      .force('collision', d3.forceCollide().radius(30));
-
-    const link = g.append('g').selectAll('line')
-      .data(filteredLinks).enter().append('line')
-      .attr('stroke', '#000').attr('stroke-opacity', d => Math.min(0.15 + d.value * 0.15, 0.8))
-      .attr('stroke-width', d => Math.min(d.value * 1.5, 6));
-
-    const neoColors = ['#fde047', '#6ee7b7', '#f9a8d4', '#fff'];
-    const node = g.append('g').selectAll('g')
-      .data(nodes).enter().append('g')
-      .style('cursor', 'pointer')
-      .call(d3.drag()
-        .on('start', (e, d) => { if (!e.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
-        .on('drag', (e, d) => { d.fx = e.x; d.fy = e.y; })
-        .on('end', (e, d) => { if (!e.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; })
-      );
-
-    node.append('circle')
-      .attr('r', d => Math.min(8 + d.bookCount * 1.5, 28))
-      .attr('fill', (d, i) => neoColors[i % neoColors.length])
-      .attr('stroke', '#000').attr('stroke-width', 2);
-
-    node.append('text')
-      .text(d => d.id.length > 6 ? d.id.slice(0, 5) + '…' : d.id)
-      .attr('text-anchor', 'middle').attr('dy', d => Math.min(8 + d.bookCount * 1.5, 28) + 14)
-      .attr('font-size', '10px').attr('font-weight', 'bold').attr('font-family', 'sans-serif');
-
-    node.on('click', (e, d) => {
-      searchBook(d.id);
-    });
-
-    // Tooltip
-    const tooltip = d3.select(container).append('div')
-      .style('position', 'absolute').style('pointer-events', 'none').style('opacity', 0)
-      .style('background', '#000').style('color', '#fde047')
-      .style('padding', '6px 10px').style('font-size', '11px').style('font-weight', 'bold')
-      .style('font-family', 'sans-serif').style('border', '2px solid #000')
-      .style('box-shadow', '3px 3px 0 #000').style('z-index', '10');
-
-    link.on('mouseover', (e, d) => {
-      tooltip.style('opacity', 1).html(`${d.source.id} ↔ ${d.target.id}<br>${d.books.join(', ')}`);
-    }).on('mousemove', (e) => {
-      const rect = container.getBoundingClientRect();
-      tooltip.style('left', (e.clientX - rect.left + 12) + 'px').style('top', (e.clientY - rect.top - 10) + 'px');
-    }).on('mouseout', () => tooltip.style('opacity', 0));
-
-    simulation.on('tick', () => {
-      link.attr('x1', d => d.source.x).attr('y1', d => d.source.y)
-          .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
-      node.attr('transform', d => `translate(${d.x},${d.y})`);
-    });
   }
 
   document.addEventListener('DOMContentLoaded', init);
