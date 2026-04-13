@@ -236,6 +236,25 @@ for name, info in celebs.items():
 
     json_ld = clean_none(json_ld)
 
+    breadcrumb_ld = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+            {
+                '@type': 'ListItem',
+                'position': 1,
+                'name': '홈',
+                'item': BASE
+            },
+            {
+                '@type': 'ListItem',
+                'position': 2,
+                'name': name + '의 독서 리스트',
+                'item': page_url
+            }
+        ]
+    }
+
     # 책 테이블 행 (이미지 포함)
     book_rows = ''
     for i, b in enumerate(books):
@@ -261,6 +280,8 @@ for name, info in celebs.items():
         '  <title>' + esc(name) + '의 독서 리스트 | 최애의 독서</title>\n'
         '  <meta name="description" content="' + desc_text + '">\n'
         '  <meta name="keywords" content="' + esc(name) + ', 독서, 책추천, 읽은책, 인생책, 셀럽독서, 최애의 독서">\n'
+        '  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">\n'
+        '  <meta name="theme-color" content="#ffffff">\n'
         '\n'
         '  <!-- Open Graph -->\n'
         '  <meta property="og:title" content="' + esc(name) + ' | 최애의 독서">\n'
@@ -283,9 +304,16 @@ for name, info in celebs.items():
         '\n'
         '  <link rel="canonical" href="' + esc(page_url) + '">\n'
         '  <link rel="icon" href="' + BASE + 'favicon.png" type="image/png">\n'
+        '  <link rel="alternate" type="application/rss+xml" title="최애의 독서 RSS" href="' + BASE + 'feed.xml">\n'
+        '\n'
+        '  <link rel="preconnect" href="https://image.aladin.co.kr">\n'
+        '  <link rel="dns-prefetch" href="https://image.aladin.co.kr">\n'
         '\n'
         '  <script type="application/ld+json">\n'
         '  ' + json.dumps(json_ld, ensure_ascii=False, indent=2) + '\n'
+        '  </script>\n'
+        '  <script type="application/ld+json">\n'
+        '  ' + json.dumps(breadcrumb_ld, ensure_ascii=False, indent=2) + '\n'
         '  </script>\n'
         '\n'
         '  <style>\n'
@@ -316,7 +344,7 @@ for name, info in celebs.items():
         '    </tbody>\n'
         '  </table>\n'
         '\n'
-        '  <p style="margin-top:24px"><a href="' + redirect_url + '">최애의 독서에서 ' + esc(name) + ' 전체 목록 보기 →</a></p>\n'
+        '  <p style="margin-top:24px"><a href="' + redirect_url + '" rel="nofollow">최애의 독서에서 ' + esc(name) + ' 전체 목록 보기 →</a></p>\n'
         '\n'
         '</body>\n'
         '</html>'
@@ -373,16 +401,36 @@ for title, binfo in book_celebs.items():
 
     desc_text = esc(title) + '을(를) ' + str(celeb_count) + '명의 셀럽이 읽었습니다: ' + celeb_names_str
 
+    book_breadcrumb_ld = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+            {
+                '@type': 'ListItem',
+                'position': 1,
+                'name': '홈',
+                'item': BASE
+            },
+            {
+                '@type': 'ListItem',
+                'position': 2,
+                'name': title,
+                'item': page_url
+            }
+        ]
+    }
+
     json_ld = {
         '@context': 'https://schema.org',
         '@type': 'Book',
         'name': title,
+        'url': page_url,
         'description': str(celeb_count) + '명의 셀럽이 읽은 책',
     }
-    if binfo['author']:
-        json_ld['author'] = {'@type': 'Person', 'name': binfo['author']}
-    if binfo['publisher']:
-        json_ld['publisher'] = {'@type': 'Organization', 'name': binfo['publisher']}
+    if binfo['author'] and binfo['author'].strip():
+        json_ld['author'] = {'@type': 'Person', 'name': binfo['author'].strip()}
+    if binfo['publisher'] and binfo['publisher'].strip():
+        json_ld['publisher'] = {'@type': 'Organization', 'name': binfo['publisher'].strip()}
     if binfo['coverUrl'] and binfo['coverUrl'].startswith('http'):
         json_ld['image'] = binfo['coverUrl']
 
@@ -395,6 +443,8 @@ for title, binfo in book_celebs.items():
         '  <title>' + esc(title) + ' - ' + str(celeb_count) + '명의 셀럽이 읽은 책 | 최애의 독서</title>\n'
         '  <meta name="description" content="' + desc_text + '">\n'
         '  <meta name="keywords" content="' + esc(title) + ', ' + esc(binfo['author']) + ', 셀럽독서, 책추천, 최애의 독서">\n'
+        '  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">\n'
+        '  <meta name="theme-color" content="#ffffff">\n'
         '\n'
         '  <meta property="og:title" content="' + esc(title) + ' | ' + str(celeb_count) + '명의 셀럽이 읽은 책">\n'
         '  <meta property="og:description" content="' + celeb_names_str + ' 등 ' + str(celeb_count) + '명이 읽은 책">\n'
@@ -402,13 +452,28 @@ for title, binfo in book_celebs.items():
         '  <meta property="og:type" content="book">\n'
         '  <meta property="og:site_name" content="최애의 독서">\n'
         '  <meta property="og:locale" content="ko_KR">\n'
-        + ('  <meta property="og:image" content="' + esc(binfo['coverUrl']) + '">\n' if binfo['coverUrl'] and binfo['coverUrl'].startswith('http') else '')
+        + ('  <meta property="og:image" content="' + esc(binfo['coverUrl']) + '">\n'
+           '  <meta property="og:image:alt" content="' + esc(title) + ' 표지">\n'
+           if binfo['coverUrl'] and binfo['coverUrl'].startswith('http')
+           else '  <meta property="og:image" content="' + BASE + 'og-image.jpg">\n')
         + '  <meta name="twitter:card" content="summary">\n'
-        '  <link rel="canonical" href="' + esc(page_url) + '">\n'
+        '  <meta name="twitter:title" content="' + esc(title) + ' | ' + str(celeb_count) + '명의 셀럽이 읽은 책">\n'
+        '  <meta name="twitter:description" content="' + celeb_names_str + ' 등 ' + str(celeb_count) + '명이 읽은 책">\n'
+        + ('  <meta name="twitter:image" content="' + esc(binfo['coverUrl']) + '">\n'
+           if binfo['coverUrl'] and binfo['coverUrl'].startswith('http')
+           else '  <meta name="twitter:image" content="' + BASE + 'og-image.jpg">\n')
+        + '  <link rel="canonical" href="' + esc(page_url) + '">\n'
         '  <link rel="icon" href="' + BASE + 'favicon.png" type="image/png">\n'
+        '  <link rel="alternate" type="application/rss+xml" title="최애의 독서 RSS" href="' + BASE + 'feed.xml">\n'
+        '\n'
+        '  <link rel="preconnect" href="https://image.aladin.co.kr">\n'
+        '  <link rel="dns-prefetch" href="https://image.aladin.co.kr">\n'
         '\n'
         '  <script type="application/ld+json">\n'
         '  ' + json.dumps(json_ld, ensure_ascii=False, indent=2) + '\n'
+        '  </script>\n'
+        '  <script type="application/ld+json">\n'
+        '  ' + json.dumps(book_breadcrumb_ld, ensure_ascii=False, indent=2) + '\n'
         '  </script>\n'
         '\n'
         '  <style>\n'
@@ -474,6 +539,41 @@ ranking_pub_html = '\n'.join(
 
 ranking_url = BASE + 'share/ranking.html'
 
+ranking_breadcrumb_ld = json.dumps({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+        {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': '홈',
+            'item': BASE
+        },
+        {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': '셀럽 독서 랭킹',
+            'item': ranking_url
+        }
+    ]
+}, ensure_ascii=False, indent=2)
+
+ranking_itemlist_ld = json.dumps({
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'name': '셀럽이 가장 많이 읽은 책 TOP 30',
+    'numberOfItems': len(top_books),
+    'itemListElement': [
+        {
+            '@type': 'ListItem',
+            'position': i + 1,
+            'name': t,
+            'url': make_book_url(t)
+        }
+        for i, (t, bi) in enumerate(top_books)
+    ]
+}, ensure_ascii=False, indent=2)
+
 ranking_page = (
     '<!DOCTYPE html>\n'
     '<html lang="ko">\n'
@@ -483,13 +583,35 @@ ranking_page = (
     '  <title>셀럽이 가장 많이 읽은 책·저자·출판사 랭킹 | 최애의 독서</title>\n'
     '  <meta name="description" content="셀럽이 가장 많이 읽은 책 TOP 30, 저자 TOP 20, 출판사 TOP 15를 확인해 보세요. 아이돌·배우·뮤지션의 독서 트렌드!">\n'
     '  <meta name="keywords" content="셀럽 독서 랭킹, 인기 책, 아이돌 추천 책, 셀럽 인생책, 최애의 독서">\n'
+    '  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">\n'
+    '  <meta name="theme-color" content="#ffffff">\n'
+    '\n'
     '  <meta property="og:title" content="셀럽 독서 랭킹 | 최애의 독서">\n'
     '  <meta property="og:description" content="셀럽이 가장 많이 읽은 책·저자·출판사 랭킹">\n'
     '  <meta property="og:url" content="' + ranking_url + '">\n'
+    '  <meta property="og:type" content="website">\n'
     '  <meta property="og:site_name" content="최애의 독서">\n'
     '  <meta property="og:locale" content="ko_KR">\n'
+    '  <meta property="og:image" content="' + BASE + 'og-image.jpg">\n'
+    '  <meta property="og:image:width" content="1200">\n'
+    '  <meta property="og:image:height" content="630">\n'
+    '  <meta property="og:image:alt" content="셀럽 독서 랭킹 - 최애의 독서">\n'
+    '  <meta name="twitter:card" content="summary_large_image">\n'
+    '  <meta name="twitter:title" content="셀럽 독서 랭킹 | 최애의 독서">\n'
+    '  <meta name="twitter:description" content="셀럽이 가장 많이 읽은 책·저자·출판사 랭킹">\n'
+    '  <meta name="twitter:image" content="' + BASE + 'og-image.jpg">\n'
+    '  <meta name="twitter:image:alt" content="셀럽 독서 랭킹 - 최애의 독서">\n'
+    '\n'
     '  <link rel="canonical" href="' + ranking_url + '">\n'
     '  <link rel="icon" href="' + BASE + 'favicon.png" type="image/png">\n'
+    '  <link rel="alternate" type="application/rss+xml" title="최애의 독서 RSS" href="' + BASE + 'feed.xml">\n'
+    '\n'
+    '  <script type="application/ld+json">\n'
+    '  ' + ranking_breadcrumb_ld + '\n'
+    '  </script>\n'
+    '  <script type="application/ld+json">\n'
+    '  ' + ranking_itemlist_ld + '\n'
+    '  </script>\n'
     '\n'
     '  <style>\n'
     '    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; color: #333; }\n'
@@ -636,8 +758,10 @@ print(f"✅ sitemap.xml 생성: {total_urls}개 URL (이미지 사이트맵 포�
 robots_txt = (
     'User-agent: *\n'
     'Allow: /\n'
+    'Disallow: /*?celeb=\n'
     '\n'
     'Sitemap: ' + BASE + 'sitemap.xml\n'
+    'Sitemap: ' + BASE + 'feed.xml\n'
 )
 
 with open('robots.txt', 'w', encoding='utf-8') as f:

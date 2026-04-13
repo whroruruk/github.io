@@ -34,7 +34,15 @@
 
   <link rel="canonical" href="https://hwiruruk.github.io/favoread/">
 
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="alternate" type="application/rss+xml" title="최애의 독서 RSS" href="https://hwiruruk.github.io/favoread/feed.xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://image.aladin.co.kr">
+  <link rel="dns-prefetch" href="https://image.aladin.co.kr">
 
   <script type="application/ld+json">
   {
@@ -81,7 +89,22 @@
     }
   }
   </script>
-  
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "홈",
+        "item": "https://hwiruruk.github.io/favoread/"
+      }
+    ]
+  }
+  </script>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;400;600;900&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
   <!-- data.json은 GitHub Actions가 data.csv에서 자동 생성 -->
