@@ -1,7 +1,7 @@
 import csv, datetime, os, json, re, html, subprocess
 from urllib.parse import quote
 
-BASE = "https://hwiruruk.github.io/favoread/"
+BASE = "https://favorbook.co.kr/"
 TODAY = datetime.date.today().isoformat()
 
 # 변경된 파일 추적: path → True/False (이번 실행에서 내용이 바뀐 경우 True)
