@@ -18,7 +18,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/%EC%95%84%EC%8A%A4%ED%8A%B8%EB%A1%9C_%EC%97%A0%EC%A0%9C%EC%9D%B4_2024.jpg/500px-%EC%95%84%EC%8A%A4%ED%8A%B8%EB%A1%9C_%EC%97%A0%EC%A0%9C%EC%9D%B4_2024.jpg</image:loc>
       <image:title>MJ(아스트로) 프로필</image:title>
       <image:caption>MJ(아스트로)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -137,7 +137,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://kpopping.com/_next/image?url=https%3A%2F%2Fcdn.kpopping.com%2Fidols%2FKeonho%2Fprofile.jpg%3Fv%3D1776266068320&amp;w=512&amp;q=85</image:loc>
       <image:title>건호(코르티스) 프로필</image:title>
       <image:caption>건호(코르티스)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -212,7 +212,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Gong_Seung-yeon_in_July_2025.png/500px-Gong_Seung-yeon_in_July_2025.png</image:loc>
       <image:title>공승연 프로필</image:title>
       <image:caption>공승연의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -306,7 +306,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://i.namu.wiki/i/TNayjc2KUWafivqkoG6A5nO1PRjGN5SVk6wu6aCjG2c9hnYl_rAmNubduHxbRQxS6Qv7Zsdypl0jd6aDx4Rqeg.webp</image:loc>
+      <image:loc>https://images.genius.com/08b51d4f22354fc0a98b50695a2f4d6d.1000x1000x1.jpg</image:loc>
       <image:title>김사월 프로필</image:title>
       <image:caption>김사월의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -393,7 +393,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/20180421_%EA%B9%80%EC%86%8C%ED%98%84_SES_%EA%B7%B8%EB%A6%B0%ED%95%98%ED%8A%B8_%EB%B0%94%EC%9E%90%ED%9A%8C_%282%29.jpg/960px-20180421_%EA%B9%80%EC%86%8C%ED%98%84_SES_%EA%B7%B8%EB%A6%B0%ED%95%98%ED%8A%B8_%EB%B0%94%EC%9E%90%ED%9A%8C_%282%29.jpg</image:loc>
       <image:title>김소현 프로필</image:title>
       <image:caption>김소현의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -548,6 +548,21 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EA%B9%80%ED%83%9C%ED%95%98.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/9/95/180720_%EB%AA%A8%EB%AA%A8%EB%9E%9C%EB%93%9C_%ED%83%9C%ED%95%98_%281%29.jpg?_=20190404012114</image:loc>
+      <image:title>김태하 프로필</image:title>
+      <image:caption>김태하의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/30768/99/cover500/k252830652_2.jpg</image:loc>
+      <image:title>나미야 잡화점의 기적 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%ED%95%9C%EC%A3%BC%28%EC%8B%A4%EB%A6%AC%EC%B9%B4%EA%B2%94%29.html</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -630,7 +645,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://image.tmdb.org/t/p/w500/3XbKus7VCNNojuSuJnrN2sRpg0Q.jpg</image:loc>
       <image:title>김호영 프로필</image:title>
       <image:caption>김호영의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -703,7 +718,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/190419_%EB%AE%A4%EC%A7%81%EB%B1%85%ED%81%AC_%EB%AA%A8%EB%AA%A8%EB%9E%9C%EB%93%9C_%EC%B6%9C%EA%B7%BC%EA%B8%B8_%EB%82%98%EC%9C%A4_%286%29.jpg/500px-190419_%EB%AE%A4%EC%A7%81%EB%B1%85%ED%81%AC_%EB%AA%A8%EB%AA%A8%EB%9E%9C%EB%93%9C_%EC%B6%9C%EA%B7%BC%EA%B8%B8_%EB%82%98%EC%9C%A4_%286%29.jpg</image:loc>
       <image:title>나윤(모모랜드) 프로필</image:title>
       <image:caption>나윤(모모랜드)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -729,7 +744,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://cdn.spotvnews.co.kr/news/photo/202504/742477_1184763_3637.jpg</image:loc>
       <image:title>남주혁 프로필</image:title>
       <image:caption>남주혁의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -763,7 +778,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/2/29/170426_%EB%AA%A8%EB%AA%A8%EB%9E%9C%EB%93%9C_%EB%82%B8%EC%8B%9C_%EC%BD%94%EC%97%91%EC%8A%A4_%ED%8C%AC%EC%82%AC%EC%9D%B8%ED%9A%8C_by_SinC_%281%29.jpg</image:loc>
       <image:title>낸시(모모랜드) 프로필</image:title>
       <image:caption>낸시(모모랜드)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -812,7 +827,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/6/6e/10%EC%9B%94_20%EC%9D%BC_U%2B%EC%95%84%EC%9D%B4%EB%8F%8CLive_%EB%9F%B0%EC%B9%AD%EC%BD%98%EC%84%9C%ED%8A%B8_%28103%29.jpg</image:loc>
       <image:title>다원(우주소녀) 프로필</image:title>
       <image:caption>다원(우주소녀)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -854,7 +869,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/8/8f/180708_%EB%8D%B0%EC%9D%B4%EC%A7%80_%EA%B2%8C%EB%A6%B4%EB%9D%BC_%EA%B3%B5%EC%97%B0_04.jpg</image:loc>
       <image:title>데이지(모모랜드) 프로필</image:title>
       <image:caption>데이지(모모랜드)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -906,7 +921,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://i.scdn.co/image/ab6761610000e5ebcd42ed2ff0bb2ab45fdd5703</image:loc>
       <image:title>라키(아스트로) 프로필</image:title>
       <image:caption>라키(아스트로)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -917,7 +932,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/e/ef/201106_sf9_%EB%A1%9C%EC%9A%B4.jpg</image:loc>
       <image:title>로운 프로필</image:title>
       <image:caption>로운의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -943,7 +958,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/180317_%EC%9A%B0%EC%A3%BC%EC%86%8C%EB%85%80_%EB%AF%B8%EB%8B%88%ED%8C%AC%EB%AF%B8%ED%8C%85_%EC%A7%81%EC%B0%8D_%2820%29.jpg/500px-180317_%EC%9A%B0%EC%A3%BC%EC%86%8C%EB%85%80_%EB%AF%B8%EB%8B%88%ED%8C%AC%EB%AF%B8%ED%8C%85_%EC%A7%81%EC%B0%8D_%2820%29.jpg</image:loc>
       <image:title>루다(우주소녀) 프로필</image:title>
       <image:caption>루다(우주소녀)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -991,7 +1006,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cortis_Martin_at_TikTok_Awards_Korea.jpg/330px-Cortis_Martin_at_TikTok_Awards_Korea.jpg</image:loc>
       <image:title>마틴(코르티스) 프로필</image:title>
       <image:caption>마틴(코르티스)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -1037,7 +1052,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/180519_%EB%AC%B8%EB%B3%84_04_%28cropped%29.jpg/960px-180519_%EB%AC%B8%EB%B3%84_04_%28cropped%29.jpg</image:loc>
       <image:title>문별(마마무) 프로필</image:title>
       <image:caption>문별(마마무)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -1241,7 +1256,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://i.namu.wiki/i/oiieTBUg8IIPwqB0aTqKoIQ9OhM2pY_HjHPP27_999WQhw5sFliPwDMFC1yw2jbKSGnFzCu7IuWzVh3qyfGe0A.webp</image:loc>
+      <image:loc>https://image.tmdb.org/t/p/original/zbNZZ8o6qF3gaDndsq76h19Pe33.jpg</image:loc>
       <image:title>박지훈 프로필</image:title>
       <image:caption>박지훈의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -1317,7 +1332,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/b/ba/Park_Hae-jin_in_Jan_2020.png</image:loc>
       <image:title>박해진 프로필</image:title>
       <image:caption>박해진의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -1380,7 +1395,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/7/78/190321_%EC%9A%B0%EC%A3%BC%EC%86%8C%EB%85%80_%EB%B3%B4%EB%82%98.jpg</image:loc>
       <image:title>보나(우주소녀) 프로필</image:title>
       <image:caption>보나(우주소녀)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -1528,7 +1543,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/170129_%ED%95%98%EB%82%A8_%EC%9A%B0%EC%A3%BC%EC%86%8C%EB%85%80_%ED%8C%AC%EC%8B%B8%EC%9D%B8%ED%9A%8C_%EC%84%A4%EC%95%84_%281%29.jpg/1280px-170129_%ED%95%98%EB%82%A8_%EC%9A%B0%EC%A3%BC%EC%86%8C%EB%85%80_%ED%8C%AC%EC%8B%B8%EC%9D%B8%ED%9A%8C_%EC%84%A4%EC%95%84_%281%29.jpg?_=20170217112334</image:loc>
       <image:title>설아(우주소녀) 프로필</image:title>
       <image:caption>설아(우주소녀)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -1728,7 +1743,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/180519_%EC%86%94%EB%9D%BC_02_%28cropped%29.jpg/960px-180519_%EC%86%94%EB%9D%BC_02_%28cropped%29.jpg</image:loc>
       <image:title>솔라(마마무) 프로필</image:title>
       <image:caption>솔라(마마무)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -1822,7 +1837,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://upload.wikimedia.org/wikipedia/commons/9/9f/%2817.05.24%29%EA%B5%AC%EA%B5%AC%EB%8B%A8_%EB%AF%B8%EB%AF%B8_%282%29.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Shin_So-yul_at_SBS_%27Big_Issue%27_production_presentation%2C_6_March_2019_01.png/500px-Shin_So-yul_at_SBS_%27Big_Issue%27_production_presentation%2C_6_March_2019_01.png</image:loc>
       <image:title>신소율 프로필</image:title>
       <image:caption>신소율의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -1860,7 +1875,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Shim_Eun-kyung_at_the_2025_Locarno_Film_Festival_04_%28cropped%29.jpg/500px-Shim_Eun-kyung_at_the_2025_Locarno_Film_Festival_04_%28cropped%29.jpg</image:loc>
       <image:title>심은경 프로필</image:title>
       <image:caption>심은경의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -1995,7 +2010,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/2/2c/%2817.11.05%29_%EC%98%A4%EC%82%B0_%EC%B2%AD%EC%86%8C%EB%85%84_%EB%AC%B8%ED%99%94%EC%A0%9C_%EC%A7%81%EC%B0%8D_%28_%EB%AA%A8%EB%AA%A8%EB%9E%9C%EB%93%9C_%EC%97%B0%EC%9A%B0_%EC%A3%BC%EC%9D%B4_%29_1.jpg?_=20180316014408</image:loc>
       <image:title>연우(모모랜드) 프로필</image:title>
       <image:caption>연우(모모랜드)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -2054,7 +2069,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/c/cb/%28%EC%94%AC%ED%94%8CTV%29_%EC%94%AC%ED%94%8C%EB%A0%88%EC%9D%B4%EB%B9%8C_3%EC%9B%94%ED%98%B8_%EB%AE%A4%EC%A7%80%EC%BB%AC_%27%EA%B7%B8%EB%82%A0%EB%93%A4%27_%EC%98%A4%EC%A2%85%ED%98%81.jpg</image:loc>
       <image:title>오종혁 프로필</image:title>
       <image:caption>오종혁의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -2323,7 +2338,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Yoon_Bora_at_The_70th_Independence_Day_of_Republic_of_Korea_02.jpg/500px-Yoon_Bora_at_The_70th_Independence_Day_of_Republic_of_Korea_02.jpg</image:loc>
       <image:title>윤보라 프로필</image:title>
       <image:caption>윤보라의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -2372,7 +2387,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/170115_%EA%B0%95%EB%82%A8%ED%8C%AC%EC%8B%B8%EC%9D%B8%ED%9A%8C_%EC%9A%B0%EC%A3%BC%EC%86%8C%EB%85%80_%EC%9D%80%EC%84%9C_%EC%84%B1%EC%86%8C_%EC%97%AC%EB%A6%84_%2812%29.jpg/960px-170115_%EA%B0%95%EB%82%A8%ED%8C%AC%EC%8B%B8%EC%9D%B8%ED%9A%8C_%EC%9A%B0%EC%A3%BC%EC%86%8C%EB%85%80_%EC%9D%80%EC%84%9C_%EC%84%B1%EC%86%8C_%EC%97%AC%EB%A6%84_%2812%29.jpg?_=20170128032150</image:loc>
       <image:title>은서(우주소녀) 프로필</image:title>
       <image:caption>은서(우주소녀)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -2621,7 +2636,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Lee_Jae-won_at_Moon_Hee-joon_%26_Soyul%27s_Wedding_%282%29.jpg/500px-Lee_Jae-won_at_Moon_Hee-joon_%26_Soyul%27s_Wedding_%282%29.jpg</image:loc>
       <image:title>이재원(H.O.T.) 프로필</image:title>
       <image:caption>이재원(H.O.T.)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -3283,7 +3298,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Lee_Jun-ho_%28%EC%9D%B4%EC%A4%80%ED%98%B8%29_in_July_2023.png/500px-Lee_Jun-ho_%28%EC%9D%B4%EC%A4%80%ED%98%B8%29_in_July_2023.png</image:loc>
       <image:title>준호(2PM) 프로필</image:title>
       <image:caption>준호(2PM)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -3355,7 +3370,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/170602_Astro_07.jpg/500px-170602_Astro_07.jpg</image:loc>
       <image:title>진진(아스트로) 프로필</image:title>
       <image:caption>진진(아스트로)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -3370,7 +3385,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/171017_AOA_%EC%B0%AC%EB%AF%B8_%ED%8C%A8%EC%85%98%EC%9C%84%ED%81%AC_%EC%8A%88%ED%8D%BC%EC%BD%A4%EB%A7%88%EB%B9%84_01.jpg/960px-171017_AOA_%EC%B0%AC%EB%AF%B8_%ED%8C%A8%EC%85%98%EC%9C%84%ED%81%AC_%EC%8A%88%ED%8D%BC%EC%BD%A4%EB%A7%88%EB%B9%84_01.jpg?_=20180106090704</image:loc>
       <image:title>찬미(AOA) 프로필</image:title>
       <image:caption>찬미(AOA)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -3526,7 +3541,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/171203_%EA%B0%95%EB%82%A8%EA%B4%80%EA%B4%91%EC%A0%95%EB%B3%B4%EC%84%BC%ED%84%B0_02.png/500px-171203_%EA%B0%95%EB%82%A8%EA%B4%80%EA%B4%91%EC%A0%95%EB%B3%B4%EC%84%BC%ED%84%B0_02.png</image:loc>
       <image:title>키노(펜타곤) 프로필</image:title>
       <image:caption>키노(펜타곤)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -3537,21 +3552,6 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/11832/9/cover500/8937473178_1.jpg</image:loc>
       <image:title>미 비포 유 표지</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://favorbook.co.kr/share/%ED%83%9C%ED%95%98%28%EB%AA%A8%EB%AA%A8%EB%9E%9C%EB%93%9C%29.html</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
-      <image:title>태하(모모랜드) 프로필</image:title>
-      <image:caption>태하(모모랜드)의 독서 리스트 - 최애의 독서</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/30768/99/cover500/k252830652_2.jpg</image:loc>
-      <image:title>나미야 잡화점의 기적 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -3636,7 +3636,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/c/c4/Ha_Yeon-joo_in_2018_%282%29.jpg</image:loc>
       <image:title>하연주 프로필</image:title>
       <image:caption>하연주의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -3772,7 +3772,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://img.khan.co.kr/news/2021/07/22/l_2021072201003047600255411.webp</image:loc>
       <image:title>핫펠트 프로필</image:title>
       <image:caption>핫펠트의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -3787,7 +3787,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://yt3.googleusercontent.com/EIrUp0kpbMfi3i_niPSvz1q2eaR6-qC8XZb_jpzJ2EqncmpeyfcTdC9tkIopuHVDYNUWg8wqpg=s900-c-k-c0x00ffffff-no-rj</image:loc>
       <image:title>허성범 프로필</image:title>
       <image:caption>허성범의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -3856,7 +3856,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://cdn.artkoreatv.com/news/photo/202102/76165_215753_1736.jpg</image:loc>
       <image:title>혜빈(모모랜드) 프로필</image:title>
       <image:caption>혜빈(모모랜드)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -3898,7 +3898,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://media.themoviedb.org/t/p/w600_and_h900_face/3rk0y8K9s08KokwuUhvb1avvH9S.jpg</image:loc>
       <image:title>홍지민 프로필</image:title>
       <image:caption>홍지민의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -3909,7 +3909,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/20230918_Hwasa_%28%ED%99%94%EC%82%AC%29.jpg/960px-20230918_Hwasa_%28%ED%99%94%EC%82%AC%29.jpg?_=20230918113231</image:loc>
       <image:title>화사(마마무) 프로필</image:title>
       <image:caption>화사(마마무)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -4043,6 +4043,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EC%9C%84%EB%B2%84%EB%A9%98%EC%89%AC.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/book/%EB%B0%94%EA%B9%A5%EC%9D%80%20%EC%97%AC%EB%A6%84.html</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -4119,7 +4125,19 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EB%8B%B9%EC%8B%A0%EC%9D%98%20%EC%9D%B4%EB%A6%84%EC%9D%84%20%EC%A7%80%EC%96%B4%EB%8B%A4%EA%B0%80%20%EB%A9%B0%EC%B9%A0%EC%9D%80%20%EB%A8%B9%EC%97%88%EB%8B%A4.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/book/%EA%B3%A0%EC%8A%B4%EB%8F%84%EC%B9%98%EC%9D%98%20%EC%86%8C%EC%9B%90.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/book/%EC%9D%B8%EA%B0%84%20%EC%8B%A4%EA%B2%A9.html</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -4173,6 +4191,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EC%95%88%EB%82%98%20%EC%B9%B4%EB%A0%88%EB%8B%88%EB%82%98.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/book/%EC%A7%80%EA%B8%88%20%EC%95%8C%EA%B3%A0%20%EC%9E%88%EB%8A%94%20%EA%B1%B8%20%EA%B7%B8%EB%95%8C%EB%8F%84%20%EC%95%8C%EC%95%98%EB%8D%94%EB%9D%BC%EB%A9%B4.html</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -4181,12 +4205,6 @@
       <image:loc>https://image.aladin.co.kr/product/13/74/cover500/8970631577_1.jpg</image:loc>
       <image:title>지금 알고 있는 걸 그때도 알았더라면 표지</image:title>
     </image:image>
-  </url>
-  <url>
-    <loc>https://favorbook.co.kr/share/book/%EB%8B%B9%EC%8B%A0%EC%9D%98%20%EC%9D%B4%EB%A6%84%EC%9D%84%20%EC%A7%80%EC%96%B4%EB%8B%A4%EA%B0%80%20%EB%A9%B0%EC%B9%A0%EC%9D%80%20%EB%A8%B9%EC%97%88%EB%8B%A4.html</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%B3%B4%EA%B1%B4%EA%B5%90%EC%82%AC%20%EC%95%88%EC%9D%80%EC%98%81.html</loc>
@@ -4309,16 +4327,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/share/book/%EC%9D%B8%EA%B0%84%20%EC%8B%A4%EA%B2%A9.html</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/49/16/cover500/893746103x_3.jpg</image:loc>
-      <image:title>인간 실격 표지</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://favorbook.co.kr/share/book/%EC%A0%88%EC%B0%BD.html</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -4392,6 +4400,16 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/28170/35/cover500/k682835560_2.jpg</image:loc>
       <image:title>애쓰지 않고 편안하게 표지</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/book/%EC%9D%B4%EC%83%81%ED%95%9C%20%EB%82%98%EB%9D%BC%EC%9D%98%20%EC%95%A8%EB%A6%AC%EC%8A%A4.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/36159/53/cover200/k792038786_1.jpg</image:loc>
+      <image:title>이상한 나라의 앨리스 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -4483,6 +4501,12 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EC%97%84%EB%A7%88%EB%A5%BC%20%EB%B6%80%ED%83%81%ED%95%B4.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/book/%EC%97%B4%EB%91%90%20%EB%B0%9C%EC%9E%90%EA%B5%AD.html</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -4535,6 +4559,12 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EC%84%A4%EA%B5%AD.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/book/%EC%A7%80%EB%AC%B8%EC%82%AC%EB%83%A5%EA%BE%BC.html</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -4555,6 +4585,12 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EC%9D%B4%EA%B8%B0%EC%A0%81%20%EC%9C%A0%EC%A0%84%EC%9E%90.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/book/%EB%AF%B8%20%EB%B9%84%ED%8F%AC%20%EC%9C%A0.html</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -4565,12 +4601,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/share/book/%EC%9D%B4%EC%83%81%ED%95%9C%20%EB%82%98%EB%9D%BC%EC%9D%98%20%EC%95%A8%EB%A6%AC%EC%8A%A4.html</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://favorbook.co.kr/share/book/%EB%82%98%EC%9D%98%20%EC%82%AC%EC%A0%81%EC%9D%B8%20%EA%B7%B8%EB%A6%BC.html</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -4579,6 +4609,12 @@
       <image:loc>https://image.aladin.co.kr/product/16369/68/cover500/k132533547_1.jpg</image:loc>
       <image:title>나의 사적인 그림 표지</image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/book/5%EA%B0%80%EC%A7%80%20%EC%82%AC%EB%9E%91%EC%9D%98%20%EC%96%B8%EC%96%B4.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%82%AC%ED%94%BC%EC%97%94%EC%8A%A4.html</loc>
@@ -4667,36 +4703,12 @@
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/33730/69/cover500/k082939640_1.jpg</image:loc>
-      <image:title>90년생이 온다 표지</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://favorbook.co.kr/share/book/%EC%84%A4%EA%B5%AD.html</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://favorbook.co.kr/share/book/%EC%9D%B4%EA%B8%B0%EC%A0%81%20%EC%9C%A0%EC%A0%84%EC%9E%90.html</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/17048/25/cover500/8932473900_1.jpg</image:loc>
-      <image:title>이기적 유전자 표지</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%A0%95%EC%9D%98%EB%9E%80%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80.html</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/4898/84/cover500/s812035947_1.jpg</image:loc>
-      <image:title>정의란 무엇인가 표지</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%82%AC%EB%9E%91%EC%97%90%20%EB%8C%80%ED%95%B4%20%EB%82%B4%EA%B0%80%20%EC%95%84%EB%8A%94%20%EB%AA%A8%EB%93%A0%20%EA%B2%83.html</loc>
@@ -4707,29 +4719,5 @@
       <image:loc>https://image.aladin.co.kr/product/34917/69/cover500/k572933255_2.jpg</image:loc>
       <image:title>사랑에 대해 내가 아는 모든 것 표지</image:title>
     </image:image>
-  </url>
-  <url>
-    <loc>https://favorbook.co.kr/share/book/%EC%95%88%EB%82%98%20%EC%B9%B4%EB%A0%88%EB%8B%88%EB%82%98.html</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://favorbook.co.kr/share/book/%EC%9C%84%EB%B2%84%EB%A9%98%EC%89%AC.html</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://favorbook.co.kr/share/book/%EC%97%84%EB%A7%88%EB%A5%BC%20%EB%B6%80%ED%83%81%ED%95%B4.html</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://favorbook.co.kr/share/book/5%EA%B0%80%EC%A7%80%20%EC%82%AC%EB%9E%91%EC%9D%98%20%EC%96%B8%EC%96%B4.html</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
   </url>
 </urlset>
