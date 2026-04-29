@@ -195,6 +195,27 @@ print(f"✅ index.html 정적 목록 갱신: {len(sorted_names)}명")
 # ── 4. share 페이지 생성 (SEO 강화) ─────────────────────────────────
 
 os.makedirs('share', exist_ok=True)
+os.makedirs('share/book', exist_ok=True)
+
+# 책 역방향 페이지 생성 데이터 사전 계산 (share 페이지에서 책 페이지로 내부링크 걸기 위함)
+book_celebs = {}
+for _name, _info in celebs.items():
+    _seen = set()
+    for _b in _info['books']:
+        _t = _b['title'].strip()
+        if _t in _seen:
+            continue
+        _seen.add(_t)
+        if _t not in book_celebs:
+            book_celebs[_t] = {
+                'celebs': [], 'author': _b['author'],
+                'publisher': _b['publisher'],
+                'coverUrl': _b.get('coverUrl', '')
+            }
+        book_celebs[_t]['celebs'].append(_name)
+
+# 2명 이상이 읽은 책만 책 페이지가 생성됨 → 그 책 제목 set
+books_with_pages = {t for t, bi in book_celebs.items() if len(bi['celebs']) >= 2}
 
 # sitemap 이미지 정보 수집용
 sitemap_images = {}  # { url: [image_url, ...] }
@@ -216,42 +237,58 @@ for name, info in celebs.items():
             page_images.append(b['coverUrl'])
     sitemap_images[page_url] = page_images
 
-    # 책 목록 (최대 10권만 description에 포함)
-    book_names_for_desc = ', '.join(esc(b['title']) for b in books[:10])
-    if len(books) > 10:
-        book_names_for_desc += ' 외 ' + str(len(books) - 10) + '권'
+    n_books = len(books)
+    # description: "RM(BTS)이 읽은 책과 추천 인생책 9권 공개! 공감의 배신, 데미안, 방구석 미술관 등 RM(BTS) 책 추천 리스트 전체 확인."
+    top3 = ', '.join(esc(b['title']) for b in books[:3])
+    desc_text = (
+        esc(name) + '이(가) 읽은 책과 추천한 인생책 ' + str(n_books) + '권 공개! '
+        + top3 + (' 등 ' if n_books > 3 else ' ')
+        + esc(name) + ' 책 추천 리스트 전체 확인.'
+    )
 
-    desc_text = esc(name) + '이(가) 읽거나 추천한 책 ' + str(len(books)) + '권: ' + book_names_for_desc
+    # 검색 키워드 변형(타이틀/메타에 노출되지 않는 변형 포함)
+    keyword_variants = ', '.join([
+        esc(name) + ' 읽은 책',
+        esc(name) + ' 추천 책',
+        esc(name) + ' 인생책',
+        esc(name) + ' 책',
+        esc(name) + ' 책 추천',
+        esc(name) + ' 도서',
+        '셀럽 독서', '아이돌 책 추천', '연예인 인생책', '최애의 독서',
+    ])
+
+    page_title = esc(name) + ' 읽은 책·추천 책 ' + str(n_books) + '권 | 최애의 독서'
+    h1_text    = esc(name) + ' 읽은 책 · 추천 책'
 
     json_ld = {
         '@context': 'https://schema.org',
         '@type': 'ProfilePage',
-        'name': name + '의 독서 리스트 | 최애의 독서',
+        'name': page_title,
         'url': page_url,
-        'description': name + '이(가) 읽거나 추천한 책 ' + str(len(books)) + '권',
+        'description': name + '이(가) 읽은 책과 추천한 인생책 ' + str(n_books) + '권',
         'mainEntity': {
             '@type': 'Person',
             'name': name,
             'image': img,
-            'description': name + '이(가) 읽거나 추천한 책 ' + str(len(books)) + '권',
-            'knowsAbout': {
-                '@type': 'ItemList',
-                'numberOfItems': len(books),
-                'itemListElement': [
-                    {
-                        '@type': 'ListItem',
-                        'position': i + 1,
+            'description': name + '이(가) 읽은 책과 추천 책 ' + str(n_books) + '권 전체 목록',
+        },
+        'mainEntityOfPage': {
+            '@type': 'ItemList',
+            'name': name + '이 읽은 책 ' + str(n_books) + '권',
+            'numberOfItems': n_books,
+            'itemListElement': [
+                {
+                    '@type': 'ListItem',
+                    'position': i + 1,
+                    'item': {
+                        '@type': 'Book',
                         'name': b['title'],
-                        'item': {
-                            '@type': 'Book',
-                            'name': b['title'],
-                            'author': {'@type': 'Person', 'name': b['author']} if b['author'] else None,
-                            'publisher': {'@type': 'Organization', 'name': b['publisher']} if b['publisher'] else None,
-                        }
+                        'author': {'@type': 'Person', 'name': b['author']} if b['author'] else None,
+                        'publisher': {'@type': 'Organization', 'name': b['publisher']} if b['publisher'] else None,
                     }
-                    for i, b in enumerate(books)
-                ]
-            }
+                }
+                for i, b in enumerate(books)
+            ]
         },
         'isPartOf': {
             '@type': 'WebSite',
@@ -289,21 +326,61 @@ for name, info in celebs.items():
         ]
     }
 
-    # 책 테이블 행 (이미지 포함)
+    # 책 테이블 행 (이미지 + 책 페이지 내부링크 + 출처 외부링크)
     book_rows = ''
     for i, b in enumerate(books):
         cover_td = ''
         if b['coverUrl'] and b['coverUrl'].startswith('http'):
             cover_td = '<img src="' + esc(b['coverUrl']) + '" alt="' + esc(b['title']) + ' 표지" width="60" height="85" loading="lazy" style="object-fit:cover">'
+
+        # 책 페이지가 존재하면(2명 이상이 읽음) 내부링크
+        if b['title'] in books_with_pages:
+            title_html = ('<a href="book/' + quote(safe_book_filename(b['title']), safe='')
+                          + '.html">' + esc(b['title']) + '</a>')
+        else:
+            title_html = esc(b['title'])
+
+        # 출처 (대부분 YouTube 등 URL) → 외부링크
+        source_html = ''
+        if b['source'] and b['source'].startswith('http'):
+            source_html = ('<a href="' + esc(b['source'])
+                           + '" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a>')
+        elif b['source']:
+            source_html = esc(b['source'])
+
         book_rows += (
             '    <tr>'
             '<td>' + str(i+1) + '</td>'
             '<td>' + cover_td + '</td>'
-            '<td>' + esc(b['title']) + '</td>'
+            '<td>' + title_html + '</td>'
             '<td>' + esc(b['author']) + '</td>'
             '<td>' + esc(b['publisher']) + '</td>'
+            '<td class="src">' + source_html + '</td>'
             '</tr>\n'
         )
+
+    # 인트로 단락: 자연스럽게 키워드 변형 노출 (~150-220자)
+    intro_p = (
+        esc(name) + '이(가) 읽은 책과 추천한 인생책 <strong>' + str(n_books) + '권</strong>을 한곳에 모았습니다. '
+        '유튜브·인터뷰·SNS 등 출처가 확인된 도서만 정리했어요. '
+        + esc(name) + ' 책 추천이 궁금하다면 아래 전체 목록과 출처 링크에서 확인할 수 있습니다.'
+    )
+
+    # 작가/출판사 빈도 요약 (간단한 unique 콘텐츠)
+    author_counts = {}
+    for b in books:
+        a = b['author'].strip()
+        if a:
+            author_counts[a] = author_counts.get(a, 0) + 1
+    top_authors = sorted(author_counts.items(), key=lambda x: x[1], reverse=True)[:3]
+    if top_authors:
+        author_summary = (
+            esc(name) + '이(가) 가장 많이 읽은 작가는 '
+            + ', '.join(esc(a) + (' (' + str(c) + '권)' if c > 1 else '') for a, c in top_authors)
+            + '입니다.'
+        )
+    else:
+        author_summary = ''
 
     page = (
         '<!DOCTYPE html>\n'
@@ -311,19 +388,19 @@ for name, info in celebs.items():
         '<head>\n'
         '  <meta charset="utf-8">\n'
         '  <meta name="viewport" content="width=device-width, initial-scale=1">\n'
-        '  <title>' + esc(name) + '의 독서 리스트 | 최애의 독서</title>\n'
+        '  <title>' + page_title + '</title>\n'
         '  <meta name="description" content="' + desc_text + '">\n'
-        '  <meta name="keywords" content="' + esc(name) + ', 독서, 책추천, 읽은책, 인생책, 셀럽독서, 최애의 독서">\n'
+        '  <meta name="keywords" content="' + keyword_variants + '">\n'
         '  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">\n'
         '  <meta name="theme-color" content="#ffffff">\n'
         '\n'
         '  <!-- Open Graph -->\n'
-        '  <meta property="og:title" content="' + esc(name) + ' | 최애의 독서">\n'
+        '  <meta property="og:title" content="' + page_title + '">\n'
         '  <meta property="og:description" content="' + desc_text + '">\n'
         '  <meta property="og:image" content="' + esc(img) + '">\n'
         '  <meta property="og:image:width" content="600">\n'
         '  <meta property="og:image:height" content="600">\n'
-        '  <meta property="og:image:alt" content="' + esc(name) + '의 독서 리스트">\n'
+        '  <meta property="og:image:alt" content="' + esc(name) + ' 읽은 책 추천 책 리스트">\n'
         '  <meta property="og:url" content="' + esc(page_url) + '">\n'
         '  <meta property="og:type" content="profile">\n'
         '  <meta property="og:site_name" content="최애의 독서">\n'
@@ -331,10 +408,10 @@ for name, info in celebs.items():
         '\n'
         '  <!-- Twitter Card -->\n'
         '  <meta name="twitter:card" content="summary_large_image">\n'
-        '  <meta name="twitter:title" content="' + esc(name) + ' | 최애의 독서">\n'
+        '  <meta name="twitter:title" content="' + page_title + '">\n'
         '  <meta name="twitter:description" content="' + desc_text + '">\n'
         '  <meta name="twitter:image" content="' + esc(img) + '">\n'
-        '  <meta name="twitter:image:alt" content="' + esc(name) + '의 독서 리스트">\n'
+        '  <meta name="twitter:image:alt" content="' + esc(name) + ' 읽은 책 추천 책 리스트">\n'
         '\n'
         '  <link rel="canonical" href="' + esc(page_url) + '">\n'
         '  <link rel="icon" href="' + BASE + 'favicon.png" type="image/png">\n'
@@ -351,34 +428,63 @@ for name, info in celebs.items():
         '  </script>\n'
         '\n'
         '  <style>\n'
-        '    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }\n'
-        '    .celeb-header { display: flex; align-items: center; gap: 20px; margin-bottom: 24px; }\n'
-        '    .celeb-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; }\n'
-        '    table { width: 100%; border-collapse: collapse; }\n'
-        '    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; font-size: 14px; }\n'
-        '    th { background: #f5f5f5; }\n'
-        '    a { color: #2563eb; }\n'
+        '    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 860px; margin: 0 auto; padding: 20px; color: #222; line-height: 1.6; }\n'
+        '    nav { margin-bottom: 16px; font-size: 13px; }\n'
+        '    .celeb-header { display: flex; align-items: center; gap: 20px; margin-bottom: 16px; flex-wrap: wrap; }\n'
+        '    .celeb-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }\n'
+        '    h1 { font-size: 26px; margin: 0 0 8px; }\n'
+        '    h2 { font-size: 19px; margin: 32px 0 12px; padding-bottom: 4px; border-bottom: 2px solid #222; }\n'
+        '    .intro { background: #f8f8f5; border-left: 3px solid #222; padding: 14px 16px; margin: 16px 0 24px; font-size: 15px; }\n'
+        '    table { width: 100%; border-collapse: collapse; font-size: 14px; }\n'
+        '    th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: middle; }\n'
+        '    th { background: #f5f5f5; font-size: 13px; }\n'
+        '    td.src a { font-size: 12px; }\n'
+        '    a { color: #2563eb; text-decoration: none; }\n'
+        '    a:hover { text-decoration: underline; }\n'
+        '    .related { margin-top: 24px; padding: 14px 16px; background: #fff8e7; border: 1px solid #f0d878; font-size: 14px; }\n'
+        '    footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #ddd; font-size: 13px; color: #666; }\n'
         '  </style>\n'
         '</head>\n'
         '<body>\n'
-        '  <nav><a href="' + BASE + '">← 최애의 독서 홈</a></nav>\n'
+        '  <nav><a href="' + BASE + '">← 최애의 독서 홈</a> · <a href="' + BASE + 'share/ranking.html">셀럽 독서 랭킹</a></nav>\n'
         '\n'
-        '  <div class="celeb-header">\n'
+        '  <header class="celeb-header">\n'
         '    <img class="celeb-img" src="' + esc(img) + '" alt="' + esc(name) + ' 프로필 사진" width="120" height="120">\n'
         '    <div>\n'
-        '      <h1>' + esc(name) + '의 독서 리스트</h1>\n'
-        '      <p>' + esc(name) + '이(가) 읽거나 추천한 책 <strong>' + str(len(books)) + '권</strong>입니다.</p>\n'
+        '      <h1>' + h1_text + '</h1>\n'
+        '      <p style="margin:0;color:#666;font-size:14px">총 <strong>' + str(n_books) + '권</strong>의 도서</p>\n'
         '    </div>\n'
-        '  </div>\n'
+        '  </header>\n'
         '\n'
-        '  <table>\n'
-        '    <thead><tr><th>#</th><th>표지</th><th>도서명</th><th>저자</th><th>출판사</th></tr></thead>\n'
-        '    <tbody>\n'
+        '  <section class="intro">\n'
+        '    <p style="margin:0">' + intro_p + '</p>\n'
+        '  </section>\n'
+        '\n'
+        '  <section>\n'
+        '    <h2>' + esc(name) + '이(가) 읽은 책 전체 목록 (' + str(n_books) + '권)</h2>\n'
+        '    <table>\n'
+        '      <thead><tr><th>#</th><th>표지</th><th>도서명</th><th>저자</th><th>출판사</th><th>출처</th></tr></thead>\n'
+        '      <tbody>\n'
         + book_rows +
-        '    </tbody>\n'
-        '  </table>\n'
+        '      </tbody>\n'
+        '    </table>\n'
+        '  </section>\n'
         '\n'
-        '  <p style="margin-top:24px"><a href="' + redirect_url + '" rel="nofollow">최애의 독서에서 ' + esc(name) + ' 전체 목록 보기 →</a></p>\n'
+        + (('  <section>\n'
+            '    <h2>' + esc(name) + ' 인생책 · 책 추천 키워드</h2>\n'
+            '    <p>' + author_summary + ' '
+            + esc(name) + '의 책 추천 리스트는 위 표에서 출처와 함께 확인할 수 있습니다.</p>\n'
+            '  </section>\n'
+            '\n') if author_summary else '')
+        + '  <aside class="related">\n'
+        '    <strong>다른 셀럽들의 인생책</strong>이 궁금하다면? '
+        '<a href="' + BASE + '">최애의 독서 홈</a>에서 ' + str(len(celebs))
+        + '명의 셀럽·아이돌·배우가 읽은 책을 확인해 보세요.\n'
+        '  </aside>\n'
+        '\n'
+        '  <footer>\n'
+        '    <p>' + esc(name) + ' 읽은 책 정보는 유튜브·인터뷰·SNS 등 공개된 출처를 기반으로 정리되었습니다.</p>\n'
+        '  </footer>\n'
         '\n'
         '</body>\n'
         '</html>'
@@ -389,24 +495,7 @@ for name, info in celebs.items():
 print(f"✅ share 페이지 생성: {len(celebs)}개")
 
 # ── 5. 책 역방향 페이지 (share/book/*.html) ──────────────────────────
-
-os.makedirs('share/book', exist_ok=True)
-
-book_celebs = {}
-for name, info in celebs.items():
-    seen = set()
-    for b in info['books']:
-        t = b['title'].strip()
-        if t in seen:
-            continue
-        seen.add(t)
-        if t not in book_celebs:
-            book_celebs[t] = {
-                'celebs': [], 'author': b['author'],
-                'publisher': b['publisher'],
-                'coverUrl': b.get('coverUrl', '')
-            }
-        book_celebs[t]['celebs'].append(name)
+# book_celebs는 섹션 4 시작 부분에서 사전 계산됨 (share 페이지 내부링크 위해)
 
 book_pages = []
 
