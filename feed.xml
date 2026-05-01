@@ -49,14 +49,6 @@
     </item>
 
     <item>
-      <title>진영(갓세븐)의 독서 리스트 (22권)</title>
-      <link>https://favorbook.co.kr/share/%EC%A7%84%EC%98%81%28%EA%B0%93%EC%84%B8%EB%B8%90%29.html</link>
-      <description>진영(갓세븐)이(가) 읽거나 추천한 책 22권을 확인해 보세요.</description>
-      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://favorbook.co.kr/share/%EC%A7%84%EC%98%81%28%EA%B0%93%EC%84%B8%EB%B8%90%29.html</guid>
-    </item>
-
-    <item>
       <title>노제의 독서 리스트 (20권)</title>
       <link>https://favorbook.co.kr/share/%EB%85%B8%EC%A0%9C.html</link>
       <description>노제이(가) 읽거나 추천한 책 20권을 확인해 보세요.</description>
@@ -70,6 +62,14 @@
       <description>윤덕원(브로콜리너마저)이(가) 읽거나 추천한 책 19권을 확인해 보세요.</description>
       <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="true">https://favorbook.co.kr/share/%EC%9C%A4%EB%8D%95%EC%9B%90%28%EB%B8%8C%EB%A1%9C%EC%BD%9C%EB%A6%AC%EB%84%88%EB%A7%88%EC%A0%80%29.html</guid>
+    </item>
+
+    <item>
+      <title>이보영의 독서 리스트 (19권)</title>
+      <link>https://favorbook.co.kr/share/%EC%9D%B4%EB%B3%B4%EC%98%81.html</link>
+      <description>이보영이(가) 읽거나 추천한 책 19권을 확인해 보세요.</description>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://favorbook.co.kr/share/%EC%9D%B4%EB%B3%B4%EC%98%81.html</guid>
     </item>
 </channel>
 </rss>
