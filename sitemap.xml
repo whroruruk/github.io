@@ -2,19 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://favorbook.co.kr/</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/ranking.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/JR%28%EB%89%B4%EC%9D%B4%EC%8A%A4%ED%8A%B8%29.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/c/c4/%EB%89%B4%EC%9D%B4%EC%8A%A4%ED%8A%B8%28NU%27EST%29_JR_%EB%94%94%EC%8A%A4%ED%8C%A8%EC%B9%98_15.png</image:loc>
+      <image:title>JR(뉴이스트) 프로필</image:title>
+      <image:caption>JR(뉴이스트)의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/MJ%28%EC%95%84%EC%8A%A4%ED%8A%B8%EB%A1%9C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -29,7 +40,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/RM%28BTS%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -60,13 +71,17 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B0%80%EC%9B%90%28%EB%AF%B8%EC%95%BC%EC%98%A4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://talkimg.imbc.com/TVianUpload/tvian/TViews/image/2025/06/11/33abb8af-32eb-4863-b891-a8cdc82930c1.jpg</image:loc>
       <image:title>가원(미야오) 프로필</image:title>
       <image:caption>가원(미야오)의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/67/38/cover500/8942403824_1.jpg</image:loc>
+      <image:title>고왕국기 표지</image:title>
     </image:image>
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/34526/60/cover500/k622932853_2.jpg</image:loc>
@@ -84,14 +99,10 @@
       <image:loc>https://image.aladin.co.kr/product/843/34/cover500/8932911525_1.jpg</image:loc>
       <image:title>도리안 그레이의 초상 표지</image:title>
     </image:image>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/2584/37/cover500/8998441012_3.jpg</image:loc>
-      <image:title>모순 표지</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B0%80%EC%9D%84%28%EC%95%84%EC%9D%B4%EB%B8%8C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -122,7 +133,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B0%95%ED%98%9C%EC%A0%95.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -145,7 +156,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B1%B4%ED%98%B8%28%EC%BD%94%EB%A5%B4%ED%8B%B0%EC%8A%A4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -160,7 +171,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B3%A0%EB%AF%BC%EC%8B%9C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -191,7 +202,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B3%A0%EC%95%84%EC%84%B1.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -203,10 +214,14 @@
       <image:loc>https://image.aladin.co.kr/product/27685/1/cover500/8932920915_1.jpg</image:loc>
       <image:title>너의 심장을 쳐라 표지</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://img.millie.co.kr/200x/service/cover/179494866/2ed91e43755a4fbb95e90df5258d48aa.jpg</image:loc>
+      <image:title>아주 보통의 결혼 표지</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B3%A0%EC%98%81%EB%B0%B0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -225,11 +240,11 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B3%B5%EB%AF%BC%EC%A7%80.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Minzy_2020_2.png/500px-Minzy_2020_2.png</image:loc>
       <image:title>공민지 프로필</image:title>
       <image:caption>공민지의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -256,7 +271,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B3%B5%EC%8A%B9%EC%97%B0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -264,10 +279,14 @@
       <image:title>공승연 프로필</image:title>
       <image:caption>공승연의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/38830/55/cover500/k412137281_1.jpg</image:loc>
+      <image:title>혐오도 복제가 되나요 표지</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B5%AC%ED%98%9C%EC%84%A0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -289,8 +308,19 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EA%B6%8C%EC%86%8C%ED%98%84.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://img1.newsis.com/2019/09/11/NISI20190911_0015587397_web.jpg</image:loc>
+      <image:title>권소현 프로필</image:title>
+      <image:caption>권소현의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%EA%B7%9C%EB%82%A8.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -305,7 +335,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%EB%8C%80%EB%AA%85.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -320,7 +350,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%EB%8F%99%EC%99%84%28%EC%8B%A0%ED%99%94%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -338,8 +368,30 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EA%B9%80%EB%8F%99%ED%98%84%28AB6IX%29.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/2/27/190406_AB6IX_%EA%B9%80%EB%8F%99%ED%98%84.jpg</image:loc>
+      <image:title>김동현(AB6IX) 프로필</image:title>
+      <image:caption>김동현(AB6IX)의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/%EA%B9%80%EB%AF%BC%EA%B2%BD.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://dimg.donga.com/wps/SPORTS/IMAGE/2025/09/05/132328808.1.jpg</image:loc>
+      <image:title>김민경 프로필</image:title>
+      <image:caption>김민경의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%EB%AF%BC%ED%95%98.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -369,8 +421,19 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EA%B9%80%EB%B3%B4%EB%9D%BC%28%EC%98%81%ED%99%94%EA%B0%90%EB%8F%85%29.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://cdn.womennews.co.kr/news/photo/202110/216696_353355_5122.jpg</image:loc>
+      <image:title>김보라(영화감독) 프로필</image:title>
+      <image:caption>김보라(영화감독)의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%EC%82%AC%EC%9B%94.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -401,7 +464,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%EC%83%88%EB%B2%BD.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -428,7 +491,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%EC%84%9C%ED%98%95.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -443,7 +506,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%EC%84%A0%EC%95%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -458,7 +521,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%EC%84%B8%EC%A0%95.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -477,24 +540,16 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%EC%86%8C%ED%98%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/20180421_%EA%B9%80%EC%86%8C%ED%98%84_SES_%EA%B7%B8%EB%A6%B0%ED%95%98%ED%8A%B8_%EB%B0%94%EC%9E%90%ED%9A%8C_%282%29.jpg/960px-20180421_%EA%B9%80%EC%86%8C%ED%98%84_SES_%EA%B7%B8%EB%A6%B0%ED%95%98%ED%8A%B8_%EB%B0%94%EC%9E%90%ED%9A%8C_%282%29.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/5/53/Kim_So-hyun_%EA%B9%80%EC%86%8C%ED%98%84_%28born_1975%29.jpg</image:loc>
       <image:title>김소현 프로필</image:title>
       <image:caption>김소현의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://image.aladin.co.kr/product/35856/11/cover500/scm12510694324.jpg</image:loc>
-      <image:title>EQ의 천재들 표지</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/37/12/cover500/8955600267_2.jpg</image:loc>
-      <image:title>탈무드 표지</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/22/97/cover500/8995048921_3.jpg</image:loc>
+      <image:loc>https://image.aladin.co.kr/product/85/93/cover500/8990794528_2.jpg</image:loc>
       <image:title>사랑해 사랑해 사랑해 표지</image:title>
     </image:image>
     <image:image>
@@ -504,7 +559,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%EC%8B%9C%ED%98%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -519,7 +574,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%EC%9C%A0%EC%A0%95.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -542,7 +597,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%EC%9C%A4%EC%95%84%28%EC%9E%90%EC%9A%B0%EB%A6%BC%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -573,7 +628,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%EC%9C%A4%EC%A7%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -591,8 +646,23 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EA%B9%80%EC%9E%AC%EC%9B%90.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://photo.newsen.com/news_photo/2026/03/04/202603041008595710_3.jpg</image:loc>
+      <image:title>김재원 프로필</image:title>
+      <image:caption>김재원의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/21/33/cover500/8982812407_2.jpg</image:loc>
+      <image:title>꼬마 니콜라 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%EC%A7%80%EC%9B%90.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -615,7 +685,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%EC%B1%84%EC%9B%90%28%EB%A5%B4%EC%84%B8%EB%9D%BC%ED%95%8C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -642,7 +712,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%ED%83%9C%EB%A6%AC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -669,7 +739,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%ED%83%9C%ED%95%98.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -692,7 +762,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%ED%95%9C%EC%A3%BC%28%EC%8B%A4%EB%A6%AC%EC%B9%B4%EA%B2%94%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -723,7 +793,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%ED%98%9C%EC%88%98.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -754,7 +824,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%ED%98%9C%EC%9C%A4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -781,11 +851,11 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%ED%98%B8%EC%98%81.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Kim_Ho-young_in_2024.png/500px-Kim_Ho-young_in_2024.png</image:loc>
       <image:title>김호영 프로필</image:title>
       <image:caption>김호영의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -804,7 +874,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%ED%9A%A8%EC%A7%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -835,7 +905,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%82%98%EB%A6%B0%28%EB%AF%B8%EC%95%BC%EC%98%A4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -866,7 +936,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%82%98%EC%9C%A4%28%EB%AA%A8%EB%AA%A8%EB%9E%9C%EB%93%9C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -881,7 +951,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%82%98%EC%9C%A4%EC%84%A0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -895,8 +965,30 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EB%82%98%EC%9D%B8%28%EB%94%94%EC%96%B4%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%29.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://cf.asiaartistawards.com/news/21/2024/01/2024010908501799958_1.jpg</image:loc>
+      <image:title>나인(디어클라우드) 프로필</image:title>
+      <image:caption>나인(디어클라우드)의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/%EB%82%A8%EB%B3%B4%EB%9D%BC.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/c/c2/20231231_Nam_Bora_%28%EB%82%A8%EB%B3%B4%EB%9D%BC%29_02.png</image:loc>
+      <image:title>남보라 프로필</image:title>
+      <image:caption>남보라의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EB%82%A8%EC%A3%BC%ED%98%81.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -911,7 +1003,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%82%A8%EC%A7%80%ED%98%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -938,7 +1030,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%82%B8%EC%8B%9C%28%EB%AA%A8%EB%AA%A8%EB%9E%9C%EB%93%9C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -953,7 +1045,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%85%B8%EC%A0%9C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -983,8 +1075,19 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EB%89%B4%28%EB%8D%94%EB%B3%B4%EC%9D%B4%EC%A6%88%29.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://thumbnews.nateimg.co.kr/view610///news.nateimg.co.kr/orgImg/jt/2023/07/10/592b7b2f-7783-48be-be07-ecf444fc667e.jpg</image:loc>
+      <image:title>뉴(더보이즈) 프로필</image:title>
+      <image:caption>뉴(더보이즈)의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EB%8B%9D%EB%8B%9D%28%EC%97%90%EC%8A%A4%ED%8C%8C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1003,7 +1106,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%8B%A4%EC%9B%90%28%EC%9A%B0%EC%A3%BC%EC%86%8C%EB%85%80%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1022,7 +1125,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%8B%A4%ED%98%84%28%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1053,7 +1156,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%8D%B0%EC%9D%B4%EC%A7%80%28%EB%AA%A8%EB%AA%A8%EB%9E%9C%EB%93%9C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1067,8 +1170,19 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EB%8D%B0%ED%94%84%EC%BD%98.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://talkimg.imbc.com/TVianUpload/tvian/TViews/image/2025/01/17/ebca98f5-4d2c-4fc4-a6df-94a92550e702.jpg</image:loc>
+      <image:title>데프콘 프로필</image:title>
+      <image:caption>데프콘의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EB%8F%84%EA%B2%B8%28%EC%84%B8%EB%B8%90%ED%8B%B4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1091,7 +1205,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%8F%84%ED%9B%88%28TWS%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1106,7 +1220,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%94%94%EB%85%B8%28%EC%84%B8%EB%B8%90%ED%8B%B4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1125,7 +1239,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%9D%BC%ED%82%A4%28%EC%95%84%EC%8A%A4%ED%8A%B8%EB%A1%9C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1133,10 +1247,14 @@
       <image:title>라키(아스트로) 프로필</image:title>
       <image:caption>라키(아스트로)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/5482/88/cover500/k582636828_1.jpg</image:loc>
+      <image:title>김이나의 작사법 표지</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%A1%9C%EC%9A%B4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1167,7 +1285,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%A1%9C%EC%A0%9C%28%EB%B8%94%EB%9E%99%ED%95%91%ED%81%AC%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1190,7 +1308,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%A3%A8%EB%8B%A4%28%EC%9A%B0%EC%A3%BC%EC%86%8C%EB%85%80%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1205,7 +1323,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%A5%98%EC%88%98%EC%98%81.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1220,7 +1338,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%A5%98%ED%98%84%EA%B2%BD.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1235,7 +1353,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%A6%AC%EC%95%84%ED%82%B4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1250,7 +1368,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%A7%88%ED%8B%B4%28%EC%BD%94%EB%A5%B4%ED%8B%B0%EC%8A%A4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1277,7 +1395,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%AC%B8%EA%B0%80%EC%98%81.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1308,11 +1426,11 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%AC%B8%EB%B3%84%28%EB%A7%88%EB%A7%88%EB%AC%B4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Mamamoo_Moonbyul_in_2024_%281%29_03.jpg/500px-Mamamoo_Moonbyul_in_2024_%281%29_03.jpg</image:loc>
       <image:title>문별(마마무) 프로필</image:title>
       <image:caption>문별(마마무)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -1323,7 +1441,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%AC%B8%EC%86%8C%EB%A6%AC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1342,7 +1460,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%AC%B8%EC%A7%80%EC%95%A0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1361,7 +1479,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%AC%B8%EC%B1%84%EC%9B%90.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1372,7 +1490,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%AF%B8%EB%AF%B8%28%EC%98%A4%EB%A7%88%EC%9D%B4%EA%B1%B8%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1403,7 +1521,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%AF%B8%EC%97%B0%28%EC%95%84%EC%9D%B4%EB%93%A4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1418,7 +1536,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%AF%BC%EC%A7%80%28%EB%89%B4%EC%A7%84%EC%8A%A4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1433,7 +1551,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%B0%8D%EA%B8%B0%EB%89%B4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1456,7 +1574,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%B0%95%EB%B3%B4%EA%B2%80.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1483,7 +1601,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%B0%95%EB%B3%B4%EC%98%81.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1506,7 +1624,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%B0%95%EC%86%8C%EB%8B%B4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1521,7 +1639,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%B0%95%EC%A0%95%EB%AF%BC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1552,7 +1670,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%B0%95%EC%A7%80%ED%9B%88.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1583,7 +1701,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%B0%95%EC%B0%AC%EC%9A%B1.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1606,7 +1724,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%B0%95%ED%95%98%EC%84%A0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1621,7 +1739,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%B0%95%ED%95%B4%EC%88%98.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1632,7 +1750,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%B0%95%ED%95%B4%EC%A7%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1663,7 +1781,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%B0%95%ED%9B%88.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1678,7 +1796,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%B0%95%ED%9D%AC%EC%88%9C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1692,8 +1810,30 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EB%B0%B1%EA%B0%80%EC%98%81%28%EC%95%88%EB%85%95%ED%95%98%EC%8B%A0%EA%B0%80%EC%98%81%29.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>http://handintheair.com/wp-content/uploads/2015/12/hand_hellogayoung.jpg</image:loc>
+      <image:title>백가영(안녕하신가영) 프로필</image:title>
+      <image:caption>백가영(안녕하신가영)의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/%EB%B0%B1%EC%A7%80%ED%97%8C%28%ED%94%84%EB%A1%9C%EB%AF%B8%EC%8A%A4%EB%82%98%EC%9D%B8%29.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/DM_%EB%B0%B1%EC%A7%80%ED%97%8C.jpg/500px-DM_%EB%B0%B1%EC%A7%80%ED%97%8C.jpg</image:loc>
+      <image:title>백지헌(프로미스나인) 프로필</image:title>
+      <image:caption>백지헌(프로미스나인)의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EB%B2%84%EB%85%BC%28%EC%84%B8%EB%B8%90%ED%8B%B4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1712,7 +1852,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%B3%80%EC%9A%94%ED%95%9C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1731,7 +1871,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%B3%B4%EB%82%98%28%EC%9A%B0%EC%A3%BC%EC%86%8C%EB%85%80%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1746,7 +1886,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%B4%89%EC%A4%80%ED%98%B8.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1777,7 +1917,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%B7%94%28BTS%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1804,7 +1944,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%82%B0%EB%93%A4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1819,7 +1959,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%84%9C%EA%B0%95%EC%A4%80.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1850,7 +1990,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%84%9C%EC%9C%A0%EB%A6%AC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1865,7 +2005,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%84%9C%EC%A7%80%ED%98%9C%281996%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1896,7 +2036,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%84%9C%ED%98%84%EC%A7%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1911,7 +2051,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%84%A4%EC%95%84%28%EC%9A%B0%EC%A3%BC%EC%86%8C%EB%85%80%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1926,7 +2066,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%84%A4%ED%98%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1945,7 +2085,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%84%B1%EC%B0%AC%28%EB%9D%BC%EC%9D%B4%EC%A6%88%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1968,7 +2108,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%84%B1%ED%98%84%28%EC%BD%94%EB%A5%B4%ED%8B%B0%EC%8A%A4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1983,7 +2123,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%84%B8%ED%9B%88%28%EC%97%91%EC%86%8C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1998,7 +2138,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%86%8C%EC%9C%A0%EC%A7%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2013,7 +2153,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%86%8C%EC%9D%B4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2036,7 +2176,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%86%8C%EC%A7%80%EC%84%AD.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2050,8 +2190,19 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EC%86%90%EB%8B%B4%EB%B9%84.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://file2.nocutnews.co.kr/newsroom/image/2025/04/11/202504111610241422_0.jpg</image:loc>
+      <image:title>손담비 프로필</image:title>
+      <image:caption>손담비의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EC%86%90%EC%88%98%ED%98%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2082,7 +2233,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%86%90%EC%97%B0%EC%9E%AC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2101,7 +2252,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%86%90%EC%98%88%EC%A7%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2116,7 +2267,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%86%90%EC%A2%85%EC%9B%90.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2139,7 +2290,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%86%94%EB%9D%BC%28%EB%A7%88%EB%A7%88%EB%AC%B4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2149,8 +2300,19 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EC%86%94%EC%A7%80%28EXID%29.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/5/59/Solji_performing_at_KBS_Cool_FM_in_July_2016_03.jpg</image:loc>
+      <image:title>솔지(EXID) 프로필</image:title>
+      <image:caption>솔지(EXID)의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EC%86%A1%ED%98%9C%EA%B5%90.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2165,7 +2327,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%88%98%EC%98%81%28%EC%86%8C%EB%85%80%EC%8B%9C%EB%8C%80%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2180,7 +2342,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%8A%A4%ED%85%94%EB%9D%BC%EC%9E%A5.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2203,7 +2365,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%8B%9C%EC%98%A8%28NCT%20%EC%9C%84%EC%8B%9C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2218,7 +2380,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%8B%A0%EC%84%B8%EA%B2%BD.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2249,7 +2411,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%8B%A0%EC%86%8C%EC%9C%A8.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2264,7 +2426,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%8B%A0%EC%8B%9C%EC%95%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2291,7 +2453,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%8B%AC%EC%9D%80%EA%B2%BD.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2302,7 +2464,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%95%84%EC%9D%B4%EB%A6%B0%28%EB%A0%88%EB%93%9C%EB%B2%A8%EB%B2%B3%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2313,7 +2475,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%95%84%EC%9D%B4%EC%9C%A0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2344,7 +2506,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%95%88%EC%98%88%EC%9D%80.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2367,7 +2529,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%95%88%EC%9C%A0%EC%A7%84%28%EC%95%84%EC%9D%B4%EB%B8%8C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2382,7 +2544,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%95%88%ED%98%95%EC%84%AD.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2405,18 +2567,18 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%97%84%EC%A7%80%EC%9B%90.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Uhm_Ji-Won_aht_the_2010_Metrocity_fashion_show_%26_party_017_%28cropped%29.jpg/500px-Uhm_Ji-Won_aht_the_2010_Metrocity_fashion_show_%26_party_017_%28cropped%29.jpg</image:loc>
       <image:title>엄지원 프로필</image:title>
       <image:caption>엄지원의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%97%84%ED%83%9C%EA%B5%AC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2431,7 +2593,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%97%98%EB%9D%BC%28%EB%AF%B8%EC%95%BC%EC%98%A4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2450,7 +2612,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%97%B0%EC%9A%B0%28%EB%AA%A8%EB%AA%A8%EB%9E%9C%EB%93%9C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2461,7 +2623,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%98%88%EB%A6%AC%28%EB%A0%88%EB%93%9C%EB%B2%A8%EB%B2%B3%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2480,7 +2642,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%98%88%EC%A7%80%EC%9B%90.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2490,8 +2652,19 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EC%98%90%EB%A1%9C.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://static.wikia.nocookie.net/kindie/images/e/ec/YELO_2021_profile_photo.png/revision/latest?cb=20220109091939</image:loc>
+      <image:title>옐로 프로필</image:title>
+      <image:caption>옐로의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EC%98%A4%EC%97%B0%EC%84%9C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2506,11 +2679,11 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%98%A4%EC%A0%95%EC%97%B0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://entertainimg.kbsmedia.co.kr/cms/uploads/PERSON_20220824121854_fedb18fbcab1546fe6ffd7b5aad83d7d.jpg</image:loc>
       <image:title>오정연 프로필</image:title>
       <image:caption>오정연의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -2521,7 +2694,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%98%A4%EC%A2%85%ED%98%81.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2544,7 +2717,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%98%A4%EC%A7%80%EC%9D%80.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2563,7 +2736,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%98%A5%EC%83%81%EB%8B%AC%EB%B9%9B.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2586,7 +2759,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%98%A5%EC%9E%90%EC%97%B0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2601,7 +2774,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%98%B9%EC%84%B1%EC%9A%B0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2616,7 +2789,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9A%94%EC%A1%B0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2647,7 +2820,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9B%90%EC%9A%B0%28%EC%84%B8%EB%B8%90%ED%8B%B4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2662,7 +2835,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9B%90%ED%95%84%28%EB%8D%B0%EC%9D%B4%EC%8B%9D%EC%8A%A4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2689,7 +2862,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9B%AC%EB%94%94%28%EB%A0%88%EB%93%9C%EB%B2%A8%EB%B2%B3%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2704,7 +2877,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9C%88%ED%84%B0%28%EC%97%90%EC%8A%A4%ED%8C%8C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2735,7 +2908,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9C%A0%EA%B2%B8%28%EA%B0%93%EC%84%B8%EB%B8%90%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2750,7 +2923,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9C%A0%EB%9D%BC%281993%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2773,7 +2946,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9C%A0%EC%9E%AC%EC%84%9D.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2788,7 +2961,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9C%A0%ED%83%80%28NCT%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2803,7 +2976,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9C%A4%EB%8D%95%EC%9B%90%28%EB%B8%8C%EB%A1%9C%EC%BD%9C%EB%A6%AC%EB%84%88%EB%A7%88%EC%A0%80%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2834,7 +3007,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9C%A4%EB%B3%B4%EB%9D%BC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2853,7 +3026,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9C%A4%EC%95%84%28%EC%86%8C%EB%85%80%EC%8B%9C%EB%8C%80%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2868,7 +3041,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9C%A4%ED%95%98.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2891,7 +3064,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%80%EC%84%9C%28%EC%9A%B0%EC%A3%BC%EC%86%8C%EB%85%80%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2906,7 +3079,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EB%8F%99%ED%9C%98.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2921,7 +3094,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EB%AF%B8%EC%97%B0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2944,7 +3117,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EB%B3%91%ED%97%8C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2959,7 +3132,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EB%B3%B4%EC%98%81.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2990,7 +3163,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EB%B8%8C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3012,8 +3185,19 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%83%88%EB%A1%AC.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/7/73/190611_%EC%9D%B4%EC%83%88%EB%A1%AC.jpg</image:loc>
+      <image:title>이새롬 프로필</image:title>
+      <image:caption>이새롬의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%84%9D%ED%9B%88.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3032,7 +3216,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%84%A4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3059,7 +3243,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%84%B8%EC%98%81.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3078,7 +3262,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%86%9C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3097,7 +3281,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%8A%B9%EC%97%B0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3128,7 +3312,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%8A%B9%EC%97%B4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3143,7 +3327,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%97%98.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3158,7 +3342,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%97%98%EB%A6%AC%EC%95%BC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3181,7 +3365,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%97%B0%ED%9D%AC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3196,7 +3380,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%98%81%EC%95%A0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3211,7 +3395,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%9C%A0%EB%B9%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3226,7 +3410,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%9C%A0%EC%98%81.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3241,7 +3425,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%9D%B4%EA%B2%BD.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3252,7 +3436,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%9E%AC%EC%9B%90%28H.O.T.%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3271,7 +3455,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%A0%81.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3286,7 +3470,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%A0%95%EC%9D%80.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3313,7 +3497,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%A0%9C%ED%9B%88.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3327,8 +3511,19 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%A4%80%EC%98%81.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Lee_Junyoung_on_ACON_2025.jpg/500px-Lee_Junyoung_on_ACON_2025.jpg</image:loc>
+      <image:title>이준영 프로필</image:title>
+      <image:caption>이준영의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%A4%80%ED%98%81.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3347,7 +3542,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%B2%AD%EC%95%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3378,7 +3573,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%ED%98%9C%EC%84%B1.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3401,7 +3596,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%ED%9A%A8%EB%A6%AC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3420,7 +3615,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9E%84%EC%88%98%EC%A0%95.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3443,7 +3638,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9E%84%EC%8B%9C%EC%99%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3470,7 +3665,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9E%A5%EA%B8%B0%ED%95%98.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3501,7 +3696,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9E%A5%EB%82%98%EB%9D%BC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3524,7 +3719,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9E%A5%EB%8F%84%EC%97%B0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3539,7 +3734,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9E%A5%EB%8F%99%EC%9C%A4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3554,7 +3749,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9E%A5%EC%9B%90%EC%98%81.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3573,7 +3768,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9E%A5%EC%9E%AC%EC%9D%B8.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3596,7 +3791,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9E%AC%EB%AF%BC%28NCT%20%EB%93%9C%EB%A6%BC%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3611,7 +3806,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9E%AC%ED%98%84%28NCT%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3625,8 +3820,19 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EC%9E%AC%ED%9A%A8%28%EB%B8%94%EB%9D%BD%EB%B9%84%29.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://wimg.sedaily.com/news/legacy/2019/12/06/1VRYXII9GN_1.jpg</image:loc>
+      <image:title>재효(블락비) 프로필</image:title>
+      <image:caption>재효(블락비)의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EC%9E%AC%ED%9D%AC%28NCT%20%EC%9C%84%EC%8B%9C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3641,7 +3847,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A0%81%EC%9E%AC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3652,7 +3858,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A0%84%EB%AF%B8%EB%8F%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3663,7 +3869,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A0%84%EC%84%9D%ED%98%B8.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3678,7 +3884,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A0%84%EC%86%8C%EB%AF%BC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3693,7 +3899,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A0%84%EC%97%AC%EB%B9%88.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3716,7 +3922,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A0%84%ED%9A%A8%EC%84%B1.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3731,7 +3937,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A0%95%EA%B2%BD%ED%98%B8.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3742,7 +3948,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A0%95%EA%B5%AD%28BTS%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3761,7 +3967,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A0%95%EC%84%B8%EC%9A%B4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3776,7 +3982,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A0%95%EC%86%8C%EB%AF%BC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3803,7 +4009,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A0%95%EC%8A%B9%ED%99%98.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3818,7 +4024,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A0%95%EC%9A%B0%EC%84%B1.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3829,7 +4035,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A0%95%EC%9D%80%EC%A7%80%28%EC%97%90%EC%9D%B4%ED%95%91%ED%81%AC%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3844,7 +4050,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A0%95%EC%9D%80%EC%B1%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3871,7 +4077,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A0%95%EC%9D%B8%EC%A7%80.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3889,19 +4095,38 @@
     </image:image>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/share/%EC%A0%95%EC%B1%84%EC%97%B0%28%EB%8B%A4%EC%9D%B4%EC%95%84%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/share/%EC%A0%95%EC%A4%80%EC%9D%BC.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://image.genie.co.kr/Y/IMAGE/IMG_ARTIST/058/362/339/58362339_1763981572546_1_600x600.JPG</image:loc>
+      <image:title>정준일 프로필</image:title>
+      <image:caption>정준일의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/%EC%A0%95%EC%B1%84%EC%97%B0%28%EB%8B%A4%EC%9D%B4%EC%95%84%29.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/2/2c/180224_%EC%98%81%ED%99%94_%EB%9D%BC%EB%9D%BC_%EC%8B%A0%EC%B4%8C_%EB%AC%B4%EB%8C%80%EC%9D%B8%EC%82%AC_%EB%8B%A4%EC%9D%B4%EC%95%84_%EC%A0%95%EC%B1%84%EC%97%B0_%EC%A7%81%EC%B0%8D_%286%29.jpg?_=20180422231213</image:loc>
       <image:title>정채연(다이아) 프로필</image:title>
       <image:caption>정채연(다이아)의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/6700/54/cover500/k232434962_1.jpg</image:loc>
+      <image:title>이 시 봐라 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/3401/16/cover500/8984887684_1.jpg</image:loc>
+      <image:title>그래도 너를 사랑한단다 표지</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A0%95%ED%95%B4%EC%9D%B8.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3920,7 +4145,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A0%95%ED%98%9C%EC%84%A0%28%EC%A0%9C%EC%9D%B4%EB%9E%98%EB%B9%97%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3938,8 +4163,19 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EC%A0%9C%EC%95%84%28%EB%B8%8C%EB%9D%BC%EC%9A%B4%EC%95%84%EC%9D%B4%EB%93%9C%EA%B1%B8%EC%8A%A4%29.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://image.news1.kr/system/photos/2020/5/28/4214557/high.jpg/dims/optimize</image:loc>
+      <image:title>제아(브라운아이드걸스) 프로필</image:title>
+      <image:caption>제아(브라운아이드걸스)의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EC%A1%B0%EC%97%AC%EC%A0%95.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3951,10 +4187,26 @@
       <image:loc>https://image.aladin.co.kr/product/23775/59/cover500/8932920230_2.jpg</image:loc>
       <image:title>깊이에의 강요 표지</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/8715/79/cover500/8954641547_2.jpg</image:loc>
+      <image:title>너무 시끄러운 고독 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/1452/24/cover500/8937462788_3.jpg</image:loc>
+      <image:title>노인과 바다 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/9751/78/cover500/8982816631_3.jpg</image:loc>
+      <image:title>자기앞의 생 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/56/9/cover500/8901049848_1.jpg</image:loc>
+      <image:title>지문사냥꾼 표지</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A1%B4%20%EB%B0%95.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3969,7 +4221,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A2%85%ED%98%84%28%EC%83%A4%EC%9D%B4%EB%8B%88%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -3992,7 +4244,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A3%BC%EC%97%B0%28%EB%8D%94%EB%B3%B4%EC%9D%B4%EC%A6%88%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4010,8 +4262,19 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EC%A3%BC%EC%9D%B4%28%EB%AA%A8%EB%AA%A8%EB%9E%9C%EB%93%9C%29.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/7/75/Momoland_JooE_in_2022.jpg</image:loc>
+      <image:title>주이(모모랜드) 프로필</image:title>
+      <image:caption>주이(모모랜드)의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EC%A3%BC%ED%9B%88%28%EC%BD%94%EB%A5%B4%ED%8B%B0%EC%8A%A4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4042,7 +4305,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A4%80%ED%98%B8%282PM%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4057,7 +4320,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A7%80%EC%A0%A4%28%EC%97%90%EC%8A%A4%ED%8C%8C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4072,7 +4335,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A7%80%ED%9B%88%28TWS%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4087,7 +4350,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A7%84%EC%98%81%28%EA%B0%93%EC%84%B8%EB%B8%90%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4118,7 +4381,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%A7%84%EC%A7%84%28%EC%95%84%EC%8A%A4%ED%8A%B8%EB%A1%9C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4133,7 +4396,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%B0%AC%EB%AF%B8%28AOA%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4144,7 +4407,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%B0%B0%EC%8A%A4%EC%97%94%ED%84%B0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4163,7 +4426,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%B2%AD%ED%95%98.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4178,7 +4441,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%B5%9C%EA%B0%95%EC%B0%BD%EB%AF%BC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4208,8 +4471,30 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EC%B5%9C%EA%B3%A0%EC%9D%80.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://img.khan.co.kr/news/2014/01/02/l_2014010201000215900018831.jpg</image:loc>
+      <image:title>최고은 프로필</image:title>
+      <image:caption>최고은의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/%EC%B5%9C%EC%9E%90%28%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%EB%93%80%EC%98%A4%29.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://img.hankyung.com/photo/202302/BF.20750927.1.jpg</image:loc>
+      <image:title>최자(다이나믹 듀오) 프로필</image:title>
+      <image:caption>최자(다이나믹 듀오)의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EC%B5%9C%EC%A0%95%ED%9B%88%28%EC%9E%94%EB%82%98%EB%B9%84%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4240,7 +4525,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%B5%9C%ED%9D%AC%EC%84%9C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4271,7 +4556,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%B9%B4%EB%A6%AC%EB%82%98%28%EC%97%90%EC%8A%A4%ED%8C%8C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4302,7 +4587,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%B9%B4%EC%9D%B4%28%EC%97%91%EC%86%8C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4321,7 +4606,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%82%A4%EB%85%B8%28%ED%8E%9C%ED%83%80%EA%B3%A4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4348,7 +4633,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%85%8C%EC%98%A4%28P1%ED%95%98%EB%AA%A8%EB%8B%88%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4363,7 +4648,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%8E%98%EC%9D%B4%EC%BB%A4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4394,7 +4679,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%8F%B4%ED%82%B4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4409,7 +4694,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%95%98%EB%8B%88%28%EB%89%B4%EC%A7%84%EC%8A%A4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4424,7 +4709,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%95%98%EC%97%B0%EC%A3%BC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4455,7 +4740,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%95%98%EC%A0%95%EC%9A%B0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4477,8 +4762,19 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%ED%95%9C%EA%B2%BD%EB%A1%9D%28%ED%81%AC%EB%9D%BC%EC%9E%89%EB%84%9B%29.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://img0.yna.co.kr/etc/inner/KR/2025/01/27/AKR20250127041000005_01_i_P4.jpg</image:loc>
+      <image:title>한경록(크라잉넛) 프로필</image:title>
+      <image:caption>한경록(크라잉넛)의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%ED%95%9C%EB%A1%9C%EB%A1%9C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4501,7 +4797,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%95%9C%EC%86%8C%ED%9D%AC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4524,7 +4820,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%95%9C%EC%8A%B9%EC%97%B0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4539,7 +4835,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%95%9C%EC%98%88%EB%A6%AC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4562,7 +4858,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%95%9C%EC%A7%80%EB%AF%BC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4581,7 +4877,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%95%9C%ED%9A%A8%EC%A3%BC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4600,7 +4896,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%95%AB%ED%8E%A0%ED%8A%B8.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4615,7 +4911,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%97%88%EC%84%B1%EB%B2%94.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4646,7 +4942,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%97%88%EC%9C%A4%EC%A7%84%28%EB%A5%B4%EC%84%B8%EB%9D%BC%ED%95%8C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4677,7 +4973,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%98%9C%EB%A6%BC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4700,7 +4996,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%98%9C%EB%B9%88%28%EB%AA%A8%EB%AA%A8%EB%9E%9C%EB%93%9C%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4715,7 +5011,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%99%8D%EA%B2%BD.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4746,7 +5042,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%99%8D%EC%A7%80%EB%AF%BC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4777,7 +5073,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%99%94%EC%82%AC%28%EB%A7%88%EB%A7%88%EB%AC%B4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4792,7 +5088,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%99%A9%EC%86%8C%EC%9C%A4%28%EC%83%88%EC%86%8C%EB%85%84%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4807,7 +5103,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%99%A9%EC%A0%95%EB%AF%BC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4822,7 +5118,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%99%A9%EC%A0%9C%EC%84%B1.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4841,7 +5137,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%9C%98%EC%9D%B8%28%EB%A7%88%EB%A7%88%EB%AC%B4%29.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -4866,7 +5162,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%AA%A8%EC%88%9C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -4876,7 +5172,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%84%B8%EC%83%81%EC%97%90%EC%84%9C%20%EA%B3%A0%EC%96%91%EC%9D%B4%EA%B0%80%20%EC%82%AC%EB%9D%BC%EC%A7%84%EB%8B%A4%EB%A9%B4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -4916,7 +5212,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%88%98%ED%99%95%EC%9E%90.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -4926,7 +5222,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%9A%B4%EB%8B%A4%EA%B3%A0%20%EB%8B%AC%EB%9D%BC%EC%A7%80%EB%8A%94%20%EC%9D%BC%EC%9D%80%20%EC%95%84%EB%AC%B4%EA%B2%83%EB%8F%84%20%EC%97%86%EA%B2%A0%EC%A7%80%EB%A7%8C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -4936,7 +5232,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%9C%84%EC%A0%80%EB%93%9C%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -4946,7 +5242,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EA%B3%B5%EC%A4%91%EA%B7%B8%EB%84%A4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -4956,7 +5252,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%9C%84%EB%B2%84%EB%A9%98%EC%89%AC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -4966,7 +5262,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%B0%94%EA%B9%A5%EC%9D%80%20%EC%97%AC%EB%A6%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -4976,7 +5272,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%B9%84%ED%96%89%EC%9A%B4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5006,7 +5302,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%A2%8B%EC%9D%80%EC%A7%80%20%EB%82%98%EC%81%9C%EC%A7%80%20%EB%88%84%EA%B0%80%20%EC%95%84%EB%8A%94%EA%B0%80.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5016,7 +5312,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%B2%AB%20%EC%97%AC%EB%A6%84%2C%20%EC%99%84%EC%A3%BC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5026,7 +5322,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%B9%B5%ED%85%8C%EC%9D%BC%2C%20%EB%9F%AC%EB%B8%8C%2C%20%EC%A2%80%EB%B9%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5036,7 +5332,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%A7%81%EC%97%85%EC%9C%BC%EB%A1%9C%EC%84%9C%EC%9D%98%20%EC%86%8C%EC%84%A4%EA%B0%80.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5046,7 +5342,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%8B%B9%EC%8B%A0%EC%9D%98%20%EC%9D%B4%EB%A6%84%EC%9D%84%20%EC%A7%80%EC%96%B4%EB%8B%A4%EA%B0%80%20%EB%A9%B0%EC%B9%A0%EC%9D%80%20%EB%A8%B9%EC%97%88%EB%8B%A4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5056,7 +5352,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EA%B3%A0%EC%8A%B4%EB%8F%84%EC%B9%98%EC%9D%98%20%EC%86%8C%EC%9B%90.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5076,7 +5372,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%82%B4%EC%95%84%EC%98%A8%20%EA%B8%B0%EC%A0%81%20%EC%82%B4%EC%95%84%EA%B0%88%20%EA%B8%B0%EC%A0%81.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5086,7 +5382,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%84%B8%EA%B3%84%EC%9D%98%20%ED%98%B8%EC%88%98.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5096,7 +5392,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EA%B5%AC%EC%9D%98%20%EC%A6%9D%EB%AA%85.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5106,7 +5402,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%B0%BD%EC%A1%B0%EC%A0%81%20%ED%96%89%EC%9C%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5116,7 +5412,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%B9%9B%EA%B3%BC%20%EB%AC%BC%EC%A7%88%EC%97%90%20%EA%B4%80%ED%95%9C%20%EC%9D%B4%EB%A1%A0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5126,7 +5422,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%9A%B0%EB%A6%AC%EA%B0%80%20%EB%B9%9B%EC%9D%98%20%EC%86%8D%EB%8F%84%EB%A1%9C%20%EA%B0%88%20%EC%88%98%20%EC%97%86%EB%8B%A4%EB%A9%B4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5136,7 +5432,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%95%88%EB%82%98%20%EC%B9%B4%EB%A0%88%EB%8B%88%EB%82%98.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5146,7 +5442,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%A7%80%EA%B8%88%20%EC%95%8C%EA%B3%A0%20%EC%9E%88%EB%8A%94%20%EA%B1%B8%20%EA%B7%B8%EB%95%8C%EB%8F%84%20%EC%95%8C%EC%95%98%EB%8D%94%EB%9D%BC%EB%A9%B4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5156,7 +5452,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%B3%B4%EA%B1%B4%EA%B5%90%EC%82%AC%20%EC%95%88%EC%9D%80%EC%98%81.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5166,7 +5462,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%99%9C%20%EC%84%B8%EA%B3%84%EC%9D%98%20%EC%A0%88%EB%B0%98%EC%9D%80%20%EA%B5%B6%EC%A3%BC%EB%A6%AC%EB%8A%94%EA%B0%80.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5176,7 +5472,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%ED%94%BC%ED%94%84%ED%8B%B0%20%ED%94%BC%ED%94%8C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5186,7 +5482,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%8B%AC%EA%B3%BC%206%ED%8E%9C%EC%8A%A4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5196,7 +5492,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%B0%98%EA%B3%A0%ED%9D%90%2C%20%EC%98%81%ED%98%BC%EC%9D%98%20%ED%8E%B8%EC%A7%80.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5205,8 +5501,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EB%82%98%EB%AF%B8%EC%95%BC%20%EC%9E%A1%ED%99%94%EC%A0%90%EC%9D%98%20%EA%B8%B0%EC%A0%81.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/30768/99/cover500/k252830652_2.jpg</image:loc>
+      <image:title>나미야 잡화점의 기적 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/book/%EB%82%98%EC%9D%98%20%EB%B9%84%EA%B1%B0%EB%8B%88%EC%A6%98%20%EB%A7%8C%ED%99%94.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5216,7 +5522,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%96%B4%EB%A6%B0%EC%99%95%EC%9E%90.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5226,7 +5532,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%ED%98%B8%EB%B0%80%EB%B0%AD%EC%9D%98%20%ED%8C%8C%EC%88%98%EA%BE%BC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5236,7 +5542,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EA%B8%89%EB%A5%98.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5246,7 +5552,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%8D%B0%EB%AF%B8%EC%95%88.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5256,7 +5562,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%8D%B0%EC%9D%BC%20%EC%B9%B4%EB%84%A4%EA%B8%B0%20%EC%9D%B8%EA%B0%84%20%EA%B4%80%EA%B3%84%EB%A1%A0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5266,7 +5572,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%AC%BC%EA%B3%A0%EA%B8%B0%EB%8A%94%20%EC%A1%B4%EC%9E%AC%ED%95%98%EC%A7%80%20%EC%95%8A%EB%8A%94%EB%8B%A4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5276,7 +5582,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%B0%9D%EC%9D%80%20%EB%B0%A4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5286,7 +5592,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%B6%88%ED%8E%B8%ED%95%9C%20%ED%8E%B8%EC%9D%98%EC%A0%90.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5295,8 +5601,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EC%95%84%EA%B0%80%EB%AF%B8.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/33728/6/cover500/k282939544_1.jpg</image:loc>
+      <image:title>아가미 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/book/%EC%A0%88%EC%B0%BD.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5306,7 +5622,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%97%AC%EB%8D%9F%20%EB%8B%A8%EC%96%B4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5316,7 +5632,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%97%B0%EA%B8%88%EC%88%A0%EC%82%AC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5326,7 +5642,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%ED%8C%8C%ED%94%BC%EC%9A%A9.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5336,7 +5652,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%95%88%EB%85%95%EC%9D%B4%EB%9D%BC%20%EA%B7%B8%EB%9E%AC%EC%96%B4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5346,7 +5662,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%9B%94%EB%93%A0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5356,7 +5672,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%BD%94%EC%8A%A4%EB%AA%A8%EC%8A%A4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5366,7 +5682,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%ED%9C%B4%EC%8B%9D%EC%9D%98%20%EB%A7%90%EB%93%A4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5376,7 +5692,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%96%B8%EC%96%B4%EC%9D%98%20%EC%98%A8%EB%8F%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5386,7 +5702,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%95%A0%EC%93%B0%EC%A7%80%20%EC%95%8A%EA%B3%A0%20%ED%8E%B8%EC%95%88%ED%95%98%EA%B2%8C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5396,7 +5712,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%9D%B4%EC%83%81%ED%95%9C%20%EB%82%98%EB%9D%BC%EC%9D%98%20%EC%95%A8%EB%A6%AC%EC%8A%A4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5406,7 +5722,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%82%98%EB%8A%94%20%EB%82%98%EB%A1%9C%20%EC%82%B4%EA%B8%B0%EB%A1%9C%20%ED%96%88%EB%8B%A4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5416,7 +5732,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%85%BC%EC%96%B4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5426,7 +5742,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%9D%BC%EB%8A%94%20%EC%84%B8%EA%B3%84.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5436,7 +5752,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%8B%A0%EA%B2%BD%20%EB%81%84%EA%B8%B0%EC%9D%98%20%EA%B8%B0%EC%88%A0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5446,7 +5762,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%AC%B4%EC%9D%98%EB%AF%B8%EC%9D%98%20%EC%B6%95%EC%A0%9C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5456,7 +5772,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%9E%90%EA%B8%B0%EB%A7%8C%EC%9D%98%20%EB%B0%A9.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5466,7 +5782,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%82%AC%EB%9E%91%EC%9D%98%20%EA%B8%B0%EC%88%A0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5476,7 +5792,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%84%88%EB%A5%BC%20%EB%B9%9B%EB%82%98%EA%B2%8C%20%ED%95%A0%20%EC%9D%BC%EB%93%A4%EC%9D%B4%20%EA%B8%B0%EB%8B%A4%EB%A6%AC%EA%B3%A0%20%EC%9E%88%EC%96%B4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5486,7 +5802,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%82%98%EC%9D%98%20%EB%9D%BC%EC%9E%84%EC%98%A4%EB%A0%8C%EC%A7%80%EB%82%98%EB%AC%B4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5496,7 +5812,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%ED%8D%BC%EB%A0%88%EC%9D%B4%EB%93%9C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5505,18 +5821,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/share/book/%EB%82%98%EB%AF%B8%EC%95%BC%20%EC%9E%A1%ED%99%94%EC%A0%90%EC%9D%98%20%EA%B8%B0%EC%A0%81.html</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/30768/99/cover500/k252830652_2.jpg</image:loc>
-      <image:title>나미야 잡화점의 기적 표지</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://favorbook.co.kr/share/book/%EC%97%AC%ED%96%89%EC%9D%98%20%EC%9D%B4%EC%9C%A0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5526,7 +5832,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%97%84%EB%A7%88%EB%A5%BC%20%EB%B6%80%ED%83%81%ED%95%B4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5536,7 +5842,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%97%B4%EB%91%90%20%EB%B0%9C%EC%9E%90%EA%B5%AD.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5546,7 +5852,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EA%B9%8A%EC%9D%B4%EC%97%90%EC%9D%98%20%EA%B0%95%EC%9A%94.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5556,7 +5862,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%B0%B8%EC%9D%84%20%EC%88%98%20%EC%97%86%EB%8A%94%20%EC%A1%B4%EC%9E%AC%EC%9D%98%20%EA%B0%80%EB%B2%BC%EC%9B%80.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5566,7 +5872,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%9E%90%EC%A1%B4%EA%B0%90%20%EC%88%98%EC%97%85.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5586,7 +5892,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%ED%86%A0%EC%A7%80.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5602,7 +5908,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%A7%80%EB%AC%B8%EC%82%AC%EB%83%A5%EA%BE%BC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5612,7 +5918,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%85%B9%EB%82%98%EB%AC%B4%EC%9D%98%20%ED%8C%8C%EC%88%98%EA%BE%BC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5622,13 +5928,13 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%9D%B4%EA%B8%B0%EC%A0%81%20%EC%9C%A0%EC%A0%84%EC%9E%90.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%AF%B8%20%EB%B9%84%ED%8F%AC%20%EC%9C%A0.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5637,8 +5943,14 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EC%A2%85%EC%9D%98%20%EA%B8%B0%EC%9B%90.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/book/%EB%82%98%EC%9D%98%20%EC%82%AC%EC%A0%81%EC%9D%B8%20%EA%B7%B8%EB%A6%BC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5648,7 +5960,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/5%EA%B0%80%EC%A7%80%20%EC%82%AC%EB%9E%91%EC%9D%98%20%EC%96%B8%EC%96%B4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5658,7 +5970,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%82%AC%ED%94%BC%EC%97%94%EC%8A%A4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5668,7 +5980,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%99%9C%20%EB%82%98%EB%8A%94%20%EB%84%88%EB%A5%BC%20%EC%82%AC%EB%9E%91%ED%95%98%EB%8A%94%EA%B0%80.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5678,7 +5990,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%ED%95%B4%EA%B0%80%20%EC%A7%80%EB%8A%94%20%EA%B3%B3%EC%9C%BC%EB%A1%9C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5687,8 +5999,14 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EC%9E%90%EA%B8%B0%20%EC%95%9E%EC%9D%98%20%EC%83%9D.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/book/%EC%98%B7%EC%86%8C%EB%A7%A4%20%EB%B6%89%EC%9D%80%20%EB%81%9D%EB%8F%99.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5698,7 +6016,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%87%BC%EC%BD%94%EC%9D%98%20%EB%AF%B8%EC%86%8C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5708,7 +6026,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%B9%85%ED%84%B0%20%ED%94%84%EB%9E%AD%ED%81%B4%EC%9D%98%20%EC%A3%BD%EC%9D%8C%EC%9D%98%20%EC%88%98%EC%9A%A9%EC%86%8C%EC%97%90%EC%84%9C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5718,7 +6036,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%82%B4%EA%B2%8C%20%EB%AC%B4%ED%95%B4%ED%95%9C%20%EC%82%AC%EB%9E%8C.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5728,7 +6046,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%81%8C%EB%A6%BC.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5738,7 +6056,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%9D%B4%EC%96%B4%EB%A0%B9%EC%9D%98%20%EB%A7%88%EC%A7%80%EB%A7%89%20%EC%88%98%EC%97%85.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5748,7 +6066,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%ED%8E%98%EC%8A%A4%ED%8A%B8.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5768,13 +6086,13 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/90%EB%85%84%EC%83%9D%EC%9D%B4%20%EC%98%A8%EB%8B%A4.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%A0%95%EC%9D%98%EB%9E%80%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5784,7 +6102,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%82%AC%EB%9E%91%EC%97%90%20%EB%8C%80%ED%95%B4%20%EB%82%B4%EA%B0%80%20%EC%95%84%EB%8A%94%20%EB%AA%A8%EB%93%A0%20%EA%B2%83.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -5793,404 +6111,1492 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EC%98%A4%EB%A7%8C%EA%B3%BC%20%ED%8E%B8%EA%B2%AC.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/43/68/cover500/s937460882_1.jpg</image:loc>
+      <image:title>오만과 편견 표지</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/book/%ED%94%84%EB%A0%88%EC%9E%84.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/26861/17/cover500/8950994518_2.jpg</image:loc>
+      <image:title>프레임 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/en/</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/ahn-hyung-seop.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/ahn-hyeong-seop.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/changmin-tvxq.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/ahn-ye-eun.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/choi-jeong-hoon-jannabi.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/an-yu-jin-ive.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/cynthia.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/bona-wjsn.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/bong-joon-ho.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/byun-yo-han.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/chang-kiha.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/chanmi-aoa.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/charles-enter.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/cho-yeo-jeong.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/choi-hee-seo.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/choi-jung-hoon-jannabi.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/chung-ha.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/dahyun-twice.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/daisy-momoland.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/dawon-wjsn.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/dino-seventeen.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/dk-seventeen.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/dohoon-tws.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/el.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/ella-meovv.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/esom.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/eunseo-wjsn.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/faker.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/gaeul-ive.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/gaon-meovv.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/gawon-meovv.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/geonho-courtis.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/giselle-aespa.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/go-ah-sung.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/go-min-si.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/gong-min-ji.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/gong-seung-yeon.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/ha-jung-woo.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/ha-yeon-joo.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/hatfelt.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/han-hyo-joo.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/han-ji-min.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/han-roro.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/han-seung-yeon.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/heo-sung-beom.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/han-so-hee.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/han-ye-ri.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/hani-exid.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/hanroro.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/heo-seong-beom.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/hong-ji-min.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/hong-kyung.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/huh-yunjin-le-sserafim.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/hwang-je-sung.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/hwang-jung-min.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/hwang-so-yoon-se-so-neon.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/hwasa-mamamoo.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/hyebin-momoland.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/hyerim.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/im-si-wan.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/irene-red-velvet.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/iu.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/jang-jane.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/jaehee-nct-wish.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/jang-kiha.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/jaehyun-nct.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jaemin-nct-dream.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jang-do-yeon.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jang-dong-yoon.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jang-jae-in.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jang-na-ra.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jang-won-young.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jeon-mi-do.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jeon-so-min.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jeon-suk-ho.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jeon-yeo-been.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jeong-eun-ji-apink.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jeong-se-woon.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/jihoon-tws.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jinjin-astro.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/jinyoung-got7.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/john-park.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/jonghyun-shinee.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/juhoon-cortis.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/juhoon-courtis.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/jung-eun-ji-apink.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/jukjae.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jun-hyo-seong.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jung-chae-yeon-dia.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jung-eun-chae.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jung-hae-in.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jung-hye-sun-j-rabbit.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jung-in-ji.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jung-kyung-ho.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jung-seung-hwan.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/jung-so-min.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/jungkook.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/jung-woo-sung.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/jungkook-bts.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/junho-2pm.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/juyeon-the-boyz.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kai-exo.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kang-hye-jung.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/karina-aespa.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kim-chae-won-le-sserafim.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kim-dae-myung.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kim-dong-wan-shinhwa.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kim-gyu-nam.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kim-hanjoo-silica-gel.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kim-ho-young.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kim-hye-soo.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kim-hye-yoon.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/kim-hyo-jin.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kim-jae-won.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kim-ji-won.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/kim-min-ha.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kim-sae-byuk.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kim-sawol.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kim-se-jeong.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kim-seo-hyung.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/kim-so-hyun.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kim-sun-a.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/kim-tae-ha.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/kim-tae-ri.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/kim-yuna-jaurim.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/kim-yoo-jung.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kim-yoon-ah-jaurim.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/kino-pentagon.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/ko-young-bae.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/ku-hye-sun.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/lee-bo-young.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/lee-byung-hun.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-chung-ah.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-dong-hwi.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-elijah.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-hye-sung.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-hyo-ri.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-jae-won-hot.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-je-hoon.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-juck.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-jun-hyuk.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/lee-jung-eun.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-mi-yeon.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/lee-se-young.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-seok-hoon.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-seol.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/lee-seung-yeon.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/moon-ga-young.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/lee-yeon-hee.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-yi-kyung.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-yoo-young.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-young-ae.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-yu-bi.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lia-kim.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lim-soo-jung.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/luda-wjsn.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/martin-courtis.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/max-changmin.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/mimi-oh-my-girl.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/mingginyu.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/minji-newjeans.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/minzy.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/miyeon-gi-dle.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/mj-astro.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/moon-chae-won.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/moon-ji-ae.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/moon-so-ri.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/moonbyul-mamamoo.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/mun-ka-young.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/nam-ji-hyun.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/nam-joo-hyuk.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/nancy-momoland.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/narin-meovv.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/nayun-momoland.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/ningning-aespa.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/noze.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/oh-ji-eun.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/oh-jong-hyuk.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/oh-jung-yeon.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/oksang-dalbit.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/oh-yeon-seo.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/ok-ja-yeon.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/okdal.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/ong-seong-wu.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/park-bo-gum.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/park-bo-young.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/park-chan-wook.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/park-ha-sun.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/park-hae-jin.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/park-hae-soo.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/park-hee-soon.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/park-hoon.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/park-ji-hoon.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/park-jung-min.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/park-so-dam.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/paul-kim.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/rm.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/rm-bts.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/rocky-astro.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/rose-blackpink.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/rowoon.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/seo-ji-hye.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/ryu-hyun-kyung.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/ryu-soo-young.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/sandeul.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/sehun-exo.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/seo-hyun-jin.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/seo-ji-hye-1996.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/seo-kang-joon.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/seonghyun-cortis.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/seo-yu-ri.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/seola-wjsn.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/seolhyun.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/shim-eun-kyung.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/shin-se-kyung.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/so-yi-hyun.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/shin-si-a.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/shin-so-yul.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/sihyeon.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/sion-nct-wish.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/so-ji-sub.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/so-yu-jin.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/solar-mamamoo.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/son-jong-won.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/son-su-hyun.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/son-soo-hyun.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/son-ye-jin.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/son-yeon-jae.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/song-hye-kyo.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/sooyoung-girls-generation.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/soy.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/stella-jang.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/sungchan-riize.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/sunghyun-courtis.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/theo-p1harmony.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/uhm-ji-won.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/um-tae-goo.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/v-bts.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/vernon-seventeen.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/wendy-red-velvet.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/wheein-mamamoo.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/winter-aespa.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/wonpil-day6.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/wonwoo-seventeen.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/ye-ji-won.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/yeonwoo-momoland.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/yeri-red-velvet.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/yi-sung-yol.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/yoo-jae-suk.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/yoon-bo-ra.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/yoon-duk-won-broccoli-you-too.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/yoona-girls-generation.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/youn-sun-nah.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/younha.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/yozoh.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/yugyeom-got7.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/yunjin-kim.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/yura-1993.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/yuta-nct.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/yves.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/norwegian-wood.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/contradiction-inconsistency.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/if-cats-disappeared-from-the-world.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/the-white-book.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/the-prince.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -6201,8 +7607,44 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/book/summer-outside.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/book/scythe.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/crying-wouldnt-change-anything.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/wizard-bakery.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/the-flying-trapeze.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/ubermensch.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/outside-is-summer-summer-outside.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/contrail-vapor-trail.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -6219,122 +7661,500 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/en/share/book/who-knows-if-its-good-or-bad.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/first-summer-complete-run-first-summer-to-the-finish.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/cocktail-love-zombie.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/novelist-as-a-vocation.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/i-ate-your-name-for-a-few-days.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/the-hedgehogs-wish.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/en/share/book/no-longer-human.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/book/proof-of-goo.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/book/miracles-lived-miracles-to-live.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/book/anna-karenina.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/book/lakes-of-the-world.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/book/the-school-nurse-files.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/book/proof-of-gu-the-proof-of-the-cube.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/book/the-little-prince.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/book/the-creative-act.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/book/the-catcher-in-the-rye.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/book/the-theory-of-light-and-matter.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/book/demian.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/book/if-we-cannot-move-at-the-speed-of-light-on-the-speed-of-light.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/book/the-uncomfortable-convenience-store.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/book/the-talmud.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/seasonal-happiness.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/daughters-of-kims-pharmacy.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/ill-give-you-my-voice.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/betting-on-famine.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/sea-of-the-moon-ocean-of-the-moon.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/outliers.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/gore-capitalism.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/moon-palace.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/embers.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/all-she-was-worth.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/great-greenhouse-repair-report.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/how-to-win-friends-and-influence-people.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/why-fish-dont-exist.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/bright-night.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/convenience-store-woman.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/the-secret-garden.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/life-at-nine.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/mouse-and-pancake.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/the-alchemist.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/book/walden.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/book/papillon.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/book/cosmos.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/book/the-fault-in-our-stars.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/each-time-we-say-goodbye.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/recording-life.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/holding-a-fragmented-universe.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/the-temperature-of-language.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/winnie-the-pooh.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/alices-adventures-in-wonderland.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/book/i-decided-to-live-as-me.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/book/a-gift-of-words-to-myself.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/the-analects.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/nietzsche-and-van-gogh.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/gray-human.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/my-universe-is-still-far-away.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/feminism-doing-laundry.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/the-challenge-of-feminism.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/maborosi.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/the-other-you.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/unhappy-even-in-love.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/the-miracles-of-the-namiya-general-store.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/book/the-reason-to-travel.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/book/the-reason-for-travel.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/please-look-after-mom.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/twelve-footprints.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/the-pigeon.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/the-unbearable-lightness-of-being.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/self-esteem-class.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/kim-jiyoung-born-1982.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/land-the-land.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/snow-country.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/book/sapiens-a-brief-history-of-humankind.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/book/fingerprint-hunter.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/the-camphor-trees-sentinel.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/the-selfish-gene.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/me-before-you.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/the-origin-of-species-on-the-origin-of-species.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/my-private-picture.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/the-five-love-languages.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/sapiens.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/essays-in-love.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/to-where-the-sun-sets.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/the-red-sleeve.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/shokos-smile.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/mans-search-for-meaning.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/a-person-harmless-to-me.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/attraction.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/lee-eo-ryeongs-last-class.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/the-plague.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/the-little-prince.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/book/justice-whats-the-right-thing-to-do.html</loc>
-    <lastmod>2026-04-30</lastmod>
+    <loc>https://favorbook.co.kr/en/share/book/the-90s-generation-has-arrived.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/justice.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/inner-communication.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/steve-jobs.html</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
