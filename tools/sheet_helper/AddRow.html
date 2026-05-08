@@ -20,9 +20,35 @@
   .status { margin-top: 12px; padding: 10px; font-size: 13px; }
   .status.ok { background: #dcfce7; border: 2px solid #16a34a; }
   .status.err { background: #fee2e2; border: 2px solid #dc2626; }
+
+  /* 알라딘 검색 패널 */
+  .search-panel { background: #fffbe9; border: 2px solid #000; box-shadow: 3px 3px 0 0 #000; padding: 12px; margin-bottom: 16px; }
+  .search-panel h3 { margin: 0 0 8px; font-size: 13px; font-weight: 800; }
+  .search-row { display: flex; gap: 6px; }
+  .search-row input { flex: 1; padding: 6px 10px; border: 2px solid #000; box-shadow: 1px 1px 0 0 #000; font-size: 12px; box-sizing: border-box; }
+  .search-row button { padding: 6px 12px; font-size: 12px; box-shadow: 1px 1px 0 0 #000; }
+  .results { margin-top: 10px; max-height: 280px; overflow-y: auto; display: flex; flex-direction: column; gap: 6px; }
+  .result-item { display: flex; gap: 8px; padding: 6px; background: #fff; border: 1px solid #000; cursor: pointer; }
+  .result-item:hover { background: #fef3c7; }
+  .result-item img { width: 36px; height: 50px; object-fit: cover; border: 1px solid #ccc; flex-shrink: 0; }
+  .result-item .info { flex: 1; min-width: 0; font-size: 11px; line-height: 1.3; }
+  .result-item .t { font-weight: 700; }
+  .result-item .m { color: #666; }
+  .result-item.picked { background: #dcfce7; }
+  .empty-msg { padding: 8px; color: #666; font-size: 11px; text-align: center; }
 </style>
 </head>
 <body>
+
+<!-- 알라딘 검색 (선택) -->
+<div class="search-panel">
+  <h3>🔍 알라딘에서 검색해서 자동 채우기 (선택)</h3>
+  <div class="search-row">
+    <input type="text" id="search-q" placeholder="책 제목 또는 키워드 (예: 채식주의자, 한강)" autocomplete="off">
+    <button type="button" id="search-btn" onclick="searchBooks()">검색</button>
+  </div>
+  <div id="search-results" class="results"></div>
+</div>
 
 <form id="form">
   <div class="field">
@@ -108,6 +134,75 @@
 <script>
 const $ = (id) => document.getElementById(id);
 
+// ── 알라딘 검색 ────────────────────────────────
+$('search-q').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') { e.preventDefault(); searchBooks(); }
+});
+
+function searchBooks() {
+  const q = $('search-q').value.trim();
+  if (!q) return;
+  const btn = $('search-btn');
+  btn.disabled = true;
+  btn.textContent = '검색중';
+  $('search-results').innerHTML = '<div class="empty-msg">⏳ 알라딘 조회 중...</div>';
+
+  google.script.run
+    .withSuccessHandler((data) => {
+      btn.disabled = false;
+      btn.textContent = '검색';
+      if (data.error) {
+        $('search-results').innerHTML = '<div class="empty-msg" style="color:#dc2626">' + data.error + '</div>';
+        return;
+      }
+      if (!data.items || !data.items.length) {
+        $('search-results').innerHTML = '<div class="empty-msg">검색 결과 없음</div>';
+        return;
+      }
+      window._searchResults = data.items;
+      renderResults(data.items);
+    })
+    .withFailureHandler((err) => {
+      btn.disabled = false;
+      btn.textContent = '검색';
+      $('search-results').innerHTML = '<div class="empty-msg" style="color:#dc2626">' + err.message + '</div>';
+    })
+    .searchAladinBooks(q, 10);
+}
+
+function renderResults(items) {
+  $('search-results').innerHTML = items.map((it, i) => `
+    <div class="result-item" id="ri-${i}" onclick="pickBook(${i})">
+      <img src="${escAttr(it.cover)}" alt="" onerror="this.style.display='none'">
+      <div class="info">
+        <div class="t">${esc(it.title)}</div>
+        <div class="m">${esc(it.author)} · ${esc(it.publisher)}${it.pubDate ? ' · ' + esc(it.pubDate) : ''}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function pickBook(idx) {
+  const it = window._searchResults[idx];
+  $('book').value = it.title || '';
+  $('author').value = (it.author || '').replace(/\s*\(지은이\)\s*/g, '').replace(/\s*\(옮긴이\)[^,]*/g, '').trim();
+  $('publisher').value = it.publisher || '';
+  $('bookInfo').value = it.link || '';
+  $('bookImage').value = it.cover || '';
+  // 시각적 피드백
+  document.querySelectorAll('.result-item').forEach(el => el.classList.remove('picked'));
+  document.getElementById('ri-' + idx).classList.add('picked');
+  // 폼 영역으로 스크롤
+  $('book').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  $('book').focus();
+}
+
+function esc(s) {
+  return String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function escAttr(s) { return esc(s); }
+
+// ── 폼 제출 ────────────────────────────────
 document.getElementById('form').addEventListener('submit', (e) => {
   e.preventDefault();
   const btn = $('submit-btn');

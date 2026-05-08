@@ -31,7 +31,7 @@ function onOpen() {
   SpreadsheetApp.getUi()
     .createMenu('📚 Favorbook')
     .addItem('빈 칸 검사', 'showMissingReport')
-    .addItem('새 행 추가', 'showAddDialog')
+    .addItem('새 행 추가 (도서 검색 포함)', 'showAddDialog')
     .addItem('통계 보기', 'showStats')
     .addToUi();
 }
@@ -315,6 +315,50 @@ function appendRow(payload) {
     bookImageAuto: !payload.bookImage && bookImage ? bookImage : null,
   };
 }
+
+
+// ── 알라딘 도서 검색 ────────────────────────────────────────
+const ALADIN_API_KEY = 'ttbtwinwhee0938002';
+const ALADIN_BASE = 'https://www.aladin.co.kr/ttb/api/ItemSearch.aspx';
+
+// 알라딘 ItemSearch API 호출 → 결과 배열 반환
+function searchAladinBooks(query, maxResults) {
+  if (!query || !query.trim()) return { items: [], error: '검색어를 입력하세요' };
+
+  const params = [
+    'ttbkey=' + ALADIN_API_KEY,
+    'Query=' + encodeURIComponent(query.trim()),
+    'QueryType=Keyword',
+    'MaxResults=' + (maxResults || 10),
+    'start=1',
+    'SearchTarget=Book',
+    'output=js',
+    'Version=20131101',
+  ].join('&');
+
+  try {
+    const response = UrlFetchApp.fetch(ALADIN_BASE + '?' + params, { muteHttpExceptions: true });
+    const json = JSON.parse(response.getContentText());
+    const items = (json.item || []).map(it => ({
+      title:       it.title || '',
+      author:      it.author || '',
+      publisher:   it.publisher || '',
+      pubDate:     it.pubDate || '',
+      isbn:        it.isbn13 || it.isbn || '',
+      description: (it.description || '').substring(0, 150),
+      cover:       (it.cover || '').replace('coversum/', 'cover500/'),
+      link:        it.link || '',
+      categoryName: it.categoryName || '',
+    }));
+    return { items: items };
+  } catch (e) {
+    return { items: [], error: e.toString() };
+  }
+}
+
+// 검색 결과를 시트에 직접 추가 (도서 정보만 — 셀럽/출처는 따로)
+// 사용 패턴: 검색 → 결과 클릭 → 폼에 자동 채워짐 → 셀럽/출처 입력 후 저장
+// 이 함수는 검색 모달에서 결과 picker용으로 호출
 
 
 // ── Web App 독립 실행 ───────────────────────────────────────
