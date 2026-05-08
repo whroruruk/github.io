@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Favoread 데이터 편집기</title>
+<link rel="icon" href="../favicon.svg">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">📚</span>
+    <strong>Favoread Editor</strong>
+    <span id="branchTag" class="tag"></span>
+  </div>
+  <div class="topbar-actions">
+    <span id="statusMsg" class="status"></span>
+    <span id="dirtyBadge" class="badge hidden">0 변경</span>
+    <button id="reloadBtn" class="btn" title="GitHub에서 최신 CSV 다시 가져오기">↻ 불러오기</button>
+    <button id="saveBtn" class="btn primary" disabled>💾 GitHub에 저장</button>
+    <button id="settingsBtn" class="btn ghost" title="설정">⚙️</button>
+  </div>
+</header>
+
+<main class="layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-head">
+      <input id="searchInput" type="search" placeholder="연예인 / 책 / 저자 검색…">
+      <div class="sidebar-tools">
+        <button id="addCelebBtn" class="btn small">+ 연예인</button>
+        <select id="filterSelect" class="small">
+          <option value="all">전체</option>
+          <option value="missing-en">영문명 누락</option>
+          <option value="missing-cover">표지 누락</option>
+          <option value="missing-img">연예인 이미지 누락</option>
+        </select>
+      </div>
+      <div class="counters">
+        <span>연예인 <b id="countCelebs">0</b></span>
+        <span>책 <b id="countBooks">0</b></span>
+        <span>영문 <b id="countEn">0%</b></span>
+      </div>
+    </div>
+    <ul id="celebList" class="celeb-list"></ul>
+  </aside>
+
+  <section id="detail" class="detail">
+    <div id="detailEmpty" class="empty">
+      <p>좌측에서 연예인을 선택하거나 <b>+ 연예인</b>으로 새로 추가하세요.</p>
+      <p class="muted">먼저 ⚙️ 설정에서 GitHub PAT와 알라딘 TTBKey를 입력해야 합니다.</p>
+    </div>
+
+    <div id="detailContent" class="hidden">
+      <div class="detail-head">
+        <div class="celeb-photo">
+          <img id="celebImgPreview" alt="">
+        </div>
+        <div class="celeb-fields">
+          <label>연예인 (한글) <span class="req">*</span>
+            <input id="celebName" type="text">
+          </label>
+          <label>연예인 영문명
+            <input id="celebNameEn" type="text" placeholder="예: Gawon (MEOVV)">
+          </label>
+          <label>연예인 이미지 URL
+            <input id="celebImg" type="url" placeholder="https://...">
+          </label>
+          <div class="celeb-actions">
+            <button id="renameApplyBtn" class="btn small" title="모든 행에 이 연예인 정보 동기화">셀럽 정보 적용</button>
+            <button id="deleteCelebBtn" class="btn small danger">셀럽 전체 삭제</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="books-head">
+        <h3>추천 도서 <span id="bookCount" class="muted"></span></h3>
+        <div class="books-actions">
+          <button id="addBookBtn" class="btn primary small">+ 책 추가</button>
+        </div>
+      </div>
+
+      <div id="booksList" class="books-list"></div>
+    </div>
+  </section>
+</main>
+
+<!-- 책 편집 다이얼로그 -->
+<dialog id="bookDialog" class="modal">
+  <form method="dialog" id="bookForm">
+    <header class="modal-head">
+      <h3 id="bookDialogTitle">책 편집</h3>
+      <button type="button" class="x" data-close>✕</button>
+    </header>
+
+    <div class="modal-body two-col">
+      <div class="col">
+        <div class="aladin-search">
+          <label>알라딘 검색
+            <div class="row">
+              <input id="aladinQuery" type="search" placeholder="책 제목 / 저자 / ISBN">
+              <button type="button" id="aladinSearchBtn" class="btn small">검색</button>
+            </div>
+          </label>
+          <label class="muted small">또는 ItemId 직접 입력
+            <div class="row">
+              <input id="aladinItemId" type="text" placeholder="예: 673870 또는 알라딘 URL">
+              <button type="button" id="aladinLookupBtn" class="btn small">조회</button>
+            </div>
+          </label>
+          <div id="aladinResults" class="aladin-results"></div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="cover-preview">
+          <img id="bookCoverPreview" alt="">
+        </div>
+        <label>도서명 (한글) <span class="req">*</span>
+          <input id="bookTitle" type="text" required>
+        </label>
+        <label>도서명 영문
+          <input id="bookTitleEn" type="text">
+        </label>
+        <label>저자 <span class="req">*</span>
+          <input id="bookAuthor" type="text" required>
+        </label>
+        <label>저자 영문
+          <input id="bookAuthorEn" type="text">
+        </label>
+        <label>출판사
+          <input id="bookPublisher" type="text">
+        </label>
+        <label>출처 (인용 URL)
+          <input id="bookSource" type="url" placeholder="https://...">
+        </label>
+        <label>도서 정보 (알라딘 URL)
+          <input id="bookLink" type="url" placeholder="https://www.aladin.co.kr/...">
+        </label>
+        <label>도서 표지 URL
+          <input id="bookCover" type="url" placeholder="https://image.aladin.co.kr/...">
+        </label>
+        <label>코멘트
+          <textarea id="bookComment" rows="2"></textarea>
+        </label>
+      </div>
+    </div>
+
+    <footer class="modal-foot">
+      <button type="button" class="btn" data-close>취소</button>
+      <button type="submit" class="btn primary">적용</button>
+    </footer>
+  </form>
+</dialog>
+
+<!-- 설정 다이얼로그 -->
+<dialog id="settingsDialog" class="modal">
+  <form method="dialog">
+    <header class="modal-head">
+      <h3>설정</h3>
+      <button type="button" class="x" data-close>✕</button>
+    </header>
+
+    <div class="modal-body">
+      <p class="muted small">
+        값은 이 브라우저의 <code>localStorage</code>에만 저장됩니다. 공용 컴퓨터에서는 사용 후 비워주세요.
+      </p>
+
+      <label>GitHub Repo
+        <input id="cfgRepo" type="text" placeholder="hwiruruk/favoread" value="hwiruruk/favoread">
+      </label>
+      <label>Branch
+        <input id="cfgBranch" type="text" placeholder="claude/data-management-ui-6tlb0">
+      </label>
+      <label>CSV 경로
+        <input id="cfgPath" type="text" value="data.csv">
+      </label>
+      <label>GitHub Personal Access Token
+        <input id="cfgToken" type="password" placeholder="ghp_... (Contents: Read & Write 권한 필요)">
+        <small class="muted">Settings → Developer settings → Personal access tokens(fine-grained) → 이 저장소에 Contents: Read and write</small>
+      </label>
+      <label>알라딘 TTBKey
+        <input id="cfgTtb" type="password" placeholder="ttbXXXXXXXXXX001">
+        <small class="muted">https://www.aladin.co.kr/ttb/wblog_manage.aspx 에서 발급</small>
+      </label>
+      <label>커밋 작성자 (옵션)
+        <input id="cfgCommitter" type="text" placeholder="이름 <email@example.com>">
+      </label>
+    </div>
+
+    <footer class="modal-foot">
+      <button type="button" class="btn" data-close>닫기</button>
+      <button type="button" id="saveSettingsBtn" class="btn primary">저장</button>
+    </footer>
+  </form>
+</dialog>
+
+<!-- 토스트 -->
+<div id="toast" class="toast hidden"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
