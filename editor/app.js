@@ -10,11 +10,12 @@ const LS = {
 };
 const Config = {
   get repo()      { return LS.get('repo', 'hwiruruk/favoread'); },
-  get branch()    { return LS.get('branch', 'claude/data-management-ui-6tlb0'); },
+  get branch()    { return LS.get('branch', 'main'); },
   get path()      { return LS.get('path', 'data.csv'); },
   get token()     { return LS.get('token'); },
   get ttb()       { return LS.get('ttb'); },
   get committer() { return LS.get('committer'); },
+  get corsProxy() { return LS.get('corsProxy'); }, // e.g. https://corsproxy.io/?url=
 };
 
 /* -------------------- State -------------------- */
@@ -184,7 +185,19 @@ const Gh = {
     if (!Config.token) throw new Error('GitHub Token이 설정되지 않았습니다.');
     const url = `/repos/${Config.repo}/contents/${encodeURIComponent(Config.path)}?ref=${encodeURIComponent(Config.branch)}`;
     const r = await this.api(url);
-    if (!r.ok) throw new Error(`GitHub 로드 실패 (${r.status}): ${await r.text()}`);
+    if (!r.ok) {
+      const t = await r.text();
+      if (r.status === 403) {
+        throw new Error(
+          'GitHub 로드 실패 (403): PAT의 Contents 읽기 권한이 없거나 저장소 접근이 빠졌습니다. ' +
+          'Fine-grained PAT 재발급 시 이 저장소 + Contents: Read를 포함하세요.'
+        );
+      }
+      if (r.status === 404) {
+        throw new Error(`GitHub 로드 실패 (404): repo/branch/path 또는 PAT 저장소 권한 확인. (${Config.repo}@${Config.branch}:${Config.path})`);
+      }
+      throw new Error(`GitHub 로드 실패 (${r.status}): ${t}`);
+    }
     const j = await r.json();
     return { content: b64decodeUtf8(j.content), sha: j.sha };
   },
@@ -208,7 +221,19 @@ const Gh = {
     if (!r.ok) {
       const t = await r.text();
       if (r.status === 409 || r.status === 422) {
-        throw new Error('저장 실패: 원격 파일이 변경되었습니다. 불러오기로 동기화 후 다시 시도하세요.');
+        throw new Error('저장 실패: 원격 파일이 변경되었습니다. ↻ 불러오기로 동기화 후 다시 시도하세요.');
+      }
+      if (r.status === 403) {
+        throw new Error(
+          'GitHub 저장 실패 (403): PAT 권한이 부족합니다. ' +
+          'Fine-grained PAT를 재발급하면서 ① 이 저장소 선택 ② Permissions → Contents: Read and write ' +
+          '를 반드시 켜주세요. (브랜치 보호 규칙으로 main 직접 푸시가 막혀있을 수도 있음)'
+        );
+      }
+      if (r.status === 404) {
+        throw new Error(
+          'GitHub 저장 실패 (404): 저장소/브랜치/경로 또는 PAT의 저장소 접근 권한을 확인하세요.'
+        );
       }
       throw new Error(`GitHub 저장 실패 (${r.status}): ${t}`);
     }
@@ -217,42 +242,106 @@ const Gh = {
   },
 };
 
-/* -------------------- Aladin API (JSONP) -------------------- */
+/* -------------------- Aladin API --------------------
+ * Aladin TTB API does not serve CORS headers, but JSONP works
+ * when Output=JS and Callback=<fn> are set. If the response isn't
+ * wrapped (e.g. plain JSON from some endpoint variants), we fall
+ * back to fetch via a user-configured CORS proxy.
+ */
 const Aladin = {
   _seq: 0,
-  jsonp(url) {
+  _baseParams(extra) {
+    const p = new URLSearchParams(extra);
+    p.set('ttbkey', Config.ttb);
+    p.set('Output', 'JS');
+    p.set('Version', '20131101');
+    return p;
+  },
+  jsonp(fullUrl) {
     return new Promise((resolve, reject) => {
-      const cb = '__aladin_cb_' + (++this._seq);
-      const timeout = setTimeout(() => {
-        cleanup(); reject(new Error('알라딘 응답 시간 초과 (TTBKey 또는 네트워크 확인)'));
-      }, 10000);
-      const cleanup = () => {
-        clearTimeout(timeout);
-        delete window[cb];
+      const cbName = '__aladin_cb_' + (++this._seq);
+      let settled = false;
+      const t = setTimeout(() => finish(new Error(
+        '알라딘 응답 시간 초과 (10s) — JSONP 차단/HTTPS 혼합컨텐츠/TTBKey 확인'
+      )), 10000);
+      const finish = (err, data) => {
+        if (settled) return; settled = true;
+        clearTimeout(t);
+        delete window[cbName];
         if (script.parentNode) script.parentNode.removeChild(script);
+        err ? reject(err) : resolve(data);
       };
-      window[cb] = (data) => { cleanup(); resolve(data); };
+      window[cbName] = (data) => finish(null, data);
       const script = document.createElement('script');
-      script.src = url + (url.includes('?') ? '&' : '?') + 'Callback=' + cb;
-      script.onerror = () => { cleanup(); reject(new Error('알라딘 호출 실패')); };
+      script.onerror = () => finish(new Error(
+        '알라딘 스크립트 로드 실패 — 네트워크/광고차단/CSP 확인'
+      ));
+      script.onload = () => {
+        // If the script loaded but the callback was never invoked,
+        // the response wasn't a JSONP wrapper (likely plain JSON or HTML error).
+        setTimeout(() => finish(new Error(
+          '알라딘 응답이 JSONP 형식이 아님 — 보통 응답이 JSON 또는 HTML. CORS 프록시로 폴백합니다.'
+        )), 50);
+      };
+      script.src = fullUrl + (fullUrl.includes('?') ? '&' : '?') +
+                   'callback=' + cbName + '&Callback=' + cbName;
       document.head.appendChild(script);
     });
   },
-  async search(query) {
+  async fetchViaProxy(fullUrl) {
+    const proxy = Config.corsProxy;
+    if (!proxy) {
+      throw new Error(
+        '알라딘 직접 호출 실패. 설정에서 CORS 프록시 URL을 입력하세요. ' +
+        '(예: https://corsproxy.io/?url= )'
+      );
+    }
+    const proxied = proxy + encodeURIComponent(fullUrl);
+    const r = await fetch(proxied);
+    if (!r.ok) throw new Error(`프록시 응답 ${r.status}: ${await r.text()}`);
+    const text = await r.text();
+    // Aladin Output=JS gives raw JSON. If wrapped in fn(...) strip it.
+    const stripped = text.replace(/^[^({]*[\(\{]/, m => m.endsWith('(') ? '' : m.slice(-1))
+                          .replace(/\)\s*;?\s*$/, '');
+    try { return JSON.parse(text.trim().startsWith('{') ? text : stripped); }
+    catch (e) {
+      // Try regex extract
+      const m = text.match(/\{[\s\S]*\}/);
+      if (m) return JSON.parse(m[0]);
+      throw new Error('프록시 응답을 JSON으로 파싱 실패: ' + text.slice(0, 120));
+    }
+  },
+  async _call(fullUrl) {
     if (!Config.ttb) throw new Error('알라딘 TTBKey가 설정되지 않았습니다.');
-    const u = new URL('https://www.aladin.co.kr/ttb/api/ItemSearch.aspx');
-    u.searchParams.set('ttbkey', Config.ttb);
-    u.searchParams.set('Query', query);
-    u.searchParams.set('QueryType', 'Keyword');
-    u.searchParams.set('MaxResults', '15');
-    u.searchParams.set('start', '1');
-    u.searchParams.set('SearchTarget', 'Book');
-    u.searchParams.set('Cover', 'Big');
-    u.searchParams.set('Output', 'JS');
-    u.searchParams.set('Version', '20131101');
-    const r = await this.jsonp(u.toString());
-    if (r.errorCode) throw new Error(`알라딘 오류 ${r.errorCode}: ${r.errorMessage}`);
-    return r.item || [];
+    console.log('[Aladin] →', fullUrl);
+    let jsonpErr;
+    try {
+      const r = await this.jsonp(fullUrl);
+      if (r && r.errorCode) throw new Error(`알라딘 오류 ${r.errorCode}: ${r.errorMessage}`);
+      return r;
+    } catch (e) {
+      jsonpErr = e;
+      console.warn('[Aladin] JSONP 실패, 프록시 폴백 시도:', e.message);
+    }
+    try {
+      const r = await this.fetchViaProxy(fullUrl);
+      if (r && r.errorCode) throw new Error(`알라딘 오류 ${r.errorCode}: ${r.errorMessage}`);
+      return r;
+    } catch (e) {
+      throw new Error(`${jsonpErr.message} / 프록시도 실패: ${e.message}`);
+    }
+  },
+  async search(query) {
+    const p = this._baseParams({
+      Query: query,
+      QueryType: 'Keyword',
+      MaxResults: '15',
+      start: '1',
+      SearchTarget: 'Book',
+      Cover: 'Big',
+    });
+    const r = await this._call('https://www.aladin.co.kr/ttb/api/ItemSearch.aspx?' + p);
+    return (r && r.item) || [];
   },
   parseItemId(input) {
     const s = String(input || '').trim();
@@ -262,21 +351,16 @@ const Aladin = {
     return null;
   },
   async lookup(itemId) {
-    if (!Config.ttb) throw new Error('알라딘 TTBKey가 설정되지 않았습니다.');
     const id = this.parseItemId(itemId) || itemId;
-    const u = new URL('https://www.aladin.co.kr/ttb/api/ItemLookUp.aspx');
-    u.searchParams.set('ttbkey', Config.ttb);
-    u.searchParams.set('itemIdType', 'ItemId');
-    u.searchParams.set('ItemId', id);
-    u.searchParams.set('Cover', 'Big');
-    u.searchParams.set('Output', 'JS');
-    u.searchParams.set('Version', '20131101');
-    const r = await this.jsonp(u.toString());
-    if (r.errorCode) throw new Error(`알라딘 오류 ${r.errorCode}: ${r.errorMessage}`);
-    return (r.item && r.item[0]) || null;
+    const p = this._baseParams({
+      itemIdType: 'ItemId',
+      ItemId: id,
+      Cover: 'Big',
+    });
+    const r = await this._call('https://www.aladin.co.kr/ttb/api/ItemLookUp.aspx?' + p);
+    return (r && r.item && r.item[0]) || null;
   },
   bigCover(item) {
-    // /coverXX/ → /cover500/  (큰 이미지)
     const c = item && item.cover;
     if (!c) return '';
     return c.replace(/\/cover(?:150|200|s)\//, '/cover500/');
@@ -597,6 +681,7 @@ function loadSettingsToForm() {
   $('#cfgPath').value = Config.path;
   $('#cfgToken').value = Config.token;
   $('#cfgTtb').value = Config.ttb;
+  $('#cfgCorsProxy').value = Config.corsProxy;
   $('#cfgCommitter').value = Config.committer;
 }
 $('#settingsBtn').addEventListener('click', () => { loadSettingsToForm(); settingsDlg.showModal(); });
@@ -606,6 +691,7 @@ $('#saveSettingsBtn').addEventListener('click', () => {
   LS.set('path', $('#cfgPath').value.trim() || 'data.csv');
   LS.set('token', $('#cfgToken').value.trim());
   LS.set('ttb', $('#cfgTtb').value.trim());
+  LS.set('corsProxy', $('#cfgCorsProxy').value.trim());
   LS.set('committer', $('#cfgCommitter').value.trim());
   $('#branchTag').textContent = `${Config.repo} @ ${Config.branch}`;
   toast('설정 저장됨', 'ok');
