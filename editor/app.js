@@ -281,7 +281,16 @@ const Aladin = {
   },
   async _tryProxy(name, prefix, kind, fullUrl) {
     const proxied = prefix + encodeURIComponent(fullUrl);
-    const r = await fetch(proxied);
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 6000);
+    let r;
+    try {
+      r = await fetch(proxied, { signal: ctrl.signal });
+    } catch (e) {
+      throw new Error(e.name === 'AbortError' ? 'timeout 6s' : e.message);
+    } finally {
+      clearTimeout(timer);
+    }
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     const text = await r.text();
     let body;
@@ -322,17 +331,20 @@ const Aladin = {
     }
     throw new Error('모든 프록시 실패 — ' + errors.join(' / '));
   },
-  async search(query) {
+  async search(query, start = 1, maxResults = 5) {
     const p = this._baseParams({
       Query: query,
       QueryType: 'Keyword',
-      MaxResults: '15',
-      start: '1',
+      MaxResults: String(maxResults),
+      start: String(start),
       SearchTarget: 'Book',
       Cover: 'Big',
     });
     const r = await this._call('https://www.aladin.co.kr/ttb/api/ItemSearch.aspx?' + p);
-    return (r && r.item) || [];
+    return {
+      items: (r && r.item) || [],
+      total: Number(r && r.totalResults) || 0,
+    };
   },
   parseItemId(input) {
     const s = String(input || '').trim();
@@ -605,29 +617,59 @@ $('#bookForm').addEventListener('submit', (e) => {
   renderDetail(); renderSidebar();
 });
 
-/* Aladin search inside dialog */
-async function runAladinSearch(query) {
+/* Aladin search inside dialog — paginated 5 at a time */
+const PAGE_SIZE = 5;
+function renderAladinResults(box) {
+  const items = box._items || [];
+  const more = (box._total || 0) > items.length;
+  let html = '';
+  items.forEach((it, i) => {
+    const cover = Aladin.bigCover(it);
+    html += `<div class="ar-item" data-i="${i}">
+      <div class="ar-cover">${cover ? `<img src="${esc(cover)}" referrerpolicy="no-referrer" alt="">` : ''}</div>
+      <div class="ar-meta">
+        <div class="ar-title">${esc(it.title)}</div>
+        <div class="ar-sub">${esc(it.author || '')} · ${esc(it.publisher || '')}</div>
+        <div class="ar-sub muted">${esc(it.pubDate || '')} · ItemId ${it.itemId}</div>
+      </div>
+    </div>`;
+  });
+  if (more) {
+    const remaining = box._total - items.length;
+    html += `<button type="button" id="aladinMoreBtn" class="btn small" style="display:block;width:100%;margin:6px 0;">+ 더 보기 (${remaining}건 남음)</button>`;
+  }
+  box.innerHTML = html;
+}
+
+async function runAladinSearch(query, append = false) {
   const box = $('#aladinResults');
-  box.innerHTML = '<div class="empty">검색 중…</div>';
+  if (!append) {
+    box.innerHTML = '<div class="empty">검색 중…</div>';
+    box._query = query;
+    box._start = 1;
+    box._items = [];
+    box._total = 0;
+  } else {
+    const old = box.querySelector('#aladinMoreBtn');
+    if (old) { old.disabled = true; old.textContent = '불러오는 중…'; }
+  }
   try {
-    const items = await Aladin.search(query);
-    if (!items.length) { box.innerHTML = '<div class="empty">결과 없음</div>'; return; }
-    let html = '';
-    items.forEach((it, i) => {
-      const cover = Aladin.bigCover(it);
-      html += `<div class="ar-item" data-i="${i}">
-        <div class="ar-cover">${cover ? `<img src="${esc(cover)}" referrerpolicy="no-referrer" alt="">` : ''}</div>
-        <div class="ar-meta">
-          <div class="ar-title">${esc(it.title)}</div>
-          <div class="ar-sub">${esc(it.author || '')} · ${esc(it.publisher || '')}</div>
-          <div class="ar-sub muted">${esc(it.pubDate || '')} · ItemId ${it.itemId}</div>
-        </div>
-      </div>`;
-    });
-    box.innerHTML = html;
-    box._items = items;
+    const { items, total } = await Aladin.search(box._query, box._start, PAGE_SIZE);
+    box._items = (box._items || []).concat(items);
+    box._start += items.length;
+    box._total = total || box._items.length;
+    if (!box._items.length) {
+      box.innerHTML = '<div class="empty">결과 없음</div>';
+      return;
+    }
+    renderAladinResults(box);
   } catch (err) {
-    box.innerHTML = `<div class="empty">${esc(err.message)}</div>`;
+    if (!append) box.innerHTML = `<div class="empty">${esc(err.message)}</div>`;
+    else {
+      const old = box.querySelector('#aladinMoreBtn');
+      if (old) { old.disabled = false; old.textContent = '+ 더 보기 (재시도)'; }
+      toast(err.message, 'err');
+    }
   }
 }
 function applyAladinItem(it) {
@@ -648,6 +690,11 @@ $('#aladinQuery').addEventListener('keydown', (e) => {
   if (e.key === 'Enter') { e.preventDefault(); $('#aladinSearchBtn').click(); }
 });
 $('#aladinResults').addEventListener('click', (e) => {
+  if (e.target.id === 'aladinMoreBtn') {
+    const box = $('#aladinResults');
+    if (box._query) runAladinSearch(box._query, true);
+    return;
+  }
   const row = e.target.closest('.ar-item'); if (!row) return;
   const items = $('#aladinResults')._items || [];
   const it = items[+row.dataset.i];
