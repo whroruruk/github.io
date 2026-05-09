@@ -243,93 +243,58 @@ const Gh = {
 };
 
 /* -------------------- Aladin API --------------------
- * Aladin TTB API does not serve CORS headers, but JSONP works
- * when Output=JS and Callback=<fn> are set. If the response isn't
- * wrapped (e.g. plain JSON from some endpoint variants), we fall
- * back to fetch via a user-configured CORS proxy.
+ * Aladin TTB OpenAPI restricts requests by Referer matching the URL
+ * registered with the TTBKey, so a static page on a different host
+ * always gets 403 "Host not in allowlist". The proven workaround
+ * (used by the BookStack repo) is to fetch via the allorigins.win
+ * proxy: it returns the upstream body wrapped in {contents, status}
+ * and Aladin does not see a mismatched Referer.
+ *
+ * Important details copied from BookStack:
+ *  - param name is lowercase `output=js`
+ *  - do NOT add a callback param (Aladin returns plain JSON + trailing `;`)
+ *  - strip the trailing `;` before JSON.parse
  */
 const Aladin = {
-  _seq: 0,
   _baseParams(extra) {
     const p = new URLSearchParams(extra);
     p.set('ttbkey', Config.ttb);
-    p.set('Output', 'JS');
+    p.set('output', 'js');
     p.set('Version', '20131101');
     return p;
-  },
-  jsonp(fullUrl) {
-    return new Promise((resolve, reject) => {
-      const cbName = '__aladin_cb_' + (++this._seq);
-      let settled = false;
-      const t = setTimeout(() => finish(new Error(
-        '알라딘 응답 시간 초과 (10s) — JSONP 차단/HTTPS 혼합컨텐츠/TTBKey 확인'
-      )), 10000);
-      const finish = (err, data) => {
-        if (settled) return; settled = true;
-        clearTimeout(t);
-        delete window[cbName];
-        if (script.parentNode) script.parentNode.removeChild(script);
-        err ? reject(err) : resolve(data);
-      };
-      window[cbName] = (data) => finish(null, data);
-      const script = document.createElement('script');
-      script.onerror = () => finish(new Error(
-        '알라딘 스크립트 로드 실패 — 네트워크/광고차단/CSP 확인'
-      ));
-      script.onload = () => {
-        // If the script loaded but the callback was never invoked,
-        // the response wasn't a JSONP wrapper (likely plain JSON or HTML error).
-        setTimeout(() => finish(new Error(
-          '알라딘 응답이 JSONP 형식이 아님 — 보통 응답이 JSON 또는 HTML. CORS 프록시로 폴백합니다.'
-        )), 50);
-      };
-      script.src = fullUrl + (fullUrl.includes('?') ? '&' : '?') +
-                   'callback=' + cbName + '&Callback=' + cbName;
-      document.head.appendChild(script);
-    });
-  },
-  async fetchViaProxy(fullUrl) {
-    const proxy = Config.corsProxy;
-    if (!proxy) {
-      throw new Error(
-        '알라딘 직접 호출 실패. 설정에서 CORS 프록시 URL을 입력하세요. ' +
-        '(예: https://corsproxy.io/?url= )'
-      );
-    }
-    const proxied = proxy + encodeURIComponent(fullUrl);
-    const r = await fetch(proxied);
-    if (!r.ok) throw new Error(`프록시 응답 ${r.status}: ${await r.text()}`);
-    const text = await r.text();
-    // Aladin Output=JS gives raw JSON. If wrapped in fn(...) strip it.
-    const stripped = text.replace(/^[^({]*[\(\{]/, m => m.endsWith('(') ? '' : m.slice(-1))
-                          .replace(/\)\s*;?\s*$/, '');
-    try { return JSON.parse(text.trim().startsWith('{') ? text : stripped); }
-    catch (e) {
-      // Try regex extract
-      const m = text.match(/\{[\s\S]*\}/);
-      if (m) return JSON.parse(m[0]);
-      throw new Error('프록시 응답을 JSON으로 파싱 실패: ' + text.slice(0, 120));
-    }
   },
   async _call(fullUrl) {
     if (!Config.ttb) throw new Error('알라딘 TTBKey가 설정되지 않았습니다.');
     console.log('[Aladin] →', fullUrl);
-    let jsonpErr;
-    try {
-      const r = await this.jsonp(fullUrl);
-      if (r && r.errorCode) throw new Error(`알라딘 오류 ${r.errorCode}: ${r.errorMessage}`);
-      return r;
-    } catch (e) {
-      jsonpErr = e;
-      console.warn('[Aladin] JSONP 실패, 프록시 폴백 시도:', e.message);
+    const proxyTpl = Config.corsProxy || 'https://api.allorigins.win/get?url=';
+    const proxied = proxyTpl + encodeURIComponent(fullUrl);
+    let r;
+    try { r = await fetch(proxied); }
+    catch (e) { throw new Error('프록시 네트워크 오류: ' + e.message); }
+    if (!r.ok) throw new Error(`프록시 HTTP ${r.status}`);
+
+    const wrapped = await r.json().catch(() => null);
+    if (!wrapped) throw new Error('프록시 응답을 JSON으로 읽지 못함');
+
+    let body;
+    if (typeof wrapped.contents === 'string') {
+      // AllOrigins shape: { contents: "<aladin body>", status: {...} }
+      let text = wrapped.contents.trim();
+      if (text.endsWith(';')) text = text.slice(0, -1);
+      // Also unwrap if Aladin happened to wrap in callback(...)
+      const m = text.match(/^[^({]*\(([\s\S]*)\)\s*$/);
+      if (m) text = m[1];
+      try { body = JSON.parse(text); }
+      catch (e) {
+        throw new Error('알라딘 응답 파싱 실패: ' + text.slice(0, 160));
+      }
+    } else {
+      body = wrapped;
     }
-    try {
-      const r = await this.fetchViaProxy(fullUrl);
-      if (r && r.errorCode) throw new Error(`알라딘 오류 ${r.errorCode}: ${r.errorMessage}`);
-      return r;
-    } catch (e) {
-      throw new Error(`${jsonpErr.message} / 프록시도 실패: ${e.message}`);
+    if (body && body.errorCode) {
+      throw new Error(`알라딘 오류 ${body.errorCode}: ${body.errorMessage}`);
     }
+    return body;
   },
   async search(query) {
     const p = this._baseParams({
@@ -363,7 +328,9 @@ const Aladin = {
   bigCover(item) {
     const c = item && item.cover;
     if (!c) return '';
-    return c.replace(/\/cover(?:150|200|s)\//, '/cover500/');
+    return c
+      .replace(/\/cover(?:150|200|s|sum)\//, '/cover500/')
+      .replace('coversum', 'cover500');
   },
 };
 

@@ -97,28 +97,31 @@ python3 -m http.server 8765
 
 ## 알라딘 API에 대해
 
-- TTB API는 CORS를 지원하지 않으므로 본 편집기는 우선 **JSONP**
-  (`Output=JS&callback=...`)로 호출합니다.
-- JSONP가 실패하면 (응답이 plain JSON이거나 광고 차단/CSP에 의해 차단된 경우)
-  **CORS 프록시**로 자동 폴백합니다. 설정에서 프록시 URL을 비워두면 폴백 없이
-  JSONP만 시도합니다.
-  - 추천 프록시 (퍼블릭, 무보장): `https://corsproxy.io/?url=`
-  - 본인 인프라가 있다면 Cloudflare Worker로 1줄 프록시를 띄우는 게 가장 안전
+알라딘 TTB OpenAPI는 발급 시 등록된 URL과 호출 측 Referer가 일치할 때만
+응답합니다. 정적 사이트(favorbook.co.kr)에서 직접 호출하면 거의 항상
+`403 "Host not in allowlist"`로 막혀요. 이 편집기는 자매 프로젝트인
+BookStack에서 검증된 패턴을 그대로 사용합니다 — `api.allorigins.win/get`을
+프록시로 거치면 응답이 `{contents, status}`로 한 번 감싸져 돌아오고,
+Aladin은 Referer 검사를 우회한 형태로 처리합니다.
+
+- 기본 프록시: `https://api.allorigins.win/get?url=` (별도 설정 불필요)
+- 다른 프록시를 쓰려면 ⚙️ 설정의 "알라딘 호출 프록시"에 입력. 끝이 `?url=`로
+  끝나야 하며, **응답을 그대로(raw) 반환하는 프록시**라면 동작은 다음과 같이
+  처리됩니다: 응답이 `{contents, status}` 모양이면 contents 안의 본문을
+  파싱하고, 아니면 본문 자체를 JSON으로 본다.
 - ItemId만 알면 (예: `https://www.aladin.co.kr/...&ItemId=673870`) URL을 그대로
   붙여 넣어도 ID를 추출해 조회합니다.
 
 ### 알라딘 디버깅
 
-검색이 안 되면 브라우저 **개발자 도구 → Console**을 여세요. 편집기는 호출
-URL을 `[Aladin] →` 로그로 찍고, 실패 시 어느 단계(JSONP 로드 / 콜백 / 프록시)
-에서 막혔는지 메시지에 포함합니다. 흔한 원인:
+검색이 안 되면 브라우저 **개발자 도구 → Console**을 여세요. 호출 URL이
+`[Aladin] →` 로 찍힙니다.
 
 | 증상 | 원인 | 해결 |
 |------|------|------|
-| `스크립트 로드 실패` | 광고차단기 / 회사 방화벽 / CSP | 차단 해제, 또는 CORS 프록시 설정 |
-| `JSONP 형식이 아님` | TTBKey 잘못 / IP 차단 / 일일 호출 한도 초과 | 키 재확인, 잠시 후 재시도 |
-| `시간 초과` | 알라딘 서버 응답 지연 | 재시도, 또는 프록시 폴백 |
-| `errorCode 8` | TTBKey 만료/오타 | 알라딘 OpenAPI 페이지에서 확인 |
+| `프록시 HTTP 4xx/5xx` | allorigins 일시 장애 | 잠시 후 재시도 또는 다른 프록시 |
+| `알라딘 응답 파싱 실패` | Aladin이 HTML(로그인 안내/오류 페이지)을 돌려줌 | TTBKey 확인 |
+| `errorCode 8` 등 | TTBKey 만료/오타 | 알라딘 OpenAPI 관리 페이지에서 확인 |
 
 ## GitHub PAT 문제 해결
 
