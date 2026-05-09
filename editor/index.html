@@ -187,9 +187,9 @@
         <input id="cfgTtb" type="password" placeholder="ttbXXXXXXXXXX001">
         <small class="muted">https://www.aladin.co.kr/ttb/wblog_manage.aspx 에서 발급</small>
       </label>
-      <label>CORS 프록시 (옵션, 알라딘 JSONP 실패 시 폴백)
-        <input id="cfgCorsProxy" type="url" placeholder="https://corsproxy.io/?url=">
-        <small class="muted">URL 끝에 <code>?url=</code> 또는 <code>/?</code>가 오도록. 비워두면 JSONP만 시도합니다.</small>
+      <label>알라딘 호출 프록시 (비워두면 기본값 사용)
+        <input id="cfgCorsProxy" type="url" placeholder="https://api.allorigins.win/get?url=">
+        <small class="muted">기본값 <code>api.allorigins.win/get?url=</code> 사용 시 별도 설정 불필요. 다른 프록시를 쓰려면 끝이 <code>?url=</code>로 끝나야 합니다.</small>
       </label>
       <label>커밋 작성자 (옵션)
         <input id="cfgCommitter" type="text" placeholder="이름 <email@example.com>">
