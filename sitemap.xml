@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/ranking.html</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1671,6 +1671,21 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EB%B0%95%EC%84%B8%EC%99%84.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/yRaB00ZVVQ6DMjJmictDEaNf6t8.jpg</image:loc>
+      <image:title>박세완 프로필</image:title>
+      <image:caption>박세완의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/30768/99/cover500/k252830652_2.jpg</image:loc>
+      <image:title>나미야 잡화점의 기적 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EB%B0%95%EC%86%8C%EB%8B%B4.html</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -2106,6 +2121,21 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EC%84%9C%ED%98%84%28%EC%86%8C%EB%85%80%EC%8B%9C%EB%8C%80%29.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/180326_7%EB%85%84%EC%9D%98_%EB%B0%A4_VIP_%EC%8B%9C%EC%82%AC%ED%9A%8C_%EC%84%9C%ED%98%84_%EC%A7%81%EC%B0%8D.jpg/500px-180326_7%EB%85%84%EC%9D%98_%EB%B0%A4_VIP_%EC%8B%9C%EC%82%AC%ED%9A%8C_%EC%84%9C%ED%98%84_%EC%A7%81%EC%B0%8D.jpg</image:loc>
+      <image:title>서현(소녀시대) 프로필</image:title>
+      <image:caption>서현(소녀시대)의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/53/28/cover500/s772832909_1.jpg</image:loc>
+      <image:title>고래 - 제10회 문학동네소설상 수상작 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EC%84%9C%ED%98%84%EC%A7%84.html</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -2387,6 +2417,21 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/27609/35/cover500/k612733020_1.jpg</image:loc>
       <image:title>생각하는 인문학 표지</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/%EC%86%A1%EC%A4%91%EA%B8%B0.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/1/1f/Song_Joong-ki_at_the_The_Innocent_Man_production_presentation06.jpg</image:loc>
+      <image:title>송중기 프로필</image:title>
+      <image:caption>송중기의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/1594/83/cover500/8996723649_2.jpg</image:loc>
+      <image:title>아이처럼 행복하라 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -3162,6 +3207,21 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/25242/7/cover500/8927811585_1.jpg</image:loc>
       <image:title>그래도, 사랑 표지</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/%EC%9D%B4%EB%82%98%EC%98%81.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/original/yZu1uFl9MIlHP8OJb4XxrRtm59G.jpg</image:loc>
+      <image:title>이나영 프로필</image:title>
+      <image:caption>이나영의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/41/13/cover500/898934834x_2.jpg</image:loc>
+      <image:title>에곤 실레, 벌거벗은 영혼 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -4359,6 +4419,10 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/7492/9/cover500/8956609950_2.jpg</image:loc>
       <image:title>종의 기원 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/34009/86/cover500/k282931968_1.jpg</image:loc>
+      <image:title>변신·단식 광대 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -5649,7 +5713,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%82%98%EB%AF%B8%EC%95%BC%20%EC%9E%A1%ED%99%94%EC%A0%90%EC%9D%98%20%EA%B8%B0%EC%A0%81.html</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -7941,7 +8005,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/the-miracles-of-the-namiya-general-store.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
