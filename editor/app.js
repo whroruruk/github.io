@@ -256,6 +256,14 @@ const Gh = {
  *  - strip the trailing `;` before JSON.parse
  */
 const Aladin = {
+  // Default proxies to try in order. Each item: [name, prefix, kind].
+  // kind: 'wrap' (response is {contents:..., status:...}) or 'raw' (body is upstream body)
+  DEFAULT_PROXIES: [
+    ['allorigins-get',  'https://api.allorigins.win/get?url=',          'wrap'],
+    ['corsproxy.io',    'https://corsproxy.io/?',                        'raw' ],
+    ['codetabs',        'https://api.codetabs.com/v1/proxy/?quest=',     'raw' ],
+    ['allorigins-raw',  'https://api.allorigins.win/raw?url=',           'raw' ],
+  ],
   _baseParams(extra) {
     const p = new URLSearchParams(extra);
     p.set('ttbkey', Config.ttb);
@@ -263,38 +271,56 @@ const Aladin = {
     p.set('Version', '20131101');
     return p;
   },
+  _parseAladinBody(text) {
+    let s = String(text || '').trim();
+    if (!s) throw new Error('빈 응답');
+    if (s.endsWith(';')) s = s.slice(0, -1);
+    const m = s.match(/^[^({]*\(([\s\S]*)\)\s*$/);
+    if (m) s = m[1];
+    return JSON.parse(s);
+  },
+  async _tryProxy(name, prefix, kind, fullUrl) {
+    const proxied = prefix + encodeURIComponent(fullUrl);
+    const r = await fetch(proxied);
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const text = await r.text();
+    let body;
+    if (kind === 'wrap') {
+      let outer;
+      try { outer = JSON.parse(text); }
+      catch { throw new Error('proxy JSON 파싱 실패'); }
+      if (typeof outer.contents !== 'string') throw new Error('contents 필드 없음');
+      body = this._parseAladinBody(outer.contents);
+    } else {
+      body = this._parseAladinBody(text);
+    }
+    if (body && body.errorCode) throw new Error(`알라딘 ${body.errorCode}: ${body.errorMessage}`);
+    return body;
+  },
   async _call(fullUrl) {
     if (!Config.ttb) throw new Error('알라딘 TTBKey가 설정되지 않았습니다.');
     console.log('[Aladin] →', fullUrl);
-    const proxyTpl = Config.corsProxy || 'https://api.allorigins.win/get?url=';
-    const proxied = proxyTpl + encodeURIComponent(fullUrl);
-    let r;
-    try { r = await fetch(proxied); }
-    catch (e) { throw new Error('프록시 네트워크 오류: ' + e.message); }
-    if (!r.ok) throw new Error(`프록시 HTTP ${r.status}`);
+    // Build proxy list: user override (if any) first, then defaults
+    const list = [];
+    if (Config.corsProxy) {
+      // User can specify a single override; we don't know its kind, so try wrap first then raw
+      list.push(['user(wrap)', Config.corsProxy, 'wrap']);
+      list.push(['user(raw)',  Config.corsProxy, 'raw']);
+    }
+    list.push(...this.DEFAULT_PROXIES);
 
-    const wrapped = await r.json().catch(() => null);
-    if (!wrapped) throw new Error('프록시 응답을 JSON으로 읽지 못함');
-
-    let body;
-    if (typeof wrapped.contents === 'string') {
-      // AllOrigins shape: { contents: "<aladin body>", status: {...} }
-      let text = wrapped.contents.trim();
-      if (text.endsWith(';')) text = text.slice(0, -1);
-      // Also unwrap if Aladin happened to wrap in callback(...)
-      const m = text.match(/^[^({]*\(([\s\S]*)\)\s*$/);
-      if (m) text = m[1];
-      try { body = JSON.parse(text); }
-      catch (e) {
-        throw new Error('알라딘 응답 파싱 실패: ' + text.slice(0, 160));
+    const errors = [];
+    for (const [name, prefix, kind] of list) {
+      try {
+        const r = await this._tryProxy(name, prefix, kind, fullUrl);
+        console.log(`[Aladin] ✓ ${name}`);
+        return r;
+      } catch (e) {
+        console.warn(`[Aladin] ✗ ${name}: ${e.message}`);
+        errors.push(`${name}: ${e.message}`);
       }
-    } else {
-      body = wrapped;
     }
-    if (body && body.errorCode) {
-      throw new Error(`알라딘 오류 ${body.errorCode}: ${body.errorMessage}`);
-    }
-    return body;
+    throw new Error('모든 프록시 실패 — ' + errors.join(' / '));
   },
   async search(query) {
     const p = this._baseParams({
