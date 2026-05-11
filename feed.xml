@@ -49,6 +49,14 @@
     </item>
 
     <item>
+      <title>페이커의 독서 리스트 (41권)</title>
+      <link>https://favorbook.co.kr/share/%ED%8E%98%EC%9D%B4%EC%BB%A4.html</link>
+      <description>페이커이(가) 읽거나 추천한 책 41권을 확인해 보세요.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://favorbook.co.kr/share/%ED%8E%98%EC%9D%B4%EC%BB%A4.html</guid>
+    </item>
+
+    <item>
       <title>박정민의 독서 리스트 (24권)</title>
       <link>https://favorbook.co.kr/share/%EB%B0%95%EC%A0%95%EB%AF%BC.html</link>
       <description>박정민이(가) 읽거나 추천한 책 24권을 확인해 보세요.</description>
@@ -62,14 +70,6 @@
       <description>진영(갓세븐)이(가) 읽거나 추천한 책 22권을 확인해 보세요.</description>
       <pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate>
       <guid isPermaLink="true">https://favorbook.co.kr/share/%EC%A7%84%EC%98%81%28%EA%B0%93%EC%84%B8%EB%B8%90%29.html</guid>
-    </item>
-
-    <item>
-      <title>안현모의 독서 리스트 (22권)</title>
-      <link>https://favorbook.co.kr/share/%EC%95%88%ED%98%84%EB%AA%A8.html</link>
-      <description>안현모이(가) 읽거나 추천한 책 22권을 확인해 보세요.</description>
-      <pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://favorbook.co.kr/share/%EC%95%88%ED%98%84%EB%AA%A8.html</guid>
     </item>
 </channel>
 </rss>

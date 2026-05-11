@@ -2241,6 +2241,14 @@
       <image:loc>https://image.aladin.co.kr/product/53/28/cover500/s772832909_1.jpg</image:loc>
       <image:title>고래 - 제10회 문학동네소설상 수상작 표지</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/26057/28/cover500/k432737052_1.jpg</image:loc>
+      <image:title>데일 카네기 자기관리론 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/21/61/cover500/8987849104_1.gif</image:loc>
+      <image:title>인간관계 지도론 표지</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%84%9C%ED%98%84%EC%A7%84.html</loc>
@@ -5664,7 +5672,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%85%B8%EB%A5%B4%EC%9B%A8%EC%9D%B4%EC%9D%98%20%EC%88%B2.html</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -6034,7 +6042,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%82%98%EB%AF%B8%EC%95%BC%20%EC%9E%A1%ED%99%94%EC%A0%90%EC%9D%98%20%EA%B8%B0%EC%A0%81.html</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -6214,7 +6222,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%BD%94%EC%8A%A4%EB%AA%A8%EC%8A%A4.html</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -6264,7 +6272,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%82%98%EB%8A%94%20%EB%82%98%EB%A1%9C%20%EC%82%B4%EA%B8%B0%EB%A1%9C%20%ED%96%88%EB%8B%A4.html</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -6304,7 +6312,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%8B%A0%EA%B2%BD%20%EB%81%84%EA%B8%B0%EC%9D%98%20%EA%B8%B0%EC%88%A0.html</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -6483,6 +6491,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EC%9E%A0.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/34349/23/cover500/8932924546_1.jpg</image:loc>
+      <image:title>잠 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/book/%EC%9E%90%EC%A1%B4%EA%B0%90%20%EC%88%98%EC%97%85.html</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -6543,6 +6561,16 @@
     <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/book/%ED%99%94%EC%94%A8%20451.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/342/9/cover500/8982739084_1.jpg</image:loc>
+      <image:title>화씨 451 표지</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%AF%B8%20%EB%B9%84%ED%8F%AC%20%EC%9C%A0.html</loc>
@@ -6671,6 +6699,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EB%AC%B4%EB%A1%80%ED%95%9C%20%EC%82%AC%EB%9E%8C%EC%97%90%EA%B2%8C%20%EC%9B%83%EC%9C%BC%EB%A9%B0%20%EB%8C%80%EC%B2%98%ED%95%98%EB%8A%94%20%EB%B2%95.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/31463/61/cover500/k272832422_1.jpg</image:loc>
+      <image:title>무례한 사람에게 웃으며 대처하는 법 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/book/%EB%81%8C%EB%A6%BC.html</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -6718,6 +6756,16 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/33730/69/cover500/k082939640_1.jpg</image:loc>
       <image:title>90년생이 온다 표지</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/book/%ED%8C%A9%ED%8A%B8%ED%92%80%EB%8B%88%EC%8A%A4.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/34538/43/cover500/8934933879_1.jpg</image:loc>
+      <image:title>팩트풀니스 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -6918,7 +6966,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/ella-meovv.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -7152,7 +7200,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/jang-jae-in.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -7644,7 +7692,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/max-changmin.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -7950,7 +7998,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/seolhyun.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -8226,7 +8274,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/norwegian-wood.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -8448,7 +8496,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/the-miracles-of-the-namiya-general-store.html</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -8556,7 +8604,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/cosmos.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -8586,7 +8634,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/i-decided-to-live-as-me.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -8693,6 +8741,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/en/share/book/empire-of-the-ants-or-the-empire-of-the-ants.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/en/share/book/self-esteem-class.html</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -8737,6 +8791,12 @@
   <url>
     <loc>https://favorbook.co.kr/en/share/book/the-selfish-gene.html</loc>
     <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/fahrenheit-451.html</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -8825,6 +8885,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/en/share/book/how-to-smile-at-rude-people.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/en/share/book/attraction.html</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -8857,6 +8923,12 @@
   <url>
     <loc>https://favorbook.co.kr/en/share/book/90s-generation-is-coming.html</loc>
     <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/factfulness.html</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
