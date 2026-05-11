@@ -1,4 +1,4 @@
-import csv, datetime, os, json, re, html, subprocess
+import csv, datetime, os, json, re, html, subprocess, io
 from urllib.parse import quote
 
 BASE = "https://favorbook.co.kr/"
@@ -104,6 +104,116 @@ def make_en_celeb_url(name_en):
 
 def make_en_book_url(title_en):
     return BASE + 'en/share/book/' + safe_en_filename(title_en) + '.html'
+
+# ── 업데이트 내역 (git log of data.csv) ─────────────────────────────
+
+def _parse_csv_pairs(text):
+    """data.csv 본문 → (celeb, title) 페어 집합. 비어있으면 빈 set."""
+    pairs = set()
+    if not text or not text.strip():
+        return pairs
+    rdr = csv.reader(io.StringIO(text))
+    try:
+        hdr = next(rdr)
+    except StopIteration:
+        return pairs
+    def find(kws):
+        for i, h in enumerate(hdr):
+            hl = h.lower()
+            if any(k in hl for k in kws) and '_en' not in hl and '이미지' not in hl:
+                return i
+        return -1
+    ci_name = find(['연예인', '이름', '인물'])
+    ci_title = find(['도서명', '제목', '책'])
+    if ci_name < 0:
+        return pairs
+    for row in rdr:
+        if len(row) <= ci_name:
+            continue
+        name = (row[ci_name] or '').strip()
+        title = (row[ci_title] or '').strip() if 0 <= ci_title < len(row) else ''
+        if not name:
+            continue
+        pairs.add((name, title))
+    return pairs
+
+def _git_blob_csv(commit_ish):
+    """`git show <commit>:data.csv` 본문. 실패시 ''."""
+    try:
+        r = subprocess.run(
+            ['git', 'show', f'{commit_ish}:data.csv'],
+            capture_output=True, check=False, timeout=10,
+        )
+        if r.returncode != 0:
+            return ''
+        return r.stdout.decode('utf-8', errors='replace')
+    except Exception:
+        return ''
+
+def build_updates_entries(limit=80):
+    """data.csv를 건드린 커밋들을 최신순으로 훑어, 새로 추가된 (celeb, title)을 정리.
+    반환: 최신순 dict 리스트."""
+    try:
+        r = subprocess.run(
+            ['git', 'log', '--no-merges', f'-n{limit}',
+             '--pretty=format:%H|%at|%s', '--', 'data.csv'],
+            capture_output=True, check=False, timeout=20,
+        )
+        out = r.stdout.decode('utf-8', errors='replace').strip()
+    except Exception:
+        out = ''
+    if not out:
+        return []
+    entries = []
+    for line in out.split('\n'):
+        try:
+            sha, ts, msg = line.split('|', 2)
+        except ValueError:
+            continue
+        cur_pairs = _parse_csv_pairs(_git_blob_csv(sha))
+        par = subprocess.run(
+            ['git', 'rev-parse', f'{sha}^'],
+            capture_output=True, check=False, timeout=5,
+        )
+        if par.returncode == 0:
+            prev_pairs = _parse_csv_pairs(_git_blob_csv(par.stdout.decode().strip()))
+        else:
+            prev_pairs = set()
+        added = cur_pairs - prev_pairs
+        if not added:
+            continue
+        by_celeb = {}
+        for name, title in added:
+            by_celeb.setdefault(name, []).append(title or '')
+        try:
+            date = datetime.datetime.fromtimestamp(int(ts))
+        except Exception:
+            continue
+        new_celebs = sorted(c for c in by_celeb if c not in {n for n, _ in prev_pairs})
+        new_books = sum(1 for v in by_celeb.values() for t in v if t.strip())
+        entries.append({
+            'sha': sha,
+            'date_iso': date.strftime('%Y-%m-%d'),
+            'date_short': date.strftime('%y-%m-%d'),
+            'message': msg,
+            'celebs': by_celeb,
+            'celeb_count': len(by_celeb),
+            'new_celebs': new_celebs,
+            'new_celeb_count': len(new_celebs),
+            'book_count': new_books,
+        })
+    return entries
+
+def headline_for(entry):
+    """'26-08-01 #카리나, #안효섭 등 N명 도서 추가 📕'."""
+    celebs = sorted(entry['celebs'].keys())
+    shown = celebs[:2]
+    more = max(0, len(celebs) - len(shown))
+    tags = ', '.join('#' + c for c in shown)
+    if more:
+        return f"{entry['date_short']} {tags} 등 {more}명 도서 추가 📕"
+    return f"{entry['date_short']} {tags} 도서 추가 📕"
+
 
 def clean_none(obj):
     """JSON-LD에서 None 값 재귀적으로 제거."""
@@ -240,8 +350,141 @@ if patched != idx_html:
 else:
     print("⚠️ JS 패치 대상을 찾지 못함 (이미 적용되었거나 구조가 다름)")
 
+# ── 3.5. 업데이트 내역 페이지 + 배너 ────────────────────────────────
+
+update_entries = build_updates_entries(limit=80)
+
+def _write_updates_page(entries):
+    """updates.html 생성."""
+    if entries:
+        items_html = []
+        MAX_TAGS = 30
+        for e in entries:
+            celeb_names = sorted(e['celebs'].keys())
+            shown_names = celeb_names[:MAX_TAGS]
+            extra = len(celeb_names) - len(shown_names)
+            tag_chips = [
+                '<a href="share/' + quote(safe_filename(c), safe='') + '.html" '
+                'class="inline-block px-2 py-0.5 mr-1 mb-1 border-2 border-ink bg-white '
+                'hover:bg-neo-yellow shadow-neo-sm text-xs font-bold font-sans text-ink '
+                'no-underline transition-all hover:-translate-y-0.5">#' + esc(c) + '</a>'
+                for c in shown_names
+            ]
+            if extra > 0:
+                tag_chips.append(
+                    '<span class="inline-block px-2 py-0.5 mr-1 mb-1 text-xs font-bold '
+                    'font-sans text-muted">외 ' + str(extra) + '명 더…</span>'
+                )
+            tags = '\n      '.join(tag_chips)
+            new_label = (' · <span class="text-neo-pink-700">새 셀럽 '
+                         + str(e['new_celeb_count']) + '명</span>'
+                         if e['new_celeb_count'] else '')
+            items_html.append(
+                '  <li class="border-2 border-ink bg-white shadow-neo p-4 sm:p-5">\n'
+                '    <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">\n'
+                '      <time datetime="' + e['date_iso'] + '" '
+                'class="font-sans font-bold text-sm sm:text-base tracking-widest">'
+                + e['date_short'] + '</time>\n'
+                '      <span class="font-sans text-xs sm:text-sm text-muted">총 '
+                + str(e['celeb_count']) + '명 · '
+                + str(e['book_count']) + '권 추가 📕' + new_label + '</span>\n'
+                '    </div>\n'
+                '    <div>\n      ' + tags + '\n    </div>\n'
+                '  </li>'
+            )
+        list_html = '\n'.join(items_html)
+    else:
+        list_html = ('  <li class="border-2 border-ink bg-white shadow-neo p-6 '
+                     'text-center font-sans font-bold text-muted">'
+                     '아직 업데이트 내역이 없습니다.</li>')
+
+    page = (
+        '<!DOCTYPE html>\n'
+        '<html lang="ko">\n'
+        '<head>\n'
+        '  <meta charset="utf-8">\n'
+        '  <meta name="viewport" content="width=device-width, initial-scale=1">\n'
+        '  <title>업데이트 내역 | 최애의 독서</title>\n'
+        '  <meta name="description" content="최애의 독서 데이터 업데이트 로그 — '
+        '새로 추가된 연예인과 추천 도서 내역.">\n'
+        '  <meta name="robots" content="index, follow">\n'
+        '  <link rel="canonical" href="' + BASE + 'updates.html">\n'
+        '  <link rel="icon" href="' + BASE + 'favicon.svg" type="image/svg+xml">\n'
+        '  <script src="https://cdn.tailwindcss.com"></script>\n'
+        '  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;400;600;900'
+        '&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">\n'
+        '  <script>\n'
+        '    tailwind.config = { theme: { extend: {\n'
+        '      fontFamily: { serif: [\'"Noto Serif KR"\', \'serif\'], '
+        'sans: [\'"Space Grotesk"\', \'sans-serif\'] },\n'
+        '      colors: { ink: "#000000", muted: "#666666", '
+        '"neo-yellow": "#fde047", "neo-pink": "#fbcfe8" },\n'
+        '      boxShadow: { neo: "4px 4px 0px 0px rgba(0,0,0,1)", '
+        '"neo-sm": "2px 2px 0px 0px rgba(0,0,0,1)" }\n'
+        '    } } };\n'
+        '  </script>\n'
+        '  <style>body{background:#fcfaf5;color:#000;-webkit-font-smoothing:antialiased;}</style>\n'
+        '</head>\n'
+        '<body class="font-serif">\n'
+        '  <main class="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">\n'
+        '    <header class="mb-10 text-center">\n'
+        '      <a href="./" class="inline-block font-sans font-bold text-xs tracking-widest '
+        'uppercase border-2 border-ink bg-white hover:bg-neo-yellow shadow-neo-sm px-4 py-2 '
+        'no-underline text-ink transition-all hover:-translate-y-0.5 mb-6">← 메인으로</a>\n'
+        '      <h1 class="text-3xl sm:text-5xl font-black tracking-tight mb-3">'
+        '업데이트 내역 📕</h1>\n'
+        '      <p class="font-sans font-bold text-sm text-muted">'
+        '최애의 독서 데이터(<code class="bg-neo-yellow px-1">data.csv</code>) 변경 로그</p>\n'
+        '    </header>\n'
+        '    <ul class="flex flex-col gap-4">\n'
+        + list_html + '\n'
+        '    </ul>\n'
+        '    <footer class="mt-12 text-center font-sans text-xs text-muted">'
+        '최근 ' + str(len(entries)) + '개 커밋 기준</footer>\n'
+        '  </main>\n'
+        '</body>\n'
+        '</html>\n'
+    )
+    write_if_changed('updates.html', page)
+
+_write_updates_page(update_entries)
+
+# index.html 배너 주입
+def _inject_updates_banner(html_text, entries):
+    if not entries:
+        return html_text
+    headline = headline_for(entries[0])
+    banner = (
+        '<!-- updates-banner:start -->\n'
+        '  <a href="updates.html" aria-label="업데이트 내역"\n'
+        '     class="max-w-xl mx-auto w-full flex items-center justify-between gap-3 '
+        'border-2 border-ink bg-neo-yellow shadow-neo-sm hover:shadow-neo '
+        'hover:-translate-y-0.5 transition-all px-4 py-3 font-sans font-bold '
+        'text-ink no-underline">\n'
+        '    <span class="text-[10px] sm:text-xs tracking-widest uppercase whitespace-nowrap">'
+        '📕 NEW</span>\n'
+        '    <span class="flex-1 text-xs sm:text-sm truncate">' + esc(headline) + '</span>\n'
+        '    <span class="text-xs sm:text-sm">→</span>\n'
+        '  </a>\n'
+        '  <!-- updates-banner:end -->'
+    )
+    if '<!-- updates-banner:start -->' in html_text:
+        return re.sub(
+            r'<!-- updates-banner:start -->.*?<!-- updates-banner:end -->',
+            lambda _m: banner,
+            html_text, flags=re.DOTALL,
+        )
+    return html_text.replace(
+        '<section id="search"',
+        banner + '\n\n  <section id="search"',
+        1,
+    )
+
+idx_html = _inject_updates_banner(idx_html, update_entries)
+
 write_if_changed('index.html', idx_html)
 print(f"✅ index.html 정적 목록 갱신: {len(sorted_names)}명")
+print(f"✅ updates.html 생성 ({len(update_entries)} 항목)")
 
 # ── 4. share 페이지 생성 (SEO 강화) ─────────────────────────────────
 
