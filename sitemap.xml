@@ -1307,6 +1307,14 @@
       <image:loc>https://image.aladin.co.kr/product/5317/19/cover500/1185051929_1.jpg</image:loc>
       <image:title>55세부터 헬로라이프 표지</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/235/57/cover500/8925522225_1.jpg</image:loc>
+      <image:title>머저리 클럽 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/35273/93/cover500/k242934457_1.jpg</image:loc>
+      <image:title>악당의 명언 표지</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%8F%84%EA%B2%B8%28%EC%84%B8%EB%B8%90%ED%8B%B4%29.html</loc>
@@ -2334,6 +2342,21 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/11155/65/cover500/k202531987_1.jpg</image:loc>
       <image:title>운다고 달라지는 일은 아무것도 없겠지만 표지</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/%EC%86%8C%EC%9C%A0.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://entertainimg.kbsmedia.co.kr/cms/uploads/PERSON_20220427180412_8c4fa12ef27272a78fdef716c31bfe09.jpg</image:loc>
+      <image:title>소유 프로필</image:title>
+      <image:caption>소유의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/3928/90/cover500/8992289618_1.jpg</image:loc>
+      <image:title>허기진 삶을 채우는 생각 한 잔 표지</image:title>
     </image:image>
   </url>
   <url>
