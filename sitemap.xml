@@ -3593,37 +3593,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%8A%B9%EC%97%B0.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
-      <image:title>이승연 프로필</image:title>
-      <image:caption>이승연의 독서 리스트 - 최애의 독서</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/25184/75/cover200/8931021291_1.jpg</image:loc>
-      <image:title>어린왕자 표지</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/19216/48/cover500/8955825021_1.jpg</image:loc>
-      <image:title>신과 나눈 이야기 표지</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/195/14/cover500/8932907870_2.jpg</image:loc>
-      <image:title>나무 표지</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/32611/37/cover500/8932923647_1.jpg</image:loc>
-      <image:title>뇌 표지</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/32952/21/cover500/8932923868_1.jpg</image:loc>
-      <image:title>파피용 표지</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%8A%B9%EC%97%B4.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -4356,9 +4325,13 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Jung_So-min_in_March_2025.png/960px-Jung_So-min_in_March_2025.png?utm_source=commons.wikimedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail</image:loc>
       <image:title>정소민 프로필</image:title>
       <image:caption>정소민의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/21744/89/cover500/k272636907_1.jpg</image:loc>
+      <image:title>너는 다시 태어나려고 기다리고 있어 표지</image:title>
     </image:image>
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/6534/85/cover500/8970638806_3.jpg</image:loc>
@@ -4664,7 +4637,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://cdn.nc.press/news/photo/202512/602462_804603_5659.jpg</image:loc>
       <image:title>주훈(코르티스) 프로필</image:title>
       <image:caption>주훈(코르티스)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -4900,7 +4873,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://image.bugsm.co.kr/artist/images/200/801889/80188952.jpg?version=20251018002101</image:loc>
       <image:title>최정훈(잔나비) 프로필</image:title>
       <image:caption>최정훈(잔나비)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -4931,7 +4904,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://contents.kyobobook.co.kr/sih/fit-in/300x0/dtl/author/1115718401.jpg</image:loc>
       <image:title>최희서 프로필</image:title>
       <image:caption>최희서의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -5551,7 +5524,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/0/0f/Wheein_2023.jpg</image:loc>
       <image:title>휘인(마마무) 프로필</image:title>
       <image:caption>휘인(마마무)의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
@@ -6082,7 +6055,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%ED%8C%8C%ED%94%BC%EC%9A%A9.html</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -6740,13 +6713,13 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/choi-hee-seo.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/choi-jung-hoon-jannabi.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -7117,7 +7090,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/juhoon-courtis.html</loc>
+    <loc>https://favorbook.co.kr/en/share/juhoon-cortis.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -7178,7 +7151,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/jung-so-min.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -7466,12 +7439,6 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/lee-seol.html</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://favorbook.co.kr/en/share/lee-seung-yeon.html</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -7994,7 +7961,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/wheein-mamamoo.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -8174,7 +8141,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/beyond-good-and-evil-or-thus-spoke-zarathustra-depending-on-specific-content-common-nietzsche.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -8426,7 +8393,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/papillon.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -8498,7 +8465,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/the-subtle-art-of-not-giving-a-fck.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -8522,7 +8489,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/the-art-of-loving.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
