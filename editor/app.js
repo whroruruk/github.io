@@ -126,10 +126,36 @@ function loadCsv(text) {
     });
   }
 
+  // 도서를 도서명 → 저자 가나다순으로 정렬 (한국어 우선 로케일 비교)
+  for (const c of celebs.values()) sortBooks(c.books);
+
   State.headers = headers;
   State.col = col;
   State.celebs = celebs;
   State.order = order;
+}
+
+/* 한국어 우선 가나다순 정렬: 도서명 1차, 저자 2차. */
+function sortBooks(books) {
+  const cmp = (x, y) => (x || '').localeCompare(y || '', 'ko-KR', {
+    numeric: true, sensitivity: 'base',
+  });
+  books.sort((a, b) => {
+    const t = cmp(a.title, b.title);
+    return t !== 0 ? t : cmp(a.author, b.author);
+  });
+}
+
+/* 모든 셀럽의 도서를 정렬. 순서가 바뀐 셀럽이 1명이라도 있으면 true 반환. */
+function sortAllCelebs() {
+  let changed = false;
+  for (const c of State.celebs.values()) {
+    const before = c.books.map(b => b.title + '|' + b.author).join('\n');
+    sortBooks(c.books);
+    const after = c.books.map(b => b.title + '|' + b.author).join('\n');
+    if (before !== after) changed = true;
+  }
+  return changed;
 }
 
 function dumpCsv() {
@@ -731,6 +757,7 @@ $('#bookForm').addEventListener('submit', (e) => {
   const c = State.celebs.get(ed.celebName);
   if (ed.bookIndex == null) c.books.push(data);
   else c.books[ed.bookIndex] = data;
+  sortBooks(c.books); // 추가/수정 후 자동 정렬
   setDirty(true);
   bookDlg.close();
   renderDetail(); renderSidebar();
@@ -922,6 +949,16 @@ async function saveToGithub() {
 
 $('#reloadBtn').addEventListener('click', reloadFromGithub);
 $('#saveBtn').addEventListener('click', saveToGithub);
+$('#sortBtn').addEventListener('click', () => {
+  const changed = sortAllCelebs();
+  if (!changed) {
+    toast('이미 모든 도서가 가나다순으로 정렬되어 있습니다', 'ok');
+    return;
+  }
+  setDirty(true);
+  renderDetail();
+  toast('정렬 완료 — 저장하면 CSV에 반영됩니다', 'ok');
+});
 
 /* -------------------- Boot -------------------- */
 (function init() {
