@@ -65,7 +65,10 @@
             <input id="celebName" type="text">
           </label>
           <label>연예인 영문명
-            <input id="celebNameEn" type="text" placeholder="예: Gawon (MEOVV)">
+            <div class="row">
+              <input id="celebNameEn" type="text" placeholder="예: Gawon (MEOVV)">
+              <button type="button" id="celebNameEnAuto" class="btn small" title="ko.wikipedia → Wikidata로 영문명 자동채움">EN 자동</button>
+            </div>
           </label>
           <label>연예인 이미지 URL
             <input id="celebImg" type="url" placeholder="https://...">
@@ -124,7 +127,10 @@
           <input id="bookTitle" type="text" required>
         </label>
         <label>도서명 영문
-          <input id="bookTitleEn" type="text">
+          <div class="row">
+            <input id="bookTitleEn" type="text">
+            <button type="button" id="bookEnAutoBtn" class="btn small" title="Google Books / Open Library에서 영문 제목·저자 자동채움">EN 자동</button>
+          </div>
         </label>
         <label>저자 <span class="req">*</span>
           <input id="bookAuthor" type="text" required>
