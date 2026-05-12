@@ -3885,6 +3885,21 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%A3%BC%EC%98%81.html</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Lee_Joo_Joung%2C_2023-1.jpg/1280px-Lee_Joo_Joung%2C_2023-1.jpg</image:loc>
+      <image:title>이주영 프로필</image:title>
+      <image:caption>이주영의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/39039/99/cover500/k982138710_2.jpg</image:loc>
+      <image:title>영화에 관하여 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%A4%80%EC%98%81.html</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -7603,6 +7618,12 @@
   <url>
     <loc>https://favorbook.co.kr/en/share/lee-je-hoon.html</loc>
     <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-joo-young.html</loc>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
