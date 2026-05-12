@@ -372,6 +372,102 @@ const Aladin = {
   },
 };
 
+/* -------------------- 영문 자동채움 (Google Books / Wikipedia / Wikidata)
+ * 모두 CORS 허용 API라 브라우저에서 직접 호출 가능.
+ * enrich_en.py와 동일한 룰을 포팅. */
+const EnEnrich = {
+  async _json(url) {
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), 8000);
+    try {
+      const r = await fetch(url, { signal: ctrl.signal });
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return await r.json();
+    } finally { clearTimeout(t); }
+  },
+
+  async bookEn(title_ko, author_ko) {
+    const q = ['intitle:' + title_ko];
+    if (author_ko) q.push('inauthor:' + author_ko);
+    const u1 = new URL('https://www.googleapis.com/books/v1/volumes');
+    u1.searchParams.set('q', q.join(' '));
+    u1.searchParams.set('langRestrict', 'en');
+    u1.searchParams.set('maxResults', '5');
+    try {
+      const d = await this._json(u1);
+      for (const it of (d.items || [])) {
+        const info = it.volumeInfo || {};
+        if (info.language !== 'en') continue;
+        if (!info.title) continue;
+        const t = info.subtitle ? `${info.title}: ${info.subtitle}` : info.title;
+        const a = (info.authors || []).join(', ') || null;
+        return { title_en: t, author_en: a, source: 'google_books' };
+      }
+    } catch (e) { console.warn('[EnEnrich] google_books fail:', e.message); }
+
+    const u2 = new URL('https://openlibrary.org/search.json');
+    u2.searchParams.set('title', title_ko);
+    if (author_ko) u2.searchParams.set('author', author_ko);
+    u2.searchParams.set('limit', '5');
+    try {
+      const d = await this._json(u2);
+      for (const doc of (d.docs || [])) {
+        const t = doc.title;
+        if (!t) continue;
+        let ascii = 0;
+        for (const ch of t) if (ch.charCodeAt(0) < 128) ascii++;
+        if (ascii / t.length > 0.85) {
+          return { title_en: t, author_en: null, source: 'open_library' };
+        }
+      }
+    } catch (e) { console.warn('[EnEnrich] open_library fail:', e.message); }
+
+    return null;
+  },
+
+  async celebEn(name_ko) {
+    let base = name_ko;
+    let group = '';
+    const m = name_ko.match(/^(.+?)\s*\(\s*(.+?)\s*\)\s*$/);
+    if (m) { base = m[1].trim(); group = m[2].trim(); }
+
+    const u1 = new URL('https://ko.wikipedia.org/w/api.php');
+    u1.searchParams.set('action', 'query');
+    u1.searchParams.set('format', 'json');
+    u1.searchParams.set('origin', '*');
+    u1.searchParams.set('titles', base);
+    u1.searchParams.set('prop', 'pageprops');
+    u1.searchParams.set('redirects', '1');
+    let qid = null;
+    try {
+      const d = await this._json(u1);
+      const pages = ((d.query || {}).pages) || {};
+      for (const p of Object.values(pages)) {
+        const pp = p.pageprops || {};
+        if (pp.wikibase_item) { qid = pp.wikibase_item; break; }
+      }
+    } catch (e) { console.warn('[EnEnrich] ko.wiki fail:', e.message); }
+    if (!qid) return null;
+
+    const u2 = new URL('https://www.wikidata.org/w/api.php');
+    u2.searchParams.set('action', 'wbgetentities');
+    u2.searchParams.set('format', 'json');
+    u2.searchParams.set('origin', '*');
+    u2.searchParams.set('ids', qid);
+    u2.searchParams.set('props', 'labels');
+    u2.searchParams.set('languages', 'en');
+    try {
+      const d = await this._json(u2);
+      const entity = (d.entities || {})[qid] || {};
+      let label = ((entity.labels || {}).en || {}).value;
+      if (!label) return null;
+      if (group && !label.includes(group)) label = `${label} (${group})`;
+      return { name_en: label, source: 'wikidata' };
+    } catch (e) { console.warn('[EnEnrich] wikidata fail:', e.message); }
+    return null;
+  },
+};
+
 /* -------------------- Render: Sidebar -------------------- */
 function applyFilter(name) {
   const c = State.celebs.get(name);
@@ -547,6 +643,29 @@ $('#renameApplyBtn').addEventListener('click', () => {
   toast('적용됨 (저장하면 모든 행에 반영됩니다)', 'ok');
 });
 
+$('#celebNameEnAuto').addEventListener('click', async (e) => {
+  const name = $('#celebName').value.trim();
+  if (!name) { toast('연예인 이름이 비어있음', 'err'); return; }
+  e.target.disabled = true;
+  const prev = e.target.textContent;
+  e.target.textContent = '조회 중…';
+  try {
+    const r = await EnEnrich.celebEn(name);
+    if (!r || !r.name_en) {
+      toast('영문명을 찾지 못했습니다 (Wikipedia에 페이지 없음)', 'err');
+      return;
+    }
+    $('#celebNameEn').value = r.name_en;
+    $('#celebNameEn').dispatchEvent(new Event('change'));
+    toast(`적용됨 (${r.source}): ${r.name_en}`, 'ok');
+  } catch (err) {
+    toast('자동채움 실패: ' + err.message, 'err');
+  } finally {
+    e.target.disabled = false;
+    e.target.textContent = prev;
+  }
+});
+
 $('#addCelebBtn').addEventListener('click', () => {
   const name = prompt('새 연예인 이름 (한글)');
   if (!name) return;
@@ -710,6 +829,29 @@ $('#aladinLookupBtn').addEventListener('click', async () => {
     toast('알라딘 정보 적용됨', 'ok');
   } catch (err) {
     toast(err.message, 'err');
+  }
+});
+
+$('#bookEnAutoBtn').addEventListener('click', async (e) => {
+  const t = $('#bookTitle').value.trim();
+  const a = $('#bookAuthor').value.trim();
+  if (!t) { toast('한글 도서명이 비어있음', 'err'); return; }
+  e.target.disabled = true;
+  const prev = e.target.textContent;
+  e.target.textContent = '조회 중…';
+  try {
+    const r = await EnEnrich.bookEn(t, a);
+    if (!r) { toast('영문판 정보를 찾지 못했습니다', 'err'); return; }
+    if (r.title_en) $('#bookTitleEn').value = r.title_en;
+    if (r.author_en && !$('#bookAuthorEn').value.trim()) {
+      $('#bookAuthorEn').value = r.author_en;
+    }
+    toast(`적용됨 (${r.source})`, 'ok');
+  } catch (err) {
+    toast('자동채움 실패: ' + err.message, 'err');
+  } finally {
+    e.target.disabled = false;
+    e.target.textContent = prev;
   }
 });
 
