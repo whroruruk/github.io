@@ -151,6 +151,33 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EA%B0%95%ED%95%98%EB%8A%98.html</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREmJUGl8iOqyG728UU1caz7GD0CEhZeJz1Fw&amp;s</image:loc>
+      <image:title>강하늘 프로필</image:title>
+      <image:caption>강하늘의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/31424/4/cover500/k482832219_1.jpg</image:loc>
+      <image:title>사피엔스 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/10222/18/cover500/k202536889_1.jpg</image:loc>
+      <image:title>새는 날아가면서 뒤돌아보지 않는다 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/6603/64/cover500/k072433054_2.jpg</image:loc>
+      <image:title>신이 말해 준 것 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/18390/11/cover500/k652534159_1.jpg</image:loc>
+      <image:title>좋은지 나쁜지 누가 아는가 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EA%B0%95%ED%98%9C%EC%A0%95.html</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -4960,6 +4987,25 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EC%B2%9C%EC%9A%B0%ED%9D%AC.html</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Chun_Woo-hee_in_July_2024_02.jpg/960px-Chun_Woo-hee_in_July_2024_02.jpg</image:loc>
+      <image:title>천우희 프로필</image:title>
+      <image:caption>천우희의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/24131/37/cover500/s962738283_1.jpg</image:loc>
+      <image:title>시선으로부터, 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/33990/42/cover500/k012930648_2.jpg</image:loc>
+      <image:title>행복의 기원 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EC%B2%AD%ED%95%98.html</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -5849,7 +5895,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%A2%8B%EC%9D%80%EC%A7%80%20%EB%82%98%EC%81%9C%EC%A7%80%20%EB%88%84%EA%B0%80%20%EC%95%84%EB%8A%94%EA%B0%80.html</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -6641,7 +6687,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%82%AC%ED%94%BC%EC%97%94%EC%8A%A4.html</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -6783,6 +6829,16 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/33730/69/cover500/k082939640_1.jpg</image:loc>
       <image:title>90년생이 온다 표지</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/book/%ED%96%89%EB%B3%B5%EC%9D%98%20%EA%B8%B0%EC%9B%90.html</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/33990/42/cover500/k012930648_2.jpg</image:loc>
+      <image:title>행복의 기원 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -6940,6 +6996,12 @@
   <url>
     <loc>https://favorbook.co.kr/en/share/choi-jung-hoon-jannabi.html</loc>
     <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/chun-woo-hee.html</loc>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -7402,6 +7464,12 @@
   <url>
     <loc>https://favorbook.co.kr/en/share/kai-exo.html</loc>
     <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kang-haneul.html</loc>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -8403,7 +8471,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/who-knows-if-its-good-or-bad-or-good-or-bad-who-knows.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -8865,7 +8933,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/sapiens.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -8962,6 +9030,12 @@
   <url>
     <loc>https://favorbook.co.kr/en/share/book/90s-generation-is-coming.html</loc>
     <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/origins-of-happiness.html</loc>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
