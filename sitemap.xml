@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://favorbook.co.kr/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/ranking.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -366,7 +366,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%EA%B7%9C%EB%82%A8.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -377,6 +377,14 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/35335/28/cover500/k712035589_1.jpg</image:loc>
       <image:title>기어코 반짝일 너에게 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/9775/29/cover500/8965745748_2.jpg</image:loc>
+      <image:title>무소의 뿔처럼 혼자서 가라 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/27494/72/cover500/k972733994_1.jpg</image:loc>
+      <image:title>부지런한 사랑 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -3882,7 +3890,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%A4%80%EC%98%81.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -6848,7 +6856,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -7418,7 +7426,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/kim-gyu-nam.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -7599,6 +7607,12 @@
   <url>
     <loc>https://favorbook.co.kr/en/share/lee-je-hoon.html</loc>
     <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-joon-young.html</loc>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -8522,7 +8536,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/the-little-prince.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -8918,7 +8932,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/the-little-prince.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
