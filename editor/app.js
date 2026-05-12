@@ -451,6 +451,39 @@ const EnEnrich = {
     return null;
   },
 
+  /* 한→영 직역. Google Translate 비공식 GTX 엔드포인트 → MyMemory 폴백.
+   * 둘 다 CORS 허용, 무인증, 짧은 문장은 거의 항상 응답. */
+  async translateKoEn(text) {
+    text = String(text || '').trim();
+    if (!text) return null;
+    // 1) Google Translate (gtx client)
+    try {
+      const u = new URL('https://translate.googleapis.com/translate_a/single');
+      u.searchParams.set('client', 'gtx');
+      u.searchParams.set('sl', 'ko');
+      u.searchParams.set('tl', 'en');
+      u.searchParams.set('dt', 't');
+      u.searchParams.set('q', text);
+      const d = await this._json(u);
+      // 응답 형식: [[[ "translated", "original", null, null, 0 ], ...], ...]
+      const parts = (d && d[0]) || [];
+      const joined = parts.map(seg => (seg && seg[0]) || '').join('').trim();
+      if (joined) return { text: joined, source: 'google_translate' };
+    } catch (e) { console.warn('[EnEnrich] google_translate fail:', e.message); }
+
+    // 2) MyMemory (무료, 일별 한도 있음)
+    try {
+      const u = new URL('https://api.mymemory.translated.net/get');
+      u.searchParams.set('q', text);
+      u.searchParams.set('langpair', 'ko|en');
+      const d = await this._json(u);
+      const t = d && d.responseData && d.responseData.translatedText;
+      if (t) return { text: String(t).trim(), source: 'mymemory' };
+    } catch (e) { console.warn('[EnEnrich] mymemory fail:', e.message); }
+
+    return null;
+  },
+
   async celebEn(name_ko) {
     let base = name_ko;
     let group = '';
@@ -856,6 +889,30 @@ $('#aladinLookupBtn').addEventListener('click', async () => {
     toast('알라딘 정보 적용됨', 'ok');
   } catch (err) {
     toast(err.message, 'err');
+  }
+});
+
+$('#bookTranslateBtn').addEventListener('click', async (e) => {
+  const t = $('#bookTitle').value.trim();
+  if (!t) { toast('한글 도서명이 비어있음', 'err'); return; }
+  e.target.disabled = true;
+  const prev = e.target.textContent;
+  e.target.textContent = '번역 중…';
+  try {
+    const r = await EnEnrich.translateKoEn(t);
+    if (!r || !r.text) {
+      toast('번역 결과를 얻지 못했습니다', 'err');
+      return;
+    }
+    // 직역임을 표시하기 위해 끝에 * 부착 (이미 *로 끝나면 그대로)
+    const marked = /\*\s*$/.test(r.text) ? r.text : (r.text + ' *');
+    $('#bookTitleEn').value = marked;
+    toast(`직역 적용 (${r.source}): ${r.text}`, 'ok');
+  } catch (err) {
+    toast('번역 실패: ' + err.message, 'err');
+  } finally {
+    e.target.disabled = false;
+    e.target.textContent = prev;
   }
 });
 
