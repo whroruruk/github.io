@@ -22,6 +22,7 @@
     <span id="dirtyBadge" class="badge hidden">0 변경</span>
     <button id="reloadBtn" class="btn" title="GitHub에서 최신 CSV 다시 가져오기">↻ 불러오기</button>
     <button id="sortBtn" class="btn" title="모든 셀럽의 추천 도서를 도서명·저자 가나다순으로 정렬">🔤 정렬</button>
+    <button id="missingBtn" class="btn" title="영문 누락된 셀럽·책 목록 (TSV 복사 → AI 의뢰 → 일괄 적용)">📋 누락 영문</button>
     <button id="saveBtn" class="btn primary" disabled>💾 GitHub에 저장</button>
     <button id="settingsBtn" class="btn ghost" title="설정">⚙️</button>
   </div>
@@ -69,6 +70,7 @@
             <div class="row">
               <input id="celebNameEn" type="text" placeholder="예: Gawon (MEOVV)">
               <button type="button" id="celebNameEnAuto" class="btn small" title="ko.wikipedia → Wikidata로 영문명 자동채움">EN 자동</button>
+              <button type="button" id="celebNameTranslateBtn" class="btn small" title="이름을 직역/음역 (결과 끝에 *)">직역*</button>
             </div>
           </label>
           <label>연예인 이미지 URL
@@ -141,6 +143,7 @@
           <div class="row">
             <input id="bookAuthorEn" type="text">
             <button type="button" id="bookAuthorEnAutoBtn" class="btn small" title="ko.wikipedia → Wikidata로 저자 영문명 자동채움">EN 자동</button>
+            <button type="button" id="bookAuthorTranslateBtn" class="btn small" title="저자명을 직역/음역 (결과 끝에 *)">직역*</button>
           </div>
         </label>
         <label>출판사
@@ -212,6 +215,69 @@
       <button type="button" id="saveSettingsBtn" class="btn primary">저장</button>
     </footer>
   </form>
+</dialog>
+
+<!-- 누락 영문 다이얼로그 -->
+<dialog id="missingDialog" class="modal" style="width: min(1100px, 96vw);">
+  <header class="modal-head">
+    <h3>📋 누락된 영문 데이터</h3>
+    <button type="button" class="x" data-close>✕</button>
+  </header>
+
+  <div class="modal-body" style="max-height: calc(90vh - 130px);">
+    <p class="muted small">
+      셀을 드래그해 복사 → AI에 의뢰 → 결과를 아래 "결과 붙여넣기"에 탭 구분으로
+      채우면 일괄 적용. 영문 입력칸을 직접 편집해도 됨. <b>변경사항 적용</b>을
+      눌러야 본 데이터에 반영됩니다.
+    </p>
+
+    <h4 style="margin-top: 16px;">연예인 영문명 누락 <span id="missCelebsCount" class="muted small"></span></h4>
+    <div class="row" style="margin-bottom: 6px;">
+      <button type="button" id="missCelebsCopyBtn" class="btn small">한글 목록 TSV 복사</button>
+    </div>
+    <div class="missing-tableWrap">
+      <table class="missing-table" id="missCelebsTable">
+        <thead><tr>
+          <th style="width:50%;">연예인 (한글)</th>
+          <th>연예인 영문명 (편집)</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <details style="margin-top: 8px;">
+      <summary class="muted small">AI 결과 일괄 붙여넣기 (한 행에 "한글 \t 영문")</summary>
+      <textarea id="missCelebsPaste" rows="4" placeholder="가원(미야오)&#9;Gawon (MEOVV)&#10;안효섭&#9;Ahn Hyo-seop"></textarea>
+      <button type="button" id="missCelebsApplyPasteBtn" class="btn small">붙여넣은 결과 적용</button>
+    </details>
+
+    <h4 style="margin-top: 18px;">책 영문 누락 <span id="missBooksCount" class="muted small"></span></h4>
+    <div class="row" style="margin-bottom: 6px;">
+      <button type="button" id="missBooksCopyBtn" class="btn small">한글 목록 TSV 복사</button>
+    </div>
+    <div class="missing-tableWrap">
+      <table class="missing-table" id="missBooksTable">
+        <thead><tr>
+          <th>연예인</th>
+          <th>도서명 (한글)</th>
+          <th>저자 (한글)</th>
+          <th>도서명 영문 (편집)</th>
+          <th>저자 영문 (편집)</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <details style="margin-top: 8px;">
+      <summary class="muted small">AI 결과 일괄 붙여넣기 ("도서명 \t 저자 \t 도서명_영문 \t 저자_영문" — 표시된 순서대로)</summary>
+      <textarea id="missBooksPaste" rows="6" placeholder="고왕국기&#9;가스 닉스&#9;The Old Kingdom *&#9;Garth Nix&#10;..."></textarea>
+      <button type="button" id="missBooksApplyPasteBtn" class="btn small">붙여넣은 결과 적용</button>
+    </details>
+  </div>
+
+  <footer class="modal-foot">
+    <span id="missingStatus" class="status"></span>
+    <button type="button" class="btn" data-close>닫기</button>
+    <button type="button" id="missingApplyBtn" class="btn primary">변경사항 적용</button>
+  </footer>
 </dialog>
 
 <!-- 토스트 -->
