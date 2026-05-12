@@ -634,15 +634,36 @@ for name, info in celebs.items():
 
     # 책 테이블 행 (이미지 + 책 페이지 내부링크 + 출처 외부링크)
     book_rows = ''
+    book_page_cards = []   # 표 아래 카드 그리드용
     for i, b in enumerate(books):
-        cover_td = ''
-        if b['coverUrl'] and b['coverUrl'].startswith('http'):
-            cover_td = '<img src="' + esc(b['coverUrl']) + '" alt="' + esc(b['title']) + ' 표지" width="60" height="85" loading="lazy" style="object-fit:cover">'
+        has_book_page = b['title'] in books_with_pages
+        book_url_rel = ''
+        if has_book_page:
+            book_url_rel = 'book/' + quote(safe_book_filename(b['title']), safe='') + '.html'
 
-        # 책 페이지가 존재하면(2명 이상이 읽음) 내부링크
-        if b['title'] in books_with_pages:
-            title_html = ('<a href="book/' + quote(safe_book_filename(b['title']), safe='')
-                          + '.html">' + esc(b['title']) + '</a>')
+        cover_img = ''
+        if b['coverUrl'] and b['coverUrl'].startswith('http'):
+            cover_img = ('<img src="' + esc(b['coverUrl']) + '" alt="' + esc(b['title'])
+                         + ' 표지" width="60" height="85" loading="lazy" style="object-fit:cover">')
+        # 표지도 책 페이지 링크로 (있으면)
+        if cover_img and has_book_page:
+            cover_td = ('<a href="' + book_url_rel
+                        + '" aria-label="' + esc(b['title']) + ' 자세히 보기">'
+                        + cover_img + '</a>')
+        else:
+            cover_td = cover_img
+
+        # 도서명 셀: 책 페이지가 있으면 링크 + 화살표로 가시성 ↑
+        if has_book_page:
+            title_html = ('<a href="' + book_url_rel + '">'
+                          + esc(b['title']) + ' <span aria-hidden="true">→</span></a>')
+            book_page_cards.append({
+                'cover':  b['coverUrl'] if (b['coverUrl'] or '').startswith('http') else '',
+                'title':  b['title'],
+                'author': b['author'],
+                'n_recs': len(book_celebs[b['title']]['celebs']),
+                'url':    book_url_rel,
+            })
         else:
             title_html = esc(b['title'])
 
@@ -772,6 +793,15 @@ for name, info in celebs.items():
         '    a { color: #2563eb; text-decoration: none; }\n'
         '    a:hover { text-decoration: underline; }\n'
         '    .related { margin-top: 24px; padding: 14px 16px; background: #fff8e7; border: 2px solid #000; box-shadow: 4px 4px 0 0 #000; font-size: 14px; }\n'
+        '    .muted { color: #666; font-size: 13px; margin: 4px 0 12px; }\n'
+        '    .book-cards { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }\n'
+        '    .book-card-link { display: flex; gap: 10px; padding: 8px; background: #fff; border: 2px solid #000; box-shadow: 2px 2px 0 0 #000; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s; }\n'
+        '    .book-card-link:hover { transform: translate(-1px,-1px); box-shadow: 4px 4px 0 0 #000; background: #fde047; text-decoration: none; }\n'
+        '    .no-cover { width: 80px; height: 115px; background: #f4f4f0; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-size: 32px; flex-shrink: 0; }\n'
+        '    .bc-meta { min-width: 0; flex: 1; }\n'
+        '    .bc-title { font-weight: 700; font-size: 13px; line-height: 1.3; margin-bottom: 4px; }\n'
+        '    .bc-author { font-size: 12px; color: #555; margin-bottom: 6px; }\n'
+        '    .bc-badge { display: inline-block; font-size: 11px; background: #fde047; border: 1px solid #000; padding: 1px 6px; font-weight: 700; }\n'
         '    footer { margin-top: 48px; padding-top: 16px; border-top: 2px solid #000; font-size: 13px; color: #666; }\n'
         '  </style>\n'
         '</head>\n'
@@ -808,6 +838,30 @@ for name, info in celebs.items():
         '    </table>\n'
         '  </section>\n'
         '\n'
+        + ((
+            '  <section class="book-pages">\n'
+            '    <h2>📖 이 책들의 상세 페이지 (' + str(len(book_page_cards)) + '권)</h2>\n'
+            '    <p class="muted">2명 이상의 셀럽이 추천한 책은 별도 상세 페이지가 있어요.</p>\n'
+            '    <ul class="book-cards">\n'
+            + ''.join(
+                '      <li class="book-card">'
+                '<a href="' + esc(_c['url']) + '" class="book-card-link">'
+                + (('<img src="' + esc(_c['cover']) + '" alt="' + esc(_c['title']) + ' 표지" '
+                    'width="80" height="115" loading="lazy" style="object-fit:cover">')
+                   if _c['cover'] else '<div class="no-cover">📕</div>')
+                + '<div class="bc-meta">'
+                  '<div class="bc-title">' + esc(_c['title']) + '</div>'
+                  '<div class="bc-author">' + esc(_c['author']) + '</div>'
+                  '<div class="bc-badge">👥 ' + str(_c['n_recs']) + '명 추천</div>'
+                  '</div>'
+                  '</a>'
+                  '</li>\n'
+                for _c in book_page_cards
+            )
+            + '    </ul>\n'
+            '  </section>\n'
+            '\n'
+        ) if book_page_cards else '')
         + (('  <section>\n'
             '    <h2>' + esc(name) + ' 인생책 · 책 추천 키워드</h2>\n'
             '    <p>' + author_summary + ' '
