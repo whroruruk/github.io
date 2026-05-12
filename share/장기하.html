@@ -193,6 +193,15 @@
     a { color: #2563eb; text-decoration: none; }
     a:hover { text-decoration: underline; }
     .related { margin-top: 24px; padding: 14px 16px; background: #fff8e7; border: 2px solid #000; box-shadow: 4px 4px 0 0 #000; font-size: 14px; }
+    .muted { color: #666; font-size: 13px; margin: 4px 0 12px; }
+    .book-cards { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+    .book-card-link { display: flex; gap: 10px; padding: 8px; background: #fff; border: 2px solid #000; box-shadow: 2px 2px 0 0 #000; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s; }
+    .book-card-link:hover { transform: translate(-1px,-1px); box-shadow: 4px 4px 0 0 #000; background: #fde047; text-decoration: none; }
+    .no-cover { width: 80px; height: 115px; background: #f4f4f0; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-size: 32px; flex-shrink: 0; }
+    .bc-meta { min-width: 0; flex: 1; }
+    .bc-title { font-weight: 700; font-size: 13px; line-height: 1.3; margin-bottom: 4px; }
+    .bc-author { font-size: 12px; color: #555; margin-bottom: 6px; }
+    .bc-badge { display: inline-block; font-size: 11px; background: #fde047; border: 1px solid #000; padding: 1px 6px; font-weight: 700; }
     footer { margin-top: 48px; padding-top: 16px; border-top: 2px solid #000; font-size: 13px; color: #666; }
   </style>
 </head>
@@ -226,10 +235,19 @@
     <tr><td>1</td><td><img src="https://image.aladin.co.kr/product/18118/8/cover500/k202534940_1.jpg" alt="당신의 별자리는 무엇인가요 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>당신의 별자리는 무엇인가요</td><td>유현준</td><td>와이즈베리</td><td class="src"><a href="https://youtu.be/w5fQG2izGbI?si=dGY-FfUQXB6RDcit" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
     <tr><td>2</td><td><img src="https://image.aladin.co.kr/product/96/57/cover500/8937461498_2.jpg" alt="무진기행 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>무진기행</td><td>김승옥</td><td>민음사</td><td class="src"><a href="https://blog.naver.com/sosohanmyarchiving/222436543680" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
     <tr><td>3</td><td><img src="https://image.aladin.co.kr/product/478/52/cover500/k752537539_1.jpg" alt="보통의 존재 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>보통의 존재</td><td>이석원</td><td>달</td><td class="src"><a href="https://blog.naver.com/sosohanmyarchiving/222436543680" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>4</td><td><img src="https://image.aladin.co.kr/product/31424/4/cover500/k482832219_1.jpg" alt="사피엔스 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td><a href="book/%EC%82%AC%ED%94%BC%EC%97%94%EC%8A%A4.html">사피엔스</a></td><td>유발 하라리</td><td>김영사</td><td class="src"><a href="https://youtu.be/WGlvlKQWB_o?si=Qcb5etcEKpTDsj1G" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>5</td><td><img src="https://image.aladin.co.kr/product/8126/75/cover500/8972757713_2.jpg" alt="직업으로서의 소설가 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td><a href="book/%EC%A7%81%EC%97%85%EC%9C%BC%EB%A1%9C%EC%84%9C%EC%9D%98%20%EC%86%8C%EC%84%A4%EA%B0%80.html">직업으로서의 소설가</a></td><td>무라카미 하루키</td><td>현대문학</td><td class="src"><a href="https://blog.naver.com/sosohanmyarchiving/222436543680" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>4</td><td><a href="book/%EC%82%AC%ED%94%BC%EC%97%94%EC%8A%A4.html" aria-label="사피엔스 자세히 보기"><img src="https://image.aladin.co.kr/product/31424/4/cover500/k482832219_1.jpg" alt="사피엔스 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EC%82%AC%ED%94%BC%EC%97%94%EC%8A%A4.html">사피엔스 <span aria-hidden="true">→</span></a></td><td>유발 하라리</td><td>김영사</td><td class="src"><a href="https://youtu.be/WGlvlKQWB_o?si=Qcb5etcEKpTDsj1G" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>5</td><td><a href="book/%EC%A7%81%EC%97%85%EC%9C%BC%EB%A1%9C%EC%84%9C%EC%9D%98%20%EC%86%8C%EC%84%A4%EA%B0%80.html" aria-label="직업으로서의 소설가 자세히 보기"><img src="https://image.aladin.co.kr/product/8126/75/cover500/8972757713_2.jpg" alt="직업으로서의 소설가 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EC%A7%81%EC%97%85%EC%9C%BC%EB%A1%9C%EC%84%9C%EC%9D%98%20%EC%86%8C%EC%84%A4%EA%B0%80.html">직업으로서의 소설가 <span aria-hidden="true">→</span></a></td><td>무라카미 하루키</td><td>현대문학</td><td class="src"><a href="https://blog.naver.com/sosohanmyarchiving/222436543680" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
       </tbody>
     </table>
+  </section>
+
+  <section class="book-pages">
+    <h2>📖 이 책들의 상세 페이지 (2권)</h2>
+    <p class="muted">2명 이상의 셀럽이 추천한 책은 별도 상세 페이지가 있어요.</p>
+    <ul class="book-cards">
+      <li class="book-card"><a href="book/%EC%82%AC%ED%94%BC%EC%97%94%EC%8A%A4.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/31424/4/cover500/k482832219_1.jpg" alt="사피엔스 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">사피엔스</div><div class="bc-author">유발 하라리</div><div class="bc-badge">👥 2명 추천</div></div></a></li>
+      <li class="book-card"><a href="book/%EC%A7%81%EC%97%85%EC%9C%BC%EB%A1%9C%EC%84%9C%EC%9D%98%20%EC%86%8C%EC%84%A4%EA%B0%80.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/8126/75/cover500/8972757713_2.jpg" alt="직업으로서의 소설가 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">직업으로서의 소설가</div><div class="bc-author">무라카미 하루키</div><div class="bc-badge">👥 2명 추천</div></div></a></li>
+    </ul>
   </section>
 
   <section>

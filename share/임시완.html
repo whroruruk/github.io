@@ -177,6 +177,15 @@
     a { color: #2563eb; text-decoration: none; }
     a:hover { text-decoration: underline; }
     .related { margin-top: 24px; padding: 14px 16px; background: #fff8e7; border: 2px solid #000; box-shadow: 4px 4px 0 0 #000; font-size: 14px; }
+    .muted { color: #666; font-size: 13px; margin: 4px 0 12px; }
+    .book-cards { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+    .book-card-link { display: flex; gap: 10px; padding: 8px; background: #fff; border: 2px solid #000; box-shadow: 2px 2px 0 0 #000; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s; }
+    .book-card-link:hover { transform: translate(-1px,-1px); box-shadow: 4px 4px 0 0 #000; background: #fde047; text-decoration: none; }
+    .no-cover { width: 80px; height: 115px; background: #f4f4f0; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-size: 32px; flex-shrink: 0; }
+    .bc-meta { min-width: 0; flex: 1; }
+    .bc-title { font-weight: 700; font-size: 13px; line-height: 1.3; margin-bottom: 4px; }
+    .bc-author { font-size: 12px; color: #555; margin-bottom: 6px; }
+    .bc-badge { display: inline-block; font-size: 11px; background: #fde047; border: 1px solid #000; padding: 1px 6px; font-weight: 700; }
     footer { margin-top: 48px; padding-top: 16px; border-top: 2px solid #000; font-size: 13px; color: #666; }
   </style>
 </head>
@@ -210,9 +219,17 @@
     <tr><td>1</td><td><img src="https://image.aladin.co.kr/product/1287/89/cover500/8985136283_1.jpg" alt="그대 사랑하라 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>그대 사랑하라</td><td>이성진</td><td>새벽</td><td class="src"><a href="https://www.youtube.com/watch?v=FXtMJv6W93Y&amp;pp=ygUQ64-F7IScIOy6oO2OmOyduA%3D%3D" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
     <tr><td>2</td><td><img src="https://image.aladin.co.kr/product/35099/94/cover500/k042934608_2.jpg" alt="우아한 거짓말 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>우아한 거짓말</td><td>김려령</td><td>창비</td><td class="src"><a href="https://www.youtube.com/watch?v=76qT8Iyet5g" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
     <tr><td>3</td><td><img src="https://image.aladin.co.kr/product/14788/17/cover500/893743749x_1.jpg" alt="인연 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>인연</td><td>피천득</td><td>민음사</td><td class="src"><a href="https://www.youtube.com/watch?v=okufW5EO2nM&amp;pp=ygUQ64-F7IScIOy6oO2OmOyduA%3D%3D" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>4</td><td><img src="https://image.aladin.co.kr/product/37794/24/cover500/s692135115_2.jpg" alt="죽은 왕녀를 위한 파반느 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td><a href="book/%EC%A3%BD%EC%9D%80%20%EC%99%95%EB%85%80%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%ED%8C%8C%EB%B0%98%EB%8A%90.html">죽은 왕녀를 위한 파반느</a></td><td>박민규</td><td>위즈덤하우스</td><td class="src"><a href="https://www.youtube.com/watch?v=PV3gUl5G9Xs&amp;pp=ygUQ64-F7IScIOy6oO2OmOyduA%3D%3D" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>4</td><td><a href="book/%EC%A3%BD%EC%9D%80%20%EC%99%95%EB%85%80%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%ED%8C%8C%EB%B0%98%EB%8A%90.html" aria-label="죽은 왕녀를 위한 파반느 자세히 보기"><img src="https://image.aladin.co.kr/product/37794/24/cover500/s692135115_2.jpg" alt="죽은 왕녀를 위한 파반느 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EC%A3%BD%EC%9D%80%20%EC%99%95%EB%85%80%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%ED%8C%8C%EB%B0%98%EB%8A%90.html">죽은 왕녀를 위한 파반느 <span aria-hidden="true">→</span></a></td><td>박민규</td><td>위즈덤하우스</td><td class="src"><a href="https://www.youtube.com/watch?v=PV3gUl5G9Xs&amp;pp=ygUQ64-F7IScIOy6oO2OmOyduA%3D%3D" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
       </tbody>
     </table>
+  </section>
+
+  <section class="book-pages">
+    <h2>📖 이 책들의 상세 페이지 (1권)</h2>
+    <p class="muted">2명 이상의 셀럽이 추천한 책은 별도 상세 페이지가 있어요.</p>
+    <ul class="book-cards">
+      <li class="book-card"><a href="book/%EC%A3%BD%EC%9D%80%20%EC%99%95%EB%85%80%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%ED%8C%8C%EB%B0%98%EB%8A%90.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/37794/24/cover500/s692135115_2.jpg" alt="죽은 왕녀를 위한 파반느 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">죽은 왕녀를 위한 파반느</div><div class="bc-author">박민규</div><div class="bc-badge">👥 2명 추천</div></div></a></li>
+    </ul>
   </section>
 
   <section>
