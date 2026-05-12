@@ -177,6 +177,15 @@
     a { color: #2563eb; text-decoration: none; }
     a:hover { text-decoration: underline; }
     .related { margin-top: 24px; padding: 14px 16px; background: #fff8e7; border: 2px solid #000; box-shadow: 4px 4px 0 0 #000; font-size: 14px; }
+    .muted { color: #666; font-size: 13px; margin: 4px 0 12px; }
+    .book-cards { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+    .book-card-link { display: flex; gap: 10px; padding: 8px; background: #fff; border: 2px solid #000; box-shadow: 2px 2px 0 0 #000; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s; }
+    .book-card-link:hover { transform: translate(-1px,-1px); box-shadow: 4px 4px 0 0 #000; background: #fde047; text-decoration: none; }
+    .no-cover { width: 80px; height: 115px; background: #f4f4f0; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-size: 32px; flex-shrink: 0; }
+    .bc-meta { min-width: 0; flex: 1; }
+    .bc-title { font-weight: 700; font-size: 13px; line-height: 1.3; margin-bottom: 4px; }
+    .bc-author { font-size: 12px; color: #555; margin-bottom: 6px; }
+    .bc-badge { display: inline-block; font-size: 11px; background: #fde047; border: 1px solid #000; padding: 1px 6px; font-weight: 700; }
     footer { margin-top: 48px; padding-top: 16px; border-top: 2px solid #000; font-size: 13px; color: #666; }
   </style>
 </head>
@@ -207,12 +216,23 @@
     <table>
       <thead><tr><th>#</th><th>표지</th><th>도서명</th><th>저자</th><th>출판사</th><th>출처</th></tr></thead>
       <tbody>
-    <tr><td>1</td><td><img src="https://image.aladin.co.kr/product/26/0/cover500/s742633278_2.jpg" alt="데미안 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td><a href="book/%EB%8D%B0%EB%AF%B8%EC%95%88.html">데미안</a></td><td>헤르만 헤세</td><td>민음사</td><td class="src"><a href="https://v.daum.net/v/16riRDyP31" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>2</td><td><img src="https://image.aladin.co.kr/product/29173/87/cover500/8932921393_1.jpg" alt="신곡 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td><a href="book/%EC%8B%A0%EA%B3%A1.html">신곡</a></td><td>단테 알리기에리</td><td>열린책들</td><td class="src"><a href="https://v.daum.net/v/16riRDyP31" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>3</td><td><img src="https://image.aladin.co.kr/product/32/95/cover500/s062934786_1.jpg" alt="싯다르타 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td><a href="book/%EC%8B%AF%EB%8B%A4%EB%A5%B4%ED%83%80.html">싯다르타</a></td><td>헤르만 헤세</td><td>민음사</td><td class="src"><a href="https://auditorium.kr/2023/05/%ED%94%BC%EC%95%84%EB%8B%88%EC%8A%A4%ED%8A%B8-%EC%9E%84%EC%9C%A4%EC%B0%AC-%EC%8B%A0%EB%93%9C%EB%A1%AC%EC%9D%98-%EB%82%B4%EB%A9%B4-%EA%B7%B8%EC%9D%98-%EC%8A%A4%EB%AC%BC%EC%97%90-%EB%8C%80/" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>4</td><td><img src="https://image.aladin.co.kr/product/35363/48/cover500/k972035997_1.jpg" alt="하늘과 바람과 별과 시 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td><a href="book/%ED%95%98%EB%8A%98%EA%B3%BC%20%EB%B0%94%EB%9E%8C%EA%B3%BC%20%EB%B3%84%EA%B3%BC%20%EC%8B%9C.html">하늘과 바람과 별과 시</a></td><td>윤동주</td><td>더스토리</td><td class="src"><a href="https://www.chosun.com/culture-life/culture_general/2022/06/21/DR6HPJKNY5FSBOERTAG3WTAQ6I/" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>1</td><td><a href="book/%EB%8D%B0%EB%AF%B8%EC%95%88.html" aria-label="데미안 자세히 보기"><img src="https://image.aladin.co.kr/product/26/0/cover500/s742633278_2.jpg" alt="데미안 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EB%8D%B0%EB%AF%B8%EC%95%88.html">데미안 <span aria-hidden="true">→</span></a></td><td>헤르만 헤세</td><td>민음사</td><td class="src"><a href="https://v.daum.net/v/16riRDyP31" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>2</td><td><a href="book/%EC%8B%A0%EA%B3%A1.html" aria-label="신곡 자세히 보기"><img src="https://image.aladin.co.kr/product/29173/87/cover500/8932921393_1.jpg" alt="신곡 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EC%8B%A0%EA%B3%A1.html">신곡 <span aria-hidden="true">→</span></a></td><td>단테 알리기에리</td><td>열린책들</td><td class="src"><a href="https://v.daum.net/v/16riRDyP31" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>3</td><td><a href="book/%EC%8B%AF%EB%8B%A4%EB%A5%B4%ED%83%80.html" aria-label="싯다르타 자세히 보기"><img src="https://image.aladin.co.kr/product/32/95/cover500/s062934786_1.jpg" alt="싯다르타 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EC%8B%AF%EB%8B%A4%EB%A5%B4%ED%83%80.html">싯다르타 <span aria-hidden="true">→</span></a></td><td>헤르만 헤세</td><td>민음사</td><td class="src"><a href="https://auditorium.kr/2023/05/%ED%94%BC%EC%95%84%EB%8B%88%EC%8A%A4%ED%8A%B8-%EC%9E%84%EC%9C%A4%EC%B0%AC-%EC%8B%A0%EB%93%9C%EB%A1%AC%EC%9D%98-%EB%82%B4%EB%A9%B4-%EA%B7%B8%EC%9D%98-%EC%8A%A4%EB%AC%BC%EC%97%90-%EB%8C%80/" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>4</td><td><a href="book/%ED%95%98%EB%8A%98%EA%B3%BC%20%EB%B0%94%EB%9E%8C%EA%B3%BC%20%EB%B3%84%EA%B3%BC%20%EC%8B%9C.html" aria-label="하늘과 바람과 별과 시 자세히 보기"><img src="https://image.aladin.co.kr/product/35363/48/cover500/k972035997_1.jpg" alt="하늘과 바람과 별과 시 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%ED%95%98%EB%8A%98%EA%B3%BC%20%EB%B0%94%EB%9E%8C%EA%B3%BC%20%EB%B3%84%EA%B3%BC%20%EC%8B%9C.html">하늘과 바람과 별과 시 <span aria-hidden="true">→</span></a></td><td>윤동주</td><td>더스토리</td><td class="src"><a href="https://www.chosun.com/culture-life/culture_general/2022/06/21/DR6HPJKNY5FSBOERTAG3WTAQ6I/" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
       </tbody>
     </table>
+  </section>
+
+  <section class="book-pages">
+    <h2>📖 이 책들의 상세 페이지 (4권)</h2>
+    <p class="muted">2명 이상의 셀럽이 추천한 책은 별도 상세 페이지가 있어요.</p>
+    <ul class="book-cards">
+      <li class="book-card"><a href="book/%EB%8D%B0%EB%AF%B8%EC%95%88.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/26/0/cover500/s742633278_2.jpg" alt="데미안 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">데미안</div><div class="bc-author">헤르만 헤세</div><div class="bc-badge">👥 9명 추천</div></div></a></li>
+      <li class="book-card"><a href="book/%EC%8B%A0%EA%B3%A1.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/29173/87/cover500/8932921393_1.jpg" alt="신곡 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">신곡</div><div class="bc-author">단테 알리기에리</div><div class="bc-badge">👥 3명 추천</div></div></a></li>
+      <li class="book-card"><a href="book/%EC%8B%AF%EB%8B%A4%EB%A5%B4%ED%83%80.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/32/95/cover500/s062934786_1.jpg" alt="싯다르타 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">싯다르타</div><div class="bc-author">헤르만 헤세</div><div class="bc-badge">👥 2명 추천</div></div></a></li>
+      <li class="book-card"><a href="book/%ED%95%98%EB%8A%98%EA%B3%BC%20%EB%B0%94%EB%9E%8C%EA%B3%BC%20%EB%B3%84%EA%B3%BC%20%EC%8B%9C.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/35363/48/cover500/k972035997_1.jpg" alt="하늘과 바람과 별과 시 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">하늘과 바람과 별과 시</div><div class="bc-author">윤동주</div><div class="bc-badge">👥 3명 추천</div></div></a></li>
+    </ul>
   </section>
 
   <section>
