@@ -259,7 +259,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B3%B5%EB%AF%BC%EC%A7%80.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -282,10 +282,6 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/49/16/cover500/893746103x_3.jpg</image:loc>
       <image:title>인간 실격 표지</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/38879/9/cover500/k762137203_2.jpg</image:loc>
-      <image:title>고슴도치의 소원 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -2130,7 +2126,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EB%B9%84%EB%B9%84.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2140,7 +2136,7 @@
     </image:image>
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/17599/51/cover500/k812534910_1.jpg</image:loc>
-      <image:title>20세기 소년 완전판 1 표지</image:title>
+      <image:title>20세기 소년 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -7738,7 +7734,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/minzy.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
