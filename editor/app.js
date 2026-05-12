@@ -43,6 +43,15 @@ function toast(msg, kind='') {
   toast._t = setTimeout(() => t.classList.add('hidden'), 3500);
 }
 function setStatus(msg) { $('#statusMsg').textContent = msg || ''; }
+
+/* 단어 첫 글자만 대문자, 나머지 소문자 ('Norwegian Wood Of Love'). */
+function toTitleCase(s) {
+  return String(s || '').replace(
+    /(\b[\p{L}\p{N}])([\p{L}\p{N}']*)/gu,
+    (_, a, b) => a.toUpperCase() + b.toLowerCase()
+  );
+}
+
 function setDirty(v) {
   State.dirty = v;
   $('#saveBtn').disabled = !v;
@@ -702,6 +711,28 @@ $('#renameApplyBtn').addEventListener('click', () => {
   toast('적용됨 (저장하면 모든 행에 반영됩니다)', 'ok');
 });
 
+$('#celebNameTranslateBtn').addEventListener('click', async (e) => {
+  const name = $('#celebName').value.trim();
+  if (!name) { toast('연예인 이름이 비어있음', 'err'); return; }
+  e.target.disabled = true;
+  const prev = e.target.textContent;
+  e.target.textContent = '번역 중…';
+  try {
+    const r = await EnEnrich.translateKoEn(name);
+    if (!r || !r.text) { toast('번역 결과를 얻지 못했습니다', 'err'); return; }
+    const cased = toTitleCase(r.text);
+    const marked = /\*\s*$/.test(cased) ? cased : (cased + ' *');
+    $('#celebNameEn').value = marked;
+    $('#celebNameEn').dispatchEvent(new Event('change'));
+    toast(`직역 적용 (${r.source}): ${cased}`, 'ok');
+  } catch (err) {
+    toast('번역 실패: ' + err.message, 'err');
+  } finally {
+    e.target.disabled = false;
+    e.target.textContent = prev;
+  }
+});
+
 $('#celebNameEnAuto').addEventListener('click', async (e) => {
   const name = $('#celebName').value.trim();
   if (!name) { toast('연예인 이름이 비어있음', 'err'); return; }
@@ -904,10 +935,32 @@ $('#bookTranslateBtn').addEventListener('click', async (e) => {
       toast('번역 결과를 얻지 못했습니다', 'err');
       return;
     }
-    // 직역임을 표시하기 위해 끝에 * 부착 (이미 *로 끝나면 그대로)
-    const marked = /\*\s*$/.test(r.text) ? r.text : (r.text + ' *');
+    // 책 제목: 단어 첫 글자 대문자 + 직역 표시 *
+    const cased = toTitleCase(r.text);
+    const marked = /\*\s*$/.test(cased) ? cased : (cased + ' *');
     $('#bookTitleEn').value = marked;
-    toast(`직역 적용 (${r.source}): ${r.text}`, 'ok');
+    toast(`직역 적용 (${r.source}): ${cased}`, 'ok');
+  } catch (err) {
+    toast('번역 실패: ' + err.message, 'err');
+  } finally {
+    e.target.disabled = false;
+    e.target.textContent = prev;
+  }
+});
+
+$('#bookAuthorTranslateBtn').addEventListener('click', async (e) => {
+  const a = $('#bookAuthor').value.trim();
+  if (!a) { toast('한글 저자명이 비어있음', 'err'); return; }
+  e.target.disabled = true;
+  const prev = e.target.textContent;
+  e.target.textContent = '번역 중…';
+  try {
+    const r = await EnEnrich.translateKoEn(a);
+    if (!r || !r.text) { toast('번역 결과를 얻지 못했습니다', 'err'); return; }
+    const cased = toTitleCase(r.text);
+    const marked = /\*\s*$/.test(cased) ? cased : (cased + ' *');
+    $('#bookAuthorEn').value = marked;
+    toast(`직역 적용 (${r.source}): ${cased}`, 'ok');
   } catch (err) {
     toast('번역 실패: ' + err.message, 'err');
   } finally {
@@ -1040,6 +1093,172 @@ $('#sortBtn').addEventListener('click', () => {
   setDirty(true);
   renderDetail();
   toast('정렬 완료 — 저장하면 CSV에 반영됩니다', 'ok');
+});
+
+/* -------------------- Missing-EN modal -------------------- */
+const missingDlg = $('#missingDialog');
+let _missingState = { celebs: [], books: [] };
+
+function collectMissing() {
+  const celebs = [];
+  const books  = [];
+  for (const name of State.order) {
+    const c = State.celebs.get(name);
+    if (!c) continue;
+    if (!c.name_en) celebs.push({ name });
+    c.books.forEach((b, i) => {
+      if (!b.title_en || !b.author_en) {
+        books.push({
+          celebName: name, bookIndex: i,
+          title: b.title || '', author: b.author || '',
+          existing_title_en: b.title_en || '',
+          existing_author_en: b.author_en || '',
+        });
+      }
+    });
+  }
+  return { celebs, books };
+}
+
+function renderMissingDialog() {
+  _missingState = collectMissing();
+  const { celebs, books } = _missingState;
+  $('#missCelebsCount').textContent = `(${celebs.length}명)`;
+  $('#missBooksCount').textContent  = `(${books.length}권)`;
+
+  const cbody = $('#missCelebsTable tbody');
+  cbody.innerHTML = celebs.length
+    ? celebs.map((row, i) =>
+        `<tr><td>${esc(row.name)}</td>` +
+        `<td><input data-celeb-i="${i}" type="text" placeholder="영문명"></td></tr>`
+      ).join('')
+    : '<tr><td colspan="2" class="muted" style="text-align:center;padding:14px;">누락 없음</td></tr>';
+
+  const bbody = $('#missBooksTable tbody');
+  bbody.innerHTML = books.length
+    ? books.map((row, i) =>
+        `<tr>
+          <td>${esc(row.celebName)}</td>
+          <td>${esc(row.title)}</td>
+          <td>${esc(row.author)}</td>
+          <td><input data-book-i="${i}" data-field="title_en" value="${esc(row.existing_title_en)}" type="text" placeholder="${row.existing_title_en ? '' : '영문 제목'}"></td>
+          <td><input data-book-i="${i}" data-field="author_en" value="${esc(row.existing_author_en)}" type="text" placeholder="${row.existing_author_en ? '' : '영문 저자'}"></td>
+        </tr>`
+      ).join('')
+    : '<tr><td colspan="5" class="muted" style="text-align:center;padding:14px;">누락 없음</td></tr>';
+  $('#missingStatus').textContent = '';
+  $('#missCelebsPaste').value = '';
+  $('#missBooksPaste').value = '';
+}
+
+$('#missingBtn').addEventListener('click', () => {
+  renderMissingDialog();
+  missingDlg.showModal();
+});
+
+function copyToClipboard(text) { return navigator.clipboard.writeText(text); }
+
+$('#missCelebsCopyBtn').addEventListener('click', async () => {
+  const tsv = _missingState.celebs.map(r => r.name).join('\n');
+  try { await copyToClipboard(tsv); toast(`${_missingState.celebs.length}건 복사됨`, 'ok'); }
+  catch (e) { toast('복사 실패: ' + e.message, 'err'); }
+});
+
+$('#missBooksCopyBtn').addEventListener('click', async () => {
+  const header = '도서명\t저자';
+  const lines = _missingState.books.map(r => `${r.title}\t${r.author}`);
+  const tsv = [header, ...lines].join('\n');
+  try { await copyToClipboard(tsv); toast(`${_missingState.books.length}건 복사됨`, 'ok'); }
+  catch (e) { toast('복사 실패: ' + e.message, 'err'); }
+});
+
+function parseTsvLines(text) {
+  return text.split(/\r?\n/)
+    .map(l => l.trim())
+    .filter(l => l.length > 0 && !/^[\-=|+\s]+$/.test(l))
+    .map(l => l.replace(/^\|\s*|\s*\|$/g, ''))
+    .map(l => l.split(/\t|\s*\|\s*/).map(c => c.trim()));
+}
+
+$('#missCelebsApplyPasteBtn').addEventListener('click', () => {
+  const rows = parseTsvLines($('#missCelebsPaste').value);
+  let applied = 0;
+  const tbody = $('#missCelebsTable tbody');
+  const byName = new Map(_missingState.celebs.map((r, i) => [r.name, i]));
+  for (const cols of rows) {
+    if (cols.length < 2) continue;
+    const ko = cols[0];
+    const en = cols[cols.length - 1];
+    if (!ko || !en) continue;
+    const idx = byName.get(ko);
+    if (idx == null) continue;
+    const inp = tbody.querySelector(`input[data-celeb-i="${idx}"]`);
+    if (inp) { inp.value = en; applied++; }
+  }
+  toast(`${applied}건 적용 (셀럽)`, 'ok');
+});
+
+$('#missBooksApplyPasteBtn').addEventListener('click', () => {
+  const rows = parseTsvLines($('#missBooksPaste').value);
+  let applied = 0;
+  const tbody = $('#missBooksTable tbody');
+  const keyIdx = new Map(_missingState.books.map((r, i) => [r.title + '\t' + r.author, i]));
+  let cursor = 0;
+  for (const cols of rows) {
+    if (cols.length < 2) continue;
+    if (/^도서명$|^title$/i.test(cols[0])) continue;
+    let i = null;
+    if (cols.length >= 2) {
+      const k = cols[0] + '\t' + cols[1];
+      if (keyIdx.has(k)) i = keyIdx.get(k);
+    }
+    if (i == null) {
+      if (cursor < _missingState.books.length) { i = cursor++; }
+    }
+    if (i == null || i >= _missingState.books.length) continue;
+    let title_en, author_en;
+    if (cols.length >= 4) { title_en = cols[2]; author_en = cols[3]; }
+    else { title_en = cols[cols.length - 2]; author_en = cols[cols.length - 1]; }
+    const inpT = tbody.querySelector(`input[data-book-i="${i}"][data-field="title_en"]`);
+    const inpA = tbody.querySelector(`input[data-book-i="${i}"][data-field="author_en"]`);
+    if (inpT && title_en) inpT.value = title_en;
+    if (inpA && author_en) inpA.value = author_en;
+    applied++;
+  }
+  toast(`${applied}건 적용 (책)`, 'ok');
+});
+
+$('#missingApplyBtn').addEventListener('click', () => {
+  const tbodyC = $('#missCelebsTable tbody');
+  const tbodyB = $('#missBooksTable tbody');
+  let touched = 0;
+
+  tbodyC.querySelectorAll('input[data-celeb-i]').forEach(inp => {
+    const v = inp.value.trim();
+    if (!v) return;
+    const row = _missingState.celebs[parseInt(inp.dataset.celebI, 10)];
+    if (!row) return;
+    const c = State.celebs.get(row.name);
+    if (c && c.name_en !== v) { c.name_en = v; touched++; }
+  });
+  tbodyB.querySelectorAll('input[data-book-i]').forEach(inp => {
+    const v = inp.value.trim();
+    if (!v) return;
+    const row = _missingState.books[parseInt(inp.dataset.bookI, 10)];
+    if (!row) return;
+    const c = State.celebs.get(row.celebName);
+    if (!c) return;
+    const b = c.books[row.bookIndex];
+    if (!b) return;
+    const f = inp.dataset.field;
+    if (b[f] !== v) { b[f] = v; touched++; }
+  });
+
+  if (!touched) { toast('변경 없음', 'ok'); return; }
+  setDirty(true);
+  renderDetail(); renderSidebar();
+  toast(`${touched}건 적용됨 — 저장하면 CSV에 반영됩니다`, 'ok');
+  missingDlg.close();
 });
 
 /* -------------------- Boot -------------------- */
