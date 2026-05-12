@@ -859,6 +859,31 @@ $('#aladinLookupBtn').addEventListener('click', async () => {
   }
 });
 
+$('#bookAuthorEnAutoBtn').addEventListener('click', async (e) => {
+  const a = $('#bookAuthor').value.trim();
+  if (!a) { toast('한글 저자명이 비어있음', 'err'); return; }
+  e.target.disabled = true;
+  const prev = e.target.textContent;
+  e.target.textContent = '조회 중…';
+  try {
+    // 저자도 인물이므로 celebEn (Wikipedia → Wikidata) 그대로 사용
+    const r = await EnEnrich.celebEn(a);
+    if (!r || !r.name_en) {
+      toast('저자 영문명을 찾지 못했습니다 (Wikipedia에 페이지 없음)', 'err');
+      return;
+    }
+    // 위 함수는 그룹 표기를 괄호로 붙이는데, 저자명엔 불필요 → 괄호 제거
+    const cleaned = r.name_en.replace(/\s*\([^)]*\)\s*$/, '').trim();
+    $('#bookAuthorEn').value = cleaned;
+    toast(`적용됨 (${r.source}): ${cleaned}`, 'ok');
+  } catch (err) {
+    toast('자동채움 실패: ' + err.message, 'err');
+  } finally {
+    e.target.disabled = false;
+    e.target.textContent = prev;
+  }
+});
+
 $('#bookEnAutoBtn').addEventListener('click', async (e) => {
   const t = $('#bookTitle').value.trim();
   const a = $('#bookAuthor').value.trim();
