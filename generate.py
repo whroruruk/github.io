@@ -544,15 +544,16 @@ for name, info in celebs.items():
     sitemap_images[page_url] = page_images
 
     n_books = len(books)
-    # description: "RM(BTS)이 읽은 책과 추천 인생책 9권 공개! 공감의 배신, 데미안, 방구석 미술관 등 RM(BTS) 책 추천 리스트 전체 확인."
+    # description: "RM(BTS) 독서 기록 한눈에! RM(BTS)이 읽은 책과 추천 인생책 9권 공개 — 공감의 배신, 데미안 등 RM(BTS) 책 추천·독서 리스트 전체."
     top3 = ', '.join(esc(b['title']) for b in books[:3])
     desc_text = (
-        esc(name) + '이(가) 읽은 책과 추천한 인생책 ' + str(n_books) + '권 공개! '
+        esc(name) + ' 독서 기록 한눈에! '
+        + esc(name) + '이(가) 읽은 책과 추천한 인생책 ' + str(n_books) + '권 공개 — '
         + top3 + (' 등 ' if n_books > 3 else ' ')
-        + esc(name) + ' 책 추천 리스트 전체 확인.'
+        + esc(name) + ' 책 추천·독서 리스트 전체.'
     )
 
-    # 검색 키워드 변형: 셀럽별 정확 매칭 + 일반 검색어(연예인/아이돌/셀럽 + 읽은 책/추천 책/추천 도서/인생책)
+    # 검색 키워드 변형: 셀럽별 정확 매칭 + 일반 검색어(연예인/아이돌/셀럽 + 읽은 책/추천 책/추천 도서/인생책/독서)
     keyword_variants = ', '.join([
         esc(name) + ' 읽은 책',
         esc(name) + ' 추천 책',
@@ -561,14 +562,20 @@ for name, info in celebs.items():
         esc(name) + ' 책',
         esc(name) + ' 책 추천',
         esc(name) + ' 도서',
+        esc(name) + ' 독서',
+        esc(name) + ' 독서 기록',
+        esc(name) + ' 독서 리스트',
+        esc(name) + ' 독서 취향',
+        esc(name) + ' 책 리스트',
         '연예인 읽은 책', '아이돌 읽은 책', '셀럽 읽은 책',
         '연예인 추천 책', '아이돌 추천 도서', '연예인 추천 도서',
         '연예인 인생책', '아이돌 인생책', '셀럽 인생책',
+        '연예인 독서', '아이돌 독서', '셀럽 독서',
         '책 추천', '인생책', '추천 도서', '최애의 독서',
     ])
 
-    page_title = esc(name) + ' 읽은 책·추천 책 ' + str(n_books) + '권 | 최애의 독서'
-    h1_text    = esc(name) + ' 읽은 책 · 추천 책'
+    page_title = esc(name) + ' 독서 기록 · 읽은 책·추천 책 ' + str(n_books) + '권 | 최애의 독서'
+    h1_text    = esc(name) + ' 독서 기록 · 읽은 책 · 추천 책'
 
     json_ld = {
         '@context': 'https://schema.org',
@@ -688,9 +695,10 @@ for name, info in celebs.items():
 
     # 인트로 단락: 자연스럽게 키워드 변형 노출 (~150-220자)
     intro_p = (
-        esc(name) + '이(가) 읽은 책과 추천한 인생책 <strong>' + str(n_books) + '권</strong>을 한곳에 모았습니다. '
-        '유튜브·인터뷰·SNS 등 출처가 확인된 도서만 정리했어요. '
-        + esc(name) + ' 책 추천이 궁금하다면 아래 전체 목록과 출처 링크에서 확인할 수 있습니다.'
+        esc(name) + '의 독서 기록을 한곳에 모았습니다. '
+        + esc(name) + '이(가) 읽은 책과 추천한 인생책 <strong>' + str(n_books) + '권</strong>을 '
+        '유튜브·인터뷰·SNS 등 출처가 확인된 자료를 기반으로 정리한 독서 리스트예요. '
+        + esc(name) + ' 책 추천과 독서 취향이 궁금하다면 아래 전체 목록과 출처 링크에서 확인할 수 있습니다.'
     )
 
     # 작가/출판사 빈도 요약 (간단한 unique 콘텐츠)
