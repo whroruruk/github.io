@@ -526,6 +526,10 @@ for _name, _info in celebs.items():
 # sitemap 이미지 정보 수집용
 sitemap_images = {}  # { url: [image_url, ...] }
 
+# 가나다 순 정렬된 셀럽 이름 (이전/다음 페이지네이션용)
+sorted_celeb_names = sorted(celebs.keys())
+celeb_index = {n: i for i, n in enumerate(sorted_celeb_names)}
+
 for name, info in celebs.items():
     img   = info['img']
     books = info['books']
@@ -544,11 +548,11 @@ for name, info in celebs.items():
     sitemap_images[page_url] = page_images
 
     n_books = len(books)
-    # description: "RM(BTS) 독서 기록 한눈에! RM(BTS)이 읽은 책과 추천 인생책 9권 공개 — 공감의 배신, 데미안 등 RM(BTS) 책 추천·독서 리스트 전체."
+    # description: "RM(BTS) 독서 기록 한눈에! RM(BTS)의 인생책과 추천 도서 9권 공개 — 공감의 배신, 데미안 등 RM(BTS) 책 추천·독서 리스트 전체."
     top3 = ', '.join(esc(b['title']) for b in books[:3])
     desc_text = (
         esc(name) + ' 독서 기록 한눈에! '
-        + esc(name) + '이(가) 읽은 책과 추천한 인생책 ' + str(n_books) + '권 공개 — '
+        + esc(name) + '의 인생책과 추천 도서 ' + str(n_books) + '권 공개 — '
         + top3 + (' 등 ' if n_books > 3 else ' ')
         + esc(name) + ' 책 추천·독서 리스트 전체.'
     )
@@ -582,12 +586,12 @@ for name, info in celebs.items():
         '@type': 'ProfilePage',
         'name': page_title,
         'url': page_url,
-        'description': name + '이(가) 읽은 책과 추천한 인생책 ' + str(n_books) + '권',
+        'description': name + '의 인생책과 추천 도서 ' + str(n_books) + '권',
         'mainEntity': {
             '@type': 'Person',
             'name': name,
             'image': img,
-            'description': name + '이(가) 읽은 책과 추천 책 ' + str(n_books) + '권 전체 목록',
+            'description': name + '의 인생책과 추천 도서 ' + str(n_books) + '권 전체 목록',
         },
         'isPartOf': {
             '@type': 'WebSite',
@@ -696,8 +700,8 @@ for name, info in celebs.items():
     # 인트로 단락: 자연스럽게 키워드 변형 노출 (~150-220자)
     intro_p = (
         esc(name) + '의 독서 기록을 한곳에 모았습니다. '
-        + esc(name) + '이(가) 읽은 책과 추천한 인생책 <strong>' + str(n_books) + '권</strong>을 '
-        '유튜브·인터뷰·SNS 등 출처가 확인된 자료를 기반으로 정리한 독서 리스트예요. '
+        '유튜브·인터뷰·SNS 등 출처가 확인된 ' + esc(name) + '의 인생책·추천 도서 '
+        '<strong>' + str(n_books) + '권</strong>을 정리한 독서 리스트예요. '
         + esc(name) + ' 책 추천과 독서 취향이 궁금하다면 아래 전체 목록과 출처 링크에서 확인할 수 있습니다.'
     )
 
@@ -710,12 +714,79 @@ for name, info in celebs.items():
     top_authors = sorted(author_counts.items(), key=lambda x: x[1], reverse=True)[:3]
     if top_authors:
         author_summary = (
-            esc(name) + '이(가) 가장 많이 읽은 작가는 '
+            esc(name) + '의 추천 도서에 가장 자주 등장한 작가는 '
             + ', '.join(esc(a) + (' (' + str(c) + '권)' if c > 1 else '') for a, c in top_authors)
             + '입니다.'
         )
     else:
         author_summary = ''
+
+    # 같은 책을 추천한 다른 셀럽 (자동 cross-link)
+    related_celebs = {}  # other_name → [shared_book_titles]
+    for b in books:
+        t = b['title']
+        for other in book_celebs.get(t, {}).get('celebs', []):
+            if other == name:
+                continue
+            related_celebs.setdefault(other, []).append(t)
+    # 공통 도서 수 내림차순, 동률이면 가나다순 — 최대 12명
+    related_sorted = sorted(
+        related_celebs.items(),
+        key=lambda x: (-len(x[1]), x[0])
+    )[:12]
+
+    related_section = ''
+    if related_sorted:
+        chips = ''
+        for other_name, shared_titles in related_sorted:
+            other_url = BASE + 'share/' + quote(safe_filename(other_name), safe='') + '.html'
+            shared_label = shared_titles[0] if len(shared_titles) == 1 \
+                else f'{shared_titles[0]} 외 {len(shared_titles)-1}권'
+            chips += (
+                '      <a class="related-celeb" href="' + esc(other_url) + '" '
+                'title="공통 도서: ' + esc(shared_label) + '">'
+                + esc(other_name)
+                + ' <span class="rc-count">' + str(len(shared_titles)) + '</span>'
+                '</a>\n'
+            )
+        related_section = (
+            '  <section class="related-celebs">\n'
+            '    <h2>🤝 ' + esc(name) + '의 독서 취향과 겹치는 셀럽</h2>\n'
+            '    <p class="muted">' + esc(name) + '의 추천 도서를 함께 추천한 다른 셀럽이에요. 숫자는 공통 도서 권수.</p>\n'
+            '    <div class="related-celeb-list">\n'
+            + chips +
+            '    </div>\n'
+            '  </section>\n'
+            '\n'
+        )
+
+    # 이전/다음 셀럽 페이지네이션 (가나다순)
+    idx = celeb_index[name]
+    prev_name = sorted_celeb_names[idx - 1] if idx > 0 else None
+    next_name = sorted_celeb_names[idx + 1] if idx < len(sorted_celeb_names) - 1 else None
+    pager_links = []
+    if prev_name:
+        prev_url = BASE + 'share/' + quote(safe_filename(prev_name), safe='') + '.html'
+        pager_links.append(
+            '      <a class="pager-link pager-prev" href="' + esc(prev_url) + '" rel="prev">'
+            '<span class="pager-arrow">←</span> '
+            '<span class="pager-label">' + esc(prev_name) + '의 독서 기록</span></a>'
+        )
+    if next_name:
+        next_url = BASE + 'share/' + quote(safe_filename(next_name), safe='') + '.html'
+        pager_links.append(
+            '      <a class="pager-link pager-next" href="' + esc(next_url) + '" rel="next">'
+            '<span class="pager-label">' + esc(next_name) + '의 독서 기록</span> '
+            '<span class="pager-arrow">→</span></a>'
+        )
+    pager_section = ''
+    if pager_links:
+        pager_section = (
+            '  <nav class="celeb-pager" aria-label="셀럽 페이지 이동">\n'
+            + '\n'.join(pager_links) + '\n'
+            '  </nav>\n'
+            '\n'
+        )
 
     # 영문 페이지가 있으면 hreflang 링크 추가
     name_en = info.get('name_en')
@@ -810,6 +881,16 @@ for name, info in celebs.items():
         '    .bc-title { font-weight: 700; font-size: 13px; line-height: 1.3; margin-bottom: 4px; }\n'
         '    .bc-author { font-size: 12px; color: #555; margin-bottom: 6px; }\n'
         '    .bc-badge { display: inline-block; font-size: 11px; background: #fde047; border: 1px solid #000; padding: 1px 6px; font-weight: 700; }\n'
+        '    .related-celebs { margin: 24px 0; }\n'
+        '    .related-celeb-list { display: flex; flex-wrap: wrap; gap: 8px; }\n'
+        '    .related-celeb { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #fff; border: 2px solid #000; box-shadow: 2px 2px 0 0 #000; font-size: 13px; font-weight: 700; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s; }\n'
+        '    .related-celeb:hover { transform: translate(-1px,-1px); box-shadow: 3px 3px 0 0 #000; background: #a7f3d0; text-decoration: none; }\n'
+        '    .rc-count { display: inline-block; min-width: 18px; padding: 0 5px; background: #fde047; border: 1px solid #000; border-radius: 10px; font-size: 11px; text-align: center; line-height: 16px; }\n'
+        '    .celeb-pager { margin: 32px 0 16px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }\n'
+        '    .pager-link { flex: 1 1 220px; padding: 10px 14px; background: #fff; border: 2px solid #000; box-shadow: 3px 3px 0 0 #000; font-size: 13px; font-weight: 700; color: #000; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: transform .1s, box-shadow .1s; }\n'
+        '    .pager-link:hover { transform: translate(-1px,-1px); box-shadow: 5px 5px 0 0 #000; background: #fde047; text-decoration: none; }\n'
+        '    .pager-next { justify-content: flex-end; }\n'
+        '    .pager-arrow { font-size: 18px; font-weight: 900; }\n'
         '    footer { margin-top: 48px; padding-top: 16px; border-top: 2px solid #000; font-size: 13px; color: #666; }\n'
         '  </style>\n'
         '</head>\n'
@@ -837,7 +918,7 @@ for name, info in celebs.items():
         '  </section>\n'
         '\n'
         '  <section>\n'
-        '    <h2>' + esc(name) + '이(가) 읽은 책 전체 목록 (' + str(n_books) + '권)</h2>\n'
+        '    <h2>' + esc(name) + '의 독서 리스트 전체 목록 (' + str(n_books) + '권)</h2>\n'
         '    <table>\n'
         '      <thead><tr><th>#</th><th>표지</th><th>도서명</th><th>저자</th><th>출판사</th><th>출처</th></tr></thead>\n'
         '      <tbody>\n'
@@ -876,14 +957,16 @@ for name, info in celebs.items():
             + esc(name) + '의 책 추천 리스트는 위 표에서 출처와 함께 확인할 수 있습니다.</p>\n'
             '  </section>\n'
             '\n') if author_summary else '')
+        + related_section
         + '  <aside class="related">\n'
         '    <strong>다른 셀럽들의 인생책</strong>이 궁금하다면? '
         '<a href="' + BASE + '">최애의 독서 홈</a>에서 ' + str(len(celebs))
         + '명의 셀럽·아이돌·배우가 읽은 책을 확인해 보세요.\n'
         '  </aside>\n'
         '\n'
-        '  <footer>\n'
-        '    <p>' + esc(name) + ' 읽은 책 정보는 유튜브·인터뷰·SNS 등 공개된 출처를 기반으로 정리되었습니다.</p>\n'
+        + pager_section
+        + '  <footer>\n'
+        '    <p>' + esc(name) + ' 독서 기록 정보는 유튜브·인터뷰·SNS 등 공개된 출처를 기반으로 정리되었습니다.</p>\n'
         '  </footer>\n'
         '\n'
         '</body>\n'
@@ -1984,7 +2067,7 @@ for title, binfo in top_books[:5]:
         '    <item>\n'
         '      <title>' + esc_xml(title) + ' - ' + str(len(binfo['celebs'])) + '명의 셀럽이 읽은 책</title>\n'
         '      <link>' + book_url + '</link>\n'
-        '      <description>' + esc_xml(', '.join(binfo['celebs'])) + '이(가) 읽은 책입니다.</description>\n'
+        '      <description>' + esc_xml(', '.join(binfo['celebs'])) + '의 추천 도서입니다.</description>\n'
         '      <pubDate>' + pub_date + '</pubDate>\n'
         '      <guid isPermaLink="true">' + book_url + '</guid>\n'
         '    </item>'
@@ -1999,7 +2082,7 @@ for name, info in top_celeb_list:
         '    <item>\n'
         '      <title>' + esc_xml(name) + '의 독서 리스트 (' + str(len(info['books'])) + '권)</title>\n'
         '      <link>' + celeb_url + '</link>\n'
-        '      <description>' + esc_xml(name) + '이(가) 읽거나 추천한 책 ' + str(len(info['books'])) + '권을 확인해 보세요.</description>\n'
+        '      <description>' + esc_xml(name) + '의 인생책·추천 도서 ' + str(len(info['books'])) + '권을 확인해 보세요.</description>\n'
         '      <pubDate>' + pub_date + '</pubDate>\n'
         '      <guid isPermaLink="true">' + celeb_url + '</guid>\n'
         '    </item>'
