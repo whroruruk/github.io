@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/ranking.html</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -75,7 +75,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B0%80%EC%9B%90%28%EB%AF%B8%EC%95%BC%EC%98%A4%29.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -217,7 +217,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B3%A0%EB%AF%BC%EC%8B%9C.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -355,7 +355,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EA%B6%8C%EC%84%B1%EC%A4%80.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -2545,13 +2545,21 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%86%90%EC%A2%85%EC%9B%90.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://upload.wikimedia.org/wikipedia/commons/5/52/Son_Jong-won_in_December_2025.png</image:loc>
       <image:title>손종원 프로필</image:title>
       <image:caption>손종원의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/11561/49/cover500/8937434482_1.jpg</image:loc>
+      <image:title>노르웨이의 숲 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/10392/17/cover500/k862536996_2.jpg</image:loc>
+      <image:title>음식과 요리 표지</image:title>
     </image:image>
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/46/10/cover500/s342934786_1.jpg</image:loc>
@@ -2562,8 +2570,8 @@
       <image:title>크리스마스 캐럴 표지</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://image.aladin.co.kr/product/836/0/cover500/8990641470_1.jpg</image:loc>
-      <image:title>호밀밭의 파수꾼 표지</image:title>
+      <image:loc>https://image.aladin.co.kr/product/1470/36/cover500/8994228349_3.jpg</image:loc>
+      <image:title>파리는 날마다 축제 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -5237,7 +5245,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%8E%98%EC%9D%B4%EC%BB%A4.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -5508,7 +5516,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%ED%97%88%EC%84%B1%EB%B2%94.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -5749,7 +5757,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%85%B8%EB%A5%B4%EC%9B%A8%EC%9D%B4%EC%9D%98%20%EC%88%B2.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -6598,6 +6606,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EC%9D%8C%EC%8B%9D%EA%B3%BC%20%EC%9A%94%EB%A6%AC.html</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/10392/17/cover500/k862536996_2.jpg</image:loc>
+      <image:title>음식과 요리 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/book/%ED%86%A0%EC%A7%80.html</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -6927,7 +6945,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -8169,7 +8187,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/son-jong-won.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -8385,7 +8403,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/norwegian-wood.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -8872,6 +8890,12 @@
   <url>
     <loc>https://favorbook.co.kr/en/share/book/the-death-of-a-dog-no-one-hates.html</loc>
     <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/on-food-and-cooking.html</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
