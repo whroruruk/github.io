@@ -1216,6 +1216,25 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EA%B9%80%ED%96%A5%EA%B8%B0.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:title>김향기 프로필</image:title>
+      <image:caption>김향기의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/27608/83/cover500/k722733028_3.jpg</image:loc>
+      <image:title>다정한 것이 살아남는다 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/38831/90/cover500/8937404664_1.jpg</image:loc>
+      <image:title>참을 수 없는 존재의 가벼움 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EA%B9%80%ED%98%9C%EC%88%98.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -1924,6 +1943,10 @@
       <image:caption>문가영의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://image.aladin.co.kr/product/90/76/cover500/8952748921_1.jpg</image:loc>
+      <image:title>가위 들고 달리기 표지</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://image.aladin.co.kr/product/27609/70/cover500/k262733021_1.jpg</image:loc>
       <image:title>군주론 표지</image:title>
     </image:image>
@@ -1938,10 +1961,6 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/36254/78/cover500/8931024827_1.jpg</image:loc>
       <image:title>독일인의 사랑 표지</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/4/6/cover500/s93746005x_3.jpg</image:loc>
-      <image:title>동물농장 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -2649,6 +2668,10 @@
       <image:title>깊이에의 강요 표지</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://image.aladin.co.kr/product/27406/76/cover500/8937463830_1.jpg</image:loc>
+      <image:title>반항하는 인간 표지</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://image.aladin.co.kr/product/4086/97/cover500/8936434128_2.jpg</image:loc>
       <image:title>소년이 온다 표지</image:title>
     </image:image>
@@ -2657,12 +2680,8 @@
       <image:title>아몬드 표지</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://image.aladin.co.kr/product/34797/80/cover500/8937437562_1.jpg</image:loc>
-      <image:title>참을 수 없는 존재의 가벼움 표지</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/23775/47/cover500/893292029x_1.jpg</image:loc>
-      <image:title>향수 표지</image:title>
+      <image:loc>https://image.aladin.co.kr/product/21224/66/cover500/8937443848_1.jpg</image:loc>
+      <image:title>이방인 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -3078,6 +3097,10 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/34036/13/cover500/k232931266_1.jpg</image:loc>
       <image:title>어떤 하루 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/21618/22/cover500/k272636595_3.jpg</image:loc>
+      <image:title>집안의 타인 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -7706,6 +7729,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EC%9D%B4%EB%B0%A9%EC%9D%B8.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/21224/66/cover500/8937443848_1.jpg</image:loc>
+      <image:title>이방인 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/book/%EC%B0%B8%EC%9D%84%20%EC%88%98%20%EC%97%86%EB%8A%94%20%EC%A1%B4%EC%9E%AC%EC%9D%98%20%EA%B0%80%EB%B2%BC%EC%9B%80.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -7753,16 +7786,6 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/10392/17/cover500/k862536996_2.jpg</image:loc>
       <image:title>음식과 요리 표지</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://favorbook.co.kr/share/book/%EC%9D%B4%EB%B0%A9%EC%9D%B8.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/21224/66/cover200/8937443848_1.jpg</image:loc>
-      <image:title>이방인 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -9004,6 +9027,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/en/share/kim-hyang-gi.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/en/share/kim-hye-soo.html</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -9413,7 +9442,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/mun-ka-young.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -9659,7 +9688,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/seo-kang-joon.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
