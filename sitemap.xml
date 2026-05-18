@@ -2946,8 +2946,8 @@
       <image:title>외롭고 높고 쓸쓸한 표지</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://image.aladin.co.kr/product/21224/66/cover200/8937443848_1.jpg</image:loc>
-      <image:title>이방인 표지</image:title>
+      <image:loc>https://image.aladin.co.kr/product/52/38/cover500/8990739160_1.jpg</image:loc>
+      <image:title>웬즈데이 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -5327,6 +5327,25 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EC%B0%A8%EC%9A%B0%EB%AF%BC.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:title>차우민 프로필</image:title>
+      <image:caption>차우민의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/48/92/cover500/8982818227_2.jpg</image:loc>
+      <image:title>11분 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/34155/59/cover500/8970125957_1.jpg</image:loc>
+      <image:title>바람의 노래를 들어라 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EC%B0%AC%EB%AF%B8%28AOA%29.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -7175,6 +7194,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EB%B0%94%EB%9E%8C%EC%9D%98%20%EB%85%B8%EB%9E%98%EB%A5%BC%20%EB%93%A4%EC%96%B4%EB%9D%BC.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/34155/59/cover500/8970125957_1.jpg</image:loc>
+      <image:title>바람의 노래를 들어라 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/book/5%EA%B0%80%EC%A7%80%20%EC%82%AC%EB%9E%91%EC%9D%98%20%EC%96%B8%EC%96%B4.html</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -7511,6 +7540,12 @@
   <url>
     <loc>https://favorbook.co.kr/en/share/byun-yo-han.html</loc>
     <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/cha-woo-min.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -8782,7 +8817,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/shin-se-kyung.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -8938,7 +8973,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/winter-aespa.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -9623,6 +9658,12 @@
   <url>
     <loc>https://favorbook.co.kr/en/share/book/my-private-painting.html</loc>
     <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/hear-the-wind-sing.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
