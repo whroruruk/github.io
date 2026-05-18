@@ -92,16 +92,16 @@
       <image:title>고전이 답했다 표지</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://image.aladin.co.kr/product/31561/46/cover500/k782832854_1.jpg</image:loc>
+      <image:title>구의 증명 표지</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://image.aladin.co.kr/product/36854/22/cover500/k542030400_1.jpg</image:loc>
       <image:title>그대는 나의 여름이 되세요 표지</image:title>
     </image:image>
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/11561/49/cover500/8937434482_1.jpg</image:loc>
       <image:title>노르웨이의 숲 표지</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/843/34/cover500/8932911525_1.jpg</image:loc>
-      <image:title>도리안 그레이의 초상 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -290,6 +290,21 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/8126/75/cover500/8972757713_2.jpg</image:loc>
       <image:title>직업으로서의 소설가 표지</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/%EA%B3%A0%ED%98%84%EC%A0%95.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:title>고현정 프로필</image:title>
+      <image:caption>고현정의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/31830/50/cover500/k102833125_3.jpg</image:loc>
+      <image:title>박태웅의 AI 강의 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -586,6 +601,21 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/26302/71/cover500/8954677150_1.jpg</image:loc>
       <image:title>긴긴밤 표지</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/%EA%B9%80%EB%AF%BC%EC%84%9D.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/oZNJCOMEqFPzN4xSSGulE62gUMZ.jpg</image:loc>
+      <image:title>김민석 프로필</image:title>
+      <image:caption>김민석의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/1462/87/cover500/8954617247_1.jpg</image:loc>
+      <image:title>칼의 노래 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -2210,6 +2240,29 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EB%B0%95%ED%98%9C%EC%88%98.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/dqTRcdoSIQ41BEHJQezFUv5cKQ9.jpg</image:loc>
+      <image:title>박혜수 프로필</image:title>
+      <image:caption>박혜수의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/195/14/cover500/8932907870_2.jpg</image:loc>
+      <image:title>나무 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/26/0/cover500/s742633278_2.jpg</image:loc>
+      <image:title>데미안 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/25184/75/cover500/8931021291_1.jpg</image:loc>
+      <image:title>어린왕자 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EB%B0%95%ED%9B%88.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -2237,6 +2290,25 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/5686/44/cover500/6000841016_1.jpg</image:loc>
       <image:title>지하련의 도정 표지</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/%EB%B0%B0%EC%A2%85%EC%98%A5.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://media.themoviedb.org/t/p/w220_and_h330_face/iELhKtHg4cP3HiSJMBLCCKBpevo.jpg</image:loc>
+      <image:title>배종옥 프로필</image:title>
+      <image:caption>배종옥의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/724/73/cover500/8954611184_1.jpg</image:loc>
+      <image:title>그로칼랭 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/9751/78/cover500/8982816631_3.jpg</image:loc>
+      <image:title>자기 앞의 생 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -2658,6 +2730,10 @@
       <image:title>5년 후 나에게 - Q&amp;A a day 표지</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://image.aladin.co.kr/product/26179/43/cover500/8925589192_1.jpg</image:loc>
+      <image:title>내 마음 다치지 않게 표지</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://image.aladin.co.kr/product/12005/79/cover500/8901219948_1.jpg</image:loc>
       <image:title>신경 끄기의 기술 표지</image:title>
     </image:image>
@@ -2946,6 +3022,10 @@
       <image:caption>수지의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://image.aladin.co.kr/product/8356/55/cover500/s962936078_1.jpg</image:loc>
+      <image:title>반응하지 않는 연습 표지</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://image.aladin.co.kr/product/1449/79/cover500/8937833557_1.jpg</image:loc>
       <image:title>왜 똑똑한 사람들이 헛소리를 믿게 될까 표지</image:title>
     </image:image>
@@ -3043,6 +3123,10 @@
       <image:loc>https://upload.wikimedia.org/wikipedia/commons/3/36/250530_Shin_Si-A_%28%EC%8B%A0%EC%8B%9C%EC%95%84%29.png</image:loc>
       <image:title>신시아 프로필</image:title>
       <image:caption>신시아의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/41/89/cover500/s122531356_2.jpg</image:loc>
+      <image:title>1984 표지</image:title>
     </image:image>
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/457/32/cover200/8932019754_1.jpg</image:loc>
@@ -3829,6 +3913,14 @@
       <image:loc>https://image.aladin.co.kr/product/35647/75/cover500/k682036711_1.jpg</image:loc>
       <image:title>대한민국사 표지</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/310/40/cover500/8960172707_2.jpg</image:loc>
+      <image:title>드래곤 라자 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/35905/54/cover500/k262037992_3.jpg</image:loc>
+      <image:title>퇴마록 표지</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/%EC%9C%A4%EC%95%84%28%EC%86%8C%EB%85%80%EC%8B%9C%EB%8C%80%29.html</loc>
@@ -4405,6 +4497,25 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%A7%80%EC%95%84.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:title>이지아 프로필</image:title>
+      <image:caption>이지아의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/29711/61/cover500/8965965160_1.jpg</image:loc>
+      <image:title>내가 된다는 것 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/57/4/cover500/8988907736_2.jpg</image:loc>
+      <image:title>우주의 구조 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%B2%AD%EC%95%84.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -4475,6 +4586,10 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/18021/22/cover500/k912534848_1.jpg</image:loc>
       <image:title>모든 계절이 유서였다 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/613/82/cover500/8961410571_1.jpg</image:loc>
+      <image:title>유기농 야채재배 도감 표지</image:title>
     </image:image>
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/18648/80/cover500/k452635362_1.jpg</image:loc>
@@ -4839,6 +4954,21 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EC%A0%84%EC%86%8C%EB%8B%88.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/original/zIod49EM7xk1OVrjbKPQqjQgT2e.jpg</image:loc>
+      <image:title>전소니 프로필</image:title>
+      <image:caption>전소니의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/23972/99/cover500/8963717569_2.jpg</image:loc>
+      <image:title>당신을 기다리고 있어 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EC%A0%84%EC%86%8C%EB%AF%BC.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -5150,6 +5280,10 @@
       <image:loc>https://upload.wikimedia.org/wikipedia/commons/2/2a/Jung_Hae-in_%EC%A0%95%ED%95%B4%EC%9D%B8_in_October_2022.jpg</image:loc>
       <image:title>정해인 프로필</image:title>
       <image:caption>정해인의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/19874/25/cover500/k492635431_1.jpg</image:loc>
+      <image:title>내가 가진 것 표지</image:title>
     </image:image>
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/12005/79/cover500/8901219948_1.jpg</image:loc>
@@ -6443,6 +6577,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EA%B5%AC%EC%9D%98%20%EC%A6%9D%EB%AA%85.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/31561/46/cover500/k782832854_1.jpg</image:loc>
+      <image:title>구의 증명 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/book/%EB%85%B8%EB%A5%B4%EC%9B%A8%EC%9D%B4%EC%9D%98%20%EC%88%B2.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -6703,16 +6847,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/share/book/%EA%B5%AC%EC%9D%98%20%EC%A6%9D%EB%AA%85.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <image:image>
-      <image:loc>https://image.aladin.co.kr/product/31561/46/cover500/k782832854_1.jpg</image:loc>
-      <image:title>구의 증명 표지</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://favorbook.co.kr/share/book/%EB%A7%88%EC%9D%8C.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -6854,7 +6988,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EC%96%B4%EB%A6%B0%EC%99%95%EC%9E%90.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -6884,7 +7018,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/share/book/%EB%8D%B0%EB%AF%B8%EC%95%88.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -7651,6 +7785,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EC%9A%B0%EC%A3%BC%EC%9D%98%20%EA%B5%AC%EC%A1%B0.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/57/4/cover500/8988907736_2.jpg</image:loc>
+      <image:title>우주의 구조 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/book/%EC%B9%A8%EB%AC%B5%EC%9D%98%20%EB%B4%84.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -7777,6 +7921,12 @@
   <url>
     <loc>https://favorbook.co.kr/en/share/an-yu-jin-ive.html</loc>
     <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/bae-jong-ok.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -7962,7 +8112,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/gawon-meovv.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -7981,6 +8131,12 @@
   <url>
     <loc>https://favorbook.co.kr/en/share/go-ah-sung.html</loc>
     <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/go-hyeon-jeong.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -8219,6 +8375,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/en/share/jeon-so-nee.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/en/share/jeon-suk-ho.html</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -8412,7 +8574,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/karina-aespa.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -8671,6 +8833,12 @@
   <url>
     <loc>https://favorbook.co.kr/en/share/lee-je-hoon.html</loc>
     <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-ji-ah.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -9011,6 +9179,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/en/share/park-hye-soo.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/en/share/park-ji-hoon.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -9132,7 +9306,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/shin-si-a.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -9233,6 +9407,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/en/share/soyou.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/en/share/stella-jang.html</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -9247,6 +9427,12 @@
   <url>
     <loc>https://favorbook.co.kr/en/share/sunghyun-courtis.html</loc>
     <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/suzy.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -9425,6 +9611,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/en/share/book/proof-of-sphere.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/en/share/book/norwegian-wood.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -9581,12 +9773,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://favorbook.co.kr/en/share/book/proof-of-existence-or-proof.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://favorbook.co.kr/en/share/book/mind.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -9690,7 +9876,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/demian.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -10212,6 +10398,12 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/book/my-palpitating-life.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/the-fabric-of-the-cosmos.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
