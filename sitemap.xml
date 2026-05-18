@@ -3190,6 +3190,21 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/%EC%8B%A0%EB%AF%BC%EC%95%84.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/original/rHsQSiTsONhmJOJLKfGJyYGSqui.jpg</image:loc>
+      <image:title>신민아 프로필</image:title>
+      <image:caption>신민아의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/1675/47/cover500/8996430595_1.jpg</image:loc>
+      <image:title>새로운 100년 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/%EC%8B%A0%EC%84%B8%EA%B2%BD.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -4344,6 +4359,10 @@
       <image:caption>이세영의 독서 리스트 - 최애의 독서</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://image.aladin.co.kr/product/6716/75/cover500/s912534620_2.jpg</image:loc>
+      <image:title>개인주의자 선언 표지</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://image.aladin.co.kr/product/25184/75/cover200/8931021291_1.jpg</image:loc>
       <image:title>어린왕자 표지</image:title>
     </image:image>
@@ -4377,6 +4396,21 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/17/22/cover500/5000172280_1.gif</image:loc>
       <image:title>호텔 아프리카 표지</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/%EC%9D%B4%EC%88%98%EC%A7%80.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://thumb.mt.co.kr/cdn-cgi/image/f=avif/21/2025/05/2025052617507266903_1.jpg</image:loc>
+      <image:title>이수지 프로필</image:title>
+      <image:caption>이수지의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/3031/51/cover500/1195026129_2.jpg</image:loc>
+      <image:title>삶으로 다시 떠오르기 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -9133,7 +9167,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/lee-se-young.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -9145,6 +9179,12 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/lee-seol.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/lee-suji.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -9547,6 +9587,12 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/shim-eun-kyung.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/shin-min-a.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
