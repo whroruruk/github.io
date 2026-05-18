@@ -284,12 +284,20 @@
       <image:title>갈매기 / 세 자매 / 바냐 아저씨 / 벚꽃 동산 표지</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://image.aladin.co.kr/product/68/25/cover500/8954601952_2.jpg</image:loc>
+      <image:title>그의 외롭고 쓸쓸한 밤 표지</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://image.aladin.co.kr/product/27685/1/cover500/8932920915_1.jpg</image:loc>
       <image:title>너의 심장을 쳐라 표지</image:title>
     </image:image>
     <image:image>
       <image:loc>https://img.millie.co.kr/200x/service/cover/179494866/2ed91e43755a4fbb95e90df5258d48aa.jpg</image:loc>
       <image:title>아주 보통의 결혼 표지</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/236/32/cover500/8971993162_1.jpg</image:loc>
+      <image:title>청구회 추억 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -8465,7 +8473,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/go-ah-sung.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
