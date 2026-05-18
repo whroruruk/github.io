@@ -646,8 +646,8 @@
       <image:title>단 한 사람 표지</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://image.aladin.co.kr/product/27/29/cover500/8937810778_3.jpg</image:loc>
-      <image:title>무인도에서 살아남기 표지</image:title>
+      <image:loc>https://image.aladin.co.kr/product/8646/90/cover500/8932317968_1.jpg</image:loc>
+      <image:title>마음 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -816,6 +816,21 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/33842/43/cover500/k982930091_2.jpg</image:loc>
       <image:title>제철행복 표지</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/%EA%B9%80%EC%8B%A0%EB%A1%9D.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://favorbook.co.kr/og-image.jpg</image:loc>
+      <image:title>김신록 프로필</image:title>
+      <image:caption>김신록의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/33853/72/cover500/8962632721_1.jpg</image:loc>
+      <image:title>침묵의 봄 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -3044,6 +3059,21 @@
     <image:image>
       <image:loc>https://image.aladin.co.kr/product/37986/20/cover500/k892034672_1.jpg</image:loc>
       <image:title>파쇄 표지</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/share/%EC%8B%A0%EC%98%88%EC%9D%80.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/3/38/250110_Shin_Ye_Eun_%28%EC%8B%A0%EC%98%88%EC%9D%80%29.png</image:loc>
+      <image:title>신예은 프로필</image:title>
+      <image:caption>신예은의 독서 리스트 - 최애의 독서</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/20419/94/cover500/8953135923_1.jpg</image:loc>
+      <image:title>팀 켈러의 인생 질문 표지</image:title>
     </image:image>
   </url>
   <url>
@@ -6683,6 +6713,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EB%A7%88%EC%9D%8C.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/8646/90/cover500/8932317968_1.jpg</image:loc>
+      <image:title>마음 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/book/%EC%B0%BD%EC%A1%B0%EC%A0%81%20%ED%96%89%EC%9C%84.html</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -7611,6 +7651,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/share/book/%EC%B9%A8%EB%AC%B5%EC%9D%98%20%EB%B4%84.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://image.aladin.co.kr/product/33853/72/cover500/8962632721_1.jpg</image:loc>
+      <image:title>침묵의 봄 표지</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/share/book/%EC%82%AC%EB%9E%91%EC%97%90%20%EB%8C%80%ED%95%B4%20%EB%82%B4%EA%B0%80%20%EC%95%84%EB%8A%94%20%EB%AA%A8%EB%93%A0%20%EA%B2%83.html</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -7900,7 +7950,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/faker.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -8464,7 +8514,7 @@
   </url>
   <url>
     <loc>https://favorbook.co.kr/en/share/kim-min-ha.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -8489,6 +8539,12 @@
   <url>
     <loc>https://favorbook.co.kr/en/share/kim-seo-hyung.html</loc>
     <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/kim-sin-rock.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -9087,6 +9143,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://favorbook.co.kr/en/share/shin-ye-eun.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://favorbook.co.kr/en/share/sihyeon.html</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -9521,6 +9583,12 @@
   <url>
     <loc>https://favorbook.co.kr/en/share/book/proof-of-existence-or-proof.html</loc>
     <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/mind.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -10079,6 +10147,12 @@
   <url>
     <loc>https://favorbook.co.kr/en/share/book/justice.html</loc>
     <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://favorbook.co.kr/en/share/book/silent-spring.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
