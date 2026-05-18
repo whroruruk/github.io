@@ -186,6 +186,19 @@
     .bc-title { font-weight: 700; font-size: 13px; line-height: 1.3; margin-bottom: 4px; }
     .bc-author { font-size: 12px; color: #555; margin-bottom: 6px; }
     .bc-badge { display: inline-block; font-size: 11px; background: #fde047; border: 1px solid #000; padding: 1px 6px; font-weight: 700; }
+    .shared-book-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+    .shared-book { background: #fff; border: 2px solid #000; box-shadow: 4px 4px 0 0 #000; padding: 12px; }
+    .sb-main { display: flex; gap: 12px; margin-bottom: 10px; }
+    .sb-cover-link { flex-shrink: 0; display: block; }
+    .sb-meta { flex: 1; min-width: 0; }
+    .sb-title { font-weight: 800; font-size: 15px; line-height: 1.3; margin-bottom: 4px; }
+    .sb-title a { color: #000; }
+    .sb-title a:hover { color: #2563eb; }
+    .sb-author { font-size: 13px; color: #555; }
+    .sb-celebs { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding-top: 10px; border-top: 1.5px dashed #ccc; }
+    .sb-celebs-label { font-size: 12px; color: #666; font-weight: 700; margin-right: 4px; }
+    .sb-celeb-chip { display: inline-block; padding: 3px 9px; background: #fff8e7; border: 1.5px solid #000; box-shadow: 1px 1px 0 0 #000; font-size: 12px; font-weight: 700; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s, background .1s; }
+    .sb-celeb-chip:hover { transform: translate(-1px,-1px); box-shadow: 2px 2px 0 0 #000; background: #fde047; text-decoration: none; }
     .related-celebs { margin: 24px 0; }
     .related-celeb-list { display: flex; flex-wrap: wrap; gap: 8px; }
     .related-celeb { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #fff; border: 2px solid #000; box-shadow: 2px 2px 0 0 #000; font-size: 13px; font-weight: 700; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s; }
@@ -226,19 +239,31 @@
     <table>
       <thead><tr><th>#</th><th>표지</th><th>도서명</th><th>저자</th><th>출판사</th><th>출처</th></tr></thead>
       <tbody>
-    <tr><td>1</td><td><img src="https://image.aladin.co.kr/product/1150/19/cover500/8964061535_1.jpg" alt="마스터 숏 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>마스터 숏</td><td>크리스토퍼 켄월시</td><td>커뮤니케이션북스</td><td class="src"><a href="https://cine21.com/news/view?mag_id=100968" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>2</td><td><a href="book/%EB%B0%A9%EA%B5%AC%EC%84%9D%20%EB%AF%B8%EC%88%A0%EA%B4%80.html" aria-label="방구석 미술관 자세히 보기"><img src="https://image.aladin.co.kr/product/36702/70/cover500/k552030683_1.jpg" alt="방구석 미술관 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EB%B0%A9%EA%B5%AC%EC%84%9D%20%EB%AF%B8%EC%88%A0%EA%B4%80.html">방구석 미술관 <span aria-hidden="true">→</span></a></td><td>조원재</td><td>블랙피쉬</td><td class="src"><a href="https://cine21.com/news/view?mag_id=100968" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>3</td><td><img src="https://image.aladin.co.kr/product/22267/40/cover500/8931461798_1.jpg" alt="와인 폴리 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>와인 폴리</td><td>Madeline Puckette, Justin Hammack</td><td>영진.com(영진닷컴)</td><td class="src"><a href="https://cine21.com/news/view?mag_id=100968" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>4</td><td><img src="https://image.aladin.co.kr/product/29857/0/cover500/895469991x_3.jpg" alt="하얼빈 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>하얼빈</td><td>김훈</td><td>문학동네</td><td class="src"><a href="https://cine21.com/news/view?mag_id=100968" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>1</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=11501970&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="마스터 숏 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/1150/19/cover500/8964061535_1.jpg" alt="마스터 숏 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=11501970&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">마스터 숏</a></td><td>크리스토퍼 켄월시</td><td>커뮤니케이션북스</td><td class="src"><a href="https://cine21.com/news/view?mag_id=100968" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>2</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=367027073&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="방구석 미술관 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/36702/70/cover500/k552030683_1.jpg" alt="방구석 미술관 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=367027073&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">방구석 미술관</a></td><td>조원재</td><td>블랙피쉬</td><td class="src"><a href="https://cine21.com/news/view?mag_id=100968" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>3</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=222674009&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="와인 폴리 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/22267/40/cover500/8931461798_1.jpg" alt="와인 폴리 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=222674009&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">와인 폴리</a></td><td>Madeline Puckette, Justin Hammack</td><td>영진.com(영진닷컴)</td><td class="src"><a href="https://cine21.com/news/view?mag_id=100968" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>4</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=298570092&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="하얼빈 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/29857/0/cover500/895469991x_3.jpg" alt="하얼빈 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=298570092&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">하얼빈</a></td><td>김훈</td><td>문학동네</td><td class="src"><a href="https://cine21.com/news/view?mag_id=100968" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
       </tbody>
     </table>
   </section>
 
   <section class="book-pages">
-    <h2>📖 이 책들의 상세 페이지 (1권)</h2>
-    <p class="muted">2명 이상의 셀럽이 추천한 책은 별도 상세 페이지가 있어요.</p>
-    <ul class="book-cards">
-      <li class="book-card"><a href="book/%EB%B0%A9%EA%B5%AC%EC%84%9D%20%EB%AF%B8%EC%88%A0%EA%B4%80.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/36702/70/cover500/k552030683_1.jpg" alt="방구석 미술관 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">방구석 미술관</div><div class="bc-author">조원재</div><div class="bc-badge">👥 2명 추천</div></div></a></li>
+    <h2>👥 김강우과 다른 셀럽이 함께 추천한 책 (1권)</h2>
+    <p class="muted">2명 이상의 셀럽이 추천한 책과 함께 추천한 셀럽 명단이에요.</p>
+    <ul class="shared-book-list">
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=367027073&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="방구석 미술관 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/36702/70/cover500/k552030683_1.jpg" alt="방구석 미술관 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=367027073&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">방구석 미술관</a></div>
+            <div class="sb-author">조원재</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 1명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/RM%28BTS%29.html">RM(BTS)</a>
+        </div>
+      </li>
     </ul>
   </section>
 

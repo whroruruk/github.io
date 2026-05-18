@@ -51,20 +51,37 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
+    "@type": "Organization",
+    "@id": "https://favorbook.co.kr/#organization",
     "name": "최애의 독서",
-    "alternateName": ["Favoread", "최애의독서"],
+    "alternateName": ["Favoread", "Favorbook", "최애의독서"],
+    "url": "https://favorbook.co.kr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://favorbook.co.kr/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    "description": "K-pop 아이돌·연예인·셀럽이 읽은 책과 추천 도서를 정리하는 팬 메이드 독서 아카이브 사이트.",
+    "sameAs": [
+      "https://www.instagram.com/favoritesbook"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://favorbook.co.kr/#website",
+    "name": "최애의 독서",
+    "alternateName": ["Favoread", "Favorbook", "최애의독서"],
     "url": "https://favorbook.co.kr/",
     "description": "아이돌, 셀럽, 연예인 나의 최애가 읽은 책, 추천 책, 인생책을 한곳에 모았어요✨",
     "image": "https://favorbook.co.kr/og-image.jpg",
     "inLanguage": "ko-KR",
     "publisher": {
-      "@type": "Organization",
-      "name": "최애의 독서",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://favorbook.co.kr/og-image.jpg"
-      }
+      "@id": "https://favorbook.co.kr/#organization"
     },
     "potentialAction": {
       "@type": "SearchAction",
@@ -399,12 +416,16 @@
   <section id="about" class="opacity-0 animate-fade-in-delayed text-center max-w-2xl mx-auto border-4 border-ink p-6 md:p-8 bg-white shadow-neo w-full">
     <h2 class="text-xl md:text-2xl font-black mb-4 bg-neo-pink inline-block px-3 py-1 border-2 border-ink shadow-neo-sm">최애의 독서란?</h2>
     <p class="text-sm md:text-base font-bold leading-relaxed text-ink word-break-keep mb-3">
+      <strong>‘최애의 독서’(Favoread)</strong>는 팬이 직접 만든 <strong>독서 아카이브 사이트</strong>예요.
       BTS·아이브·세븐틴 같은 K-POP 아이돌부터 한국 드라마 배우, 뮤지션까지 —
-      <strong>연예인이 읽은 책, 아이돌 추천 도서, 셀럽 인생책</strong>을 한곳에 모은 아카이브입니다.
+      <strong>연예인이 읽은 책, 아이돌 추천 도서, 셀럽 인생책</strong>을 한곳에 모았습니다.
     </p>
     <p class="text-sm md:text-base font-bold leading-relaxed text-ink word-break-keep">
       유튜브·인터뷰·SNS 등 출처가 확인된 책 추천만 정리했어요.<br>
       최애의 책을 제보하려면 상단의 FAQ를 눌러주세요😆
+    </p>
+    <p class="text-[11px] sm:text-xs font-bold leading-relaxed text-muted word-break-keep mt-4 pt-3 border-t-2 border-ink/20">
+      📚 인스타그램 <a href="https://www.instagram.com/favoritesbook" target="_blank" rel="noopener" class="underline decoration-2 hover:text-ink">@favoritesbook</a> 에서도 만나요.
     </p>
   </section>
 
@@ -1364,7 +1385,8 @@
           <div class="w-full aspect-[2/3] ${coverBg} border-2 border-ink mb-2 sm:mb-3 flex items-center justify-center p-0 text-center group-hover:opacity-90 transition-opacity overflow-hidden">
              ${coverHtml}
           </div>
-          <p class="font-bold text-[10px] sm:text-xs text-center w-full text-ink">${info.count}명이 읽었어요</p>
+          <p class="font-black text-[11px] sm:text-xs text-center w-full text-ink leading-tight line-clamp-2 min-h-[2.4em] px-0.5">${title}</p>
+          <p class="font-bold text-[10px] sm:text-xs text-center w-full text-ink mt-1">${info.count}명이 읽었어요</p>
           <p class="text-[8px] sm:text-[9px] text-muted text-center w-full mt-0.5 line-clamp-1">${celebList}</p>
         </div>
       `;

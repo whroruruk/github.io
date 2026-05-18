@@ -643,40 +643,50 @@ for name, info in celebs.items():
         ]
     }
 
-    # 책 테이블 행 (이미지 + 책 페이지 내부링크 + 출처 외부링크)
+    # 책 테이블 행 (표지·도서명은 알라딘 외부 링크, 출처는 별도 외부링크)
     book_rows = ''
-    book_page_cards = []   # 표 아래 카드 그리드용
+    shared_book_cards = []   # 다른 셀럽도 함께 추천한 책 목록용
     for i, b in enumerate(books):
         has_book_page = b['title'] in books_with_pages
-        book_url_rel = ''
-        if has_book_page:
-            book_url_rel = 'book/' + quote(safe_book_filename(b['title']), safe='') + '.html'
+
+        # 알라딘 상품 URL (CSV의 '&amp;'는 디코드 후 esc로 재이스케이프)
+        # 일부 행은 '도서 정보' 칸에 이미지 URL이 들어있으니 그런 경우는 링크로 쓰지 않음
+        aladin_url = ''
+        raw_link = b.get('link') or ''
+        if raw_link.startswith('http') and not raw_link.lower().rstrip().endswith(
+            ('.jpg', '.jpeg', '.png', '.gif', '.webp', '.bmp')
+        ):
+            aladin_url = esc(html.unescape(raw_link))
 
         cover_img = ''
         if b['coverUrl'] and b['coverUrl'].startswith('http'):
             cover_img = ('<img src="' + esc(b['coverUrl']) + '" alt="' + esc(b['title'])
                          + ' 표지" width="60" height="85" loading="lazy" style="object-fit:cover">')
-        # 표지도 책 페이지 링크로 (있으면)
-        if cover_img and has_book_page:
-            cover_td = ('<a href="' + book_url_rel
-                        + '" aria-label="' + esc(b['title']) + ' 자세히 보기">'
+
+        if cover_img and aladin_url:
+            cover_td = ('<a href="' + aladin_url
+                        + '" rel="nofollow noopener noreferrer" target="_blank" '
+                        'aria-label="' + esc(b['title']) + ' 알라딘에서 보기">'
                         + cover_img + '</a>')
         else:
             cover_td = cover_img
 
-        # 도서명 셀: 책 페이지가 있으면 링크 + 화살표로 가시성 ↑
-        if has_book_page:
-            title_html = ('<a href="' + book_url_rel + '">'
-                          + esc(b['title']) + ' <span aria-hidden="true">→</span></a>')
-            book_page_cards.append({
-                'cover':  b['coverUrl'] if (b['coverUrl'] or '').startswith('http') else '',
-                'title':  b['title'],
-                'author': b['author'],
-                'n_recs': len(book_celebs[b['title']]['celebs']),
-                'url':    book_url_rel,
-            })
+        if aladin_url:
+            title_html = ('<a href="' + aladin_url
+                          + '" rel="nofollow noopener noreferrer" target="_blank">'
+                          + esc(b['title']) + '</a>')
         else:
             title_html = esc(b['title'])
+
+        if has_book_page:
+            other_celebs = [c for c in book_celebs[b['title']]['celebs'] if c != name]
+            shared_book_cards.append({
+                'cover':       b['coverUrl'] if (b['coverUrl'] or '').startswith('http') else '',
+                'title':       b['title'],
+                'author':      b['author'],
+                'aladin_url':  aladin_url,
+                'other_celebs': other_celebs,
+            })
 
         # 출처 (대부분 YouTube 등 URL) → 외부링크
         source_html = ''
@@ -881,6 +891,19 @@ for name, info in celebs.items():
         '    .bc-title { font-weight: 700; font-size: 13px; line-height: 1.3; margin-bottom: 4px; }\n'
         '    .bc-author { font-size: 12px; color: #555; margin-bottom: 6px; }\n'
         '    .bc-badge { display: inline-block; font-size: 11px; background: #fde047; border: 1px solid #000; padding: 1px 6px; font-weight: 700; }\n'
+        '    .shared-book-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }\n'
+        '    .shared-book { background: #fff; border: 2px solid #000; box-shadow: 4px 4px 0 0 #000; padding: 12px; }\n'
+        '    .sb-main { display: flex; gap: 12px; margin-bottom: 10px; }\n'
+        '    .sb-cover-link { flex-shrink: 0; display: block; }\n'
+        '    .sb-meta { flex: 1; min-width: 0; }\n'
+        '    .sb-title { font-weight: 800; font-size: 15px; line-height: 1.3; margin-bottom: 4px; }\n'
+        '    .sb-title a { color: #000; }\n'
+        '    .sb-title a:hover { color: #2563eb; }\n'
+        '    .sb-author { font-size: 13px; color: #555; }\n'
+        '    .sb-celebs { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding-top: 10px; border-top: 1.5px dashed #ccc; }\n'
+        '    .sb-celebs-label { font-size: 12px; color: #666; font-weight: 700; margin-right: 4px; }\n'
+        '    .sb-celeb-chip { display: inline-block; padding: 3px 9px; background: #fff8e7; border: 1.5px solid #000; box-shadow: 1px 1px 0 0 #000; font-size: 12px; font-weight: 700; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s, background .1s; }\n'
+        '    .sb-celeb-chip:hover { transform: translate(-1px,-1px); box-shadow: 2px 2px 0 0 #000; background: #fde047; text-decoration: none; }\n'
         '    .related-celebs { margin: 24px 0; }\n'
         '    .related-celeb-list { display: flex; flex-wrap: wrap; gap: 8px; }\n'
         '    .related-celeb { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #fff; border: 2px solid #000; box-shadow: 2px 2px 0 0 #000; font-size: 13px; font-weight: 700; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s; }\n'
@@ -929,28 +952,51 @@ for name, info in celebs.items():
         '\n'
         + ((
             '  <section class="book-pages">\n'
-            '    <h2>📖 이 책들의 상세 페이지 (' + str(len(book_page_cards)) + '권)</h2>\n'
-            '    <p class="muted">2명 이상의 셀럽이 추천한 책은 별도 상세 페이지가 있어요.</p>\n'
-            '    <ul class="book-cards">\n'
+            '    <h2>👥 ' + esc(name) + '과 다른 셀럽이 함께 추천한 책 (' + str(len(shared_book_cards)) + '권)</h2>\n'
+            '    <p class="muted">2명 이상의 셀럽이 추천한 책과 함께 추천한 셀럽 명단이에요.</p>\n'
+            '    <ul class="shared-book-list">\n'
             + ''.join(
-                '      <li class="book-card">'
-                '<a href="' + esc(_c['url']) + '" class="book-card-link">'
-                + (('<img src="' + esc(_c['cover']) + '" alt="' + esc(_c['title']) + ' 표지" '
-                    'width="80" height="115" loading="lazy" style="object-fit:cover">')
-                   if _c['cover'] else '<div class="no-cover">📕</div>')
-                + '<div class="bc-meta">'
-                  '<div class="bc-title">' + esc(_c['title']) + '</div>'
-                  '<div class="bc-author">' + esc(_c['author']) + '</div>'
-                  '<div class="bc-badge">👥 ' + str(_c['n_recs']) + '명 추천</div>'
-                  '</div>'
-                  '</a>'
-                  '</li>\n'
-                for _c in book_page_cards
+                '      <li class="shared-book">\n'
+                '        <div class="sb-main">\n'
+                '          ' + (
+                    ('<a class="sb-cover-link" href="' + _c['aladin_url']
+                     + '" rel="nofollow noopener noreferrer" target="_blank" '
+                     'aria-label="' + esc(_c['title']) + ' 알라딘에서 보기">'
+                     + '<img src="' + esc(_c['cover']) + '" alt="' + esc(_c['title']) + ' 표지" '
+                     'width="60" height="85" loading="lazy" style="object-fit:cover"></a>')
+                    if (_c['cover'] and _c['aladin_url']) else
+                    (('<img src="' + esc(_c['cover']) + '" alt="' + esc(_c['title']) + ' 표지" '
+                      'width="60" height="85" loading="lazy" style="object-fit:cover">')
+                     if _c['cover'] else '<div class="no-cover">📕</div>')
+                ) + '\n'
+                '          <div class="sb-meta">\n'
+                '            <div class="sb-title">'
+                + (
+                    ('<a href="' + _c['aladin_url']
+                     + '" rel="nofollow noopener noreferrer" target="_blank">'
+                     + esc(_c['title']) + '</a>')
+                    if _c['aladin_url'] else esc(_c['title'])
+                ) + '</div>\n'
+                '            <div class="sb-author">' + esc(_c['author']) + '</div>\n'
+                '          </div>\n'
+                '        </div>\n'
+                '        <div class="sb-celebs">\n'
+                '          <span class="sb-celebs-label">함께 추천한 셀럽 '
+                + str(len(_c['other_celebs'])) + '명:</span>\n'
+                + ''.join(
+                    '          <a class="sb-celeb-chip" href="' + esc(
+                        BASE + 'share/' + quote(safe_filename(_oc), safe='') + '.html'
+                    ) + '">' + esc(_oc) + '</a>\n'
+                    for _oc in _c['other_celebs']
+                )
+                + '        </div>\n'
+                '      </li>\n'
+                for _c in shared_book_cards
             )
             + '    </ul>\n'
             '  </section>\n'
             '\n'
-        ) if book_page_cards else '')
+        ) if shared_book_cards else '')
         + (('  <section>\n'
             '    <h2>' + esc(name) + ' 인생책 · 책 추천 키워드</h2>\n'
             '    <p>' + author_summary + ' '

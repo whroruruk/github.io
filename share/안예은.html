@@ -218,6 +218,19 @@
     .bc-title { font-weight: 700; font-size: 13px; line-height: 1.3; margin-bottom: 4px; }
     .bc-author { font-size: 12px; color: #555; margin-bottom: 6px; }
     .bc-badge { display: inline-block; font-size: 11px; background: #fde047; border: 1px solid #000; padding: 1px 6px; font-weight: 700; }
+    .shared-book-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+    .shared-book { background: #fff; border: 2px solid #000; box-shadow: 4px 4px 0 0 #000; padding: 12px; }
+    .sb-main { display: flex; gap: 12px; margin-bottom: 10px; }
+    .sb-cover-link { flex-shrink: 0; display: block; }
+    .sb-meta { flex: 1; min-width: 0; }
+    .sb-title { font-weight: 800; font-size: 15px; line-height: 1.3; margin-bottom: 4px; }
+    .sb-title a { color: #000; }
+    .sb-title a:hover { color: #2563eb; }
+    .sb-author { font-size: 13px; color: #555; }
+    .sb-celebs { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding-top: 10px; border-top: 1.5px dashed #ccc; }
+    .sb-celebs-label { font-size: 12px; color: #666; font-weight: 700; margin-right: 4px; }
+    .sb-celeb-chip { display: inline-block; padding: 3px 9px; background: #fff8e7; border: 1.5px solid #000; box-shadow: 1px 1px 0 0 #000; font-size: 12px; font-weight: 700; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s, background .1s; }
+    .sb-celeb-chip:hover { transform: translate(-1px,-1px); box-shadow: 2px 2px 0 0 #000; background: #fde047; text-decoration: none; }
     .related-celebs { margin: 24px 0; }
     .related-celeb-list { display: flex; flex-wrap: wrap; gap: 8px; }
     .related-celeb { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #fff; border: 2px solid #000; box-shadow: 2px 2px 0 0 #000; font-size: 13px; font-weight: 700; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s; }
@@ -258,21 +271,33 @@
     <table>
       <thead><tr><th>#</th><th>표지</th><th>도서명</th><th>저자</th><th>출판사</th><th>출처</th></tr></thead>
       <tbody>
-    <tr><td>1</td><td><img src="https://image.aladin.co.kr/product/29103/66/cover500/k732837160_1.jpg" alt="도망을 잘 치는 도련님 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>도망을 잘 치는 도련님</td><td>마츠이 유세이</td><td>대원씨아이(만화)</td><td class="src"><a href="https://cine21.com/news/view?mag_id=106920" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>2</td><td><img src="https://image.aladin.co.kr/product/8125/20/cover500/8933707077_1.jpg" alt="무당, 여성, 신령들 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>무당, 여성, 신령들</td><td>로렐 켄달</td><td>일조각</td><td class="src"><a href="https://m.ch.yes24.com/article/details/51977" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>3</td><td><img src="https://image.aladin.co.kr/product/3651/8/cover500/s602635931_1.jpg" alt="우리는 언제나 성에 살았다 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>우리는 언제나 성에 살았다</td><td>셜리 잭슨</td><td>엘릭시르</td><td class="src"><a href="https://cine21.com/news/view?mag_id=106920" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>4</td><td><img src="https://image.aladin.co.kr/product/33065/53/cover500/k052937092_1.jpg" alt="잘돼가? 무엇이든 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>잘돼가? 무엇이든</td><td>이경미</td><td>유선사</td><td class="src"><a href="https://m.ch.yes24.com/article/details/51977" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>5</td><td><img src="https://image.aladin.co.kr/product/7492/11/cover500/8954643256_1.jpg" alt="제5도살장 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>제5도살장</td><td>커트 보니것</td><td>문학동네</td><td class="src"><a href="https://cine21.com/news/view?mag_id=106920" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>6</td><td><a href="book/%EC%A7%80%EB%AC%B8%EC%82%AC%EB%83%A5%EA%BE%BC.html" aria-label="지문사냥꾼 자세히 보기"><img src="https://image.aladin.co.kr/product/56/9/cover500/8901049848_1.jpg" alt="지문사냥꾼 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EC%A7%80%EB%AC%B8%EC%82%AC%EB%83%A5%EA%BE%BC.html">지문사냥꾼 <span aria-hidden="true">→</span></a></td><td>이적</td><td>웅진지식하우스</td><td class="src"><a href="https://m.ch.yes24.com/article/details/51977" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>1</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=291036678&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="도망을 잘 치는 도련님 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/29103/66/cover500/k732837160_1.jpg" alt="도망을 잘 치는 도련님 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=291036678&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">도망을 잘 치는 도련님</a></td><td>마츠이 유세이</td><td>대원씨아이(만화)</td><td class="src"><a href="https://cine21.com/news/view?mag_id=106920" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>2</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=81252067&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="무당, 여성, 신령들 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/8125/20/cover500/8933707077_1.jpg" alt="무당, 여성, 신령들 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=81252067&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">무당, 여성, 신령들</a></td><td>로렐 켄달</td><td>일조각</td><td class="src"><a href="https://m.ch.yes24.com/article/details/51977" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>3</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=36510862&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="우리는 언제나 성에 살았다 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/3651/8/cover500/s602635931_1.jpg" alt="우리는 언제나 성에 살았다 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=36510862&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">우리는 언제나 성에 살았다</a></td><td>셜리 잭슨</td><td>엘릭시르</td><td class="src"><a href="https://cine21.com/news/view?mag_id=106920" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>4</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=330655391&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="잘돼가? 무엇이든 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/33065/53/cover500/k052937092_1.jpg" alt="잘돼가? 무엇이든 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=330655391&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">잘돼가? 무엇이든</a></td><td>이경미</td><td>유선사</td><td class="src"><a href="https://m.ch.yes24.com/article/details/51977" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>5</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=74921149&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="제5도살장 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/7492/11/cover500/8954643256_1.jpg" alt="제5도살장 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=74921149&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">제5도살장</a></td><td>커트 보니것</td><td>문학동네</td><td class="src"><a href="https://cine21.com/news/view?mag_id=106920" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>6</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=560903&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="지문사냥꾼 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/56/9/cover500/8901049848_1.jpg" alt="지문사냥꾼 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=560903&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">지문사냥꾼</a></td><td>이적</td><td>웅진지식하우스</td><td class="src"><a href="https://m.ch.yes24.com/article/details/51977" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
       </tbody>
     </table>
   </section>
 
   <section class="book-pages">
-    <h2>📖 이 책들의 상세 페이지 (1권)</h2>
-    <p class="muted">2명 이상의 셀럽이 추천한 책은 별도 상세 페이지가 있어요.</p>
-    <ul class="book-cards">
-      <li class="book-card"><a href="book/%EC%A7%80%EB%AC%B8%EC%82%AC%EB%83%A5%EA%BE%BC.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/56/9/cover500/8901049848_1.jpg" alt="지문사냥꾼 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">지문사냥꾼</div><div class="bc-author">이적</div><div class="bc-badge">👥 2명 추천</div></div></a></li>
+    <h2>👥 안예은과 다른 셀럽이 함께 추천한 책 (1권)</h2>
+    <p class="muted">2명 이상의 셀럽이 추천한 책과 함께 추천한 셀럽 명단이에요.</p>
+    <ul class="shared-book-list">
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=560903&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="지문사냥꾼 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/56/9/cover500/8901049848_1.jpg" alt="지문사냥꾼 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=560903&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">지문사냥꾼</a></div>
+            <div class="sb-author">이적</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 1명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%A1%B0%EC%97%AC%EC%A0%95.html">조여정</a>
+        </div>
+      </li>
     </ul>
   </section>
 

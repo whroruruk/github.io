@@ -378,6 +378,19 @@
     .bc-title { font-weight: 700; font-size: 13px; line-height: 1.3; margin-bottom: 4px; }
     .bc-author { font-size: 12px; color: #555; margin-bottom: 6px; }
     .bc-badge { display: inline-block; font-size: 11px; background: #fde047; border: 1px solid #000; padding: 1px 6px; font-weight: 700; }
+    .shared-book-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+    .shared-book { background: #fff; border: 2px solid #000; box-shadow: 4px 4px 0 0 #000; padding: 12px; }
+    .sb-main { display: flex; gap: 12px; margin-bottom: 10px; }
+    .sb-cover-link { flex-shrink: 0; display: block; }
+    .sb-meta { flex: 1; min-width: 0; }
+    .sb-title { font-weight: 800; font-size: 15px; line-height: 1.3; margin-bottom: 4px; }
+    .sb-title a { color: #000; }
+    .sb-title a:hover { color: #2563eb; }
+    .sb-author { font-size: 13px; color: #555; }
+    .sb-celebs { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding-top: 10px; border-top: 1.5px dashed #ccc; }
+    .sb-celebs-label { font-size: 12px; color: #666; font-weight: 700; margin-right: 4px; }
+    .sb-celeb-chip { display: inline-block; padding: 3px 9px; background: #fff8e7; border: 1.5px solid #000; box-shadow: 1px 1px 0 0 #000; font-size: 12px; font-weight: 700; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s, background .1s; }
+    .sb-celeb-chip:hover { transform: translate(-1px,-1px); box-shadow: 2px 2px 0 0 #000; background: #fde047; text-decoration: none; }
     .related-celebs { margin: 24px 0; }
     .related-celeb-list { display: flex; flex-wrap: wrap; gap: 8px; }
     .related-celeb { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #fff; border: 2px solid #000; box-shadow: 2px 2px 0 0 #000; font-size: 13px; font-weight: 700; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s; }
@@ -418,40 +431,165 @@
     <table>
       <thead><tr><th>#</th><th>표지</th><th>도서명</th><th>저자</th><th>출판사</th><th>출처</th></tr></thead>
       <tbody>
-    <tr><td>1</td><td><img src="https://image.aladin.co.kr/product/24342/1/cover500/k262630705_1.jpg" alt="낯선 행성 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>낯선 행성</td><td>네이선 파일</td><td>시공사</td><td class="src"><a href="https://brunch.co.kr/@parkaezey/82" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>2</td><td><a href="book/%EB%82%B4%EA%B2%8C%20%EB%AC%B4%ED%95%B4%ED%95%9C%20%EC%82%AC%EB%9E%8C.html" aria-label="내게 무해한 사람 자세히 보기"><img src="https://image.aladin.co.kr/product/15133/51/cover500/8954651828_2.jpg" alt="내게 무해한 사람 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EB%82%B4%EA%B2%8C%20%EB%AC%B4%ED%95%B4%ED%95%9C%20%EC%82%AC%EB%9E%8C.html">내게 무해한 사람 <span aria-hidden="true">→</span></a></td><td>최은영</td><td>문학동네</td><td class="src"></td></tr>
-    <tr><td>3</td><td><a href="book/%EB%8B%AC%EA%B3%BC%206%ED%8E%9C%EC%8A%A4.html" aria-label="달과 6펜스 자세히 보기"><img src="https://image.aladin.co.kr/product/23/77/cover500/s692639624_2.jpg" alt="달과 6펜스 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EB%8B%AC%EA%B3%BC%206%ED%8E%9C%EC%8A%A4.html">달과 6펜스 <span aria-hidden="true">→</span></a></td><td>서머싯 몸</td><td>민음사</td><td class="src"><a href="https://brunch.co.kr/@parkaezey/82" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>4</td><td><img src="https://image.aladin.co.kr/product/37015/28/cover500/k262030327_1.jpg" alt="말뚝들 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>말뚝들</td><td>김홍</td><td>한겨레출판</td><td class="src"><a href="https://www.youtube.com/watch?v=R2P0sW9CGX8" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>5</td><td><a href="book/%EB%AA%A8%EC%88%9C.html" aria-label="모순 자세히 보기"><img src="https://image.aladin.co.kr/product/2584/37/cover500/8998441012_3.jpg" alt="모순 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EB%AA%A8%EC%88%9C.html">모순 <span aria-hidden="true">→</span></a></td><td>양귀자</td><td>쓰다</td><td class="src"><a href="https://www.youtube.com/watch?v=R2P0sW9CGX8" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>6</td><td><a href="book/%EB%B0%9D%EC%9D%80%20%EB%B0%A4.html" aria-label="밝은 밤 자세히 보기"><img src="https://image.aladin.co.kr/product/27541/91/cover500/k312835925_1.jpg" alt="밝은 밤 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EB%B0%9D%EC%9D%80%20%EB%B0%A4.html">밝은 밤 <span aria-hidden="true">→</span></a></td><td>최은영</td><td>문학동네</td><td class="src"><a href="https://www.esquirekorea.co.kr/article/1895614" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>7</td><td><a href="book/%EB%B3%B4%EA%B1%B4%EA%B5%90%EC%82%AC%20%EC%95%88%EC%9D%80%EC%98%81.html" aria-label="보건교사 안은영 자세히 보기"><img src="https://image.aladin.co.kr/product/25128/11/cover500/8937479958_2.jpg" alt="보건교사 안은영 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EB%B3%B4%EA%B1%B4%EA%B5%90%EC%82%AC%20%EC%95%88%EC%9D%80%EC%98%81.html">보건교사 안은영 <span aria-hidden="true">→</span></a></td><td>정세랑</td><td>민음사</td><td class="src"></td></tr>
-    <tr><td>8</td><td><a href="book/%EC%82%AC%EC%84%9C%ED%95%A8%20110%ED%98%B8%EC%9D%98%20%EC%9A%B0%ED%8E%B8%EB%AC%BC.html" aria-label="사서함 110호의 우편물 자세히 보기"><img src="https://image.aladin.co.kr/product/29829/2/cover500/k702838510_1.jpg" alt="사서함 110호의 우편물 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EC%82%AC%EC%84%9C%ED%95%A8%20110%ED%98%B8%EC%9D%98%20%EC%9A%B0%ED%8E%B8%EB%AC%BC.html">사서함 110호의 우편물 <span aria-hidden="true">→</span></a></td><td>이도우</td><td>수박설탕</td><td class="src"><a href="https://www.esquirekorea.co.kr/article/1895614" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>9</td><td><a href="book/%EC%82%AC%EC%84%9C%ED%95%A8%20110%ED%98%B8%EC%9D%98%20%EC%9A%B0%ED%8E%B8%EB%AC%BC.html" aria-label="사서함 110호의 우편물 자세히 보기"><img src="https://image.aladin.co.kr/product/29829/2/cover500/k702838510_1.jpg" alt="사서함 110호의 우편물 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EC%82%AC%EC%84%9C%ED%95%A8%20110%ED%98%B8%EC%9D%98%20%EC%9A%B0%ED%8E%B8%EB%AC%BC.html">사서함 110호의 우편물 <span aria-hidden="true">→</span></a></td><td>이도우</td><td>수박설탕</td><td class="src"><a href="https://www.youtube.com/watch?v=R2P0sW9CGX8" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>10</td><td><a href="book/%EC%87%BC%EC%BD%94%EC%9D%98%20%EB%AF%B8%EC%86%8C.html" aria-label="쇼코의 미소 자세히 보기"><img src="https://image.aladin.co.kr/product/8679/95/cover500/8954641636_1.jpg" alt="쇼코의 미소 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EC%87%BC%EC%BD%94%EC%9D%98%20%EB%AF%B8%EC%86%8C.html">쇼코의 미소 <span aria-hidden="true">→</span></a></td><td>최은영</td><td>문학동네</td><td class="src"><a href="https://www.esquirekorea.co.kr/article/1895614" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>11</td><td><img src="https://image.aladin.co.kr/product/24131/37/cover500/s962738283_1.jpg" alt="시선으로부터 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>시선으로부터</td><td>정세랑</td><td>문학동네</td><td class="src"><a href="https://www.youtube.com/watch?v=R2P0sW9CGX8" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>12</td><td><img src="https://image.aladin.co.kr/product/18656/7/cover500/s152635462_1.jpg" alt="열여섯 밤의 주방 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>열여섯 밤의 주방</td><td>마오우</td><td>사계절</td><td class="src"><a href="https://www.wkorea.com/2024/07/26/%ec%b9%b4%eb%a6%ac%eb%82%98%ec%99%80-%eb%82%98%eb%88%88-%ea%b2%b0%ec%a0%95%ec%a0%81-%ec%88%9c%ea%b0%84/" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>13</td><td><img src="https://image.aladin.co.kr/product/34002/54/cover500/k462930652_1.jpg" alt="입속 지느러미 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>입속 지느러미</td><td>조예은</td><td>한겨레출판</td><td class="src"><a href="https://www.youtube.com/watch?v=R2P0sW9CGX8" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>14</td><td><a href="book/%EC%A0%88%EC%B0%BD.html" aria-label="절창 자세히 보기"><img src="https://image.aladin.co.kr/product/37172/36/cover500/k662031678_3.jpg" alt="절창 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EC%A0%88%EC%B0%BD.html">절창 <span aria-hidden="true">→</span></a></td><td>구병모</td><td>문학동네</td><td class="src"><a href="https://www.youtube.com/watch?v=R2P0sW9CGX8" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>15</td><td><a href="book/%EC%B9%B5%ED%85%8C%EC%9D%BC%2C%20%EB%9F%AC%EB%B8%8C%2C%20%EC%A2%80%EB%B9%84.html" aria-label="칵테일, 러브, 좀비 자세히 보기"><img src="https://image.aladin.co.kr/product/29543/72/cover500/k502837053_1.jpg" alt="칵테일, 러브, 좀비 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EC%B9%B5%ED%85%8C%EC%9D%BC%2C%20%EB%9F%AC%EB%B8%8C%2C%20%EC%A2%80%EB%B9%84.html">칵테일, 러브, 좀비 <span aria-hidden="true">→</span></a></td><td>조예은</td><td>안전가옥</td><td class="src"><a href="https://www.youtube.com/watch?v=R2P0sW9CGX8" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>16</td><td><img src="https://image.aladin.co.kr/product/35640/72/cover500/k962036608_2.jpg" alt="필사는 도끼다 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>필사는 도끼다</td><td>김지수</td><td>다산북스</td><td class="src"><a href="https://theqoo.net/karina/3967001167?m=0&amp;listStyle=viewer" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>1</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="낯선 행성 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/24342/1/cover500/k262630705_1.jpg" alt="낯선 행성 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">낯선 행성</a></td><td>네이선 파일</td><td>시공사</td><td class="src"><a href="https://brunch.co.kr/@parkaezey/82" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>2</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="내게 무해한 사람 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/15133/51/cover500/8954651828_2.jpg" alt="내게 무해한 사람 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">내게 무해한 사람</a></td><td>최은영</td><td>문학동네</td><td class="src"></td></tr>
+    <tr><td>3</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="달과 6펜스 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/23/77/cover500/s692639624_2.jpg" alt="달과 6펜스 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">달과 6펜스</a></td><td>서머싯 몸</td><td>민음사</td><td class="src"><a href="https://brunch.co.kr/@parkaezey/82" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>4</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=370152807&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="말뚝들 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/37015/28/cover500/k262030327_1.jpg" alt="말뚝들 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=370152807&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">말뚝들</a></td><td>김홍</td><td>한겨레출판</td><td class="src"><a href="https://www.youtube.com/watch?v=R2P0sW9CGX8" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>5</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=25843736&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="모순 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/2584/37/cover500/8998441012_3.jpg" alt="모순 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=25843736&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">모순</a></td><td>양귀자</td><td>쓰다</td><td class="src"><a href="https://www.youtube.com/watch?v=R2P0sW9CGX8" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>6</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="밝은 밤 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/27541/91/cover500/k312835925_1.jpg" alt="밝은 밤 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">밝은 밤</a></td><td>최은영</td><td>문학동네</td><td class="src"><a href="https://www.esquirekorea.co.kr/article/1895614" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>7</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=251281173" rel="nofollow noopener noreferrer" target="_blank" aria-label="보건교사 안은영 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/25128/11/cover500/8937479958_2.jpg" alt="보건교사 안은영 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=251281173" rel="nofollow noopener noreferrer" target="_blank">보건교사 안은영</a></td><td>정세랑</td><td>민음사</td><td class="src"></td></tr>
+    <tr><td>8</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="사서함 110호의 우편물 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/29829/2/cover500/k702838510_1.jpg" alt="사서함 110호의 우편물 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">사서함 110호의 우편물</a></td><td>이도우</td><td>수박설탕</td><td class="src"><a href="https://www.esquirekorea.co.kr/article/1895614" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>9</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=298290264&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="사서함 110호의 우편물 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/29829/2/cover500/k702838510_1.jpg" alt="사서함 110호의 우편물 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=298290264&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">사서함 110호의 우편물</a></td><td>이도우</td><td>수박설탕</td><td class="src"><a href="https://www.youtube.com/watch?v=R2P0sW9CGX8" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>10</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="쇼코의 미소 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/8679/95/cover500/8954641636_1.jpg" alt="쇼코의 미소 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">쇼코의 미소</a></td><td>최은영</td><td>문학동네</td><td class="src"><a href="https://www.esquirekorea.co.kr/article/1895614" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>11</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=241313700&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="시선으로부터 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/24131/37/cover500/s962738283_1.jpg" alt="시선으로부터 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=241313700&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">시선으로부터</a></td><td>정세랑</td><td>문학동네</td><td class="src"><a href="https://www.youtube.com/watch?v=R2P0sW9CGX8" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>12</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=186560700&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="열여섯 밤의 주방 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/18656/7/cover500/s152635462_1.jpg" alt="열여섯 밤의 주방 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=186560700&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">열여섯 밤의 주방</a></td><td>마오우</td><td>사계절</td><td class="src"><a href="https://www.wkorea.com/2024/07/26/%ec%b9%b4%eb%a6%ac%eb%82%98%ec%99%80-%eb%82%98%eb%88%88-%ea%b2%b0%ec%a0%95%ec%a0%81-%ec%88%9c%ea%b0%84/" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>13</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340025499&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="입속 지느러미 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/34002/54/cover500/k462930652_1.jpg" alt="입속 지느러미 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340025499&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">입속 지느러미</a></td><td>조예은</td><td>한겨레출판</td><td class="src"><a href="https://www.youtube.com/watch?v=R2P0sW9CGX8" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>14</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=371723601&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="절창 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/37172/36/cover500/k662031678_3.jpg" alt="절창 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=371723601&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">절창</a></td><td>구병모</td><td>문학동네</td><td class="src"><a href="https://www.youtube.com/watch?v=R2P0sW9CGX8" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>15</td><td><img src="https://image.aladin.co.kr/product/29543/72/cover500/k502837053_1.jpg" alt="칵테일, 러브, 좀비 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>칵테일, 러브, 좀비</td><td>조예은</td><td>안전가옥</td><td class="src"><a href="https://www.youtube.com/watch?v=R2P0sW9CGX8" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>16</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=356407255&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="필사는 도끼다 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/35640/72/cover500/k962036608_2.jpg" alt="필사는 도끼다 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=356407255&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">필사는 도끼다</a></td><td>김지수</td><td>다산북스</td><td class="src"><a href="https://theqoo.net/karina/3967001167?m=0&amp;listStyle=viewer" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
       </tbody>
     </table>
   </section>
 
   <section class="book-pages">
-    <h2>📖 이 책들의 상세 페이지 (10권)</h2>
-    <p class="muted">2명 이상의 셀럽이 추천한 책은 별도 상세 페이지가 있어요.</p>
-    <ul class="book-cards">
-      <li class="book-card"><a href="book/%EB%82%B4%EA%B2%8C%20%EB%AC%B4%ED%95%B4%ED%95%9C%20%EC%82%AC%EB%9E%8C.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/15133/51/cover500/8954651828_2.jpg" alt="내게 무해한 사람 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">내게 무해한 사람</div><div class="bc-author">최은영</div><div class="bc-badge">👥 2명 추천</div></div></a></li>
-      <li class="book-card"><a href="book/%EB%8B%AC%EA%B3%BC%206%ED%8E%9C%EC%8A%A4.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/23/77/cover500/s692639624_2.jpg" alt="달과 6펜스 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">달과 6펜스</div><div class="bc-author">서머싯 몸</div><div class="bc-badge">👥 4명 추천</div></div></a></li>
-      <li class="book-card"><a href="book/%EB%AA%A8%EC%88%9C.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/2584/37/cover500/8998441012_3.jpg" alt="모순 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">모순</div><div class="bc-author">양귀자</div><div class="bc-badge">👥 5명 추천</div></div></a></li>
-      <li class="book-card"><a href="book/%EB%B0%9D%EC%9D%80%20%EB%B0%A4.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/27541/91/cover500/k312835925_1.jpg" alt="밝은 밤 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">밝은 밤</div><div class="bc-author">최은영</div><div class="bc-badge">👥 2명 추천</div></div></a></li>
-      <li class="book-card"><a href="book/%EB%B3%B4%EA%B1%B4%EA%B5%90%EC%82%AC%20%EC%95%88%EC%9D%80%EC%98%81.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/25128/11/cover500/8937479958_2.jpg" alt="보건교사 안은영 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">보건교사 안은영</div><div class="bc-author">정세랑</div><div class="bc-badge">👥 2명 추천</div></div></a></li>
-      <li class="book-card"><a href="book/%EC%82%AC%EC%84%9C%ED%95%A8%20110%ED%98%B8%EC%9D%98%20%EC%9A%B0%ED%8E%B8%EB%AC%BC.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/29829/2/cover500/k702838510_1.jpg" alt="사서함 110호의 우편물 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">사서함 110호의 우편물</div><div class="bc-author">이도우</div><div class="bc-badge">👥 2명 추천</div></div></a></li>
-      <li class="book-card"><a href="book/%EC%82%AC%EC%84%9C%ED%95%A8%20110%ED%98%B8%EC%9D%98%20%EC%9A%B0%ED%8E%B8%EB%AC%BC.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/29829/2/cover500/k702838510_1.jpg" alt="사서함 110호의 우편물 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">사서함 110호의 우편물</div><div class="bc-author">이도우</div><div class="bc-badge">👥 2명 추천</div></div></a></li>
-      <li class="book-card"><a href="book/%EC%87%BC%EC%BD%94%EC%9D%98%20%EB%AF%B8%EC%86%8C.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/8679/95/cover500/8954641636_1.jpg" alt="쇼코의 미소 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">쇼코의 미소</div><div class="bc-author">최은영</div><div class="bc-badge">👥 2명 추천</div></div></a></li>
-      <li class="book-card"><a href="book/%EC%A0%88%EC%B0%BD.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/37172/36/cover500/k662031678_3.jpg" alt="절창 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">절창</div><div class="bc-author">구병모</div><div class="bc-badge">👥 2명 추천</div></div></a></li>
-      <li class="book-card"><a href="book/%EC%B9%B5%ED%85%8C%EC%9D%BC%2C%20%EB%9F%AC%EB%B8%8C%2C%20%EC%A2%80%EB%B9%84.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/29543/72/cover500/k502837053_1.jpg" alt="칵테일, 러브, 좀비 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">칵테일, 러브, 좀비</div><div class="bc-author">조예은</div><div class="bc-badge">👥 2명 추천</div></div></a></li>
+    <h2>👥 카리나(에스파)과 다른 셀럽이 함께 추천한 책 (10권)</h2>
+    <p class="muted">2명 이상의 셀럽이 추천한 책과 함께 추천한 셀럽 명단이에요.</p>
+    <ul class="shared-book-list">
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="내게 무해한 사람 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/15133/51/cover500/8954651828_2.jpg" alt="내게 무해한 사람 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">내게 무해한 사람</a></div>
+            <div class="sb-author">최은영</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 1명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%9D%B4%EC%B2%AD%EC%95%84.html">이청아</a>
+        </div>
+      </li>
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="달과 6펜스 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/23/77/cover500/s692639624_2.jpg" alt="달과 6펜스 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">달과 6펜스</a></div>
+            <div class="sb-author">서머싯 몸</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 3명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EA%B9%80%EC%A7%80%EC%9B%90.html">김지원</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EB%8B%9D%EB%8B%9D%28%EC%97%90%EC%8A%A4%ED%8C%8C%29.html">닝닝(에스파)</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%A7%84%EC%98%81%28%EA%B0%93%EC%84%B8%EB%B8%90%29.html">진영(갓세븐)</a>
+        </div>
+      </li>
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=25843736&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="모순 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/2584/37/cover500/8998441012_3.jpg" alt="모순 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=25843736&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">모순</a></div>
+            <div class="sb-author">양귀자</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 4명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EA%B0%80%EC%9B%90%28%EB%AF%B8%EC%95%BC%EC%98%A4%29.html">가원(미야오)</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%95%88%ED%98%95%EC%84%AD.html">안형섭</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%9A%94%EC%A1%B0.html">요조</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%B0%B0%EC%8A%A4%EC%97%94%ED%84%B0.html">찰스엔터</a>
+        </div>
+      </li>
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="밝은 밤 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/27541/91/cover500/k312835925_1.jpg" alt="밝은 밤 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">밝은 밤</a></div>
+            <div class="sb-author">최은영</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 1명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EB%82%98%EB%A6%B0%28%EB%AF%B8%EC%95%BC%EC%98%A4%29.html">나린(미야오)</a>
+        </div>
+      </li>
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=251281173" rel="nofollow noopener noreferrer" target="_blank" aria-label="보건교사 안은영 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/25128/11/cover500/8937479958_2.jpg" alt="보건교사 안은영 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=251281173" rel="nofollow noopener noreferrer" target="_blank">보건교사 안은영</a></div>
+            <div class="sb-author">정세랑</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 1명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EA%B9%80%EC%9C%A4%EC%95%84%28%EC%9E%90%EC%9A%B0%EB%A6%BC%29.html">김윤아(자우림)</a>
+        </div>
+      </li>
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="사서함 110호의 우편물 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/29829/2/cover500/k702838510_1.jpg" alt="사서함 110호의 우편물 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">사서함 110호의 우편물</a></div>
+            <div class="sb-author">이도우</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 1명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EA%B9%80%EB%AF%BC%EC%A3%BC.html">김민주</a>
+        </div>
+      </li>
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=298290264&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="사서함 110호의 우편물 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/29829/2/cover500/k702838510_1.jpg" alt="사서함 110호의 우편물 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=298290264&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">사서함 110호의 우편물</a></div>
+            <div class="sb-author">이도우</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 1명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EA%B9%80%EB%AF%BC%EC%A3%BC.html">김민주</a>
+        </div>
+      </li>
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="쇼코의 미소 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/8679/95/cover500/8954641636_1.jpg" alt="쇼코의 미소 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=545121&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">쇼코의 미소</a></div>
+            <div class="sb-author">최은영</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 1명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%9D%B4%EC%86%9C.html">이솜</a>
+        </div>
+      </li>
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=371723601&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="절창 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/37172/36/cover500/k662031678_3.jpg" alt="절창 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=371723601&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">절창</a></div>
+            <div class="sb-author">구병모</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 1명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EB%82%98%EB%A6%B0%28%EB%AF%B8%EC%95%BC%EC%98%A4%29.html">나린(미야오)</a>
+        </div>
+      </li>
+      <li class="shared-book">
+        <div class="sb-main">
+          <img src="https://image.aladin.co.kr/product/29543/72/cover500/k502837053_1.jpg" alt="칵테일, 러브, 좀비 표지" width="60" height="85" loading="lazy" style="object-fit:cover">
+          <div class="sb-meta">
+            <div class="sb-title">칵테일, 러브, 좀비</div>
+            <div class="sb-author">조예은</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 1명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EA%B3%A0%EB%AF%BC%EC%8B%9C.html">고민시</a>
+        </div>
+      </li>
     </ul>
   </section>
 
