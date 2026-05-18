@@ -190,6 +190,19 @@
     .bc-title { font-weight: 700; font-size: 13px; line-height: 1.3; margin-bottom: 4px; }
     .bc-author { font-size: 12px; color: #555; margin-bottom: 6px; }
     .bc-badge { display: inline-block; font-size: 11px; background: #fde047; border: 1px solid #000; padding: 1px 6px; font-weight: 700; }
+    .shared-book-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+    .shared-book { background: #fff; border: 2px solid #000; box-shadow: 4px 4px 0 0 #000; padding: 12px; }
+    .sb-main { display: flex; gap: 12px; margin-bottom: 10px; }
+    .sb-cover-link { flex-shrink: 0; display: block; }
+    .sb-meta { flex: 1; min-width: 0; }
+    .sb-title { font-weight: 800; font-size: 15px; line-height: 1.3; margin-bottom: 4px; }
+    .sb-title a { color: #000; }
+    .sb-title a:hover { color: #2563eb; }
+    .sb-author { font-size: 13px; color: #555; }
+    .sb-celebs { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding-top: 10px; border-top: 1.5px dashed #ccc; }
+    .sb-celebs-label { font-size: 12px; color: #666; font-weight: 700; margin-right: 4px; }
+    .sb-celeb-chip { display: inline-block; padding: 3px 9px; background: #fff8e7; border: 1.5px solid #000; box-shadow: 1px 1px 0 0 #000; font-size: 12px; font-weight: 700; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s, background .1s; }
+    .sb-celeb-chip:hover { transform: translate(-1px,-1px); box-shadow: 2px 2px 0 0 #000; background: #fde047; text-decoration: none; }
     .related-celebs { margin: 24px 0; }
     .related-celeb-list { display: flex; flex-wrap: wrap; gap: 8px; }
     .related-celeb { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #fff; border: 2px solid #000; box-shadow: 2px 2px 0 0 #000; font-size: 13px; font-weight: 700; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s; }
@@ -231,21 +244,68 @@
       <thead><tr><th>#</th><th>표지</th><th>도서명</th><th>저자</th><th>출판사</th><th>출처</th></tr></thead>
       <tbody>
     <tr><td>1</td><td></td><td>러버 보이</td><td>팀 보울러</td><td></td><td class="src"><a href="https://www.sedaily.com/article/12141887" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>2</td><td><a href="book/%EB%AF%B8%20%EB%B9%84%ED%8F%AC%20%EC%9C%A0.html" aria-label="미 비포 유 자세히 보기"><img src="https://image.aladin.co.kr/product/11832/9/cover500/8937473178_1.jpg" alt="미 비포 유 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EB%AF%B8%20%EB%B9%84%ED%8F%AC%20%EC%9C%A0.html">미 비포 유 <span aria-hidden="true">→</span></a></td><td>조조 모예스</td><td>다산책방</td><td class="src"><a href="https://www.sedaily.com/article/12141887" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>3</td><td><a href="book/%EC%96%B4%EB%A6%B0%EC%99%95%EC%9E%90.html" aria-label="어린왕자 자세히 보기"><img src="https://image.aladin.co.kr/product/25184/75/cover200/8931021291_1.jpg" alt="어린왕자 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EC%96%B4%EB%A6%B0%EC%99%95%EC%9E%90.html">어린왕자 <span aria-hidden="true">→</span></a></td><td>앙투안 드 생텍쥐페리</td><td>문예출판사</td><td class="src"><a href="https://www.sedaily.com/article/12141887" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>4</td><td><a href="book/%EC%A0%95%EC%9D%98%EB%9E%80%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80.html" aria-label="정의란 무엇인가 자세히 보기"><img src="https://image.aladin.co.kr/product/4898/84/cover500/s812035947_1.jpg" alt="정의란 무엇인가 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EC%A0%95%EC%9D%98%EB%9E%80%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80.html">정의란 무엇인가 <span aria-hidden="true">→</span></a></td><td>마이클 샌델</td><td></td><td class="src"><a href="https://www.sedaily.com/article/12141887" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>5</td><td><img src="https://image.aladin.co.kr/product/52/52/cover500/8974092085_1.jpg" alt="행운아 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>행운아</td><td>존 버거</td><td></td><td class="src"><a href="https://www.sedaily.com/article/12141887" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>2</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=338505472&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="미 비포 유 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/11832/9/cover500/8937473178_1.jpg" alt="미 비포 유 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=338505472&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">미 비포 유</a></td><td>조조 모예스</td><td>다산책방</td><td class="src"><a href="https://www.sedaily.com/article/12141887" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>3</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=251847567" rel="nofollow noopener noreferrer" target="_blank" aria-label="어린왕자 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/25184/75/cover200/8931021291_1.jpg" alt="어린왕자 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=251847567" rel="nofollow noopener noreferrer" target="_blank">어린왕자</a></td><td>앙투안 드 생텍쥐페리</td><td>문예출판사</td><td class="src"><a href="https://www.sedaily.com/article/12141887" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>4</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=48988418&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="정의란 무엇인가 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/4898/84/cover500/s812035947_1.jpg" alt="정의란 무엇인가 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=48988418&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">정의란 무엇인가</a></td><td>마이클 샌델</td><td></td><td class="src"><a href="https://www.sedaily.com/article/12141887" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>5</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=525238&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="행운아 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/52/52/cover500/8974092085_1.jpg" alt="행운아 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=525238&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">행운아</a></td><td>존 버거</td><td></td><td class="src"><a href="https://www.sedaily.com/article/12141887" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
       </tbody>
     </table>
   </section>
 
   <section class="book-pages">
-    <h2>📖 이 책들의 상세 페이지 (3권)</h2>
-    <p class="muted">2명 이상의 셀럽이 추천한 책은 별도 상세 페이지가 있어요.</p>
-    <ul class="book-cards">
-      <li class="book-card"><a href="book/%EB%AF%B8%20%EB%B9%84%ED%8F%AC%20%EC%9C%A0.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/11832/9/cover500/8937473178_1.jpg" alt="미 비포 유 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">미 비포 유</div><div class="bc-author">조조 모예스</div><div class="bc-badge">👥 5명 추천</div></div></a></li>
-      <li class="book-card"><a href="book/%EC%96%B4%EB%A6%B0%EC%99%95%EC%9E%90.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/25184/75/cover200/8931021291_1.jpg" alt="어린왕자 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">어린왕자</div><div class="bc-author">앙투안 드 생텍쥐페리</div><div class="bc-badge">👥 9명 추천</div></div></a></li>
-      <li class="book-card"><a href="book/%EC%A0%95%EC%9D%98%EB%9E%80%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/4898/84/cover500/s812035947_1.jpg" alt="정의란 무엇인가 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">정의란 무엇인가</div><div class="bc-author">마이클 샌델</div><div class="bc-badge">👥 3명 추천</div></div></a></li>
+    <h2>👥 키노(펜타곤)과 다른 셀럽이 함께 추천한 책 (3권)</h2>
+    <p class="muted">2명 이상의 셀럽이 추천한 책과 함께 추천한 셀럽 명단이에요.</p>
+    <ul class="shared-book-list">
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=338505472&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="미 비포 유 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/11832/9/cover500/8937473178_1.jpg" alt="미 비포 유 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=338505472&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">미 비포 유</a></div>
+            <div class="sb-author">조조 모예스</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 4명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%9B%90%EC%9A%B0%28%EC%84%B8%EB%B8%90%ED%8B%B4%29.html">원우(세븐틴)</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%9D%B4%EB%B3%B4%EC%98%81.html">이보영</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%A7%84%EC%98%81%28%EA%B0%93%EC%84%B8%EB%B8%90%29.html">진영(갓세븐)</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%A7%84%EC%A7%84%28%EC%95%84%EC%8A%A4%ED%8A%B8%EB%A1%9C%29.html">진진(아스트로)</a>
+        </div>
+      </li>
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=251847567" rel="nofollow noopener noreferrer" target="_blank" aria-label="어린왕자 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/25184/75/cover200/8931021291_1.jpg" alt="어린왕자 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=251847567" rel="nofollow noopener noreferrer" target="_blank">어린왕자</a></div>
+            <div class="sb-author">앙투안 드 생텍쥐페리</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 8명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EA%B9%80%ED%9A%A8%EC%A7%84.html">김효진</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%9D%B4%EB%B3%B4%EC%98%81.html">이보영</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%9D%B4%EC%84%B8%EC%98%81.html">이세영</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%A0%95%EC%86%8C%EB%AF%BC.html">정소민</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%ED%8F%B4%ED%82%B4.html">폴킴</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%ED%95%9C%EC%A7%80%EB%AF%BC.html">한지민</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%97%90%EB%93%9C%EC%9B%8C%EB%93%9C%20%EB%A6%AC.html">에드워드 리</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EB%B0%95%ED%98%9C%EC%88%98.html">박혜수</a>
+        </div>
+      </li>
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=48988418&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="정의란 무엇인가 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/4898/84/cover500/s812035947_1.jpg" alt="정의란 무엇인가 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=48988418&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">정의란 무엇인가</a></div>
+            <div class="sb-author">마이클 샌델</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 2명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%ED%8E%98%EC%9D%B4%EC%BB%A4.html">페이커</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%ED%97%88%EC%84%B1%EB%B2%94.html">허성범</a>
+        </div>
+      </li>
     </ul>
   </section>
 

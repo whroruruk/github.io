@@ -186,6 +186,19 @@
     .bc-title { font-weight: 700; font-size: 13px; line-height: 1.3; margin-bottom: 4px; }
     .bc-author { font-size: 12px; color: #555; margin-bottom: 6px; }
     .bc-badge { display: inline-block; font-size: 11px; background: #fde047; border: 1px solid #000; padding: 1px 6px; font-weight: 700; }
+    .shared-book-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+    .shared-book { background: #fff; border: 2px solid #000; box-shadow: 4px 4px 0 0 #000; padding: 12px; }
+    .sb-main { display: flex; gap: 12px; margin-bottom: 10px; }
+    .sb-cover-link { flex-shrink: 0; display: block; }
+    .sb-meta { flex: 1; min-width: 0; }
+    .sb-title { font-weight: 800; font-size: 15px; line-height: 1.3; margin-bottom: 4px; }
+    .sb-title a { color: #000; }
+    .sb-title a:hover { color: #2563eb; }
+    .sb-author { font-size: 13px; color: #555; }
+    .sb-celebs { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding-top: 10px; border-top: 1.5px dashed #ccc; }
+    .sb-celebs-label { font-size: 12px; color: #666; font-weight: 700; margin-right: 4px; }
+    .sb-celeb-chip { display: inline-block; padding: 3px 9px; background: #fff8e7; border: 1.5px solid #000; box-shadow: 1px 1px 0 0 #000; font-size: 12px; font-weight: 700; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s, background .1s; }
+    .sb-celeb-chip:hover { transform: translate(-1px,-1px); box-shadow: 2px 2px 0 0 #000; background: #fde047; text-decoration: none; }
     .related-celebs { margin: 24px 0; }
     .related-celeb-list { display: flex; flex-wrap: wrap; gap: 8px; }
     .related-celeb { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #fff; border: 2px solid #000; box-shadow: 2px 2px 0 0 #000; font-size: 13px; font-weight: 700; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s; }
@@ -226,10 +239,10 @@
     <table>
       <thead><tr><th>#</th><th>표지</th><th>도서명</th><th>저자</th><th>출판사</th><th>출처</th></tr></thead>
       <tbody>
-    <tr><td>1</td><td><img src="https://image.aladin.co.kr/product/18597/94/cover500/k422635064_1.jpg" alt="말의 내공 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>말의 내공</td><td>신도현</td><td>행성비</td><td class="src"><a href="https://www.segye.com/newsView/20190302000266" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>2</td><td><img src="https://image.aladin.co.kr/product/34968/62/cover500/k022934567_1.jpg" alt="어떤 비밀 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>어떤 비밀</td><td>최진영</td><td>난다</td><td class="src"><a href="https://www.segye.com/newsView/20190302000266" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>3</td><td><img src="https://image.aladin.co.kr/product/29638/8/cover500/895468727x_1.jpg" alt="이해할 수 없는 점이 마음에 듭니다 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>이해할 수 없는 점이 마음에 듭니다</td><td>조말선</td><td>문학동네</td><td class="src"><a href="https://www.yna.co.kr/view/AKR20260318036600005?input=1195m" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>4</td><td><img src="https://image.aladin.co.kr/product/24248/90/cover500/k442630368_1.jpg" alt="집에 있는데도 집에 가고 싶어 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>집에 있는데도 집에 가고 싶어</td><td>권라빈</td><td>스튜디오오드리</td><td class="src"><a href="https://www.segye.com/newsView/20190302000266" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>1</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=185979454&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="말의 내공 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/18597/94/cover500/k422635064_1.jpg" alt="말의 내공 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=185979454&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">말의 내공</a></td><td>신도현</td><td>행성비</td><td class="src"><a href="https://www.segye.com/newsView/20190302000266" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>2</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=349686287" rel="nofollow noopener noreferrer" target="_blank" aria-label="어떤 비밀 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/34968/62/cover500/k022934567_1.jpg" alt="어떤 비밀 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=349686287" rel="nofollow noopener noreferrer" target="_blank">어떤 비밀</a></td><td>최진영</td><td>난다</td><td class="src"><a href="https://www.segye.com/newsView/20190302000266" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>3</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=296380882&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="이해할 수 없는 점이 마음에 듭니다 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/29638/8/cover500/895468727x_1.jpg" alt="이해할 수 없는 점이 마음에 듭니다 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=296380882&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">이해할 수 없는 점이 마음에 듭니다</a></td><td>조말선</td><td>문학동네</td><td class="src"><a href="https://www.yna.co.kr/view/AKR20260318036600005?input=1195m" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>4</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=242489000&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="집에 있는데도 집에 가고 싶어 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/24248/90/cover500/k442630368_1.jpg" alt="집에 있는데도 집에 가고 싶어 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=242489000&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">집에 있는데도 집에 가고 싶어</a></td><td>권라빈</td><td>스튜디오오드리</td><td class="src"><a href="https://www.segye.com/newsView/20190302000266" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
       </tbody>
     </table>
   </section>

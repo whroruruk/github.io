@@ -154,6 +154,19 @@
     .bc-title { font-weight: 700; font-size: 13px; line-height: 1.3; margin-bottom: 4px; }
     .bc-author { font-size: 12px; color: #555; margin-bottom: 6px; }
     .bc-badge { display: inline-block; font-size: 11px; background: #fde047; border: 1px solid #000; padding: 1px 6px; font-weight: 700; }
+    .shared-book-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+    .shared-book { background: #fff; border: 2px solid #000; box-shadow: 4px 4px 0 0 #000; padding: 12px; }
+    .sb-main { display: flex; gap: 12px; margin-bottom: 10px; }
+    .sb-cover-link { flex-shrink: 0; display: block; }
+    .sb-meta { flex: 1; min-width: 0; }
+    .sb-title { font-weight: 800; font-size: 15px; line-height: 1.3; margin-bottom: 4px; }
+    .sb-title a { color: #000; }
+    .sb-title a:hover { color: #2563eb; }
+    .sb-author { font-size: 13px; color: #555; }
+    .sb-celebs { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding-top: 10px; border-top: 1.5px dashed #ccc; }
+    .sb-celebs-label { font-size: 12px; color: #666; font-weight: 700; margin-right: 4px; }
+    .sb-celeb-chip { display: inline-block; padding: 3px 9px; background: #fff8e7; border: 1.5px solid #000; box-shadow: 1px 1px 0 0 #000; font-size: 12px; font-weight: 700; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s, background .1s; }
+    .sb-celeb-chip:hover { transform: translate(-1px,-1px); box-shadow: 2px 2px 0 0 #000; background: #fde047; text-decoration: none; }
     .related-celebs { margin: 24px 0; }
     .related-celeb-list { display: flex; flex-wrap: wrap; gap: 8px; }
     .related-celeb { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #fff; border: 2px solid #000; box-shadow: 2px 2px 0 0 #000; font-size: 13px; font-weight: 700; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s; }
@@ -194,8 +207,8 @@
     <table>
       <thead><tr><th>#</th><th>표지</th><th>도서명</th><th>저자</th><th>출판사</th><th>출처</th></tr></thead>
       <tbody>
-    <tr><td>1</td><td><img src="https://image.aladin.co.kr/product/10193/46/cover500/8990167744_1.jpg" alt="에드거 앨런 포 베스트 단편선 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>에드거 앨런 포 베스트 단편선</td><td>에드거 앨런 포</td><td>한비미디어</td><td class="src"><a href="https://youtu.be/WhmDxFAJ3Qk?si=9t6CZm2ZLsw-DCne" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>2</td><td><img src="https://image.aladin.co.kr/product/7162/36/cover500/8954638570_1.jpg" alt="흐르는 강물처럼 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>흐르는 강물처럼</td><td>파울로 코엘료</td><td>문학동네</td><td class="src"><a href="https://www.youtube.com/watch?v=31ANsmGwwdk" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>1</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=101934669&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="에드거 앨런 포 베스트 단편선 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/10193/46/cover500/8990167744_1.jpg" alt="에드거 앨런 포 베스트 단편선 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=101934669&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">에드거 앨런 포 베스트 단편선</a></td><td>에드거 앨런 포</td><td>한비미디어</td><td class="src"><a href="https://youtu.be/WhmDxFAJ3Qk?si=9t6CZm2ZLsw-DCne" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>2</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=71623687&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="흐르는 강물처럼 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/7162/36/cover500/8954638570_1.jpg" alt="흐르는 강물처럼 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=71623687&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">흐르는 강물처럼</a></td><td>파울로 코엘료</td><td>문학동네</td><td class="src"><a href="https://www.youtube.com/watch?v=31ANsmGwwdk" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
       </tbody>
     </table>
   </section>

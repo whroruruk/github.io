@@ -170,6 +170,19 @@
     .bc-title { font-weight: 700; font-size: 13px; line-height: 1.3; margin-bottom: 4px; }
     .bc-author { font-size: 12px; color: #555; margin-bottom: 6px; }
     .bc-badge { display: inline-block; font-size: 11px; background: #fde047; border: 1px solid #000; padding: 1px 6px; font-weight: 700; }
+    .shared-book-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+    .shared-book { background: #fff; border: 2px solid #000; box-shadow: 4px 4px 0 0 #000; padding: 12px; }
+    .sb-main { display: flex; gap: 12px; margin-bottom: 10px; }
+    .sb-cover-link { flex-shrink: 0; display: block; }
+    .sb-meta { flex: 1; min-width: 0; }
+    .sb-title { font-weight: 800; font-size: 15px; line-height: 1.3; margin-bottom: 4px; }
+    .sb-title a { color: #000; }
+    .sb-title a:hover { color: #2563eb; }
+    .sb-author { font-size: 13px; color: #555; }
+    .sb-celebs { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding-top: 10px; border-top: 1.5px dashed #ccc; }
+    .sb-celebs-label { font-size: 12px; color: #666; font-weight: 700; margin-right: 4px; }
+    .sb-celeb-chip { display: inline-block; padding: 3px 9px; background: #fff8e7; border: 1.5px solid #000; box-shadow: 1px 1px 0 0 #000; font-size: 12px; font-weight: 700; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s, background .1s; }
+    .sb-celeb-chip:hover { transform: translate(-1px,-1px); box-shadow: 2px 2px 0 0 #000; background: #fde047; text-decoration: none; }
     .related-celebs { margin: 24px 0; }
     .related-celeb-list { display: flex; flex-wrap: wrap; gap: 8px; }
     .related-celeb { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #fff; border: 2px solid #000; box-shadow: 2px 2px 0 0 #000; font-size: 13px; font-weight: 700; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s; }
@@ -210,19 +223,50 @@
     <table>
       <thead><tr><th>#</th><th>표지</th><th>도서명</th><th>저자</th><th>출판사</th><th>출처</th></tr></thead>
       <tbody>
-    <tr><td>1</td><td><img src="https://image.aladin.co.kr/product/603/79/cover500/8932909342_1.jpg" alt="그리스인 조르바 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>그리스인 조르바</td><td>니코스 카잔자키스</td><td>열린책들</td><td class="src"><a href="https://www.wkorea.com/2019/11/25/who-me/" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>2</td><td><a href="book/%EB%85%B8%EB%A5%B4%EC%9B%A8%EC%9D%B4%EC%9D%98%20%EC%88%B2.html" aria-label="노르웨이의 숲 자세히 보기"><img src="https://image.aladin.co.kr/product/11561/49/cover500/8937434482_1.jpg" alt="노르웨이의 숲 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EB%85%B8%EB%A5%B4%EC%9B%A8%EC%9D%B4%EC%9D%98%20%EC%88%B2.html">노르웨이의 숲 <span aria-hidden="true">→</span></a></td><td>무라카미 하루키</td><td>민음사</td><td class="src"><a href="https://www.wkorea.com/2019/11/25/who-me/" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>3</td><td><a href="book/%EC%B0%B8%EC%9D%84%20%EC%88%98%20%EC%97%86%EB%8A%94%20%EC%A1%B4%EC%9E%AC%EC%9D%98%20%EA%B0%80%EB%B2%BC%EC%9B%80.html" aria-label="참을 수 없는 존재의 가벼움 자세히 보기"><img src="https://image.aladin.co.kr/product/38831/90/cover500/8937404664_1.jpg" alt="참을 수 없는 존재의 가벼움 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EC%B0%B8%EC%9D%84%20%EC%88%98%20%EC%97%86%EB%8A%94%20%EC%A1%B4%EC%9E%AC%EC%9D%98%20%EA%B0%80%EB%B2%BC%EC%9B%80.html">참을 수 없는 존재의 가벼움 <span aria-hidden="true">→</span></a></td><td>밀란 쿤데라</td><td>민음사</td><td class="src"><a href="https://www.wkorea.com/2019/11/25/who-me/" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>1</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=6037971&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="그리스인 조르바 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/603/79/cover500/8932909342_1.jpg" alt="그리스인 조르바 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=6037971&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">그리스인 조르바</a></td><td>니코스 카잔자키스</td><td>열린책들</td><td class="src"><a href="https://www.wkorea.com/2019/11/25/who-me/" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>2</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=115614994&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="노르웨이의 숲 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/11561/49/cover500/8937434482_1.jpg" alt="노르웨이의 숲 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=115614994&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">노르웨이의 숲</a></td><td>무라카미 하루키</td><td>민음사</td><td class="src"><a href="https://www.wkorea.com/2019/11/25/who-me/" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>3</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=388319072&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="참을 수 없는 존재의 가벼움 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/38831/90/cover500/8937404664_1.jpg" alt="참을 수 없는 존재의 가벼움 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=388319072&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">참을 수 없는 존재의 가벼움</a></td><td>밀란 쿤데라</td><td>민음사</td><td class="src"><a href="https://www.wkorea.com/2019/11/25/who-me/" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
       </tbody>
     </table>
   </section>
 
   <section class="book-pages">
-    <h2>📖 이 책들의 상세 페이지 (2권)</h2>
-    <p class="muted">2명 이상의 셀럽이 추천한 책은 별도 상세 페이지가 있어요.</p>
-    <ul class="book-cards">
-      <li class="book-card"><a href="book/%EB%85%B8%EB%A5%B4%EC%9B%A8%EC%9D%B4%EC%9D%98%20%EC%88%B2.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/11561/49/cover500/8937434482_1.jpg" alt="노르웨이의 숲 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">노르웨이의 숲</div><div class="bc-author">무라카미 하루키</div><div class="bc-badge">👥 6명 추천</div></div></a></li>
-      <li class="book-card"><a href="book/%EC%B0%B8%EC%9D%84%20%EC%88%98%20%EC%97%86%EB%8A%94%20%EC%A1%B4%EC%9E%AC%EC%9D%98%20%EA%B0%80%EB%B2%BC%EC%9B%80.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/38831/90/cover500/8937404664_1.jpg" alt="참을 수 없는 존재의 가벼움 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">참을 수 없는 존재의 가벼움</div><div class="bc-author">밀란 쿤데라</div><div class="bc-badge">👥 5명 추천</div></div></a></li>
+    <h2>👥 김도완과 다른 셀럽이 함께 추천한 책 (2권)</h2>
+    <p class="muted">2명 이상의 셀럽이 추천한 책과 함께 추천한 셀럽 명단이에요.</p>
+    <ul class="shared-book-list">
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=115614994&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="노르웨이의 숲 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/11561/49/cover500/8937434482_1.jpg" alt="노르웨이의 숲 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=115614994&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">노르웨이의 숲</a></div>
+            <div class="sb-author">무라카미 하루키</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 5명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EA%B0%80%EC%9B%90%28%EB%AF%B8%EC%95%BC%EC%98%A4%29.html">가원(미야오)</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EA%B3%A0%EB%AF%BC%EC%8B%9C.html">고민시</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%86%90%EC%A2%85%EC%9B%90.html">손종원</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%ED%8E%98%EC%9D%B4%EC%BB%A4.html">페이커</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%ED%97%88%EC%84%B1%EB%B2%94.html">허성범</a>
+        </div>
+      </li>
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=388319072&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="참을 수 없는 존재의 가벼움 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/38831/90/cover500/8937404664_1.jpg" alt="참을 수 없는 존재의 가벼움 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=388319072&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">참을 수 없는 존재의 가벼움</a></div>
+            <div class="sb-author">밀란 쿤데라</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 4명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%84%9C%EA%B0%95%EC%A4%80.html">서강준</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%95%84%EC%9D%B4%EC%9C%A0.html">아이유</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%A7%84%EC%98%81%28%EA%B0%93%EC%84%B8%EB%B8%90%29.html">진영(갓세븐)</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EA%B9%80%ED%96%A5%EA%B8%B0.html">김향기</a>
+        </div>
+      </li>
     </ul>
   </section>
 

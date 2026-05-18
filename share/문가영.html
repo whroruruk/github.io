@@ -330,6 +330,19 @@
     .bc-title { font-weight: 700; font-size: 13px; line-height: 1.3; margin-bottom: 4px; }
     .bc-author { font-size: 12px; color: #555; margin-bottom: 6px; }
     .bc-badge { display: inline-block; font-size: 11px; background: #fde047; border: 1px solid #000; padding: 1px 6px; font-weight: 700; }
+    .shared-book-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+    .shared-book { background: #fff; border: 2px solid #000; box-shadow: 4px 4px 0 0 #000; padding: 12px; }
+    .sb-main { display: flex; gap: 12px; margin-bottom: 10px; }
+    .sb-cover-link { flex-shrink: 0; display: block; }
+    .sb-meta { flex: 1; min-width: 0; }
+    .sb-title { font-weight: 800; font-size: 15px; line-height: 1.3; margin-bottom: 4px; }
+    .sb-title a { color: #000; }
+    .sb-title a:hover { color: #2563eb; }
+    .sb-author { font-size: 13px; color: #555; }
+    .sb-celebs { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding-top: 10px; border-top: 1.5px dashed #ccc; }
+    .sb-celebs-label { font-size: 12px; color: #666; font-weight: 700; margin-right: 4px; }
+    .sb-celeb-chip { display: inline-block; padding: 3px 9px; background: #fff8e7; border: 1.5px solid #000; box-shadow: 1px 1px 0 0 #000; font-size: 12px; font-weight: 700; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s, background .1s; }
+    .sb-celeb-chip:hover { transform: translate(-1px,-1px); box-shadow: 2px 2px 0 0 #000; background: #fde047; text-decoration: none; }
     .related-celebs { margin: 24px 0; }
     .related-celeb-list { display: flex; flex-wrap: wrap; gap: 8px; }
     .related-celeb { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #fff; border: 2px solid #000; box-shadow: 2px 2px 0 0 #000; font-size: 13px; font-weight: 700; text-decoration: none; color: #000; transition: transform .1s, box-shadow .1s; }
@@ -370,32 +383,93 @@
     <table>
       <thead><tr><th>#</th><th>표지</th><th>도서명</th><th>저자</th><th>출판사</th><th>출처</th></tr></thead>
       <tbody>
-    <tr><td>1</td><td><img src="https://image.aladin.co.kr/product/90/76/cover500/8952748921_1.jpg" alt="가위 들고 달리기 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>가위 들고 달리기</td><td>어거스텐 버로스</td><td>시공사</td><td class="src"><a href="https://www.marieclairekorea.com/celebrity/2021/06/munkayoung-2/" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>2</td><td><a href="book/%EA%B5%B0%EC%A3%BC%EB%A1%A0.html" aria-label="군주론 자세히 보기"><img src="https://image.aladin.co.kr/product/27609/70/cover500/k262733021_1.jpg" alt="군주론 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EA%B5%B0%EC%A3%BC%EB%A1%A0.html">군주론 <span aria-hidden="true">→</span></a></td><td>니콜로 마키아벨리</td><td>현대지성</td><td class="src"><a href="https://www.kyeongin.com/article/1458022" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>3</td><td><img src="https://image.aladin.co.kr/product/5918/21/cover500/8936472631_1.jpg" alt="남자들은 자꾸 나를 가르치려 든다 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>남자들은 자꾸 나를 가르치려 든다</td><td>리베카 솔닛</td><td>창비</td><td class="src"><a href="https://news.nate.com/view/20200520n04921" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>4</td><td><a href="book/%EB%85%BC%EC%96%B4.html" aria-label="논어 자세히 보기"><img src="https://image.aladin.co.kr/product/16891/66/cover500/k482534174_2.jpg" alt="논어 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EB%85%BC%EC%96%B4.html">논어 <span aria-hidden="true">→</span></a></td><td>공자</td><td>현대지성</td><td class="src"><a href="https://www.chosun.com/topclass/topclass_issue/2025/11/08/B7G3BLQY4ZEGFHI5YV7UVF2NYQ/" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>5</td><td><img src="https://image.aladin.co.kr/product/36254/78/cover500/8931024827_1.jpg" alt="독일인의 사랑 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>독일인의 사랑</td><td>프리드리히 막스 뮐러</td><td>문예출판사</td><td class="src"><a href="https://v.daum.net/v/20251226043604056?f=p" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>6</td><td><img src="https://image.aladin.co.kr/product/4/6/cover500/s93746005x_3.jpg" alt="동물농장 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>동물농장</td><td>조지 오웰</td><td>민음사</td><td class="src"><a href="https://naver.me/5K6S0jo6" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>7</td><td><img src="https://image.aladin.co.kr/product/421/38/cover500/8937462141_2.jpg" alt="면도날 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>면도날</td><td>서머싯 몸</td><td>민음사</td><td class="src"><a href="https://bookishreels.tistory.com/115" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>8</td><td><a href="book/%EB%AC%B4%EC%9D%98%EB%AF%B8%EC%9D%98%20%EC%B6%95%EC%A0%9C.html" aria-label="무의미의 축제 자세히 보기"><img src="https://image.aladin.co.kr/product/34130/14/cover500/8937456745_1.jpg" alt="무의미의 축제 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EB%AC%B4%EC%9D%98%EB%AF%B8%EC%9D%98%20%EC%B6%95%EC%A0%9C.html">무의미의 축제 <span aria-hidden="true">→</span></a></td><td>밀란 쿤데라</td><td>민음사</td><td class="src"><a href="https://www.donga.com/news/amp/all/20180115/88181143/1" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>9</td><td><img src="https://image.aladin.co.kr/product/4729/78/cover500/8937488396_1.jpg" alt="빨래하는 페미니즘 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>빨래하는 페미니즘</td><td>스테퍼니 스탈</td><td>민음사</td><td class="src"><a href="https://news.nate.com/view/20200520n04921" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>10</td><td><img src="https://image.aladin.co.kr/product/27412/62/cover200/k972732555_1.jpg" alt="순수와 비순수 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>순수와 비순수</td><td>시도니 가브리엘 콜레트</td><td>1984BOOKS</td><td class="src"><a href="https://www.cosmopolitan.co.kr/article/1871533" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>11</td><td><a href="book/%EC%8B%A0%EA%B3%A1.html" aria-label="신곡 자세히 보기"><img src="https://image.aladin.co.kr/product/29173/87/cover500/8932921393_1.jpg" alt="신곡 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EC%8B%A0%EA%B3%A1.html">신곡 <span aria-hidden="true">→</span></a></td><td>단테 알리기에리</td><td>열린책들</td><td class="src"><a href="https://www.chosun.com/topclass/topclass_issue/2025/11/08/B7G3BLQY4ZEGFHI5YV7UVF2NYQ/" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>12</td><td><a href="book/%EC%9E%90%EA%B8%B0%EB%A7%8C%EC%9D%98%20%EB%B0%A9.html" aria-label="자기만의 방 자세히 보기"><img src="https://image.aladin.co.kr/product/9789/92/cover500/8937429047_1.jpg" alt="자기만의 방 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="book/%EC%9E%90%EA%B8%B0%EB%A7%8C%EC%9D%98%20%EB%B0%A9.html">자기만의 방 <span aria-hidden="true">→</span></a></td><td>버지니아 울프</td><td>민음사</td><td class="src"><a href="https://news.nate.com/view/20200520n04921" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
-    <tr><td>13</td><td><img src="https://image.aladin.co.kr/product/29103/47/cover500/k282837160_2.jpg" alt="페미니즘의 도전 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></td><td>페미니즘의 도전</td><td>정희진</td><td>교양인</td><td class="src"><a href="https://news.nate.com/view/20200520n04921" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>1</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=907620&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="가위 들고 달리기 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/90/76/cover500/8952748921_1.jpg" alt="가위 들고 달리기 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=907620&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">가위 들고 달리기</a></td><td>어거스텐 버로스</td><td>시공사</td><td class="src"><a href="https://www.marieclairekorea.com/celebrity/2021/06/munkayoung-2/" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>2</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=276097060" rel="nofollow noopener noreferrer" target="_blank" aria-label="군주론 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/27609/70/cover500/k262733021_1.jpg" alt="군주론 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=276097060" rel="nofollow noopener noreferrer" target="_blank">군주론</a></td><td>니콜로 마키아벨리</td><td>현대지성</td><td class="src"><a href="https://www.kyeongin.com/article/1458022" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>3</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=59182114" rel="nofollow noopener noreferrer" target="_blank" aria-label="남자들은 자꾸 나를 가르치려 든다 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/5918/21/cover500/8936472631_1.jpg" alt="남자들은 자꾸 나를 가르치려 든다 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=59182114" rel="nofollow noopener noreferrer" target="_blank">남자들은 자꾸 나를 가르치려 든다</a></td><td>리베카 솔닛</td><td>창비</td><td class="src"><a href="https://news.nate.com/view/20200520n04921" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>4</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=168916649" rel="nofollow noopener noreferrer" target="_blank" aria-label="논어 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/16891/66/cover500/k482534174_2.jpg" alt="논어 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=168916649" rel="nofollow noopener noreferrer" target="_blank">논어</a></td><td>공자</td><td>현대지성</td><td class="src"><a href="https://www.chosun.com/topclass/topclass_issue/2025/11/08/B7G3BLQY4ZEGFHI5YV7UVF2NYQ/" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>5</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=362547830&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="독일인의 사랑 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/36254/78/cover500/8931024827_1.jpg" alt="독일인의 사랑 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=362547830&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">독일인의 사랑</a></td><td>프리드리히 막스 뮐러</td><td>문예출판사</td><td class="src"><a href="https://v.daum.net/v/20251226043604056?f=p" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>6</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=40674&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="동물농장 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/4/6/cover500/s93746005x_3.jpg" alt="동물농장 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=40674&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">동물농장</a></td><td>조지 오웰</td><td>민음사</td><td class="src"><a href="https://naver.me/5K6S0jo6" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>7</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=4213854&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank" aria-label="면도날 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/421/38/cover500/8937462141_2.jpg" alt="면도날 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=4213854&amp;partner=openAPI&amp;start=api" rel="nofollow noopener noreferrer" target="_blank">면도날</a></td><td>서머싯 몸</td><td>민음사</td><td class="src"><a href="https://bookishreels.tistory.com/115" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>8</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=341301410" rel="nofollow noopener noreferrer" target="_blank" aria-label="무의미의 축제 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/34130/14/cover500/8937456745_1.jpg" alt="무의미의 축제 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=341301410" rel="nofollow noopener noreferrer" target="_blank">무의미의 축제</a></td><td>밀란 쿤데라</td><td>민음사</td><td class="src"><a href="https://www.donga.com/news/amp/all/20180115/88181143/1" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>9</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=47297893" rel="nofollow noopener noreferrer" target="_blank" aria-label="빨래하는 페미니즘 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/4729/78/cover500/8937488396_1.jpg" alt="빨래하는 페미니즘 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=47297893" rel="nofollow noopener noreferrer" target="_blank">빨래하는 페미니즘</a></td><td>스테퍼니 스탈</td><td>민음사</td><td class="src"><a href="https://news.nate.com/view/20200520n04921" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>10</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=274126221" rel="nofollow noopener noreferrer" target="_blank" aria-label="순수와 비순수 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/27412/62/cover200/k972732555_1.jpg" alt="순수와 비순수 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=274126221" rel="nofollow noopener noreferrer" target="_blank">순수와 비순수</a></td><td>시도니 가브리엘 콜레트</td><td>1984BOOKS</td><td class="src"><a href="https://www.cosmopolitan.co.kr/article/1871533" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>11</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=291738750" rel="nofollow noopener noreferrer" target="_blank" aria-label="신곡 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/29173/87/cover500/8932921393_1.jpg" alt="신곡 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=291738750" rel="nofollow noopener noreferrer" target="_blank">신곡</a></td><td>단테 알리기에리</td><td>열린책들</td><td class="src"><a href="https://www.chosun.com/topclass/topclass_issue/2025/11/08/B7G3BLQY4ZEGFHI5YV7UVF2NYQ/" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>12</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=97899246" rel="nofollow noopener noreferrer" target="_blank" aria-label="자기만의 방 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/9789/92/cover500/8937429047_1.jpg" alt="자기만의 방 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=97899246" rel="nofollow noopener noreferrer" target="_blank">자기만의 방</a></td><td>버지니아 울프</td><td>민음사</td><td class="src"><a href="https://news.nate.com/view/20200520n04921" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
+    <tr><td>13</td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=291034743" rel="nofollow noopener noreferrer" target="_blank" aria-label="페미니즘의 도전 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/29103/47/cover500/k282837160_2.jpg" alt="페미니즘의 도전 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a></td><td><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=291034743" rel="nofollow noopener noreferrer" target="_blank">페미니즘의 도전</a></td><td>정희진</td><td>교양인</td><td class="src"><a href="https://news.nate.com/view/20200520n04921" rel="nofollow noopener noreferrer" target="_blank">출처 보기 →</a></td></tr>
       </tbody>
     </table>
   </section>
 
   <section class="book-pages">
-    <h2>📖 이 책들의 상세 페이지 (5권)</h2>
-    <p class="muted">2명 이상의 셀럽이 추천한 책은 별도 상세 페이지가 있어요.</p>
-    <ul class="book-cards">
-      <li class="book-card"><a href="book/%EA%B5%B0%EC%A3%BC%EB%A1%A0.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/27609/70/cover500/k262733021_1.jpg" alt="군주론 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">군주론</div><div class="bc-author">니콜로 마키아벨리</div><div class="bc-badge">👥 2명 추천</div></div></a></li>
-      <li class="book-card"><a href="book/%EB%85%BC%EC%96%B4.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/16891/66/cover500/k482534174_2.jpg" alt="논어 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">논어</div><div class="bc-author">공자</div><div class="bc-badge">👥 2명 추천</div></div></a></li>
-      <li class="book-card"><a href="book/%EB%AC%B4%EC%9D%98%EB%AF%B8%EC%9D%98%20%EC%B6%95%EC%A0%9C.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/34130/14/cover500/8937456745_1.jpg" alt="무의미의 축제 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">무의미의 축제</div><div class="bc-author">밀란 쿤데라</div><div class="bc-badge">👥 2명 추천</div></div></a></li>
-      <li class="book-card"><a href="book/%EC%8B%A0%EA%B3%A1.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/29173/87/cover500/8932921393_1.jpg" alt="신곡 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">신곡</div><div class="bc-author">단테 알리기에리</div><div class="bc-badge">👥 3명 추천</div></div></a></li>
-      <li class="book-card"><a href="book/%EC%9E%90%EA%B8%B0%EB%A7%8C%EC%9D%98%20%EB%B0%A9.html" class="book-card-link"><img src="https://image.aladin.co.kr/product/9789/92/cover500/8937429047_1.jpg" alt="자기만의 방 표지" width="80" height="115" loading="lazy" style="object-fit:cover"><div class="bc-meta"><div class="bc-title">자기만의 방</div><div class="bc-author">버지니아 울프</div><div class="bc-badge">👥 2명 추천</div></div></a></li>
+    <h2>👥 문가영과 다른 셀럽이 함께 추천한 책 (5권)</h2>
+    <p class="muted">2명 이상의 셀럽이 추천한 책과 함께 추천한 셀럽 명단이에요.</p>
+    <ul class="shared-book-list">
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=276097060" rel="nofollow noopener noreferrer" target="_blank" aria-label="군주론 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/27609/70/cover500/k262733021_1.jpg" alt="군주론 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=276097060" rel="nofollow noopener noreferrer" target="_blank">군주론</a></div>
+            <div class="sb-author">니콜로 마키아벨리</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 1명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EA%B0%80%EC%9D%84%28%EC%95%84%EC%9D%B4%EB%B8%8C%29.html">가을(아이브)</a>
+        </div>
+      </li>
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=168916649" rel="nofollow noopener noreferrer" target="_blank" aria-label="논어 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/16891/66/cover500/k482534174_2.jpg" alt="논어 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=168916649" rel="nofollow noopener noreferrer" target="_blank">논어</a></div>
+            <div class="sb-author">공자</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 1명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EB%A1%9C%EC%9A%B4.html">로운</a>
+        </div>
+      </li>
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=341301410" rel="nofollow noopener noreferrer" target="_blank" aria-label="무의미의 축제 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/34130/14/cover500/8937456745_1.jpg" alt="무의미의 축제 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=341301410" rel="nofollow noopener noreferrer" target="_blank">무의미의 축제</a></div>
+            <div class="sb-author">밀란 쿤데라</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 1명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%A7%84%EC%98%81%28%EA%B0%93%EC%84%B8%EB%B8%90%29.html">진영(갓세븐)</a>
+        </div>
+      </li>
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=291738750" rel="nofollow noopener noreferrer" target="_blank" aria-label="신곡 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/29173/87/cover500/8932921393_1.jpg" alt="신곡 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=291738750" rel="nofollow noopener noreferrer" target="_blank">신곡</a></div>
+            <div class="sb-author">단테 알리기에리</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 2명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%9E%84%EC%9C%A4%EC%B0%AC.html">임윤찬</a>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EC%97%90%EB%93%9C%EC%9B%8C%EB%93%9C%20%EB%A6%AC.html">에드워드 리</a>
+        </div>
+      </li>
+      <li class="shared-book">
+        <div class="sb-main">
+          <a class="sb-cover-link" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=97899246" rel="nofollow noopener noreferrer" target="_blank" aria-label="자기만의 방 알라딘에서 보기"><img src="https://image.aladin.co.kr/product/9789/92/cover500/8937429047_1.jpg" alt="자기만의 방 표지" width="60" height="85" loading="lazy" style="object-fit:cover"></a>
+          <div class="sb-meta">
+            <div class="sb-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=97899246" rel="nofollow noopener noreferrer" target="_blank">자기만의 방</a></div>
+            <div class="sb-author">버지니아 울프</div>
+          </div>
+        </div>
+        <div class="sb-celebs">
+          <span class="sb-celebs-label">함께 추천한 셀럽 1명:</span>
+          <a class="sb-celeb-chip" href="https://favorbook.co.kr/share/%EB%B0%95%ED%95%98%EC%84%A0.html">박하선</a>
+        </div>
+      </li>
     </ul>
   </section>
 
